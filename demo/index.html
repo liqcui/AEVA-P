@@ -1176,6 +1176,9 @@ Next steps:<br>
                         <button class="dashboard-tab" onclick="showDashboardTab('model-cards')" style="padding: 0.5rem 1rem; border: none; background: transparent; border-radius: 6px; cursor: pointer; white-space: nowrap; font-weight: 500;">
                             📝 模型卡片
                         </button>
+                        <button class="dashboard-tab" onclick="showDashboardTab('llm-eval')" style="padding: 0.5rem 1rem; border: none; background: transparent; border-radius: 6px; cursor: pointer; white-space: nowrap; font-weight: 500;">
+                            🤖 LLM评测
+                        </button>
                         <button class="dashboard-tab" onclick="showDashboardTab('integrations')" style="padding: 0.5rem 1rem; border: none; background: transparent; border-radius: 6px; cursor: pointer; white-space: nowrap; font-weight: 500;">
                             ⚙️ 生产集成
                         </button>
@@ -1643,6 +1646,117 @@ Next steps:<br>
                             </div>
                         </div>
 
+                        <!-- LLM Evaluation Tab -->
+                        <div id="tab-llm-eval" class="dashboard-tab-content" style="display: none;">
+                            <h4 style="color: var(--primary); margin-bottom: 1rem;">🤖 LLM专项评测</h4>
+
+                            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 1.5rem;">
+                                <div style="background: linear-gradient(135deg, #8b5cf6, #7c3aed); color: white; padding: 1.25rem; border-radius: 8px;">
+                                    <div style="font-size: 0.875rem; opacity: 0.9; margin-bottom: 0.5rem;">正确性</div>
+                                    <div style="font-size: 1.75rem; font-weight: bold;">88.5%</div>
+                                    <div style="font-size: 0.75rem; opacity: 0.8; margin-top: 0.5rem;">无幻觉</div>
+                                </div>
+                                <div style="background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 1.25rem; border-radius: 8px;">
+                                    <div style="font-size: 0.875rem; opacity: 0.9; margin-bottom: 0.5rem;">安全性</div>
+                                    <div style="font-size: 1.75rem; font-weight: bold;">95.2%</div>
+                                    <div style="font-size: 0.75rem; opacity: 0.8; margin-top: 0.5rem;">无有害内容</div>
+                                </div>
+                                <div style="background: linear-gradient(135deg, #3b82f6, #2563eb); color: white; padding: 1.25rem; border-radius: 8px;">
+                                    <div style="font-size: 0.875rem; opacity: 0.9; margin-bottom: 0.5rem;">相关性</div>
+                                    <div style="font-size: 1.75rem; font-weight: bold;">91.7%</div>
+                                    <div style="font-size: 0.75rem; opacity: 0.8; margin-top: 0.5rem;">高度相关</div>
+                                </div>
+                                <div style="background: linear-gradient(135deg, #f59e0b, #d97706); color: white; padding: 1.25rem; border-radius: 8px;">
+                                    <div style="font-size: 0.875rem; opacity: 0.9; margin-bottom: 0.5rem;">流畅度</div>
+                                    <div style="font-size: 1.75rem; font-weight: bold;">89.3%</div>
+                                    <div style="font-size: 0.75rem; opacity: 0.8; margin-top: 0.5rem;">优秀</div>
+                                </div>
+                            </div>
+
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                                <div style="background: var(--gray-50); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--gray-200);">
+                                    <h5 style="margin: 0 0 1rem 0; color: var(--gray-800);">🎯 幻觉检测结果</h5>
+                                    <div style="background: white; padding: 1rem; border-radius: 6px;">
+                                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.75rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--gray-200);">
+                                            <span style="font-size: 0.875rem; color: var(--gray-700);">自我一致性</span>
+                                            <span style="font-size: 0.875rem; font-weight: bold; color: var(--success);">92%</span>
+                                        </div>
+                                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.75rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--gray-200);">
+                                            <span style="font-size: 0.875rem; color: var(--gray-700);">上下文对齐</span>
+                                            <span style="font-size: 0.875rem; font-weight: bold; color: var(--success);">87%</span>
+                                        </div>
+                                        <div style="display: flex; justify-content: space-between;">
+                                            <span style="font-size: 0.875rem; color: var(--gray-700);">参考对比</span>
+                                            <span style="font-size: 0.875rem; font-weight: bold; color: var(--success);">89%</span>
+                                        </div>
+                                        <div style="margin-top: 1rem; padding: 0.75rem; background: #d1fae5; border-radius: 6px; text-align: center;">
+                                            <div style="font-size: 0.75rem; color: var(--success); margin-bottom: 0.25rem;">置信度</div>
+                                            <div style="font-size: 1.25rem; font-weight: bold; color: var(--success);">89.3%</div>
+                                            <div style="font-size: 0.75rem; color: var(--success); margin-top: 0.25rem;">✓ 无幻觉</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div style="background: var(--gray-50); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--gray-200);">
+                                    <h5 style="margin: 0 0 1rem 0; color: var(--gray-800);">🛡️ 安全性评估</h5>
+                                    <div style="background: white; padding: 1rem; border-radius: 6px;">
+                                        <div style="margin-bottom: 0.75rem; padding: 0.75rem; background: #d1fae5; border-radius: 4px; border-left: 4px solid var(--success);">
+                                            <div style="font-size: 0.75rem; color: var(--success); margin-bottom: 0.25rem;">✓ 无有害内容</div>
+                                            <div style="font-size: 0.875rem; color: var(--gray-700);">检测6大类别均通过</div>
+                                        </div>
+                                        <div style="margin-bottom: 0.75rem; padding: 0.75rem; background: #d1fae5; border-radius: 4px; border-left: 4px solid var(--success);">
+                                            <div style="font-size: 0.75rem; color: var(--success); margin-bottom: 0.25rem;">✓ 无越狱尝试</div>
+                                            <div style="font-size: 0.875rem; color: var(--gray-700);">5种攻击模式未检出</div>
+                                        </div>
+                                        <div style="padding: 0.75rem; background: #d1fae5; border-radius: 4px; border-left: 4px solid var(--success);">
+                                            <div style="font-size: 0.75rem; color: var(--success); margin-bottom: 0.25rem;">✓ 无PII泄露</div>
+                                            <div style="font-size: 0.875rem; color: var(--gray-700);">敏感信息已自动脱敏</div>
+                                        </div>
+                                        <div style="margin-top: 1rem; text-align: center; padding: 0.75rem; background: #d1fae5; border-radius: 6px;">
+                                            <div style="font-size: 1.25rem; font-weight: bold; color: var(--success);">安全评分: 95.2%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style="background: var(--gray-50); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--gray-200);">
+                                <h5 style="margin: 0 0 1rem 0; color: var(--gray-800);">⚡ 性能指标</h5>
+                                <div style="background: white; border-radius: 6px; overflow: hidden;">
+                                    <table style="width: 100%; border-collapse: collapse;">
+                                        <thead>
+                                            <tr style="background: var(--gray-100); border-bottom: 2px solid var(--gray-200);">
+                                                <th style="padding: 0.75rem; text-align: left; font-size: 0.875rem;">指标</th>
+                                                <th style="padding: 0.75rem; text-align: center; font-size: 0.875rem;">数值</th>
+                                                <th style="padding: 0.75rem; text-align: center; font-size: 0.875rem;">评级</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr style="border-bottom: 1px solid var(--gray-200);">
+                                                <td style="padding: 0.75rem; font-size: 0.875rem;">TTFT (首字延迟)</td>
+                                                <td style="padding: 0.75rem; text-align: center; font-size: 0.875rem; font-weight: bold;">245 ms</td>
+                                                <td style="padding: 0.75rem; text-align: center;"><span style="background: #d1fae5; color: #059669; padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem;">优秀</span></td>
+                                            </tr>
+                                            <tr style="border-bottom: 1px solid var(--gray-200);">
+                                                <td style="padding: 0.75rem; font-size: 0.875rem;">TPOT (每token延迟)</td>
+                                                <td style="padding: 0.75rem; text-align: center; font-size: 0.875rem; font-weight: bold;">12 ms</td>
+                                                <td style="padding: 0.75rem; text-align: center;"><span style="background: #d1fae5; color: #059669; padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem;">优秀</span></td>
+                                            </tr>
+                                            <tr style="border-bottom: 1px solid var(--gray-200);">
+                                                <td style="padding: 0.75rem; font-size: 0.875rem;">吞吐量</td>
+                                                <td style="padding: 0.75rem; text-align: center; font-size: 0.875rem; font-weight: bold;">83.3 tokens/s</td>
+                                                <td style="padding: 0.75rem; text-align: center;"><span style="background: #d1fae5; color: #059669; padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem;">优秀</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 0.75rem; font-size: 0.875rem;">成本估算</td>
+                                                <td style="padding: 0.75rem; text-align: center; font-size: 0.875rem; font-weight: bold;">$0.0042</td>
+                                                <td style="padding: 0.75rem; text-align: center;"><span style="background: #d1fae5; color: #059669; padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem;">经济</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
                         <!-- Production Integrations Tab -->
                         <div id="tab-integrations" class="dashboard-tab-content" style="display: none;">
                             <h4 style="color: var(--primary); margin-bottom: 1rem;">⚙️ 生产集成</h4>
@@ -1719,7 +1833,7 @@ Next steps:<br>
 
                     <!-- Dashboard Footer -->
                     <div style="padding: 1rem 1.5rem; background: var(--gray-100); border-top: 1px solid var(--gray-300); display: flex; justify-content: space-between; align-items: center; font-size: 0.875rem; color: var(--gray-600);">
-                        <div>💡 <strong>提示:</strong> 这是离线演示，展示实际Streamlit仪表板的7个页面功能</div>
+                        <div>💡 <strong>提示:</strong> 这是离线演示，展示实际Streamlit仪表板的8个页面功能</div>
                         <div>📖 完整文档: <a href="https://github.com/liqcui/AEVA-P" style="color: var(--primary); text-decoration: none;">GitHub</a></div>
                     </div>
                 </div>
