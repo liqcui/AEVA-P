@@ -604,7 +604,7 @@
                             🌐 Web 仪表板
                         </h4>
                         <p style="color: var(--gray-700); margin-bottom: 1rem; line-height: 1.6;">
-                            为<strong>探索、可视化和协作</strong>设计，提供8个主页面+4个高级功能
+                            为<strong>探索、可视化和协作</strong>设计，提供9个主页面+4个高级功能
                         </p>
                         <div style="background: var(--gray-100); padding: 1rem; border-radius: 6px; margin-bottom: 1rem;">
                             <div style="font-size: 0.85rem; color: var(--gray-700);">
@@ -781,11 +781,12 @@
                         </div>
                         <div style="background: white; padding: 0.75rem; border-radius: 4px; border: 1px solid var(--gray-300);">
                             <div style="font-size: 0.875rem; color: var(--gray-700); margin-bottom: 0.5rem;">
-                                <strong>8个主页面 + 4个高级功能:</strong>
+                                <strong>9个主页面 + 4个高级功能:</strong>
                             </div>
                             <div style="font-size: 0.75rem; color: var(--gray-600);">
                                 🏠 主页 | 🔍 可解释性 | 🛡️ 鲁棒性<br>
                                 📊 数据质量 | 📈 A/B测试 | 📝 模型卡片<br>
+                                🤖 LLM评测 | ⚙️ 生产集成 | 📄 报告生成<br>
                                 🤖 LLM评测 | ⚙️ 生产集成<br>
                                 <span style="color: var(--primary);">+ 🏆 基准测试 | 🤖 流水线 | 🧠 智能分析 | 🛡️ 质量门禁</span>
                             </div>
@@ -1182,6 +1183,9 @@ Next steps:<br>
                         </button>
                         <button class="dashboard-tab" onclick="showDashboardTab('integrations')" style="padding: 0.5rem 1rem; border: none; background: transparent; border-radius: 6px; cursor: pointer; white-space: nowrap; font-weight: 500;">
                             ⚙️ 生产集成
+                        </button>
+                        <button class="dashboard-tab" onclick="showDashboardTab('report-generation')" style="padding: 0.5rem 1rem; border: none; background: transparent; border-radius: 6px; cursor: pointer; white-space: nowrap; font-weight: 500;">
+                            📄 报告生成
                         </button>
                     </div>
 
@@ -1892,11 +1896,144 @@ Next steps:<br>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Report Generation Tab -->
+                        <div id="tab-report-generation" class="dashboard-tab-content" style="display: none;">
+                            <h4 style="color: var(--primary); margin-bottom: 1rem;">📄 报告生成中心</h4>
+
+                            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 1.5rem;">
+                                <div style="background: linear-gradient(135deg, #3b82f6, #2563eb); color: white; padding: 1.25rem; border-radius: 8px;">
+                                    <div style="font-size: 2rem; font-weight: bold; margin-bottom: 0.5rem;">156</div>
+                                    <div style="font-size: 0.875rem; opacity: 0.9;">总报告数</div>
+                                </div>
+                                <div style="background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 1.25rem; border-radius: 8px;">
+                                    <div style="font-size: 2rem; font-weight: bold; margin-bottom: 0.5rem;">24</div>
+                                    <div style="font-size: 0.875rem; opacity: 0.9;">本月生成</div>
+                                </div>
+                                <div style="background: linear-gradient(135deg, #f59e0b, #d97706); color: white; padding: 1.25rem; border-radius: 8px;">
+                                    <div style="font-size: 2rem; font-weight: bold; margin-bottom: 0.5rem;">2.3 GB</div>
+                                    <div style="font-size: 0.875rem; opacity: 0.9;">总大小</div>
+                                </div>
+                                <div style="background: linear-gradient(135deg, #8b5cf6, #7c3aed); color: white; padding: 1.25rem; border-radius: 8px;">
+                                    <div style="font-size: 2rem; font-weight: bold; margin-bottom: 0.5rem;">45s</div>
+                                    <div style="font-size: 0.875rem; opacity: 0.9;">平均生成时间</div>
+                                </div>
+                            </div>
+
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                                <div>
+                                    <h5 style="margin: 0 0 1rem 0; color: var(--gray-800);">📊 报告类型</h5>
+                                    <div style="background: white; padding: 1.5rem; border-radius: 8px; border: 1px solid var(--gray-300);">
+                                        <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                                            <div style="display: flex; justify-content: space-between; padding: 0.5rem; background: var(--gray-50); border-radius: 4px;">
+                                                <span>📋 完整评估报告</span>
+                                                <span style="font-weight: bold; color: var(--primary);">87</span>
+                                            </div>
+                                            <div style="display: flex; justify-content: space-between; padding: 0.5rem; background: var(--gray-50); border-radius: 4px;">
+                                                <span>🎯 自定义报告</span>
+                                                <span style="font-weight: bold; color: var(--success);">42</span>
+                                            </div>
+                                            <div style="display: flex; justify-content: space-between; padding: 0.5rem; background: var(--gray-50); border-radius: 4px;">
+                                                <span>📈 对比报告</span>
+                                                <span style="font-weight: bold; color: var(--warning);">21</span>
+                                            </div>
+                                            <div style="display: flex; justify-content: space-between; padding: 0.5rem; background: var(--gray-50); border-radius: 4px;">
+                                                <span>🔍 专项报告</span>
+                                                <span style="font-weight: bold; color: #8b5cf6;">6</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <h5 style="margin: 0 0 1rem 0; color: var(--gray-800);">📑 报告模板</h5>
+                                    <div style="background: white; padding: 1.5rem; border-radius: 8px; border: 1px solid var(--gray-300);">
+                                        <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                                            <div style="padding: 0.75rem; border: 2px solid var(--primary); border-radius: 6px;">
+                                                <div style="font-weight: bold; color: var(--primary); margin-bottom: 0.25rem;">标准模板</div>
+                                                <div style="font-size: 0.75rem; color: var(--gray-600);">5个核心模块 | PDF, HTML</div>
+                                            </div>
+                                            <div style="padding: 0.75rem; border: 1px solid var(--gray-300); border-radius: 6px;">
+                                                <div style="font-weight: bold; color: var(--gray-800); margin-bottom: 0.25rem;">企业模板</div>
+                                                <div style="font-size: 0.75rem; color: var(--gray-600);">9个完整模块 | PDF, HTML, Excel</div>
+                                            </div>
+                                            <div style="padding: 0.75rem; border: 1px solid var(--gray-300); border-radius: 6px;">
+                                                <div style="font-weight: bold; color: var(--gray-800); margin-bottom: 0.25rem;">学术模板</div>
+                                                <div style="font-size: 0.75rem; color: var(--gray-600);">科研导向 | PDF, LaTeX</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style="margin-top: 1.5rem;">
+                                <h5 style="margin: 0 0 1rem 0; color: var(--gray-800);">📚 最近生成的报告</h5>
+                                <div style="background: white; border-radius: 8px; border: 1px solid var(--gray-300); overflow: hidden;">
+                                    <table style="width: 100%; border-collapse: collapse;">
+                                        <thead>
+                                            <tr style="background: var(--gray-100); border-bottom: 1px solid var(--gray-300);">
+                                                <th style="padding: 0.75rem; text-align: left; font-size: 0.875rem;">报告名称</th>
+                                                <th style="padding: 0.75rem; text-align: left; font-size: 0.875rem;">类型</th>
+                                                <th style="padding: 0.75rem; text-align: left; font-size: 0.875rem;">生成时间</th>
+                                                <th style="padding: 0.75rem; text-align: left; font-size: 0.875rem;">格式</th>
+                                                <th style="padding: 0.75rem; text-align: left; font-size: 0.875rem;">大小</th>
+                                                <th style="padding: 0.75rem; text-align: center; font-size: 0.875rem;">状态</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr style="border-bottom: 1px solid var(--gray-200);">
+                                                <td style="padding: 0.75rem; font-size: 0.875rem;">Model_Evaluation_Report_20260413</td>
+                                                <td style="padding: 0.75rem; font-size: 0.875rem;">完整评估</td>
+                                                <td style="padding: 0.75rem; font-size: 0.875rem;">2小时前</td>
+                                                <td style="padding: 0.75rem; font-size: 0.875rem;">PDF, HTML</td>
+                                                <td style="padding: 0.75rem; font-size: 0.875rem;">15.2 MB</td>
+                                                <td style="padding: 0.75rem; text-align: center; font-size: 0.875rem;"><span style="color: var(--success);">✅ 可用</span></td>
+                                            </tr>
+                                            <tr style="border-bottom: 1px solid var(--gray-200);">
+                                                <td style="padding: 0.75rem; font-size: 0.875rem;">Comparison_Report_v2.3_vs_v2.4</td>
+                                                <td style="padding: 0.75rem; font-size: 0.875rem;">对比报告</td>
+                                                <td style="padding: 0.75rem; font-size: 0.875rem;">1天前</td>
+                                                <td style="padding: 0.75rem; font-size: 0.875rem;">PDF, Excel</td>
+                                                <td style="padding: 0.75rem; font-size: 0.875rem;">8.7 MB</td>
+                                                <td style="padding: 0.75rem; text-align: center; font-size: 0.875rem;"><span style="color: var(--success);">✅ 可用</span></td>
+                                            </tr>
+                                            <tr style="border-bottom: 1px solid var(--gray-200);">
+                                                <td style="padding: 0.75rem; font-size: 0.875rem;">Robustness_Analysis_Report</td>
+                                                <td style="padding: 0.75rem; font-size: 0.875rem;">专项报告</td>
+                                                <td style="padding: 0.75rem; font-size: 0.875rem;">3天前</td>
+                                                <td style="padding: 0.75rem; font-size: 0.875rem;">HTML, Markdown</td>
+                                                <td style="padding: 0.75rem; font-size: 0.875rem;">4.3 MB</td>
+                                                <td style="padding: 0.75rem; text-align: center; font-size: 0.875rem;"><span style="color: var(--success);">✅ 可用</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 0.75rem; font-size: 0.875rem;">Full_Assessment_Q1_2026</td>
+                                                <td style="padding: 0.75rem; font-size: 0.875rem;">季度报告</td>
+                                                <td style="padding: 0.75rem; font-size: 0.875rem;">1周前</td>
+                                                <td style="padding: 0.75rem; font-size: 0.875rem;">PDF, HTML, JSON</td>
+                                                <td style="padding: 0.75rem; font-size: 0.875rem;">28.5 MB</td>
+                                                <td style="padding: 0.75rem; text-align: center; font-size: 0.875rem;"><span style="color: var(--success);">✅ 可用</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div style="margin-top: 1.5rem; padding: 1rem; background: linear-gradient(135deg, #eff6ff, #dbeafe); border-radius: 8px; border: 1px solid #3b82f6;">
+                                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                                    <span style="font-size: 1.25rem;">💡</span>
+                                    <strong style="color: #1e40af;">报告生成功能</strong>
+                                </div>
+                                <div style="font-size: 0.875rem; color: #1e3a8a; line-height: 1.6;">
+                                    支持PDF、HTML、Markdown、JSON、Excel等多种格式导出 | 提供标准、企业、学术、监管等多种模板 |
+                                    可自定义选择评估模块 | 支持批量生成和定时任务 | 完整的历史报告管理
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Dashboard Footer -->
                     <div style="padding: 1rem 1.5rem; background: var(--gray-100); border-top: 1px solid var(--gray-300); display: flex; justify-content: space-between; align-items: center; font-size: 0.875rem; color: var(--gray-600);">
-                        <div>💡 <strong>提示:</strong> 这是离线演示，展示实际Streamlit仪表板的8个主页面 + 4个高级功能子页面</div>
+                        <div>💡 <strong>提示:</strong> 这是离线演示，展示实际Streamlit仪表板的9个主页面 + 4个高级功能子页面</div>
                         <div>📖 完整文档: <a href="https://github.com/liqcui/AEVA-P" style="color: var(--primary); text-decoration: none;">GitHub</a></div>
                     </div>
                 </div>
@@ -2279,7 +2416,7 @@ Next steps:<br>
                                 <div style="background: white; padding: 1rem; border-radius: 6px; border: 2px solid #10b981; text-align: center;">
                                     <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🌐</div>
                                     <div style="font-weight: bold; color: #10b981; margin-bottom: 0.25rem;">Web Dashboard</div>
-                                    <div style="font-size: 0.8rem; color: #6b7280;">8+4页面 | 可视化 | 协作</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280;">9+4页面 | 可视化 | 协作</div>
                                 </div>
                             </div>
                         </div>
@@ -4338,7 +4475,7 @@ pipeline.add_stage(
                 </div>
                 <div>
                     <p style="margin-bottom: 1rem; color: var(--gray-700);">
-                        <strong>Streamlit Web界面:</strong> 8个主页面+4个高级功能，16个交互演示，零代码体验
+                        <strong>Streamlit Web界面:</strong> 9个主页面+4个高级功能，17个交互演示，零代码体验
                     </p>
                     <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
                         <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px;">

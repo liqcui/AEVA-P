@@ -13,7 +13,7 @@
 AEVA is an intelligent platform for algorithm evaluation and validation, designed to transform algorithm testing from manual operations to AI-driven standardized processes. It implements "Evaluation-as-a-Service" (EaaS) philosophy.
 
 ### 🎯 Dashboard Structure
-**8 Main Pages** providing comprehensive evaluation capabilities:
+**9 Main Pages** providing comprehensive evaluation capabilities:
 - 🏠 Overview & Metrics
 - 🔍 Explainability (SHAP/LIME)
 - 🛡️ Adversarial Robustness
@@ -22,6 +22,7 @@ AEVA is an intelligent platform for algorithm evaluation and validation, designe
 - 📝 Model Cards
 - 🤖 LLM Evaluation
 - ⚙️ Production Integrations
+- 📄 Report Generation ⭐ NEW
 
 **4 Advanced Features** for enterprise-grade automation:
 - 🏆 Benchmark Suite - Multi-model comparison
@@ -441,7 +442,7 @@ Experience AEVA's full functionality directly in your browser:
 - ✅ No API keys required
 - ✅ Fully offline-capable
 - ✅ All features with mock data
-- ✅ Interactive Dashboard UI with 8 main pages + 4 advanced features ⭐ NEW
+- ✅ Interactive Dashboard UI with 9 main pages + 4 advanced features ⭐ NEW
 - ✅ LLM evaluation demos (hallucination, performance, safety) ⭐ NEW
 - ✅ Enterprise scalability architecture showcase ⭐ NEW
 
@@ -478,7 +479,7 @@ aeva dashboard
 # Access at: http://localhost:8501
 ```
 
-**Dashboard Features** (8 Main Pages):
+**Dashboard Features** (9 Main Pages):
 - 🏠 Overview & Metrics
 - 🔍 SHAP/LIME Explainability
 - 🛡️ Adversarial Robustness
@@ -487,6 +488,7 @@ aeva dashboard
 - 📝 Model Card Generation
 - 🤖 LLM Evaluation ⭐ NEW
 - ⚙️ Production Integrations
+- 📄 Report Generation ⭐ NEW
 
 **Advanced Features** (4 Sub-Pages):
 - 🏆 Benchmark Suite - Standardized evaluation & multi-model comparison
@@ -508,8 +510,8 @@ cd demo
 open index.html  # or double-click the file
 
 # The demo is fully offline-capable and showcases:
-# - Interactive Dashboard UI with 8 main pages + 4 advanced features ⭐ NEW
-# - 8 Main Pages: Overview, Explainability, Robustness, Data Quality, A/B Testing, Model Cards, LLM Eval, Production
+# - Interactive Dashboard UI with 9 main pages + 4 advanced features ⭐ NEW
+# - 9 Main Pages: Overview, Explainability, Robustness, Data Quality, A/B Testing, Model Cards, LLM Eval, Production, Report Generation
 # - 4 Advanced Features: Benchmark Suite, Auto Pipeline, Brain Analysis, Quality Guard
 # - LLM Evaluation (hallucination, performance, safety, UX) ⭐ NEW
 # - Enterprise scalability & Kubernetes deployment ⭐ NEW
