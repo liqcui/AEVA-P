@@ -389,7 +389,7 @@ python3 verify_copyright.py && echo "✅ 版权验证通过"
 
 ### 版权相关问题
 
-- **邮箱**: liqcui@redhat.com
+- **邮箱**: liquan_cui@126.com
 - **GitHub**: https://github.com/liqcui
 - **项目主页**: https://github.com/liqcui/AEVA-P
 

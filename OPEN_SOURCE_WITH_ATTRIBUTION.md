@@ -30,7 +30,7 @@
 
 When you start using AEVA, please send a brief notification:
 
-**Email**: liqcui@redhat.com
+**Email**: liquan_cui@126.com
 **Subject**: AEVA Usage Notification - [Your Project Name]
 
 **Template**:
@@ -220,7 +220,7 @@ python3 verify_copyright.py
 **A**: Absolutely! Just send us a notification and add attribution.
 
 ### Q: What if my use case doesn't fit the examples?
-**A**: Email us at liqcui@redhat.com and we'll discuss your specific situation.
+**A**: Email us at liquan_cui@126.com and we'll discuss your specific situation.
 
 ### Q: Do I need permission for each project?
 **A**: No. One notification per organization is fine. You can mention multiple projects.
@@ -232,7 +232,7 @@ python3 verify_copyright.py
 Before using AEVA:
 
 - [ ] Read this document
-- [ ] Send notification email to liqcui@redhat.com
+- [ ] Send notification email to liquan_cui@126.com
 - [ ] Add attribution to your project (README/docs/code)
 - [ ] Keep watermark (AEVA-2026-LQC-dc68e33) in source files
 - [ ] Don't remove copyright headers
@@ -245,7 +245,7 @@ That's it! You're good to go! 🚀
 
 ### Get Help
 
-- 📧 Email: liqcui@redhat.com
+- 📧 Email: liquan_cui@126.com
 - 🐛 Issues: https://github.com/liqcui/AEVA-P/issues
 - 💬 Discussions: https://github.com/liqcui/AEVA-P/discussions
 
@@ -277,7 +277,7 @@ See [LICENSE](LICENSE) for the complete license text.
 - ✅ Use for any purpose (personal, academic, commercial)
 - ✅ Modify and distribute
 - ✅ Create derivative works
-- 📧 Notify author: liqcui@redhat.com
+- 📧 Notify author: liquan_cui@126.com
 - 📝 Provide attribution
 - 🔐 Keep watermark: AEVA-2026-LQC-dc68e33
 
@@ -293,7 +293,7 @@ By following these simple attribution requirements, you help us:
 - Build a community of users
 - Improve the software based on feedback
 
-**Questions?** Email us at liqcui@redhat.com
+**Questions?** Email us at liquan_cui@126.com
 
 ---
 

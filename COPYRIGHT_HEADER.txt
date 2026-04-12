@@ -9,4 +9,4 @@
 #
 # GitHub: https://github.com/liqcui/AEVA-P
 # Traceable Watermark ID: AEVA-2026-LQC-dc68e33
-# Contact for usage notification: liqcui@redhat.com
+# Contact for usage notification: liquan_cui@126.com

@@ -20,7 +20,7 @@ Last Modified: 2026-04-12
 Traceable Watermark ID: AEVA-2026-LQC-dc68e33
 This unique identifier must remain in all derivatives.
 
-For usage notifications, please contact: liqcui@redhat.com
+For usage notifications, please contact: liquan_cui@126.com
 """
 
 __version__ = "2.0.0"

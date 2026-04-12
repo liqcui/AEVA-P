@@ -7,7 +7,7 @@
 - **作者**: Liquan Cui
 - **项目ID**: AEVA-2026-LQC-dc68e33
 - **GitHub**: https://github.com/liqcui/AEVA-P
-- **联系方式**: liqcui@redhat.com
+- **联系方式**: liquan_cui@126.com
 
 ---
 
@@ -221,7 +221,7 @@ python3 add_copyright.py
 如需商业使用或其他用途，请联系：
 
 - **作者**: Liquan Cui
-- **邮箱**: liqcui@redhat.com
+- **邮箱**: liquan_cui@126.com
 - **GitHub**: https://github.com/liqcui
 
 ---
@@ -332,7 +332,7 @@ python3 verify_copyright.py
 ## 📞 联系方式
 
 **版权问题咨询**:
-- 邮箱: liqcui@redhat.com
+- 邮箱: liquan_cui@126.com
 - GitHub: https://github.com/liqcui
 
 **许可申请**:

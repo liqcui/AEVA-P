@@ -10,7 +10,7 @@
 **GitHub**: https://github.com/liqcui/AEVA-P
 **License**: Open Source with Attribution
 
-📧 **If you use this code, please notify**: liqcui@redhat.com
+📧 **If you use this code, please notify**: liquan_cui@126.com
 
 **Usage Requirements**:
 1. ✅ Notify the original author when using this code
