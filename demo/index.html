@@ -1391,6 +1391,146 @@ Next steps:<br>
         <div id="architecture" class="page-section active">
             <h2 style="margin-bottom: 1.5rem; font-size: 1.875rem;">🏗️ AEVA 架构与组件</h2>
 
+            <!-- Architecture Diagram -->
+            <div class="card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border: none; color: white;">
+                <div class="card-header" style="border-bottom: 1px solid rgba(255,255,255,0.2);">
+                    <h3 class="card-title" style="color: white;">📐 系统架构图</h3>
+                </div>
+                <div style="padding: 2rem;">
+                    <!-- Architecture Diagram SVG-like using HTML/CSS -->
+                    <div style="background: rgba(255,255,255,0.95); border-radius: 12px; padding: 2rem; color: #1f2937;">
+                        <!-- Top Layer: Platform Header -->
+                        <div style="text-align: center; margin-bottom: 1.5rem; padding: 1rem; background: linear-gradient(135deg, #667eea, #764ba2); color: white; border-radius: 8px;">
+                            <div style="font-size: 1.5rem; font-weight: bold; margin-bottom: 0.25rem;">AEVA Platform</div>
+                            <div style="font-size: 0.9rem; opacity: 0.95;">Algorithm Evaluation & Validation Agent</div>
+                        </div>
+
+                        <!-- Core Components Layer -->
+                        <div style="border: 2px solid #e5e7eb; border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem;">
+                            <div style="text-align: center; font-weight: bold; color: #6366f1; margin-bottom: 1rem; font-size: 1.1rem;">
+                                核心组件层 (Core Components)
+                            </div>
+                            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+                                <!-- AEVA-Guard -->
+                                <div style="background: linear-gradient(135deg, #3b82f6, #2563eb); color: white; padding: 1rem; border-radius: 8px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">🛡️</div>
+                                    <div style="font-weight: bold; margin-bottom: 0.25rem;">AEVA-Guard</div>
+                                    <div style="font-size: 0.75rem; opacity: 0.9;">质量门禁</div>
+                                </div>
+
+                                <!-- AEVA-Bench -->
+                                <div style="background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 1rem; border-radius: 8px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">📊</div>
+                                    <div style="font-weight: bold; margin-bottom: 0.25rem;">AEVA-Bench</div>
+                                    <div style="font-size: 0.75rem; opacity: 0.9;">标准基准</div>
+                                </div>
+
+                                <!-- AEVA-Auto -->
+                                <div style="background: linear-gradient(135deg, #f59e0b, #d97706); color: white; padding: 1rem; border-radius: 8px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">⚙️</div>
+                                    <div style="font-weight: bold; margin-bottom: 0.25rem;">AEVA-Auto</div>
+                                    <div style="font-size: 0.75rem; opacity: 0.9;">自动化</div>
+                                </div>
+                            </div>
+
+                            <!-- Arrow Down -->
+                            <div style="text-align: center; margin: 1rem 0; font-size: 1.5rem; color: #9ca3af;">
+                                ↓
+                            </div>
+
+                            <!-- AEVA-Brain (centered) -->
+                            <div style="max-width: 400px; margin: 0 auto;">
+                                <div style="background: linear-gradient(135deg, #8b5cf6, #7c3aed); color: white; padding: 1.25rem; border-radius: 8px; text-align: center; box-shadow: 0 6px 12px rgba(139,92,246,0.3);">
+                                    <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🧠</div>
+                                    <div style="font-weight: bold; font-size: 1.1rem; margin-bottom: 0.25rem;">AEVA-Brain</div>
+                                    <div style="font-size: 0.85rem; opacity: 0.95;">智能诊断 (Quality LLM)</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Enhancement Layer -->
+                        <div style="border: 2px dashed #d1d5db; border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem;">
+                            <div style="text-align: center; font-weight: bold; color: #10b981; margin-bottom: 1rem; font-size: 1.1rem;">
+                                增强模块层 (Enhancement Modules)
+                            </div>
+                            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem;">
+                                <div style="background: #fef3c7; padding: 0.75rem; border-radius: 6px; text-align: center; font-size: 0.85rem; border: 1px solid #fbbf24;">
+                                    <div style="font-weight: bold;">📄 Report</div>
+                                    <div style="font-size: 0.7rem; color: #92400e;">报告生成</div>
+                                </div>
+                                <div style="background: #fee2e2; padding: 0.75rem; border-radius: 6px; text-align: center; font-size: 0.85rem; border: 1px solid #f87171;">
+                                    <div style="font-weight: bold;">🔍 Explainability</div>
+                                    <div style="font-size: 0.7rem; color: #991b1b;">可解释性</div>
+                                </div>
+                                <div style="background: #dbeafe; padding: 0.75rem; border-radius: 6px; text-align: center; font-size: 0.85rem; border: 1px solid #60a5fa;">
+                                    <div style="font-weight: bold;">⚖️ Fairness</div>
+                                    <div style="font-size: 0.7rem; color: #1e40af;">公平性</div>
+                                </div>
+                                <div style="background: #e0e7ff; padding: 0.75rem; border-radius: 6px; text-align: center; font-size: 0.85rem; border: 1px solid #818cf8;">
+                                    <div style="font-weight: bold;">🛡️ Robustness</div>
+                                    <div style="font-size: 0.7rem; color: #3730a3;">鲁棒性</div>
+                                </div>
+                                <div style="background: #d1fae5; padding: 0.75rem; border-radius: 6px; text-align: center; font-size: 0.85rem; border: 1px solid #34d399;">
+                                    <div style="font-weight: bold;">📊 Data Quality</div>
+                                    <div style="font-size: 0.7rem; color: #065f46;">数据质量</div>
+                                </div>
+                                <div style="background: #fce7f3; padding: 0.75rem; border-radius: 6px; text-align: center; font-size: 0.85rem; border: 1px solid #f472b6;">
+                                    <div style="font-weight: bold;">📈 A/B Test</div>
+                                    <div style="font-size: 0.7rem; color: #9f1239;">A/B测试</div>
+                                </div>
+                                <div style="background: #fef3c7; padding: 0.75rem; border-radius: 6px; text-align: center; font-size: 0.85rem; border: 1px solid #fbbf24;">
+                                    <div style="font-weight: bold;">📝 Model Card</div>
+                                    <div style="font-size: 0.7rem; color: #92400e;">模型卡片</div>
+                                </div>
+                                <div style="background: #e0e7ff; padding: 0.75rem; border-radius: 6px; text-align: center; font-size: 0.85rem; border: 1px solid #818cf8;">
+                                    <div style="font-weight: bold;">🔗 Integration</div>
+                                    <div style="font-size: 0.7rem; color: #3730a3;">生产集成</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Interface Layer -->
+                        <div style="background: linear-gradient(135deg, #f0f9ff, #e0f2fe); border: 2px solid #3b82f6; border-radius: 8px; padding: 1rem;">
+                            <div style="text-align: center; font-weight: bold; color: #1e40af; margin-bottom: 0.75rem; font-size: 1.1rem;">
+                                双重交互接口 (Dual Interface)
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                                <div style="background: white; padding: 1rem; border-radius: 6px; border: 2px solid #3b82f6; text-align: center;">
+                                    <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🖥️</div>
+                                    <div style="font-weight: bold; color: #3b82f6; margin-bottom: 0.25rem;">CLI Interface</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280;">11个命令 | 自动化 | CI/CD</div>
+                                </div>
+                                <div style="background: white; padding: 1rem; border-radius: 6px; border: 2px solid #10b981; text-align: center;">
+                                    <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🌐</div>
+                                    <div style="font-weight: bold; color: #10b981; margin-bottom: 0.25rem;">Web Dashboard</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280;">7个页面 | 可视化 | 协作</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bottom Stats -->
+                        <div style="margin-top: 1.5rem; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; text-align: center;">
+                            <div style="padding: 0.75rem; background: linear-gradient(135deg, #f3f4f6, #e5e7eb); border-radius: 6px;">
+                                <div style="font-weight: bold; font-size: 1.25rem; color: #3b82f6;">5</div>
+                                <div style="font-size: 0.75rem; color: #6b7280;">核心组件</div>
+                            </div>
+                            <div style="padding: 0.75rem; background: linear-gradient(135deg, #f3f4f6, #e5e7eb); border-radius: 6px;">
+                                <div style="font-weight: bold; font-size: 1.25rem; color: #10b981;">12</div>
+                                <div style="font-size: 0.75rem; color: #6b7280;">增强模块</div>
+                            </div>
+                            <div style="padding: 0.75rem; background: linear-gradient(135deg, #f3f4f6, #e5e7eb); border-radius: 6px;">
+                                <div style="font-weight: bold; font-size: 1.25rem; color: #f59e0b;">17K+</div>
+                                <div style="font-size: 0.75rem; color: #6b7280;">代码行数</div>
+                            </div>
+                            <div style="padding: 0.75rem; background: linear-gradient(135deg, #f3f4f6, #e5e7eb); border-radius: 6px;">
+                                <div style="font-weight: bold; font-size: 1.25rem; color: #8b5cf6;">312+</div>
+                                <div style="font-size: 0.75rem; color: #6b7280;">API方法</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Overview -->
             <div class="card">
                 <div class="card-header">
