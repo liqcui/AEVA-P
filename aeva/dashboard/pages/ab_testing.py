@@ -64,22 +64,30 @@ def render_comparison_tab():
         try:
             from aeva.ab_testing import ABTester
 
-            tester = ABTester()
-            result = tester.compare(scores_a, scores_b)
+            tester = ABTester(significance_level=0.05)
+            result = tester.compare(
+                scores_a.tolist(),
+                scores_b.tolist(),
+                variant_a_name="模型A",
+                variant_b_name="模型B"
+            )
 
             st.success("✅ 对比完成!")
 
-            col1, col2, col3 = st.columns(3)
+            col1, col2, col3, col4 = st.columns(4)
             with col1:
-                st.metric("P值", f"{result.get('p_value', 0):.4f}")
+                st.metric("P值", f"{result.p_value:.4f}")
             with col2:
-                st.metric("效应量", f"{result.get('effect_size', 0):.4f}")
+                st.metric("效应量", f"{result.effect_size:.4f}")
             with col3:
-                significant = result.get('p_value', 1) < 0.05
-                st.metric("显著性", "显著" if significant else "不显著")
+                st.metric("显著性", "显著 ✓" if result.statistically_significant else "不显著 ✗")
+            with col4:
+                st.metric("提升", f"{result.improvement_pct:+.2f}%")
 
         except Exception as e:
             st.error(f"❌ 错误: {str(e)}")
+            import traceback
+            st.code(traceback.format_exc())
 
 
 def render_statistical_tab():
@@ -130,19 +138,75 @@ def render_power_tab():
 def render_code_tab():
     st.markdown("## 💻 代码示例")
 
+    st.markdown("### 基本 A/B 测试")
     st.code("""
-from aeva.ab_testing import ABTester, StatisticalTests
+from aeva.ab_testing import ABTester
 
 # 创建测试器
-tester = ABTester()
+tester = ABTester(significance_level=0.05, power=0.8)
 
-# 对比两组
-result = tester.compare(scores_a, scores_b)
-print(f"P值: {result['p_value']}")
-print(f"显著性: {result['significant']}")
+# 对比两组模型性能
+result = tester.compare(
+    scores_a.tolist(),
+    scores_b.tolist(),
+    variant_a_name="模型A",
+    variant_b_name="模型B"
+)
 
-# 统计检验
-stats = StatisticalTests()
-result = stats.t_test(group_a, group_b)
-result = stats.mann_whitney_test(group_a, group_b)
+print(f"P值: {result.p_value:.4f}")
+print(f"显著性: {result.statistically_significant}")
+print(f"效应量: {result.effect_size:.4f}")
+print(f"提升: {result.improvement_pct:+.2f}%")
+print(f"胜者: {result.winner}")
+""", language="python")
+
+    st.markdown("### 统计检验")
+    st.code("""
+from aeva.ab_testing import StatisticalTest
+
+# 创建统计检验对象
+stat_test = StatisticalTest(significance_level=0.05)
+
+# t检验
+result = stat_test.t_test(group_a, group_b)
+print(f"t统计量: {result.statistic:.4f}")
+print(f"p值: {result.p_value:.4f}")
+print(f"显著: {result.significant}")
+
+# Mann-Whitney U检验 (非参数)
+result = stat_test.mann_whitney_u(group_a, group_b)
+
+# 效应量
+cohens_d = stat_test.cohens_d(group_a, group_b)
+print(f"Cohen's d: {cohens_d:.4f}")
+""", language="python")
+
+    st.markdown("### 序贯测试 (提前停止)")
+    st.code("""
+# 序贯A/B测试 - 可以提前停止以节省样本
+result = tester.sequential_test(
+    control_scores,
+    treatment_scores,
+    check_interval=200,
+    min_samples=500,
+    max_samples=5000
+)
+
+if result.status.value == "stopped_early":
+    print(f"✓ 测试提前停止!")
+    print(f"  节省样本: {5000 - result.variant_a_size}")
+""", language="python")
+
+    st.markdown("### 贝叶斯A/B测试")
+    st.code("""
+# 贝叶斯方法
+result = tester.bayesian_test(
+    control_data,
+    treatment_data,
+    prior_mean=0.05,
+    prior_std=0.02
+)
+
+print(f"P(B优于A): {result.prob_b_better:.2%}")
+print(f"期望损失: {result.expected_loss_a:.4f}")
 """, language="python")

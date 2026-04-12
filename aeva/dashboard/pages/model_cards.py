@@ -63,30 +63,60 @@ def render_generation_tab():
 
         if submitted:
             try:
-                from aeva.model_cards import ModelCardGenerator
+                from aeva.model_cards import ModelCardGenerator, ModelType, PerformanceMetrics
 
-                generator = ModelCardGenerator(model_name)
+                # 创建性能指标对象
+                perf_metrics = PerformanceMetrics(
+                    primary_metric="accuracy",
+                    metrics={
+                        "accuracy": accuracy,
+                        "precision": precision,
+                        "recall": recall,
+                        "f1_score": 2 * (precision * recall) / (precision + recall) if (precision + recall) > 0 else 0
+                    }
+                )
+
+                # 映射模型类型
+                type_map = {
+                    "分类": ModelType.CLASSIFIER,
+                    "回归": ModelType.REGRESSOR,
+                    "聚类": ModelType.CLUSTERING,
+                    "其他": ModelType.CLASSIFIER
+                }
+
+                generator = ModelCardGenerator(model_name=model_name)
 
                 card = generator.generate_card(
                     model_version=model_version,
-                    model_type=model_type,
-                    performance_metrics={
-                        "accuracy": accuracy,
-                        "precision": precision,
-                        "recall": recall
-                    },
+                    model_type=type_map.get(model_type, ModelType.CLASSIFIER),
+                    performance_metrics=perf_metrics,
                     intended_use=intended_use,
                     limitations=limitations
                 )
 
                 st.success("✅ 模型卡片生成成功!")
 
-                # Display card
+                # Display card - convert to dict for JSON display
+                from dataclasses import asdict
+                try:
+                    card_dict = asdict(card)
+                    # Convert enums to strings
+                    if 'model_type' in card_dict and hasattr(card_dict['model_type'], 'value'):
+                        card_dict['model_type'] = card_dict['model_type'].value
+                except:
+                    card_dict = {
+                        "model_name": card.model_name,
+                        "model_version": card.model_version,
+                        "model_type": card.model_type.value if hasattr(card.model_type, 'value') else str(card.model_type),
+                        "intended_use": card.intended_use,
+                        "limitations": card.limitations
+                    }
+
                 st.markdown("### 生成的模型卡片")
-                st.json(card)
+                st.json(card_dict)
 
                 # Download
-                card_json = json.dumps(card, indent=2, ensure_ascii=False)
+                card_json = json.dumps(card_dict, indent=2, ensure_ascii=False, default=str)
                 st.download_button(
                     label="📥 下载模型卡片 (JSON)",
                     data=card_json,
@@ -94,8 +124,14 @@ def render_generation_tab():
                     mime="application/json"
                 )
 
+                # Export to HTML
+                html_path = generator.export_html(card, "/tmp/model_card.html")
+                st.info(f"HTML导出至: {html_path}")
+
             except Exception as e:
                 st.error(f"❌ 错误: {str(e)}")
+                import traceback
+                st.code(traceback.format_exc())
 
 
 def render_validation_tab():
@@ -110,18 +146,28 @@ def render_validation_tab():
             card_data = json.load(uploaded_file)
 
             validator = ModelCardValidator()
-            is_valid, errors = validator.validate(card_data)
+            report = validator.validate(card_data)
 
-            if is_valid:
+            if report.is_valid:
                 st.success("✅ 模型卡片验证通过!")
+                st.metric("完整性评分", f"{report.completeness_score:.1f}%")
                 st.json(card_data)
             else:
-                st.error("❌ 验证失败")
-                for error in errors:
-                    st.warning(f"⚠️ {error}")
+                st.error(f"❌ 验证失败 - 完整性: {report.completeness_score:.1f}%")
+
+                st.markdown("### 验证问题")
+                for issue in report.issues:
+                    if issue.level.value == "error":
+                        st.error(f"❌ {issue.message}")
+                    elif issue.level.value == "warning":
+                        st.warning(f"⚠️ {issue.message}")
+                    else:
+                        st.info(f"ℹ️ {issue.message}")
 
         except Exception as e:
             st.error(f"❌ 错误: {str(e)}")
+            import traceback
+            st.code(traceback.format_exc())
 
 
 def render_templates_tab():
@@ -163,27 +209,67 @@ def render_templates_tab():
 def render_code_tab():
     st.markdown("## 💻 代码示例")
 
+    st.markdown("### 生成模型卡片")
     st.code("""
-from aeva.model_cards import ModelCardGenerator, ModelCardValidator
-
-# 生成模型卡片
-generator = ModelCardGenerator("My Model")
-card = generator.generate_card(
-    model_version="1.0.0",
-    model_type="classification",
-    performance_metrics={
-        "accuracy": 0.95,
-        "precision": 0.94,
-        "recall": 0.96
-    },
-    intended_use="医疗诊断辅助",
-    limitations="仅供参考，需要医生确认"
+from aeva.model_cards import (
+    ModelCardGenerator,
+    ModelType,
+    PerformanceMetrics,
+    FairnessMetrics
 )
 
-# 保存卡片
-generator.save_card(card, "model_card.json")
+# 创建性能指标
+perf_metrics = PerformanceMetrics(
+    primary_metric="accuracy",
+    metrics={
+        "accuracy": 0.95,
+        "precision": 0.94,
+        "recall": 0.96,
+        "f1_score": 0.95
+    },
+    test_set_size=10000
+)
 
-# 验证卡片
+# 创建公平性指标
+fairness = FairnessMetrics(
+    demographic_parity=0.95,
+    equal_opportunity=0.92,
+    protected_attributes=["age", "gender"]
+)
+
+# 生成模型卡片
+generator = ModelCardGenerator(model_name="Medical Diagnosis Model")
+card = generator.generate_card(
+    model_version="1.0.0",
+    model_type=ModelType.CLASSIFIER,
+    performance_metrics=perf_metrics,
+    fairness_metrics=fairness,
+    intended_use="医疗诊断辅助",
+    limitations="仅供参考，需要医生确认",
+    ethical_considerations="已考虑公平性和隐私保护"
+)
+
+# 导出多种格式
+generator.export_json(card, "model_card.json")
+generator.export_markdown(card, "model_card.md")
+generator.export_html(card, "model_card.html")
+""", language="python")
+
+    st.markdown("### 验证模型卡片")
+    st.code("""
+from aeva.model_cards import ModelCardValidator
+
+# 验证模型卡片
 validator = ModelCardValidator()
-is_valid, errors = validator.validate(card)
+card_dict = {...}  # 从JSON加载的模型卡片
+
+report = validator.validate(card_dict)
+
+if report.is_valid:
+    print("✓ 验证通过!")
+    print(f"完整性评分: {report.completeness_score:.1f}%")
+else:
+    print("✗ 验证失败")
+    for issue in report.issues:
+        print(f"[{issue.level.value}] {issue.message}")
 """, language="python")
