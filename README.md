@@ -177,6 +177,7 @@ Experience AEVA's full functionality directly in your browser:
 - ✅ Fully offline-capable
 - ✅ All features with mock data
 - ✅ 8 interactive pages
+- ✅ LLM evaluation demos (hallucination, performance, safety) ⭐ NEW
 
 ### 🎭 Dual Interface - Choose Your Interaction Method
 
@@ -237,6 +238,7 @@ open index.html  # or double-click the file
 # - Bench standardized benchmarks
 # - Auto pipeline visualization
 # - Brain intelligent analysis (core innovation)
+# - LLM Evaluation (hallucination, performance, safety, UX) ⭐ NEW
 ```
 
 📖 **Demo Guide**: See [`demo/README.md`](demo/README.md) for detailed demo usage and presentation scripts.
