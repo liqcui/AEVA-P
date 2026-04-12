@@ -32,12 +32,6 @@ AVEA-P/
 │   ├── advanced_brain_analysis.py
 │   └── report_generation_example.py  ⭐
 │
-├── interview_prep/             # 面试准备(11份)
-│   ├── 00_文档总览.md
-│   ├── 01_核心问题回答.md
-│   ├── ...
-│   └── 10_离线演示方案.md
-│
 └── docs/                       # 技术文档
     ├── ENHANCEMENT_PLAN.md
     ├── ENHANCEMENTS_IMPLEMENTED.md
@@ -265,7 +259,7 @@ if decision['should_promote']:
 - **Brain: 1分30秒** ⭐ 重点
 - 总结: 30秒
 
-**详细脚本**: `interview_prep/10_离线演示方案.md`
+**详细演示脚本**: See `demo/README.md` for detailed presentation guide
 
 ---
 

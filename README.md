@@ -120,7 +120,6 @@ AVEA-P/
 │   ├── index.html         # Full-featured demo page
 │   └── README.md          # Demo usage guide
 ├── docs/                   # Documentation
-├── interview_prep/         # Interview preparation materials
 ├── scripts/                # Utility scripts
 ├── requirements.txt        # Python dependencies
 ├── setup.py               # Package setup

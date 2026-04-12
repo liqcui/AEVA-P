@@ -212,7 +212,6 @@ AVEA-P/
 │   ├── ENHANCEMENT_PLAN.md       # ✅ 新增: 增强计划
 │   └── ENHANCEMENTS_IMPLEMENTED.md  # ✅ 新增: 实现总结
 │
-├── interview_prep/
 │   └── 10_离线演示方案.md         # ✅ 新增: 演示方案
 │
 └── DEMO_COMPLETE.md              # ✅ 新增: Demo完成总结
