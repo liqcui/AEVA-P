@@ -1,0 +1,57 @@
+{
+  "model_name": "Loan Approval Model",
+  "model_version": "3.0.0",
+  "model_type": "classifier",
+  "intended_use": "Automated credit scoring for loan applications",
+  "training_data": {
+    "description": "Loan application and repayment history",
+    "size": 250000,
+    "sources": [
+      "Financial institution records"
+    ],
+    "preprocessing": [
+      "Feature engineering",
+      "Bias mitigation applied"
+    ],
+    "features": [],
+    "temporal_coverage": "",
+    "geographical_coverage": "",
+    "demographic_info": {}
+  },
+  "performance_metrics": {
+    "primary_metric": "f1_score",
+    "metrics": {
+      "accuracy": 0.85,
+      "precision": 0.83,
+      "recall": 0.8,
+      "f1_score": 0.815
+    },
+    "test_set_size": 25000,
+    "cross_validation": null,
+    "confidence_intervals": {}
+  },
+  "limitations": "Requires human review for applications outside normal parameters",
+  "ethical_considerations": "Regular fairness audits recommended",
+  "timestamp": "2026-04-12T23:10:53.690263",
+  "metadata": {},
+  "model_architecture": "",
+  "hyperparameters": {},
+  "training_procedure": "",
+  "out_of_scope_uses": [],
+  "fairness_metrics": {
+    "demographic_parity": 0.95,
+    "equal_opportunity": 0.92,
+    "disparate_impact": 0.88,
+    "protected_attributes": [
+      "age",
+      "gender",
+      "geographic_region"
+    ],
+    "bias_analysis": ""
+  },
+  "environmental_impact": {},
+  "compliance_frameworks": [],
+  "references": [],
+  "authors": [],
+  "license_info": ""
+}

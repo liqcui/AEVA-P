@@ -1,0 +1,59 @@
+{
+  "model_name": "Fraud Detection System",
+  "model_version": "5.1.0",
+  "model_type": "classifier",
+  "intended_use": "Real-time fraud detection for payment transactions",
+  "training_data": {
+    "description": "Transaction data with fraud labels",
+    "size": 5000000,
+    "sources": [
+      "Payment processing system",
+      "Fraud investigation database"
+    ],
+    "preprocessing": [
+      "Anonymization",
+      "Feature engineering",
+      "SMOTE for imbalance"
+    ],
+    "features": [],
+    "temporal_coverage": "",
+    "geographical_coverage": "",
+    "demographic_info": {}
+  },
+  "performance_metrics": {
+    "primary_metric": "precision",
+    "metrics": {
+      "precision": 0.93,
+      "recall": 0.89,
+      "f1_score": 0.91,
+      "accuracy": 0.98,
+      "false_positive_rate": 0.01
+    },
+    "test_set_size": 500000,
+    "cross_validation": null,
+    "confidence_intervals": {}
+  },
+  "limitations": "May require additional rules for novel fraud patterns",
+  "ethical_considerations": "Balance between fraud prevention and customer friction",
+  "timestamp": "2026-04-12T23:10:53.983815",
+  "metadata": {},
+  "model_architecture": "",
+  "hyperparameters": {},
+  "training_procedure": "",
+  "out_of_scope_uses": [],
+  "fairness_metrics": {
+    "demographic_parity": 0.94,
+    "equal_opportunity": 0.96,
+    "disparate_impact": null,
+    "protected_attributes": [
+      "merchant_category",
+      "geographic_region"
+    ],
+    "bias_analysis": ""
+  },
+  "environmental_impact": {},
+  "compliance_frameworks": [],
+  "references": [],
+  "authors": [],
+  "license_info": ""
+}

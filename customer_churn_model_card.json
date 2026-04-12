@@ -1,0 +1,49 @@
+{
+  "model_name": "Customer Churn Predictor",
+  "model_version": "1.0.0",
+  "model_type": "classifier",
+  "intended_use": "Binary classification model to predict customer churn risk",
+  "training_data": {
+    "description": "Historical customer purchase data from 2020-2025",
+    "size": 100000,
+    "sources": [
+      "Internal database",
+      "CRM system"
+    ],
+    "preprocessing": [
+      "Normalized numerical features",
+      "One-hot encoded categories"
+    ],
+    "features": [],
+    "temporal_coverage": "",
+    "geographical_coverage": "",
+    "demographic_info": {}
+  },
+  "performance_metrics": {
+    "primary_metric": "accuracy",
+    "metrics": {
+      "accuracy": 0.87,
+      "precision": 0.85,
+      "recall": 0.82,
+      "f1_score": 0.835,
+      "auc_roc": 0.91
+    },
+    "test_set_size": 10000,
+    "cross_validation": null,
+    "confidence_intervals": {}
+  },
+  "limitations": "See documentation",
+  "ethical_considerations": "Standard considerations apply",
+  "timestamp": "2026-04-12T23:10:53.689746",
+  "metadata": {},
+  "model_architecture": "",
+  "hyperparameters": {},
+  "training_procedure": "",
+  "out_of_scope_uses": [],
+  "fairness_metrics": null,
+  "environmental_impact": {},
+  "compliance_frameworks": [],
+  "references": [],
+  "authors": [],
+  "license_info": ""
+}

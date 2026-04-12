@@ -8,7 +8,6 @@ Project ID: AEVA-2026-LQC-dc68e33
 import logging
 import numpy as np
 import matplotlib.pyplot as plt
-import seaborn as sns
 from typing import Optional, List, Dict, Any, Tuple, Union
 from matplotlib.figure import Figure
 from matplotlib.axes import Axes
@@ -17,9 +16,15 @@ from enum import Enum
 
 logger = logging.getLogger(__name__)
 
-# Set default style
-plt.style.use('seaborn-v0_8-darkgrid')
-sns.set_palette("husl")
+# Optional seaborn import
+try:
+    import seaborn as sns
+    plt.style.use('seaborn-v0_8-darkgrid')
+    sns.set_palette("husl")
+    HAS_SEABORN = True
+except ImportError:
+    HAS_SEABORN = False
+    logger.warning("seaborn not installed - using default matplotlib styles")
 
 
 class VisualizationType(Enum):

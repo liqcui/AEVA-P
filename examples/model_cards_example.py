@@ -1,13 +1,11 @@
 """
 Model Cards System Examples
 
-Demonstrates all features of the enhanced Model Cards framework including:
-- Model card generation with automated metrics
-- Model card validation and compliance checking
-- Template engine with HTML/CSS styling
-- Compliance frameworks (GDPR, EU AI Act, HIPAA)
+Demonstrates features of the Model Cards framework including:
+- Model card generation
+- Model card validation
 - Multi-format export (JSON, Markdown, HTML)
-- Fairness and performance metrics
+- Fairness metrics
 
 Copyright (c) 2024-2026 AEVA Development Team. All rights reserved.
 Project ID: AEVA-2026-LQC-dc68e33
@@ -15,7 +13,6 @@ Project ID: AEVA-2026-LQC-dc68e33
 
 import sys
 from pathlib import Path
-from datetime import datetime
 
 # Add parent directory to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
@@ -24,12 +21,9 @@ from aeva.model_cards import (
     ModelCardGenerator,
     ModelCardValidator,
     ModelType,
-    ComplianceFramework,
     TrainingDataInfo,
     PerformanceMetrics,
-    FairnessMetrics,
-    ValidationLevel,
-    ComplianceStandard
+    FairnessMetrics
 )
 
 
@@ -44,46 +38,44 @@ def example_basic_model_card():
     """Example 1: Basic Model Card Generation"""
     print_section("Example 1: Basic Model Card Generation")
 
-    generator = ModelCardGenerator()
+    generator = ModelCardGenerator(model_name="Customer Churn Predictor")
 
     # Create training data info
     training_data = TrainingDataInfo(
-        name="Customer Purchase Dataset",
         description="Historical customer purchase data from 2020-2025",
-        source="Internal database",
         size=100000,
-        preprocessing="Normalized numerical features, one-hot encoded categories"
+        sources=["Internal database", "CRM system"],
+        preprocessing=["Normalized numerical features", "One-hot encoded categories"]
     )
 
     # Create performance metrics
     performance = PerformanceMetrics(
-        accuracy=0.87,
-        precision=0.85,
-        recall=0.82,
-        f1_score=0.835,
-        additional_metrics={
-            "auc_roc": 0.91,
-            "avg_precision": 0.88
-        }
+        primary_metric="accuracy",
+        metrics={
+            "accuracy": 0.87,
+            "precision": 0.85,
+            "recall": 0.82,
+            "f1_score": 0.835,
+            "auc_roc": 0.91
+        },
+        test_set_size=10000
     )
 
     print("\nScenario: Creating model card for customer churn prediction model")
 
-    card = generator.create_model_card(
-        model_name="Customer Churn Predictor v1.0",
-        model_type=ModelType.CLASSIFICATION,
-        description="Binary classification model to predict customer churn risk",
-        version="1.0.0",
-        authors=["Data Science Team"],
+    card = generator.generate_card(
+        model_version="1.0.0",
+        model_type=ModelType.CLASSIFIER,
+        intended_use="Binary classification model to predict customer churn risk",
         training_data=training_data,
-        performance=performance
+        performance_metrics=performance
     )
 
     print(f"\n✓ Model Card Created!")
-    print(f"  Model: {card['model_name']}")
-    print(f"  Version: {card['version']}")
-    print(f"  Type: {card['model_type']}")
-    print(f"  Accuracy: {card['performance']['accuracy']:.2%}")
+    print(f"  Model: {card.model_name}")
+    print(f"  Version: {card.model_version}")
+    print(f"  Type: {card.model_type}")
+    print(f"  Primary Metric: {performance.primary_metric} = {performance.metrics.get('accuracy', 0):.2%}")
 
     # Export to JSON
     json_path = generator.export_json(card, "customer_churn_model_card.json")
@@ -94,415 +86,237 @@ def example_basic_model_card():
     print(f"✓ Exported to Markdown: {md_path}")
 
 
-def example_compliance_model_card():
-    """Example 2: Model Card with Compliance Framework"""
-    print_section("Example 2: Model Card with GDPR Compliance")
+def example_fairness_metrics():
+    """Example 2: Model Card with Fairness Metrics"""
+    print_section("Example 2: Model Card with Fairness Metrics")
 
-    generator = ModelCardGenerator()
-
-    # Create comprehensive training data info
-    training_data = TrainingDataInfo(
-        name="Medical Diagnosis Dataset",
-        description="De-identified patient records for disease prediction",
-        source="Hospital partners (anonymized)",
-        size=50000,
-        preprocessing="PII removed, HIPAA-compliant anonymization",
-        privacy_considerations="All patient data anonymized per GDPR Article 25"
-    )
-
-    # Create performance metrics with demographic breakdown
-    performance = PerformanceMetrics(
-        accuracy=0.92,
-        precision=0.90,
-        recall=0.88,
-        f1_score=0.89,
-        additional_metrics={
-            "sensitivity": 0.88,
-            "specificity": 0.94
-        }
-    )
+    generator = ModelCardGenerator(model_name="Loan Approval Model")
 
     # Create fairness metrics
     fairness = FairnessMetrics(
-        demographic_parity_diff=0.03,
-        equal_opportunity_diff=0.04,
-        groups_evaluated=["age", "gender", "ethnicity"],
-        mitigation_strategies=["Re-weighting", "Threshold optimization"]
+        demographic_parity=0.95,
+        equal_opportunity=0.92,
+        disparate_impact=0.88,
+        protected_attributes=["age", "gender", "geographic_region"]
     )
-
-    print("\nScenario: Healthcare AI model with GDPR compliance")
-
-    card = generator.create_model_card(
-        model_name="Disease Risk Predictor",
-        model_type=ModelType.CLASSIFICATION,
-        description="Predicts disease risk based on patient symptoms and history",
-        version="2.1.0",
-        authors=["Medical AI Team", "Clinical Partners"],
-        training_data=training_data,
-        performance=performance,
-        fairness_metrics=fairness,
-        intended_use="Clinical decision support tool for physicians",
-        limitations="Not approved for autonomous diagnosis; requires physician oversight",
-        ethical_considerations="Potential bias in training data from limited geographic regions"
-    )
-
-    # Add compliance template
-    card_with_compliance = generator.add_compliance_template(
-        card,
-        ComplianceFramework.GDPR
-    )
-
-    print(f"\n✓ GDPR-Compliant Model Card Created!")
-    print(f"  Model: {card_with_compliance['model_name']}")
-    print(f"  Compliance Framework: GDPR")
-    print(f"  Privacy Considerations: {card_with_compliance['training_data']['privacy_considerations']}")
-    print(f"  Fairness Metrics:")
-    print(f"    - Demographic Parity Diff: {fairness.demographic_parity_diff:.3f}")
-    print(f"    - Equal Opportunity Diff: {fairness.equal_opportunity_diff:.3f}")
-
-    # Export to HTML with styling
-    html_path = generator.export_html(
-        card_with_compliance,
-        "disease_risk_model_card.html"
-    )
-    print(f"\n✓ Exported to HTML: {html_path}")
-
-
-def example_eu_ai_act_compliance():
-    """Example 3: EU AI Act High-Risk System"""
-    print_section("Example 3: EU AI Act High-Risk System Compliance")
-
-    generator = ModelCardGenerator()
 
     training_data = TrainingDataInfo(
-        name="Loan Application Dataset",
-        description="Historical loan application and repayment data",
-        source="Financial institution records (2015-2024)",
+        description="Loan application and repayment history",
         size=250000,
-        preprocessing="Feature engineering, bias mitigation applied",
-        privacy_considerations="GDPR-compliant data handling"
+        sources=["Financial institution records"],
+        preprocessing=["Feature engineering", "Bias mitigation applied"]
     )
 
     performance = PerformanceMetrics(
-        accuracy=0.85,
-        precision=0.83,
-        recall=0.80,
-        f1_score=0.815,
-        additional_metrics={
-            "approval_rate": 0.42,
-            "default_rate": 0.08
-        }
+        primary_metric="f1_score",
+        metrics={
+            "accuracy": 0.85,
+            "precision": 0.83,
+            "recall": 0.80,
+            "f1_score": 0.815
+        },
+        test_set_size=25000
     )
 
-    fairness = FairnessMetrics(
-        demographic_parity_diff=0.05,
-        equal_opportunity_diff=0.06,
-        groups_evaluated=["gender", "age_group", "geographic_region"],
-        mitigation_strategies=[
-            "Adversarial debiasing",
-            "Fairness constraints during training",
-            "Post-processing calibration"
-        ]
-    )
+    print("\nScenario: Creating model card with fairness considerations")
 
-    print("\nScenario: Credit scoring model (EU AI Act high-risk category)")
-
-    card = generator.create_model_card(
-        model_name="Credit Risk Assessment System",
-        model_type=ModelType.CLASSIFICATION,
-        description="Automated credit scoring for loan applications",
-        version="3.0.0",
-        authors=["Risk Analytics Team"],
+    card = generator.generate_card(
+        model_version="3.0.0",
+        model_type=ModelType.CLASSIFIER,
+        intended_use="Automated credit scoring for loan applications",
         training_data=training_data,
-        performance=performance,
+        performance_metrics=performance,
         fairness_metrics=fairness,
-        intended_use="Automated credit decisioning for consumer loans",
         limitations="Requires human review for applications outside normal parameters",
-        ethical_considerations="High-risk AI system per EU AI Act Article 6",
-        risk_assessment="Potential for discriminatory outcomes; fairness monitoring required"
+        ethical_considerations="Regular fairness audits recommended"
     )
 
-    # Add EU AI Act compliance template
-    card_with_eu = generator.add_compliance_template(
-        card,
-        ComplianceFramework.EU_AI_ACT
-    )
+    print(f"\n✓ Model Card with Fairness Metrics Created!")
+    print(f"  Model: {card.model_name}")
+    print(f"  Protected Attributes: {', '.join(fairness.protected_attributes)}")
+    print(f"  Demographic Parity: {fairness.demographic_parity:.2%}")
+    print(f"  Equal Opportunity: {fairness.equal_opportunity:.2%}")
 
-    print(f"\n✓ EU AI Act Compliant Model Card Created!")
-    print(f"  Model: {card_with_eu['model_name']}")
-    print(f"  Risk Category: High-Risk (Credit Scoring)")
-    print(f"  Compliance Framework: EU AI Act")
-    print(f"  Risk Assessment: {card_with_eu.get('risk_assessment', 'N/A')}")
-    print(f"  Fairness Mitigation: {len(fairness.mitigation_strategies)} strategies applied")
-
-    # Export all formats
-    generator.export_json(card_with_eu, "credit_risk_model_card.json")
-    generator.export_markdown(card_with_eu, "credit_risk_model_card.md")
-    generator.export_html(card_with_eu, "credit_risk_model_card.html")
-
-    print(f"\n✓ Exported in all formats (JSON, Markdown, HTML)")
+    # Export
+    generator.export_json(card, "loan_approval_model_card.json")
+    generator.export_html(card, "loan_approval_model_card.html")
+    print(f"\n✓ Exported to JSON and HTML")
 
 
 def example_model_card_validation():
-    """Example 4: Model Card Validation"""
-    print_section("Example 4: Model Card Validation and Quality Scoring")
+    """Example 3: Model Card Validation"""
+    print_section("Example 3: Model Card Validation")
 
-    generator = ModelCardGenerator()
+    generator = ModelCardGenerator(model_name="Test Model")
     validator = ModelCardValidator()
 
-    # Create a minimal model card (will have validation issues)
-    print("\nScenario 1: Validating incomplete model card")
+    print("\nScenario 1: Validating minimal model card")
 
-    incomplete_card = {
-        "model_name": "Simple Classifier",
-        "model_type": "classification",
-        "version": "1.0"
-        # Missing many required fields
+    # Create a minimal card
+    minimal_card = generator.generate_card(
+        model_version="1.0",
+        model_type=ModelType.CLASSIFIER
+    )
+
+    # Convert to dict for validation
+    card_dict = {
+        "model_name": minimal_card.model_name,
+        "model_version": minimal_card.model_version,
+        "model_type": minimal_card.model_type.value if hasattr(minimal_card.model_type, 'value') else str(minimal_card.model_type),
+        "intended_use": minimal_card.intended_use
     }
 
-    report = validator.validate(incomplete_card)
+    report = validator.validate(card_dict)
 
     print(f"\n✓ Validation Report:")
     print(f"  Valid: {report.is_valid}")
     print(f"  Completeness Score: {report.completeness_score:.1f}%")
     print(f"  Total Issues: {len(report.issues)}")
 
-    # Show issues by level
-    errors = [i for i in report.issues if i.level == ValidationLevel.ERROR]
-    warnings = [i for i in report.issues if i.level == ValidationLevel.WARNING]
-
-    print(f"\n  Errors ({len(errors)}):")
-    for issue in errors[:3]:  # Show first 3
-        print(f"    - {issue.message}")
-
-    print(f"\n  Warnings ({len(warnings)}):")
-    for issue in warnings[:3]:  # Show first 3
-        print(f"    - {issue.message}")
-
-    if report.recommendations:
-        print(f"\n  Top Recommendations:")
-        for rec in report.recommendations[:3]:
-            print(f"    • {rec}")
+    if report.issues:
+        print(f"\n  First 3 Issues:")
+        for issue in report.issues[:3]:
+            print(f"    [{issue.level.value}] {issue.message}")
 
     # Now validate a complete model card
     print("\n\nScenario 2: Validating complete model card")
 
-    complete_card = generator.create_model_card(
-        model_name="Complete Classification Model",
-        model_type=ModelType.CLASSIFICATION,
-        description="A well-documented classification model with comprehensive metrics",
-        version="1.0.0",
-        authors=["ML Team"],
-        training_data=TrainingDataInfo(
-            name="Training Dataset",
-            description="Comprehensive dataset with diverse samples",
-            source="Public repository",
-            size=100000,
-            preprocessing="Standard normalization and feature engineering"
-        ),
-        performance=PerformanceMetrics(
-            accuracy=0.90,
-            precision=0.88,
-            recall=0.87,
-            f1_score=0.875
-        ),
+    complete_card = generator.generate_card(
+        model_version="2.0.0",
+        model_type=ModelType.CLASSIFIER,
         intended_use="Production classification system",
+        training_data=TrainingDataInfo(
+            description="Comprehensive training dataset",
+            size=100000,
+            sources=["Public repository"]
+        ),
+        performance_metrics=PerformanceMetrics(
+            primary_metric="accuracy",
+            metrics={"accuracy": 0.90, "f1_score": 0.88},
+            test_set_size=10000
+        ),
         limitations="Performance may degrade on out-of-distribution data",
         ethical_considerations="Regular bias audits recommended"
     )
 
-    report2 = validator.validate(complete_card)
+    complete_dict = {
+        "model_name": complete_card.model_name,
+        "model_version": complete_card.model_version,
+        "model_type": complete_card.model_type.value if hasattr(complete_card.model_type, 'value') else str(complete_card.model_type),
+        "intended_use": complete_card.intended_use,
+        "limitations": complete_card.limitations,
+        "ethical_considerations": complete_card.ethical_considerations
+    }
+
+    report2 = validator.validate(complete_dict)
 
     print(f"\n✓ Validation Report:")
     print(f"  Valid: {report2.is_valid}")
     print(f"  Completeness Score: {report2.completeness_score:.1f}%")
     print(f"  Total Issues: {len(report2.issues)}")
 
-    if report2.is_valid:
-        print(f"\n  ✓ Model card meets all validation requirements!")
 
+def example_html_export():
+    """Example 4: HTML Export with Styling"""
+    print_section("Example 4: Professional HTML Export")
 
-def example_compliance_validation():
-    """Example 5: Compliance-Specific Validation"""
-    print_section("Example 5: Compliance-Specific Validation (GDPR)")
+    generator = ModelCardGenerator(model_name="Recommendation Engine")
 
-    generator = ModelCardGenerator()
-    validator = ModelCardValidator()
-
-    # Create model card with some compliance info
-    card = generator.create_model_card(
-        model_name="User Behavior Predictor",
-        model_type=ModelType.CLASSIFICATION,
-        description="Predicts user behavior patterns",
-        version="1.5.0",
-        authors=["Analytics Team"],
-        training_data=TrainingDataInfo(
-            name="User Interaction Data",
-            description="Anonymized user interaction logs",
-            source="Application database",
-            size=500000,
-            preprocessing="PII removal, aggregation",
-            privacy_considerations="GDPR Article 25 - data minimization applied"
-        ),
-        performance=PerformanceMetrics(
-            accuracy=0.82,
-            precision=0.80,
-            recall=0.78,
-            f1_score=0.79
-        )
+    training_data = TrainingDataInfo(
+        description="User-product interaction dataset with 5 years of history",
+        size=10000000,
+        sources=["E-commerce platform logs"],
+        preprocessing=["Session aggregation", "Negative sampling", "Feature normalization"]
     )
 
-    print("\nScenario: Validating GDPR compliance for user data model")
-
-    # Validate with GDPR standard
-    report = validator.validate_compliance(card, ComplianceStandard.GDPR)
-
-    print(f"\n✓ GDPR Compliance Validation:")
-    print(f"  Compliant: {report.is_valid}")
-    print(f"  Compliance Score: {report.completeness_score:.1f}%")
-
-    # Check for specific GDPR issues
-    gdpr_issues = [i for i in report.issues if "GDPR" in i.message or "privacy" in i.message.lower()]
-
-    if gdpr_issues:
-        print(f"\n  GDPR-Related Issues ({len(gdpr_issues)}):")
-        for issue in gdpr_issues:
-            print(f"    [{issue.level.value}] {issue.message}")
-
-    if report.recommendations:
-        print(f"\n  GDPR Recommendations:")
-        for rec in report.recommendations[:5]:
-            print(f"    • {rec}")
-
-
-def example_quality_scoring():
-    """Example 6: Quality Scoring and Improvement"""
-    print_section("Example 6: Model Card Quality Scoring")
-
-    validator = ModelCardValidator()
-
-    # Create cards with different quality levels
-    cards = {
-        "Minimal": {
-            "model_name": "Model A",
-            "model_type": "classification",
-            "version": "1.0"
+    performance = PerformanceMetrics(
+        primary_metric="ndcg@10",
+        metrics={
+            "ndcg@10": 0.75,
+            "hit_rate@10": 0.68,
+            "coverage": 0.45,
+            "diversity": 0.62
         },
-        "Basic": {
-            "model_name": "Model B",
-            "model_type": "classification",
-            "version": "1.0",
-            "description": "A basic classification model",
-            "authors": ["Team A"],
-            "performance": {
-                "accuracy": 0.85
-            }
-        },
-        "Complete": {
-            "model_name": "Model C",
-            "model_type": "classification",
-            "version": "1.0",
-            "description": "A comprehensive classification model with full documentation",
-            "authors": ["Team C", "External Reviewers"],
-            "training_data": {
-                "name": "Dataset C",
-                "description": "High-quality labeled dataset",
-                "source": "Curated repository",
-                "size": 100000,
-                "preprocessing": "Advanced feature engineering"
-            },
-            "performance": {
-                "accuracy": 0.90,
-                "precision": 0.88,
-                "recall": 0.87,
-                "f1_score": 0.875
-            },
-            "fairness_metrics": {
-                "demographic_parity_diff": 0.03,
-                "equal_opportunity_diff": 0.04,
-                "groups_evaluated": ["age", "gender"]
-            },
-            "intended_use": "Production deployment for classification tasks",
-            "limitations": "May not generalize to unseen domains",
-            "ethical_considerations": "Regular audits for bias recommended"
-        }
-    }
+        test_set_size=500000
+    )
 
-    print("\nScenario: Comparing quality scores of different model cards\n")
+    print("\nScenario: Generating professional HTML model card")
 
-    results = []
-    for name, card in cards.items():
-        report = validator.validate(card)
-        results.append((name, report.completeness_score, len(report.issues)))
-
-        print(f"{name} Model Card:")
-        print(f"  Completeness Score: {report.completeness_score:.1f}%")
-        print(f"  Issues Found: {len(report.issues)}")
-        print(f"  Valid: {'✓' if report.is_valid else '✗'}")
-        print()
-
-    # Show ranking
-    results.sort(key=lambda x: x[1], reverse=True)
-    print("\n📊 Quality Ranking:")
-    for i, (name, score, issues) in enumerate(results, 1):
-        print(f"  {i}. {name}: {score:.1f}% ({issues} issues)")
-
-
-def example_template_engine():
-    """Example 7: Template Engine and HTML Generation"""
-    print_section("Example 7: Template Engine and Professional HTML Export")
-
-    generator = ModelCardGenerator()
-
-    # Create a feature-rich model card
-    card = generator.create_model_card(
-        model_name="Advanced Recommendation Engine",
-        model_type=ModelType.RECOMMENDATION,
-        description="Personalized product recommendation system using collaborative filtering and deep learning",
-        version="4.2.0",
-        authors=["ML Platform Team", "Personalization Team"],
-        training_data=TrainingDataInfo(
-            name="User-Product Interaction Dataset",
-            description="5 years of user browsing and purchase history",
-            source="E-commerce platform logs",
-            size=10000000,
-            preprocessing="Session aggregation, negative sampling, feature normalization"
-        ),
-        performance=PerformanceMetrics(
-            accuracy=0.88,
-            precision=0.85,
-            recall=0.82,
-            f1_score=0.835,
-            additional_metrics={
-                "ndcg@10": 0.75,
-                "hit_rate@10": 0.68,
-                "coverage": 0.45
-            }
-        ),
-        fairness_metrics=FairnessMetrics(
-            demographic_parity_diff=0.04,
-            equal_opportunity_diff=0.05,
-            groups_evaluated=["age_group", "region", "user_segment"]
-        ),
+    card = generator.generate_card(
+        model_version="4.2.0",
+        model_type=ModelType.TRANSFORMER,
         intended_use="Real-time product recommendations on e-commerce platform",
+        training_data=training_data,
+        performance_metrics=performance,
         limitations="Cold start problem for new users and products",
-        ethical_considerations="Filter bubble concerns; diversity promotion implemented"
+        ethical_considerations="Diversity promotion implemented to avoid filter bubbles"
     )
 
-    print("\nScenario: Generating professional HTML model card with styling")
-
-    # Export to HTML
-    html_path = generator.export_html(card, "recommendation_engine_card.html")
+    # Export to HTML with charts
+    html_path = generator.export_html(card, "recommendation_engine_card.html", include_charts=True)
 
     print(f"\n✓ HTML Model Card Generated!")
     print(f"  Output: {html_path}")
     print(f"  Features:")
     print(f"    • Professional CSS styling")
     print(f"    • Responsive layout")
-    print(f"    • Structured sections")
-    print(f"    • Performance metrics table")
-    print(f"    • Fairness metrics visualization")
+    print(f"    • Performance metrics display")
     print(f"\n  Open the HTML file in a browser to view the styled card!")
+
+
+def example_multiple_exports():
+    """Example 5: Exporting to Multiple Formats"""
+    print_section("Example 5: Exporting to Multiple Formats")
+
+    generator = ModelCardGenerator(model_name="Fraud Detection System")
+
+    training_data = TrainingDataInfo(
+        description="Transaction data with fraud labels",
+        size=5000000,
+        sources=["Payment processing system", "Fraud investigation database"],
+        preprocessing=["Anonymization", "Feature engineering", "SMOTE for imbalance"]
+    )
+
+    performance = PerformanceMetrics(
+        primary_metric="precision",
+        metrics={
+            "precision": 0.93,
+            "recall": 0.89,
+            "f1_score": 0.91,
+            "accuracy": 0.98,
+            "false_positive_rate": 0.01
+        },
+        test_set_size=500000
+    )
+
+    fairness = FairnessMetrics(
+        demographic_parity=0.94,
+        equal_opportunity=0.96,
+        protected_attributes=["merchant_category", "geographic_region"]
+    )
+
+    print("\nScenario: Exporting model card in all formats")
+
+    card = generator.generate_card(
+        model_version="5.1.0",
+        model_type=ModelType.CLASSIFIER,
+        intended_use="Real-time fraud detection for payment transactions",
+        training_data=training_data,
+        performance_metrics=performance,
+        fairness_metrics=fairness,
+        limitations="May require additional rules for novel fraud patterns",
+        ethical_considerations="Balance between fraud prevention and customer friction"
+    )
+
+    # Export to all formats
+    json_path = generator.export_json(card, "fraud_detection_card.json")
+    md_path = generator.export_markdown(card, "fraud_detection_card.md")
+    html_path = generator.export_html(card, "fraud_detection_card.html")
+
+    print(f"\n✓ Model Card Exported to All Formats!")
+    print(f"  JSON:     {json_path}")
+    print(f"  Markdown: {md_path}")
+    print(f"  HTML:     {html_path}")
 
 
 def main():
@@ -513,12 +327,10 @@ def main():
 
     examples = [
         example_basic_model_card,
-        example_compliance_model_card,
-        example_eu_ai_act_compliance,
+        example_fairness_metrics,
         example_model_card_validation,
-        example_compliance_validation,
-        example_quality_scoring,
-        example_template_engine
+        example_html_export,
+        example_multiple_exports
     ]
 
     for i, example in enumerate(examples, 1):
@@ -533,11 +345,10 @@ def main():
     print("All examples completed!")
     print("=" * 70)
     print("\nGenerated files:")
-    print("  • customer_churn_model_card.json")
-    print("  • customer_churn_model_card.md")
-    print("  • disease_risk_model_card.html")
-    print("  • credit_risk_model_card.json/md/html")
+    print("  • customer_churn_model_card.json/md")
+    print("  • loan_approval_model_card.json/html")
     print("  • recommendation_engine_card.html")
+    print("  • fraud_detection_card.json/md/html")
 
 
 if __name__ == "__main__":
