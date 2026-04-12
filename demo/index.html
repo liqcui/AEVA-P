@@ -814,8 +814,46 @@
             <!-- CLI Commands -->
             <div class="card" style="margin-top: 2rem;">
                 <div class="card-header">
-                    <h3 class="card-title">🖥️ CLI 命令速查</h3>
+                    <h3 class="card-title">🖥️ CLI 命令速查 (11个命令)</h3>
                 </div>
+
+                <!-- Command Categories -->
+                <div style="margin-bottom: 1.5rem; padding: 1rem; background: linear-gradient(135deg, #f0f9ff, #e0f2fe); border-radius: 8px; border: 1px solid #bae6fd;">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                        <div>
+                            <h4 style="color: var(--primary); font-size: 0.9rem; margin-bottom: 0.5rem; font-weight: bold;">📊 模型评估 (3个)</h4>
+                            <div style="font-size: 0.8rem; color: var(--gray-700); line-height: 1.6;">
+                                • evaluate model<br>
+                                • evaluate explainability<br>
+                                • evaluate fairness
+                            </div>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--success); font-size: 0.9rem; margin-bottom: 0.5rem; font-weight: bold;">📁 数据质量 (2个)</h4>
+                            <div style="font-size: 0.8rem; color: var(--gray-700); line-height: 1.6;">
+                                • data validate<br>
+                                • data profile
+                            </div>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--warning); font-size: 0.9rem; margin-bottom: 0.5rem; font-weight: bold;">🌐 服务启动 (2个)</h4>
+                            <div style="font-size: 0.8rem; color: var(--gray-700); line-height: 1.6;">
+                                • dashboard<br>
+                                • server
+                            </div>
+                        </div>
+                        <div>
+                            <h4 style="color: #8b5cf6; font-size: 0.9rem; margin-bottom: 0.5rem; font-weight: bold;">🔧 工具命令 (4个)</h4>
+                            <div style="font-size: 0.8rem; color: var(--gray-700); line-height: 1.6;">
+                                • init<br>
+                                • info<br>
+                                • --version<br>
+                                • --help
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div>
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
                         <!-- Model Evaluation -->
@@ -837,6 +875,17 @@
                                 &nbsp;&nbsp;explainability<br>
                                 &nbsp;&nbsp;MODEL.pkl DATA.csv<br>
                                 &nbsp;&nbsp;--method shap
+                            </code>
+                        </div>
+
+                        <!-- Fairness -->
+                        <div style="background: var(--gray-50); padding: 1rem; border-radius: 8px; border-left: 4px solid var(--primary);">
+                            <h4 style="color: var(--primary); margin-bottom: 0.5rem; font-size: 1rem;">公平性评估</h4>
+                            <code style="display: block; font-size: 0.8rem; color: var(--gray-700); background: white; padding: 0.5rem; border-radius: 4px;">
+                                aeva evaluate fairness<br>
+                                &nbsp;&nbsp;MODEL.pkl DATA.csv<br>
+                                &nbsp;&nbsp;--sensitive-features<br>
+                                &nbsp;&nbsp;gender --sensitive-features race
                             </code>
                         </div>
 
