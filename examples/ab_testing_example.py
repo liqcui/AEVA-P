@@ -21,7 +21,12 @@ from pathlib import Path
 # Add parent directory to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from aeva.ab_testing import ABTester, StatisticalTest, BanditAlgorithm
+from aeva.ab_testing import (
+    ABTester,
+    StatisticalTest,
+    BanditAlgorithm,
+    CorrectionMethod
+)
 
 
 def print_section(title: str):
@@ -71,7 +76,7 @@ def example_statistical_tests():
     # 5. Multiple comparison correction
     print("\n5. Multiple Comparison Correction:")
     p_values = [0.01, 0.03, 0.05, 0.07, 0.10]
-    corrected = stat_test.correct_pvalues(p_values, method=stat_test.CorrectionMethod.BONFERRONI)
+    corrected = stat_test.correct_pvalues(p_values, method=CorrectionMethod.BONFERRONI)
     print(f"Original p-values: {p_values}")
     print(f"Bonferroni corrected: {[f'{p:.4f}' for p in corrected]}")
 

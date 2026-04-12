@@ -41,11 +41,18 @@ from aeva.robustness.defenses import (
 from aeva.robustness.visualizations import (
     plot_adversarial_examples,
     plot_perturbation,
-    plot_robustness_curve
+    plot_robustness_curve,
+    RobustnessVisualizer,
+    VisualizationType,
+    VisualizationConfig
 )
 from aeva.robustness.report import (
     RobustnessReport,
-    RobustnessReportGenerator
+    RobustnessReportGenerator,
+    AttackType,
+    SeverityLevel,
+    AttackResult as ReportAttackResult,
+    DefenseResult
 )
 
 __all__ = [
@@ -72,10 +79,17 @@ __all__ = [
     'plot_adversarial_examples',
     'plot_perturbation',
     'plot_robustness_curve',
+    'RobustnessVisualizer',
+    'VisualizationType',
+    'VisualizationConfig',
 
     # Reporting
     'RobustnessReport',
     'RobustnessReportGenerator',
+    'AttackType',
+    'SeverityLevel',
+    'ReportAttackResult',
+    'DefenseResult',
 ]
 
 __version__ = '1.0.0'

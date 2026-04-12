@@ -20,14 +20,14 @@ from pathlib import Path
 # Add parent directory to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from aeva.robustness import (
+from aeva.robustness.report import (
     RobustnessReportGenerator,
-    RobustnessVisualizer,
     AttackType,
     SeverityLevel,
     AttackResult,
     DefenseResult
 )
+from aeva.robustness.visualizations import RobustnessVisualizer
 
 
 def print_section(title: str):

@@ -6,6 +6,23 @@ Dual License: Free for Personal/Academic, Commercial Requires Permission | GitHu
 Project ID: AEVA-2026-LQC-dc68e33
 """
 from aeva.data_quality.profiler import DataProfiler
-from aeva.data_quality.metrics import QualityMetrics
+from aeva.data_quality.metrics import (
+    QualityMetrics,
+    QualityDimension,
+    OutlierMethod,
+    QualityScore,
+    OutlierAnalysis,
+    DistributionAnalysis,
+    QualityReport
+)
 
-__all__ = ["DataProfiler", "QualityMetrics"]
+__all__ = [
+    "DataProfiler",
+    "QualityMetrics",
+    "QualityDimension",
+    "OutlierMethod",
+    "QualityScore",
+    "OutlierAnalysis",
+    "DistributionAnalysis",
+    "QualityReport"
+]
