@@ -23,6 +23,7 @@ from aeva.dashboard.pages import (
     data_quality,
     ab_testing,
     model_cards,
+    llm_evaluation,
     production_integrations
 )
 
@@ -96,6 +97,7 @@ page = st.sidebar.radio(
         "📊 数据质量",
         "📈 A/B 测试",
         "📝 模型卡片",
+        "🤖 LLM 评测",
         "⚙️ 生产级集成"
     ]
 )
@@ -105,6 +107,7 @@ st.sidebar.markdown("### 系统信息")
 st.sidebar.info(f"""
 **版本**: v2.0.0
 **状态**: ✅ Production Ready
+**页面**: 8 个功能页面
 **模块**: 12 核心 + 3 集成
 **测试覆盖**: 65%
 """)
@@ -122,6 +125,8 @@ elif page == "📈 A/B 测试":
     ab_testing.render()
 elif page == "📝 模型卡片":
     model_cards.render()
+elif page == "🤖 LLM 评测":
+    llm_evaluation.render()
 elif page == "⚙️ 生产级集成":
     production_integrations.render()
 

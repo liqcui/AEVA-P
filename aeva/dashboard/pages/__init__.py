@@ -13,6 +13,7 @@ from . import (
     data_quality,
     ab_testing,
     model_cards,
+    llm_evaluation,
     production_integrations
 )
 
@@ -23,5 +24,6 @@ __all__ = [
     'data_quality',
     'ab_testing',
     'model_cards',
+    'llm_evaluation',
     'production_integrations'
 ]
