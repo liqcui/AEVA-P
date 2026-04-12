@@ -14,21 +14,30 @@ import pandas as pd
 project_root = Path(__file__).parent.parent.parent.parent.parent
 sys.path.insert(0, str(project_root))
 
+# Import i18n
+from aeva.dashboard.i18n import t, get_current_language
+
 
 def render():
     """Render guard (quality gates) page"""
 
     # Back button
-    if st.button("← 返回主页", key="back_from_guard"):
+    if st.button(t("back_to_home"), key="back_from_guard"):
         st.session_state.subpage = None
         st.rerun()
 
-    st.markdown('<p class="main-header">🛡️ 质量门禁系统</p>', unsafe_allow_html=True)
-    st.markdown("### 自动化质量检查与发布控制")
+    st.markdown(f'<p class="main-header">{t("guard_title")}</p>', unsafe_allow_html=True)
+    st.markdown(f"### {t('guard_subtitle')}")
 
     st.markdown("---")
 
-    tabs = st.tabs(["🎯 门禁管理", "📊 规则配置", "🚦 执行监控", "📈 统计报告", "💻 代码示例"])
+    tabs = st.tabs([
+        t("guard_tab_management"),
+        t("guard_tab_rules"),
+        t("guard_tab_monitoring"),
+        t("guard_tab_statistics"),
+        t("guard_tab_code")
+    ])
 
     with tabs[0]:
         render_gate_management()

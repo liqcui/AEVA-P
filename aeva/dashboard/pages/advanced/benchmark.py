@@ -15,21 +15,29 @@ import numpy as np
 project_root = Path(__file__).parent.parent.parent.parent.parent
 sys.path.insert(0, str(project_root))
 
+# Import i18n
+from aeva.dashboard.i18n import t, get_current_language
+
 
 def render():
     """Render benchmark suite page"""
 
     # Back button
-    if st.button("← 返回主页", key="back_from_benchmark"):
+    if st.button(t("back_to_home"), key="back_from_benchmark"):
         st.session_state.subpage = None
         st.rerun()
 
-    st.markdown('<p class="main-header">🏆 基准测试套件</p>', unsafe_allow_html=True)
-    st.markdown("### 标准化评估与多模型对比")
+    st.markdown(f'<p class="main-header">{t("benchmark_title")}</p>', unsafe_allow_html=True)
+    st.markdown(f"### {t('benchmark_subtitle')}")
 
     st.markdown("---")
 
-    tabs = st.tabs(["📊 基准套件", "🎯 运行测试", "📈 结果对比", "💻 代码示例"])
+    tabs = st.tabs([
+        t("benchmark_tab_suites"),
+        t("benchmark_tab_run"),
+        t("benchmark_tab_compare"),
+        t("benchmark_tab_code")
+    ])
 
     with tabs[0]:
         render_suite_management()

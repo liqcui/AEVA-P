@@ -16,21 +16,30 @@ from datetime import datetime, timedelta
 project_root = Path(__file__).parent.parent.parent.parent.parent
 sys.path.insert(0, str(project_root))
 
+# Import i18n
+from aeva.dashboard.i18n import t, get_current_language
+
 
 def render():
     """Render auto pipeline page"""
 
     # Back button
-    if st.button("← 返回主页", key="back_from_auto"):
+    if st.button(t("back_to_home"), key="back_from_auto"):
         st.session_state.subpage = None
         st.rerun()
 
-    st.markdown('<p class="main-header">🤖 自动化评估流水线</p>', unsafe_allow_html=True)
-    st.markdown("### 工作流编排与任务调度")
+    st.markdown(f'<p class="main-header">{t("auto_title")}</p>', unsafe_allow_html=True)
+    st.markdown(f"### {t('auto_subtitle')}")
 
     st.markdown("---")
 
-    tabs = st.tabs(["🔄 流水线管理", "⚙️ 任务调度", "🚀 执行监控", "📊 分布式执行", "💻 代码示例"])
+    tabs = st.tabs([
+        t("auto_tab_pipeline"),
+        t("auto_tab_scheduling"),
+        t("auto_tab_monitoring"),
+        t("auto_tab_distributed"),
+        t("auto_tab_code")
+    ])
 
     with tabs[0]:
         render_pipeline_management()

@@ -15,21 +15,30 @@ import json
 project_root = Path(__file__).parent.parent.parent.parent.parent
 sys.path.insert(0, str(project_root))
 
+# Import i18n
+from aeva.dashboard.i18n import t, get_current_language
+
 
 def render():
     """Render brain (intelligent analysis) page"""
 
     # Back button
-    if st.button("← 返回主页", key="back_from_brain"):
+    if st.button(t("back_to_home"), key="back_from_brain"):
         st.session_state.subpage = None
         st.rerun()
 
-    st.markdown('<p class="main-header">🧠 智能分析引擎</p>', unsafe_allow_html=True)
-    st.markdown("### 基于LLM的智能结果分析与建议")
+    st.markdown(f'<p class="main-header">{t("brain_title")}</p>', unsafe_allow_html=True)
+    st.markdown(f"### {t('brain_subtitle')}")
 
     st.markdown("---")
 
-    tabs = st.tabs(["🔍 结果分析", "💡 根因分析", "📝 改进建议", "🤖 LLM配置", "💻 代码示例"])
+    tabs = st.tabs([
+        t("brain_tab_analysis"),
+        t("brain_tab_root_cause"),
+        t("brain_tab_suggestions"),
+        t("brain_tab_llm"),
+        t("brain_tab_code")
+    ])
 
     with tabs[0]:
         render_result_analysis()

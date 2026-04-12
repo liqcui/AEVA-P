@@ -30,6 +30,9 @@ from aeva.dashboard.pages import (
 # Import advanced feature pages
 from aeva.dashboard.pages.advanced import benchmark, auto_pipeline, brain, guard
 
+# Import i18n support
+from aeva.dashboard.i18n import init_language, t, language_selector
+
 # Page configuration
 st.set_page_config(
     page_title="AEVA v2.0 Dashboard",
@@ -85,6 +88,9 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
+# Initialize language
+init_language()
+
 # Sidebar navigation
 st.sidebar.markdown("# 🤖 AEVA v2.0")
 st.sidebar.markdown("### Algorithm Evaluation & Validation Agent")
@@ -92,27 +98,27 @@ st.sidebar.markdown("---")
 
 # Page selection
 page = st.sidebar.radio(
-    "导航",
+    "Navigation / 导航",
     [
-        "🏠 主页",
-        "🔍 可解释性分析",
-        "🛡️ 对抗鲁棒性",
-        "📊 数据质量",
-        "📈 A/B 测试",
-        "📝 模型卡片",
-        "🤖 LLM 评测",
-        "⚙️ 生产级集成"
+        t("nav_home"),
+        t("nav_explainability"),
+        t("nav_robustness"),
+        t("nav_data_quality"),
+        t("nav_ab_testing"),
+        t("nav_model_cards"),
+        t("nav_llm_evaluation"),
+        t("nav_production")
     ]
 )
 
 st.sidebar.markdown("---")
-st.sidebar.markdown("### 系统信息")
+st.sidebar.markdown(f"### {t('system_info')}")
 st.sidebar.info(f"""
-**版本**: v2.0.0
-**状态**: ✅ Production Ready
-**页面**: 8 主页面 + 4 高级功能
-**模块**: 12 核心 + 3 集成
-**测试覆盖**: 65%
+**{t('version')}**: v2.0.0
+**{t('status')}**: {t('status_ready')}
+**{t('pages')}**: 8 {t('main_pages')} + 4 {t('advanced_features')}
+**{t('modules')}**: 12 {t('core')} + 3 {t('integrations')}
+**{t('test_coverage')}**: 65%
 """)
 
 # Check for sub-page navigation
@@ -128,22 +134,25 @@ if 'subpage' in st.session_state and st.session_state.subpage:
         guard.render()
 else:
     # Normal page routing
-    if page == "🏠 主页":
+    if page == t("nav_home"):
         home.render()
-    elif page == "🔍 可解释性分析":
+    elif page == t("nav_explainability"):
         explainability.render()
-    elif page == "🛡️ 对抗鲁棒性":
+    elif page == t("nav_robustness"):
         robustness.render()
-    elif page == "📊 数据质量":
+    elif page == t("nav_data_quality"):
         data_quality.render()
-    elif page == "📈 A/B 测试":
+    elif page == t("nav_ab_testing"):
         ab_testing.render()
-    elif page == "📝 模型卡片":
+    elif page == t("nav_model_cards"):
         model_cards.render()
-    elif page == "🤖 LLM 评测":
+    elif page == t("nav_llm_evaluation"):
         llm_evaluation.render()
-    elif page == "⚙️ 生产级集成":
+    elif page == t("nav_production"):
         production_integrations.render()
+
+# Language selector
+language_selector()
 
 # Footer
 st.sidebar.markdown("---")
