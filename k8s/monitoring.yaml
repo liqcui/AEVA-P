@@ -1,0 +1,348 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: prometheus-config
+  namespace: aeva
+data:
+  prometheus.yml: |
+    global:
+      scrape_interval: 15s
+      evaluation_interval: 15s
+      external_labels:
+        cluster: 'aeva-production'
+
+    scrape_configs:
+    - job_name: 'aeva-api'
+      kubernetes_sd_configs:
+      - role: pod
+        namespaces:
+          names:
+          - aeva
+      relabel_configs:
+      - source_labels: [__meta_kubernetes_pod_label_app]
+        regex: aeva-api
+        action: keep
+      - source_labels: [__meta_kubernetes_pod_name]
+        target_label: pod
+      - source_labels: [__meta_kubernetes_pod_node_name]
+        target_label: node
+
+    - job_name: 'aeva-worker'
+      kubernetes_sd_configs:
+      - role: pod
+        namespaces:
+          names:
+          - aeva
+      relabel_configs:
+      - source_labels: [__meta_kubernetes_pod_label_app]
+        regex: aeva-worker
+        action: keep
+      - source_labels: [__meta_kubernetes_pod_name]
+        target_label: pod
+
+    - job_name: 'redis'
+      static_configs:
+      - targets: ['redis-exporter:9121']
+
+    - job_name: 'postgresql'
+      static_configs:
+      - targets: ['postgres-exporter:9187']
+
+    - job_name: 'rabbitmq'
+      static_configs:
+      - targets: ['rabbitmq:15692']
+
+    alerting:
+      alertmanagers:
+      - static_configs:
+        - targets: ['alertmanager:9093']
+
+    rule_files:
+    - '/etc/prometheus/rules/*.yml'
+
+  aeva-alerts.yml: |
+    groups:
+    - name: aeva_performance
+      interval: 30s
+      rules:
+      - alert: HighAPILatency
+        expr: histogram_quantile(0.99, rate(aeva_api_request_duration_seconds_bucket[5m])) > 1
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "API P99 latency too high"
+          description: "P99 latency is {{ $value }}s"
+
+      - alert: HighTaskQueueLength
+        expr: aeva_task_queue_length > 1000
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Task queue too long"
+          description: "Queue has {{ $value }} pending tasks"
+
+      - alert: WorkerHighCPU
+        expr: rate(container_cpu_usage_seconds_total{pod=~"aeva-worker.*"}[5m]) > 0.9
+        for: 10m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Worker CPU usage critical"
+          description: "Worker {{ $labels.pod }} CPU > 90%"
+
+      - alert: WorkerHighMemory
+        expr: container_memory_usage_bytes{pod=~"aeva-worker.*"} / container_spec_memory_limit_bytes{pod=~"aeva-worker.*"} > 0.9
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Worker memory usage high"
+          description: "Worker {{ $labels.pod }} memory > 90%"
+
+      - alert: LLMEvaluationFailureRate
+        expr: rate(aeva_llm_evaluation_failures_total[5m]) > 0.1
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "LLM evaluation failure rate high"
+          description: "Failure rate is {{ $value | humanizePercentage }}"
+
+      - alert: DatabaseConnectionPoolExhausted
+        expr: aeva_db_connection_pool_available < 2
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Database connection pool nearly exhausted"
+          description: "Only {{ $value }} connections available"
+
+    - name: aeva_availability
+      interval: 30s
+      rules:
+      - alert: APIServerDown
+        expr: up{job="aeva-api"} == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "API server is down"
+          description: "API pod {{ $labels.pod }} is unreachable"
+
+      - alert: WorkerDown
+        expr: up{job="aeva-worker"} == 0
+        for: 2m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Worker is down"
+          description: "Worker pod {{ $labels.pod }} is unreachable"
+
+      - alert: DatabaseDown
+        expr: up{job="postgresql"} == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "PostgreSQL is down"
+
+      - alert: RedisDown
+        expr: up{job="redis"} == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Redis is down"
+
+      - alert: RabbitMQDown
+        expr: up{job="rabbitmq"} == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "RabbitMQ is down"
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: grafana-dashboards
+  namespace: aeva
+data:
+  aeva-overview.json: |
+    {
+      "dashboard": {
+        "title": "AEVA Overview",
+        "panels": [
+          {
+            "title": "API Request Rate",
+            "targets": [
+              {
+                "expr": "rate(aeva_api_requests_total[5m])"
+              }
+            ]
+          },
+          {
+            "title": "API Latency (P99)",
+            "targets": [
+              {
+                "expr": "histogram_quantile(0.99, rate(aeva_api_request_duration_seconds_bucket[5m]))"
+              }
+            ]
+          },
+          {
+            "title": "Worker Task Queue Length",
+            "targets": [
+              {
+                "expr": "aeva_task_queue_length"
+              }
+            ]
+          },
+          {
+            "title": "LLM Evaluation Throughput",
+            "targets": [
+              {
+                "expr": "rate(aeva_llm_evaluations_total[5m])"
+              }
+            ]
+          },
+          {
+            "title": "Resource Usage (CPU)",
+            "targets": [
+              {
+                "expr": "sum(rate(container_cpu_usage_seconds_total{namespace=\"aeva\"}[5m])) by (pod)"
+              }
+            ]
+          },
+          {
+            "title": "Resource Usage (Memory)",
+            "targets": [
+              {
+                "expr": "sum(container_memory_usage_bytes{namespace=\"aeva\"}) by (pod)"
+              }
+            ]
+          }
+        ]
+      }
+    }
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prometheus
+  namespace: aeva
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: prometheus
+  template:
+    metadata:
+      labels:
+        app: prometheus
+    spec:
+      serviceAccountName: prometheus
+      containers:
+      - name: prometheus
+        image: prom/prometheus:latest
+        args:
+        - '--config.file=/etc/prometheus/prometheus.yml'
+        - '--storage.tsdb.path=/prometheus'
+        - '--storage.tsdb.retention.time=30d'
+        ports:
+        - containerPort: 9090
+        volumeMounts:
+        - name: config
+          mountPath: /etc/prometheus
+        - name: rules
+          mountPath: /etc/prometheus/rules
+        - name: storage
+          mountPath: /prometheus
+        resources:
+          requests:
+            memory: "2Gi"
+            cpu: "1000m"
+          limits:
+            memory: "4Gi"
+            cpu: "2000m"
+      volumes:
+      - name: config
+        configMap:
+          name: prometheus-config
+          items:
+          - key: prometheus.yml
+            path: prometheus.yml
+      - name: rules
+        configMap:
+          name: prometheus-config
+          items:
+          - key: aeva-alerts.yml
+            path: aeva-alerts.yml
+      - name: storage
+        persistentVolumeClaim:
+          claimName: prometheus-storage
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: prometheus
+  namespace: aeva
+spec:
+  type: ClusterIP
+  ports:
+  - port: 9090
+    targetPort: 9090
+  selector:
+    app: prometheus
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: prometheus-storage
+  namespace: aeva
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 100Gi
+  storageClassName: standard
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: prometheus
+  namespace: aeva
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: prometheus
+rules:
+- apiGroups: [""]
+  resources:
+  - nodes
+  - nodes/proxy
+  - services
+  - endpoints
+  - pods
+  verbs: ["get", "list", "watch"]
+- apiGroups:
+  - extensions
+  resources:
+  - ingresses
+  verbs: ["get", "list", "watch"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: prometheus
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: prometheus
+subjects:
+- kind: ServiceAccount
+  name: prometheus
+  namespace: aeva

@@ -1,0 +1,157 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: aeva-worker
+  namespace: aeva
+  labels:
+    app: aeva-worker
+    component: worker
+spec:
+  serviceName: aeva-worker
+  replicas: 5
+  selector:
+    matchLabels:
+      app: aeva-worker
+  template:
+    metadata:
+      labels:
+        app: aeva-worker
+        component: worker
+    spec:
+      containers:
+      - name: worker
+        image: aeva:latest
+        imagePullPolicy: Always
+        command: ["celery"]
+        args:
+        - "-A"
+        - "aeva.auto.distributed_executor"
+        - "worker"
+        - "-Q"
+        - "guard,bench,llm_eval,brain"
+        - "-c"
+        - "4"
+        - "--loglevel=INFO"
+        env:
+        - name: CELERY_BROKER_URL
+          value: "pyamqp://guest@rabbitmq:5672//"
+        - name: CELERY_RESULT_BACKEND
+          value: "redis://redis:6379/0"
+        - name: AEVA_DB_HOST
+          valueFrom:
+            configMapKeyRef:
+              name: aeva-config
+              key: db_host
+        - name: AEVA_DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: aeva-secrets
+              key: db_password
+        - name: AEVA_REDIS_HOST
+          valueFrom:
+            configMapKeyRef:
+              name: aeva-config
+              key: redis_host
+        - name: AEVA_BRAIN_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: aeva-secrets
+              key: brain_api_key
+        resources:
+          requests:
+            memory: "1Gi"
+            cpu: "1000m"
+          limits:
+            memory: "4Gi"
+            cpu: "4000m"
+        volumeMounts:
+        - name: data
+          mountPath: /app/data
+        - name: results
+          mountPath: /app/results
+        - name: logs
+          mountPath: /app/logs
+      volumes:
+      - name: logs
+        emptyDir: {}
+  volumeClaimTemplates:
+  - metadata:
+      name: data
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      resources:
+        requests:
+          storage: 50Gi
+      storageClassName: fast-ssd
+  - metadata:
+      name: results
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      resources:
+        requests:
+          storage: 100Gi
+      storageClassName: standard
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: aeva-worker
+  namespace: aeva
+spec:
+  clusterIP: None  # Headless service
+  selector:
+    app: aeva-worker
+  ports:
+  - name: metrics
+    port: 9090
+    targetPort: 9090
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: aeva-worker-hpa
+  namespace: aeva
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: StatefulSet
+    name: aeva-worker
+  minReplicas: 3
+  maxReplicas: 50
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 70
+  - type: Resource
+    resource:
+      name: memory
+      target:
+        type: Utilization
+        averageUtilization: 80
+  - type: Pods
+    pods:
+      metric:
+        name: celery_queue_length
+      target:
+        type: AverageValue
+        averageValue: "100"
+  behavior:
+    scaleDown:
+      stabilizationWindowSeconds: 600
+      policies:
+      - type: Pods
+        value: 2
+        periodSeconds: 120
+    scaleUp:
+      stabilizationWindowSeconds: 0
+      policies:
+      - type: Percent
+        value: 100
+        periodSeconds: 60
+      - type: Pods
+        value: 5
+        periodSeconds: 60
+      selectPolicy: Max

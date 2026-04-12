@@ -1,0 +1,67 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: aeva-config
+  namespace: aeva
+data:
+  # Database configuration
+  db_host: "postgres-ha"
+  db_port: "5432"
+  db_name: "aeva"
+
+  # Redis configuration
+  redis_host: "redis-sentinel"
+  redis_port: "6379"
+
+  # RabbitMQ configuration
+  rabbitmq_host: "rabbitmq"
+  rabbitmq_port: "5672"
+
+  # Application configuration
+  log_level: "INFO"
+  debug: "false"
+
+  # Auto module configuration
+  worker_concurrency: "4"
+  task_timeout: "3600"
+  retry_limit: "3"
+
+  # Bench module configuration
+  parallel_execution: "true"
+  max_workers: "4"
+
+  # Guard module configuration
+  default_threshold: "0.85"
+  strict_mode: "false"
+  auto_block: "true"
+
+  # Brain module configuration
+  brain_provider: "anthropic"
+  brain_model: "claude-3-5-sonnet-20241022"
+  brain_max_tokens: "4096"
+  brain_temperature: "0.7"
+
+  # API configuration
+  api_workers: "4"
+  api_host: "0.0.0.0"
+  api_port: "8000"
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: aeva-secrets
+  namespace: aeva
+type: Opaque
+stringData:
+  # Database password
+  db_password: "CHANGE_ME_IN_PRODUCTION"
+
+  # Redis password (if needed)
+  redis_password: ""
+
+  # Brain API key
+  brain_api_key: "CHANGE_ME_IN_PRODUCTION"
+
+  # RabbitMQ credentials
+  rabbitmq_username: "aeva"
+  rabbitmq_password: "CHANGE_ME_IN_PRODUCTION"
