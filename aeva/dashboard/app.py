@@ -28,7 +28,7 @@ from aeva.dashboard.pages import (
 )
 
 # Import advanced feature pages
-from aeva.dashboard.pages.advanced import benchmark, auto_pipeline, brain
+from aeva.dashboard.pages.advanced import benchmark, auto_pipeline, brain, guard
 
 # Page configuration
 st.set_page_config(
@@ -124,6 +124,8 @@ if 'subpage' in st.session_state and st.session_state.subpage:
         auto_pipeline.render()
     elif st.session_state.subpage == "brain":
         brain.render()
+    elif st.session_state.subpage == "guard":
+        guard.render()
 else:
     # Normal page routing
     if page == "🏠 主页":

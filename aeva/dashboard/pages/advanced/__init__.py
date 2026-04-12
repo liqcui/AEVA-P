@@ -6,6 +6,6 @@ Dual License: Free for Personal/Academic, Commercial Requires Permission | GitHu
 Project ID: AEVA-2026-LQC-dc68e33
 """
 
-from . import benchmark, auto_pipeline, brain
+from . import benchmark, auto_pipeline, brain, guard
 
-__all__ = ['benchmark', 'auto_pipeline', 'brain']
+__all__ = ['benchmark', 'auto_pipeline', 'brain', 'guard']

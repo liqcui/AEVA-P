@@ -114,9 +114,9 @@ def render():
 
     # Advanced Features
     st.markdown("## 🚀 高级功能")
-    st.markdown("探索AEVA的高级企业级功能，包括基准测试、自动化流水线和智能分析。")
+    st.markdown("探索AEVA的高级企业级功能，包括基准测试、自动化流水线、智能分析和质量门禁。")
 
-    col1, col2, col3 = st.columns(3)
+    col1, col2 = st.columns(2)
 
     with col1:
         st.markdown("""
@@ -131,6 +131,20 @@ def render():
         """)
         if st.button("进入基准测试 →", key="goto_benchmark", use_container_width=True):
             st.session_state.subpage = "benchmark"
+            st.rerun()
+
+        st.markdown("""
+        ### 🧠 智能分析引擎
+        基于LLM的智能结果分析
+
+        **核心能力**:
+        - 🔍 自动异常检测
+        - 💡 AI驱动根因分析
+        - 📝 智能改进建议
+        - 🤖 Claude API集成
+        """)
+        if st.button("进入智能分析 →", key="goto_brain", use_container_width=True):
+            st.session_state.subpage = "brain"
             st.rerun()
 
     with col2:
@@ -148,19 +162,18 @@ def render():
             st.session_state.subpage = "auto"
             st.rerun()
 
-    with col3:
         st.markdown("""
-        ### 🧠 智能分析引擎
-        基于LLM的智能结果分析
+        ### 🛡️ 质量门禁系统
+        自动化质量检查与发布控制
 
         **核心能力**:
-        - 🔍 自动异常检测
-        - 💡 AI驱动根因分析
-        - 📝 智能改进建议
-        - 🤖 Claude API集成
+        - 🎯 阈值/多指标门禁
+        - 🚦 自动化质量检查
+        - 📊 执行监控与统计
+        - ⚡ 发布阻断保护
         """)
-        if st.button("进入智能分析 →", key="goto_brain", use_container_width=True):
-            st.session_state.subpage = "brain"
+        if st.button("进入质量门禁 →", key="goto_guard", use_container_width=True):
+            st.session_state.subpage = "guard"
             st.rerun()
 
     st.markdown("---")
