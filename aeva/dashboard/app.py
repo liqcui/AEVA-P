@@ -27,6 +27,9 @@ from aeva.dashboard.pages import (
     production_integrations
 )
 
+# Import advanced feature pages
+from aeva.dashboard.pages.advanced import benchmark, auto_pipeline, brain
+
 # Page configuration
 st.set_page_config(
     page_title="AEVA v2.0 Dashboard",
@@ -112,23 +115,33 @@ st.sidebar.info(f"""
 **测试覆盖**: 65%
 """)
 
-# Page routing
-if page == "🏠 主页":
-    home.render()
-elif page == "🔍 可解释性分析":
-    explainability.render()
-elif page == "🛡️ 对抗鲁棒性":
-    robustness.render()
-elif page == "📊 数据质量":
-    data_quality.render()
-elif page == "📈 A/B 测试":
-    ab_testing.render()
-elif page == "📝 模型卡片":
-    model_cards.render()
-elif page == "🤖 LLM 评测":
-    llm_evaluation.render()
-elif page == "⚙️ 生产级集成":
-    production_integrations.render()
+# Check for sub-page navigation
+if 'subpage' in st.session_state and st.session_state.subpage:
+    # Render advanced feature sub-pages
+    if st.session_state.subpage == "benchmark":
+        benchmark.render()
+    elif st.session_state.subpage == "auto":
+        auto_pipeline.render()
+    elif st.session_state.subpage == "brain":
+        brain.render()
+else:
+    # Normal page routing
+    if page == "🏠 主页":
+        home.render()
+    elif page == "🔍 可解释性分析":
+        explainability.render()
+    elif page == "🛡️ 对抗鲁棒性":
+        robustness.render()
+    elif page == "📊 数据质量":
+        data_quality.render()
+    elif page == "📈 A/B 测试":
+        ab_testing.render()
+    elif page == "📝 模型卡片":
+        model_cards.render()
+    elif page == "🤖 LLM 评测":
+        llm_evaluation.render()
+    elif page == "⚙️ 生产级集成":
+        production_integrations.render()
 
 # Footer
 st.sidebar.markdown("---")

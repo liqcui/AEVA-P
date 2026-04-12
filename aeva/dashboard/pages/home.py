@@ -112,6 +112,59 @@ def render():
 
     st.markdown("---")
 
+    # Advanced Features
+    st.markdown("## 🚀 高级功能")
+    st.markdown("探索AEVA的高级企业级功能，包括基准测试、自动化流水线和智能分析。")
+
+    col1, col2, col3 = st.columns(3)
+
+    with col1:
+        st.markdown("""
+        ### 🏆 基准测试套件
+        标准化评估与多模型对比
+
+        **核心能力**:
+        - 📋 创建自定义基准套件
+        - 🔧 配置评估指标
+        - 📁 管理测试数据集
+        - 📈 多模型性能对比
+        """)
+        if st.button("进入基准测试 →", key="goto_benchmark", use_container_width=True):
+            st.session_state.subpage = "benchmark"
+            st.rerun()
+
+    with col2:
+        st.markdown("""
+        ### 🤖 自动化流水线
+        工作流编排与任务调度
+
+        **核心能力**:
+        - 🔄 可视化流水线配置
+        - ⚙️ 定时与事件触发
+        - 🚀 执行监控与统计
+        - 📊 分布式执行支持
+        """)
+        if st.button("进入自动化流水线 →", key="goto_auto", use_container_width=True):
+            st.session_state.subpage = "auto"
+            st.rerun()
+
+    with col3:
+        st.markdown("""
+        ### 🧠 智能分析引擎
+        基于LLM的智能结果分析
+
+        **核心能力**:
+        - 🔍 自动异常检测
+        - 💡 AI驱动根因分析
+        - 📝 智能改进建议
+        - 🤖 Claude API集成
+        """)
+        if st.button("进入智能分析 →", key="goto_brain", use_container_width=True):
+            st.session_state.subpage = "brain"
+            st.rerun()
+
+    st.markdown("---")
+
     # Status
     st.markdown("## 📋 系统状态")
 
