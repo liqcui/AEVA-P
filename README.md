@@ -3,14 +3,21 @@
 
 ---
 
-**Copyright (c) 2024-2026 Liquan Cui. All rights reserved.**
+**Copyright (c) 2024-2026 AEVA Development Team**
+**Open Source with Attribution Required**
 
-**Author**: Liquan Cui
+**Traceable Watermark ID**: AEVA-2026-LQC-dc68e33
 **GitHub**: https://github.com/liqcui/AEVA-P
-**Project ID**: AEVA-2026-LQC-dc68e33
-**Contact**: liqcui@redhat.com
+**License**: Open Source with Attribution
 
-This software is the proprietary work of Liquan Cui. Unauthorized copying, modification, distribution, or use of this software, via any medium, is strictly prohibited without explicit permission.
+📧 **If you use this code, please notify**: liqcui@redhat.com
+
+**Usage Requirements**:
+1. ✅ Notify the original author when using this code
+2. ✅ Provide attribution in your project
+3. ✅ Keep the traceable watermark (AEVA-2026-LQC-dc68e33) intact
+
+This software is free to use for personal, academic, and commercial purposes, provided you follow the attribution requirements above.
 
 ---
 

@@ -15,9 +15,9 @@ from pathlib import Path
 from typing import Tuple, List
 
 # Expected copyright strings
-EXPECTED_COPYRIGHT = "Copyright (c) 2024-2026 Liquan Cui"
-EXPECTED_AUTHOR = "Liquan Cui"
-EXPECTED_PROJECT_ID = "AEVA-2026-LQC-dc68e33"
+EXPECTED_COPYRIGHT = "Copyright (c) 2024-2026 AEVA Development Team"
+EXPECTED_ATTRIBUTION = "Open Source with Attribution"
+EXPECTED_WATERMARK = "AEVA-2026-LQC-dc68e33"
 EXPECTED_GITHUB = "https://github.com/liqcui/AEVA-P"
 
 
@@ -37,11 +37,11 @@ def verify_file_copyright(filepath: Path) -> Tuple[bool, List[str]]:
         if EXPECTED_COPYRIGHT not in content:
             missing.append("Copyright notice")
 
-        if EXPECTED_AUTHOR not in content:
-            missing.append("Author name")
+        if EXPECTED_ATTRIBUTION not in content:
+            missing.append("Attribution requirement")
 
-        if EXPECTED_PROJECT_ID not in content:
-            missing.append("Project ID")
+        if EXPECTED_WATERMARK not in content:
+            missing.append("Watermark ID")
 
         if EXPECTED_GITHUB not in content:
             missing.append("GitHub URL")
@@ -113,9 +113,9 @@ def main():
 
         checks = [
             ("Version", aeva.__version__, "2.0.0"),
-            ("Author", aeva.__author__, EXPECTED_AUTHOR),
-            ("Copyright", aeva.__copyright__, f"Copyright (c) 2024-2026 {EXPECTED_AUTHOR}. All rights reserved."),
-            ("Project ID", aeva.__project_id__, EXPECTED_PROJECT_ID),
+            ("Author", aeva.__author__, "AEVA Development Team"),
+            ("Copyright", aeva.__copyright__, "Copyright (c) 2024-2026 AEVA Development Team. Open Source with Attribution Required."),
+            ("Watermark", aeva.__watermark__, EXPECTED_WATERMARK),
             ("GitHub", aeva.__github__, EXPECTED_GITHUB),
         ]
 
@@ -144,10 +144,11 @@ def main():
     print("=" * 70)
     print(f"\nProject: AEVA v{aeva.__version__}")
     print(f"Author: {aeva.__author__}")
-    print(f"Project ID: {aeva.__project_id__}")
+    print(f"Watermark ID: {aeva.__watermark__}")
+    print(f"License: {aeva.__license__}")
     print(f"Files Protected: {len(valid_files)}/{len(py_files)}")
-    print("\nAll copyright watermarks are valid and in place.")
-    print("This project is protected against plagiarism.")
+    print("\nAll copyright watermarks and attribution requirements are valid.")
+    print("This project uses traceable watermarks for source identification.")
     print("=" * 70)
 
 

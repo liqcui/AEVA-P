@@ -1,11 +1,12 @@
 # AEVA - Algorithm Evaluation & Validation Agent
-# Copyright (c) 2024-2026 Liquan Cui. All rights reserved.
+# Copyright (c) 2024-2026 AEVA Development Team
+# Open Source with Attribution Required
 #
-# This software is the proprietary work of Liquan Cui.
-# Unauthorized copying, modification, distribution, or use of this software,
-# via any medium, is strictly prohibited without explicit permission.
+# If you use this code, you must:
+# 1. Notify the original author
+# 2. Provide attribution in your project
+# 3. Keep this watermark intact
 #
-# Author: Liquan Cui
 # GitHub: https://github.com/liqcui/AEVA-P
-# Project ID: AEVA-2026-LQC-dc68e33
-# Contact: liqcui@redhat.com
+# Traceable Watermark ID: AEVA-2026-LQC-dc68e33
+# Contact for usage notification: liqcui@redhat.com

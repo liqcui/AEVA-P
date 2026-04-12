@@ -4,30 +4,33 @@ AEVA - Algorithm Evaluation & Validation Agent
 
 Main package initialization
 
-Copyright (c) 2024-2026 Liquan Cui
-All rights reserved.
+Copyright (c) 2024-2026 AEVA Development Team
+Open Source with Attribution Required
 
-This software is the proprietary work of Liquan Cui.
-Unauthorized copying, modification, distribution, or use of this software,
-via any medium, is strictly prohibited without explicit permission.
+If you use this code, you must:
+1. Notify the original author
+2. Provide attribution in your project
+3. Keep this watermark intact
 
 Project: AEVA v2.0 - Enterprise ML Model Evaluation Platform
-Author: Liquan Cui
 GitHub: https://github.com/liqcui/AEVA-P
 Creation Date: 2024-01-15
 Last Modified: 2026-04-12
-Unique ID: AEVA-2026-LQC-dc68e33
 
-For licensing inquiries, please contact: liqcui@redhat.com
+Traceable Watermark ID: AEVA-2026-LQC-dc68e33
+This unique identifier must remain in all derivatives.
+
+For usage notifications, please contact: liqcui@redhat.com
 """
 
 __version__ = "2.0.0"
-__author__ = "Liquan Cui"
-__copyright__ = "Copyright (c) 2024-2026 Liquan Cui. All rights reserved."
-__license__ = "Proprietary"
+__author__ = "AEVA Development Team"
+__copyright__ = "Copyright (c) 2024-2026 AEVA Development Team. Open Source with Attribution Required."
+__license__ = "Open Source with Attribution"
 __description__ = "Algorithm Evaluation & Validation Agent - Enterprise ML Model Evaluation Platform"
 __project_id__ = "AEVA-2026-LQC-dc68e33"
 __github__ = "https://github.com/liqcui/AEVA-P"
+__watermark__ = "AEVA-2026-LQC-dc68e33"  # Traceable watermark - DO NOT REMOVE
 
 from aeva.core.platform import AEVA
 from aeva.core.config import AEVAConfig
