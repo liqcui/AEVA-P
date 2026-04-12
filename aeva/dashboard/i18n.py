@@ -23,6 +23,7 @@ TRANSLATIONS = {
         "nav_model_cards": "📝 模型卡片",
         "nav_llm_evaluation": "🤖 LLM 评测",
         "nav_production": "⚙️ 生产级集成",
+        "nav_report_generation": "📄 报告生成",
 
         # System Info
         "system_info": "系统信息",
@@ -160,6 +161,7 @@ TRANSLATIONS = {
         "nav_model_cards": "📝 Model Cards",
         "nav_llm_evaluation": "🤖 LLM Evaluation",
         "nav_production": "⚙️ Production Integration",
+        "nav_report_generation": "📄 Report Generation",
 
         # System Info
         "system_info": "System Info",

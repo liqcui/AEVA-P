@@ -24,7 +24,8 @@ from aeva.dashboard.pages import (
     ab_testing,
     model_cards,
     llm_evaluation,
-    production_integrations
+    production_integrations,
+    report_generation
 )
 
 # Import advanced feature pages
@@ -107,7 +108,8 @@ page = st.sidebar.radio(
         t("nav_ab_testing"),
         t("nav_model_cards"),
         t("nav_llm_evaluation"),
-        t("nav_production")
+        t("nav_production"),
+        t("nav_report_generation")
     ]
 )
 
@@ -116,7 +118,7 @@ st.sidebar.markdown(f"### {t('system_info')}")
 st.sidebar.info(f"""
 **{t('version')}**: v2.0.0
 **{t('status')}**: {t('status_ready')}
-**{t('pages')}**: 8 {t('main_pages')} + 4 {t('advanced_features')}
+**{t('pages')}**: 9 {t('main_pages')} + 4 {t('advanced_features')}
 **{t('modules')}**: 12 {t('core')} + 3 {t('integrations')}
 **{t('test_coverage')}**: 65%
 """)
@@ -150,6 +152,8 @@ else:
         llm_evaluation.render()
     elif page == t("nav_production"):
         production_integrations.render()
+    elif page == t("nav_report_generation"):
+        report_generation.render()
 
 # Language selector
 language_selector()

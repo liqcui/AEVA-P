@@ -14,7 +14,8 @@ from . import (
     ab_testing,
     model_cards,
     llm_evaluation,
-    production_integrations
+    production_integrations,
+    report_generation
 )
 
 __all__ = [
@@ -25,5 +26,6 @@ __all__ = [
     'ab_testing',
     'model_cards',
     'llm_evaluation',
-    'production_integrations'
+    'production_integrations',
+    'report_generation'
 ]
