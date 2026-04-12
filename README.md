@@ -12,6 +12,23 @@
 ## Overview
 AEVA is an intelligent platform for algorithm evaluation and validation, designed to transform algorithm testing from manual operations to AI-driven standardized processes. It implements "Evaluation-as-a-Service" (EaaS) philosophy.
 
+### 🎯 Dashboard Structure
+**8 Main Pages** providing comprehensive evaluation capabilities:
+- 🏠 Overview & Metrics
+- 🔍 Explainability (SHAP/LIME)
+- 🛡️ Adversarial Robustness
+- 📊 Data Quality
+- 📈 A/B Testing
+- 📝 Model Cards
+- 🤖 LLM Evaluation
+- ⚙️ Production Integrations
+
+**4 Advanced Features** for enterprise-grade automation:
+- 🏆 Benchmark Suite - Multi-model comparison
+- 🤖 Auto Pipeline - Workflow orchestration
+- 🧠 Brain Analysis - AI-powered diagnostics
+- 🛡️ Quality Guard - Automated gates
+
 ## Architecture
 
 ```
@@ -424,7 +441,7 @@ Experience AEVA's full functionality directly in your browser:
 - ✅ No API keys required
 - ✅ Fully offline-capable
 - ✅ All features with mock data
-- ✅ Interactive Dashboard UI with 5 functional tabs ⭐ NEW
+- ✅ Interactive Dashboard UI with 8 main pages + 4 advanced features ⭐ NEW
 - ✅ LLM evaluation demos (hallucination, performance, safety) ⭐ NEW
 - ✅ Enterprise scalability architecture showcase ⭐ NEW
 
@@ -461,15 +478,21 @@ aeva dashboard
 # Access at: http://localhost:8501
 ```
 
-**Dashboard Features**:
+**Dashboard Features** (8 Main Pages):
 - 🏠 Overview & Metrics
 - 🔍 SHAP/LIME Explainability
 - 🛡️ Adversarial Robustness
 - 📊 Data Quality Analysis
-- 🤖 LLM Evaluation ⭐ NEW
-- 📈 A/B Testing & Deployment
+- 📈 A/B Testing
 - 📝 Model Card Generation
+- 🤖 LLM Evaluation ⭐ NEW
 - ⚙️ Production Integrations
+
+**Advanced Features** (4 Sub-Pages):
+- 🏆 Benchmark Suite - Standardized evaluation & multi-model comparison
+- 🤖 Auto Pipeline - Workflow orchestration & task scheduling
+- 🧠 Brain Analysis - AI-powered intelligent analysis with LLM
+- 🛡️ Quality Guard - Automated quality gates & release control
 
 💡 **Try it now**: Experience the full Dashboard UI in our [interactive demo](https://liqcui.github.io/AEVA-P/) (no server required)
 
@@ -485,21 +508,28 @@ cd demo
 open index.html  # or double-click the file
 
 # The demo is fully offline-capable and showcases:
-# - Interactive Dashboard UI with 5 tabs (Overview, Explainability, Robustness, Data Quality, LLM Eval) ⭐ NEW
-# - Guard quality gates
-# - Bench standardized benchmarks
-# - Auto pipeline visualization
-# - Brain intelligent analysis (core innovation)
+# - Interactive Dashboard UI with 8 main pages + 4 advanced features ⭐ NEW
+# - 8 Main Pages: Overview, Explainability, Robustness, Data Quality, A/B Testing, Model Cards, LLM Eval, Production
+# - 4 Advanced Features: Benchmark Suite, Auto Pipeline, Brain Analysis, Quality Guard
 # - LLM Evaluation (hallucination, performance, safety, UX) ⭐ NEW
 # - Enterprise scalability & Kubernetes deployment ⭐ NEW
 ```
 
-**Dashboard Features**:
-- 📊 **Overview**: 4 KPI cards, performance trends, quality distribution chart, recent models table
+**Dashboard Pages**:
+- 📊 **Overview**: 4 KPI cards, performance trends, quality distribution, recent models, advanced features showcase
 - 🔍 **Explainability**: SHAP feature importance, LIME analysis, counterfactual explanations
 - 🛡️ **Robustness**: FGSM/PGD attack testing, defense effectiveness evaluation
 - 📊 **Data Quality**: Quality metrics, missing values detection, distribution drift analysis
-- 🤖 **LLM Evaluation**: Hallucination detection, safety assessment, relevance & fluency scoring
+- 📈 **A/B Testing**: Statistical significance testing, Bayesian analysis, sequential testing
+- 📝 **Model Cards**: Automated model documentation generation and validation
+- 🤖 **LLM Evaluation**: Hallucination detection, safety assessment, performance profiling, UX scoring
+- ⚙️ **Production Integrations**: ART, Great Expectations, statsmodels integration showcase
+
+**Advanced Features** (Accessed via Home):
+- 🏆 **Benchmark Suite**: Create benchmark suites, run tests, multi-model comparison, performance ranking
+- 🤖 **Auto Pipeline**: Pipeline management, task scheduling, execution monitoring, distributed execution
+- 🧠 **Brain Analysis**: AI-powered result analysis, root cause detection, intelligent recommendations
+- 🛡️ **Quality Guard**: Quality gates management, automated checks, execution monitoring, statistics reports
 
 📖 **Demo Guide**: See [`demo/README.md`](demo/README.md) for detailed demo usage and presentation scripts.
 
