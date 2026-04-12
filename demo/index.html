@@ -1687,6 +1687,149 @@ Next steps:<br>
                 </div>
             </div>
 
+            <!-- LLM Evaluation Capabilities -->
+            <div class="card" style="border: 3px solid #8b5cf6; background: linear-gradient(135deg, #faf5ff, #f3e8ff);">
+                <div class="card-header" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed); color: white; border: none;">
+                    <h3 class="card-title" style="color: white; display: flex; align-items: center; gap: 0.5rem;">
+                        🤖 LLM 专项评测能力
+                        <span class="badge" style="background: #fbbf24; color: #78350f; font-size: 0.75rem; padding: 0.25rem 0.75rem;">AI Era</span>
+                    </h3>
+                </div>
+                <div style="padding: 1.5rem;">
+                    <p style="margin-bottom: 1.5rem; color: var(--gray-700); line-height: 1.8; font-size: 0.95rem;">
+                        AEVA 专为<strong>大语言模型（LLM）时代</strong>设计，提供全面的LLM评测能力，覆盖<strong>功能、性能、安全、体验</strong>四大维度：
+                    </p>
+
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem;">
+                        <!-- 1. Correctness -->
+                        <div style="background: white; padding: 1.5rem; border-radius: 12px; border-left: 5px solid #3b82f6; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                                <div style="font-size: 2.5rem;">✓</div>
+                                <div>
+                                    <h4 style="margin: 0; color: #3b82f6; font-size: 1.1rem;">功能正确性评测</h4>
+                                    <div style="font-size: 0.75rem; color: #6b7280; margin-top: 0.25rem;">Correctness Evaluation</div>
+                                </div>
+                            </div>
+                            <ul style="margin: 0; padding-left: 1.5rem; color: var(--gray-700); line-height: 1.9; font-size: 0.9rem;">
+                                <li><strong>准确性检测</strong> - 事实性验证、答案匹配度、知识库一致性</li>
+                                <li><strong>幻觉检测</strong> - 自我一致性检查、外部知识验证、置信度评分</li>
+                                <li><strong>逻辑推理</strong> - 推理链验证、因果关系检查、矛盾检测</li>
+                                <li><strong>任务完成度</strong> - 指令遵循、输出格式、完整性评分</li>
+                            </ul>
+                            <div style="margin-top: 1rem; padding: 0.75rem; background: #eff6ff; border-radius: 6px; font-size: 0.85rem; color: #1e40af;">
+                                💡 <strong>支持</strong>: RAG验证、Few-shot评测、Chain-of-Thought分析
+                            </div>
+                        </div>
+
+                        <!-- 2. Performance -->
+                        <div style="background: white; padding: 1.5rem; border-radius: 12px; border-left: 5px solid #10b981; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                                <div style="font-size: 2.5rem;">⚡</div>
+                                <div>
+                                    <h4 style="margin: 0; color: #10b981; font-size: 1.1rem;">性能评测</h4>
+                                    <div style="font-size: 0.75rem; color: #6b7280; margin-top: 0.25rem;">Performance Evaluation</div>
+                                </div>
+                            </div>
+                            <ul style="margin: 0; padding-left: 1.5rem; color: var(--gray-700); line-height: 1.9; font-size: 0.9rem;">
+                                <li><strong>延迟分析</strong> - TTFT、TPOT、P50/P95/P99延迟、端到端响应时间</li>
+                                <li><strong>吞吐量</strong> - QPS/TPS、并发处理能力、批处理优化</li>
+                                <li><strong>资源消耗</strong> - GPU利用率、内存占用、Token消耗统计</li>
+                                <li><strong>成本分析</strong> - API调用成本、Token单价、ROI计算</li>
+                            </ul>
+                            <div style="margin-top: 1rem; padding: 0.75rem; background: #f0fdf4; border-radius: 6px; font-size: 0.85rem; color: #065f46;">
+                                💡 <strong>支持</strong>: 压力测试、长文本性能、流式输出监控
+                            </div>
+                        </div>
+
+                        <!-- 3. Safety -->
+                        <div style="background: white; padding: 1.5rem; border-radius: 12px; border-left: 5px solid #ef4444; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                                <div style="font-size: 2.5rem;">🛡️</div>
+                                <div>
+                                    <h4 style="margin: 0; color: #ef4444; font-size: 1.1rem;">安全性评测</h4>
+                                    <div style="font-size: 0.75rem; color: #6b7280; margin-top: 0.25rem;">Safety Evaluation</div>
+                                </div>
+                            </div>
+                            <ul style="margin: 0; padding-left: 1.5rem; color: var(--gray-700); line-height: 1.9; font-size: 0.9rem;">
+                                <li><strong>有害内容过滤</strong> - 暴力、色情、仇恨言论、歧视内容检测</li>
+                                <li><strong>越狱测试</strong> - Prompt注入、指令绕过、DAN攻击防御</li>
+                                <li><strong>隐私保护</strong> - PII泄露检测、敏感信息识别、数据脱敏</li>
+                                <li><strong>对抗鲁棒性</strong> - 对抗样本、噪声干扰、输入扰动测试</li>
+                            </ul>
+                            <div style="margin-top: 1rem; padding: 0.75rem; background: #fef2f2; border-radius: 6px; font-size: 0.85rem; color: #991b1b;">
+                                💡 <strong>支持</strong>: Red Teaming、安全基准测试、合规性检查
+                            </div>
+                        </div>
+
+                        <!-- 4. User Experience -->
+                        <div style="background: white; padding: 1.5rem; border-radius: 12px; border-left: 5px solid #f59e0b; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                                <div style="font-size: 2.5rem;">⭐</div>
+                                <div>
+                                    <h4 style="margin: 0; color: #f59e0b; font-size: 1.1rem;">用户体验评测</h4>
+                                    <div style="font-size: 0.75rem; color: #6b7280; margin-top: 0.25rem;">User Experience Evaluation</div>
+                                </div>
+                            </div>
+                            <ul style="margin: 0; padding-left: 1.5rem; color: var(--gray-700); line-height: 1.9; font-size: 0.9rem;">
+                                <li><strong>相关性评分</strong> - 语义相似度、上下文匹配、意图识别</li>
+                                <li><strong>流畅度评估</strong> - 语言自然度、可读性、连贯性、语法正确性</li>
+                                <li><strong>多样性分析</strong> - 词汇丰富度、重复度检测、创造性评分</li>
+                                <li><strong>情感倾向</strong> - 情绪识别、语气分析、友好度评估</li>
+                            </ul>
+                            <div style="margin-top: 1rem; padding: 0.75rem; background: #fffbeb; border-radius: 6px; font-size: 0.85rem; color: #92400e;">
+                                💡 <strong>支持</strong>: 人工评测集成、A/B测试、用户反馈分析
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Automation Pipeline -->
+                    <div style="margin-top: 1.5rem; background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(102,126,234,0.3);">
+                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                            <div style="font-size: 2rem;">🔄</div>
+                            <h4 style="margin: 0; font-size: 1.1rem;">自动化评测流水线设计</h4>
+                        </div>
+                        <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.75rem; margin-top: 1rem;">
+                            <div style="text-align: center; padding: 0.75rem; background: rgba(255,255,255,0.15); border-radius: 8px; backdrop-filter: blur(10px);">
+                                <div style="font-size: 1.5rem; margin-bottom: 0.25rem;">1️⃣</div>
+                                <div style="font-size: 0.85rem; font-weight: bold;">数据准备</div>
+                                <div style="font-size: 0.7rem; opacity: 0.9; margin-top: 0.25rem;">自动采样</div>
+                            </div>
+                            <div style="text-align: center; padding: 0.75rem; background: rgba(255,255,255,0.15); border-radius: 8px; backdrop-filter: blur(10px);">
+                                <div style="font-size: 1.5rem; margin-bottom: 0.25rem;">2️⃣</div>
+                                <div style="font-size: 0.85rem; font-weight: bold;">模型调用</div>
+                                <div style="font-size: 0.7rem; opacity: 0.9; margin-top: 0.25rem;">批量推理</div>
+                            </div>
+                            <div style="text-align: center; padding: 0.75rem; background: rgba(255,255,255,0.15); border-radius: 8px; backdrop-filter: blur(10px);">
+                                <div style="font-size: 1.5rem; margin-bottom: 0.25rem;">3️⃣</div>
+                                <div style="font-size: 0.85rem; font-weight: bold;">多维评测</div>
+                                <div style="font-size: 0.7rem; opacity: 0.9; margin-top: 0.25rem;">并行执行</div>
+                            </div>
+                            <div style="text-align: center; padding: 0.75rem; background: rgba(255,255,255,0.15); border-radius: 8px; backdrop-filter: blur(10px);">
+                                <div style="font-size: 1.5rem; margin-bottom: 0.25rem;">4️⃣</div>
+                                <div style="font-size: 0.85rem; font-weight: bold;">结果分析</div>
+                                <div style="font-size: 0.7rem; opacity: 0.9; margin-top: 0.25rem;">AI诊断</div>
+                            </div>
+                            <div style="text-align: center; padding: 0.75rem; background: rgba(255,255,255,0.15); border-radius: 8px; backdrop-filter: blur(10px);">
+                                <div style="font-size: 1.5rem; margin-bottom: 0.25rem;">5️⃣</div>
+                                <div style="font-size: 0.85rem; font-weight: bold;">报告生成</div>
+                                <div style="font-size: 0.7rem; opacity: 0.9; margin-top: 0.25rem;">多格式</div>
+                            </div>
+                        </div>
+                        <div style="margin-top: 1rem; padding: 1rem; background: rgba(255,255,255,0.1); border-radius: 8px; border: 1px solid rgba(255,255,255,0.2);">
+                            <div style="font-size: 0.9rem; margin-bottom: 0.5rem;"><strong>🎯 自动化特性:</strong></div>
+                            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; font-size: 0.85rem;">
+                                <div>✓ CI/CD集成</div>
+                                <div>✓ 定时调度</div>
+                                <div>✓ 事件触发</div>
+                                <div>✓ 版本对比</div>
+                                <div>✓ 趋势分析</div>
+                                <div>✓ 自动告警</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Enhancement Modules -->
             <div class="card">
                 <div class="card-header">
