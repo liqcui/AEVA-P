@@ -3,21 +3,27 @@
 
 ---
 
-**Copyright (c) 2024-2026 AEVA Development Team**
-**Open Source with Attribution Required**
+**Copyright (c) 2024-2026 AEVA Development Team. All rights reserved.**
 
 **Traceable Watermark ID**: AEVA-2026-LQC-dc68e33
 **GitHub**: https://github.com/liqcui/AEVA-P
-**License**: Open Source with Attribution
+**License**: Dual License (Personal/Academic Free, Commercial Requires Permission)
 
-📧 **If you use this code, please notify**: liquan_cui@126.com
+📧 **Contact**: liquan_cui@126.com
+
+**License Summary**:
+- ✅ **FREE** for personal and academic use
+- ⚠️ **Commercial use requires explicit permission**
 
 **Usage Requirements**:
-1. ✅ Notify the original author when using this code
+1. ✅ Notify the author when using this code
 2. ✅ Provide attribution in your project
 3. ✅ Keep the traceable watermark (AEVA-2026-LQC-dc68e33) intact
+4. ⚠️ For commercial use: Email liquan_cui@126.com for permission
 
-This software is free to use for personal, academic, and commercial purposes, provided you follow the attribution requirements above.
+**Commercial Use**: If you plan to use AEVA in any revenue-generating project, product, or service, please contact us for a commercial license. We offer flexible options including free startup licenses for companies with <$1M revenue.
+
+See [LICENSE](LICENSE) for complete terms.
 
 ---
 

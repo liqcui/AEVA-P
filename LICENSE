@@ -1,4 +1,4 @@
-Open Source License with Attribution Required
+Dual License Agreement
 
 Copyright (c) 2024-2026 AEVA Development Team
 All rights reserved.
@@ -8,206 +8,376 @@ Traceable Watermark ID: AEVA-2026-LQC-dc68e33
 GitHub: https://github.com/liqcui/AEVA-P
 
 ================================================================================
-TERMS AND CONDITIONS
+DUAL LICENSE STRUCTURE
 ================================================================================
 
-1. GRANT OF LICENSE
-   Permission is hereby granted, free of charge, to any person obtaining a copy
-   of this software and associated documentation files (the "Software"), to use,
-   copy, modify, merge, publish, distribute, and/or sublicense the Software,
-   subject to the following conditions:
+This software is available under two license types:
 
-2. ATTRIBUTION REQUIREMENTS
-   You MUST:
+1. FREE LICENSE (Personal and Academic Use)
+2. COMMERCIAL LICENSE (Requires Permission and Agreement)
 
-   a) Notify the original author when using this code
-      Contact: liquan_cui@126.com
-      Subject: "AEVA Usage Notification - [Your Project Name]"
+================================================================================
+PART 1: FREE LICENSE (Personal and Academic Use)
+================================================================================
 
-   b) Provide clear attribution in your project:
-      - Include a reference to this repository
-      - State "Based on AEVA by AEVA Development Team"
-      - Link to: https://github.com/liqcui/AEVA-P
+GRANT OF LICENSE
 
-   c) Keep the traceable watermark intact:
-      - Watermark ID: AEVA-2026-LQC-dc68e33
-      - This identifier must remain in all source files
-      - Do not remove or modify copyright headers
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), for
+PERSONAL and ACADEMIC use only, subject to the following conditions:
 
-3. TRACEABLE WATERMARK
-   All source code files contain the unique watermark: AEVA-2026-LQC-dc68e33
+PERMITTED USES (FREE)
 
-   This watermark serves to:
-   - Identify the original source of the code
-   - Track derivatives and usage
-   - Protect against plagiarism
+✅ Personal projects and learning
+✅ Academic research and publications
+✅ Educational purposes
+✅ Non-profit organizations
+✅ Open source projects (non-commercial)
+✅ Prototyping and experimentation
 
-   **IMPORTANT**: Removing or modifying this watermark is strictly prohibited
-   and may result in loss of usage rights.
+REQUIREMENTS FOR FREE USE
 
-4. DERIVATIVE WORKS
-   When creating derivative works:
-   - Maintain all copyright notices
-   - Keep the watermark ID: AEVA-2026-LQC-dc68e33
-   - Add your own copyright for your modifications
-   - Clearly indicate what has been changed
+You MUST:
 
-   Example:
-   ```
-   Based on AEVA (AEVA-2026-LQC-dc68e33)
-   Original: https://github.com/liqcui/AEVA-P
-   Modified by: [Your Name/Organization]
-   Changes: [Description of modifications]
-   ```
-
-5. USAGE NOTIFICATION
-   When you start using this software, send a notification to:
-
+1. NOTIFY the author when using this code
    Email: liquan_cui@126.com
-   Subject: AEVA Usage Notification - [Your Project Name]
+   Subject: "AEVA Usage Notification - [Your Project Name]"
 
    Include:
-   - Project name
-   - Brief description of usage
-   - Whether it's personal, academic, or commercial
-   - Link to your project (if public)
+   - Project name and description
+   - Purpose (personal/academic)
+   - Expected usage timeline
 
-   This helps us:
-   - Understand how the software is used
-   - Provide support and updates
-   - Build a community of users
+2. PROVIDE ATTRIBUTION
+   In your project documentation, README, or publications:
 
-6. PERMITTED USE
-   ✅ Personal projects
-   ✅ Academic research
-   ✅ Commercial applications
-   ✅ Modification and distribution
-   ✅ Creating derivative works
+   ```
+   This project uses AEVA (Algorithm Evaluation & Validation Agent)
+   developed by AEVA Development Team.
 
-   All above uses are allowed provided you:
-   - Notify the author
-   - Provide attribution
-   - Keep the watermark
+   GitHub: https://github.com/liqcui/AEVA-P
+   Watermark ID: AEVA-2026-LQC-dc68e33
+   ```
 
-7. PROHIBITED ACTIONS
-   ❌ Removing copyright notices
-   ❌ Removing the watermark (AEVA-2026-LQC-dc68e33)
-   ❌ Claiming the work as your own
-   ❌ Using without attribution
-   ❌ Using without notifying the author
+3. KEEP THE WATERMARK INTACT
+   - Do not remove or modify: AEVA-2026-LQC-dc68e33
+   - Maintain all copyright headers in source files
+   - Preserve attribution in derivative works
 
-8. NO WARRANTY
-   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+4. SHARE MODIFICATIONS (Optional but encouraged)
+   - Consider contributing improvements back to the project
+   - Share your research findings that used AEVA
 
-9. LIMITATION OF LIABILITY
-   IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-   DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
-   OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
-   USE OR OTHER DEALINGS IN THE SOFTWARE.
+PROHIBITED UNDER FREE LICENSE
 
-10. TERMINATION
-    Your rights under this license will terminate automatically if you fail to:
-    - Notify the author of usage
-    - Provide proper attribution
-    - Maintain the watermark
-
-11. ATTRIBUTION EXAMPLES
-
-    Example 1 - README Attribution:
-    ```markdown
-    ## Acknowledgments
-    This project is based on AEVA (Algorithm Evaluation & Validation Agent)
-    developed by AEVA Development Team.
-
-    Original Repository: https://github.com/liqcui/AEVA-P
-    Watermark ID: AEVA-2026-LQC-dc68e33
-    ```
-
-    Example 2 - Documentation Attribution:
-    ```
-    Powered by AEVA - Algorithm Evaluation & Validation Agent
-    https://github.com/liqcui/AEVA-P
-    ```
-
-    Example 3 - Code Comments:
-    ```python
-    # Based on AEVA (AEVA-2026-LQC-dc68e33)
-    # Original: https://github.com/liqcui/AEVA-P
-    ```
-
-12. ENFORCEMENT
-    Failure to comply with these terms may result in:
-    - Request to add proper attribution
-    - Request to remove unauthorized usage
-    - Legal action for copyright infringement (if applicable)
+❌ Commercial use (selling products/services)
+❌ Integration into commercial software
+❌ Providing AEVA as a paid service
+❌ Using in revenue-generating applications
+❌ Corporate/business use without permission
 
 ================================================================================
-WATERMARK VERIFICATION
+PART 2: COMMERCIAL LICENSE (Requires Permission)
 ================================================================================
 
-This project includes embedded watermarks to prove authorship:
+COMMERCIAL USE DEFINITION
 
-- Unique Watermark ID: AEVA-2026-LQC-dc68e33
-- Embedded in: 93 Python source files
-- Git Commit: dc68e33 (initial comprehensive commit)
-- Creation Date: January 15, 2024
-- Total Lines of Code: 23,000+
+"Commercial use" includes but is not limited to:
 
-Verification methods:
+- Using AEVA in commercial products or services
+- Integrating AEVA into commercial software
+- Providing AEVA-based consulting or services for profit
+- Using AEVA in internal business operations
+- Building SaaS/PaaS products with AEVA
+- Any revenue-generating activity using AEVA
 
-1. Check file headers:
-   ```bash
-   grep -r "AEVA-2026-LQC-dc68e33" aeva/ | wc -l
-   # Output: 93
-   ```
+OBTAINING COMMERCIAL LICENSE
 
-2. Verify metadata:
-   ```bash
-   python3 -c "import aeva; print(aeva.__watermark__)"
-   # Output: AEVA-2026-LQC-dc68e33
-   ```
+To use AEVA for commercial purposes, you MUST obtain written permission:
 
-3. Run verification script:
-   ```bash
-   python3 verify_copyright.py
-   ```
+Contact: liquan_cui@126.com
+Subject: "AEVA Commercial License Request - [Company/Project Name]"
+
+Include in your request:
+1. Company/organization name
+2. Project description
+3. Intended commercial use
+4. Expected scale (users, revenue, etc.)
+5. Timeline for usage
+
+We will respond within 7 business days with:
+- License approval or questions
+- Terms and conditions (if applicable)
+- Any fees or requirements (case-by-case basis)
+
+COMMERCIAL LICENSE OPTIONS
+
+We offer flexible commercial licensing:
+
+Option 1: Startup License (Free under conditions)
+- For startups with <$1M annual revenue
+- Requires attribution and notification
+- Valid for 2 years
+- Must renew if revenue exceeds threshold
+
+Option 2: Enterprise License (Custom terms)
+- For established companies
+- Custom terms based on usage
+- Includes support and updates
+- Negotiable pricing
+
+Option 3: OEM/Redistribution License
+- For embedding AEVA in your products
+- Custom terms and pricing
+- White-label options available
+
+COMMERCIAL LICENSE BENEFITS
+
+✅ Full commercial usage rights
+✅ Technical support
+✅ Priority bug fixes
+✅ Feature requests consideration
+✅ Legal protection and indemnification
+✅ Custom terms negotiable
+
+================================================================================
+PART 3: GENERAL TERMS (Both Licenses)
+================================================================================
+
+TRACEABLE WATERMARK
+
+All source code contains the unique watermark: AEVA-2026-LQC-dc68e33
+
+This watermark:
+- Identifies the original source
+- Tracks usage and derivatives
+- Must remain in all copies and derivatives
+- Removal is strictly prohibited
+
+Watermark verification:
+```bash
+grep -r "AEVA-2026-LQC-dc68e33" aeva/ | wc -l
+# Should return: 93 (number of source files)
+```
+
+DERIVATIVE WORKS
+
+When creating derivative works:
+
+1. Maintain original copyright notices
+2. Keep the watermark (AEVA-2026-LQC-dc68e33)
+3. Add your own copyright for your modifications
+4. Clearly indicate changes made
+5. Follow the same license restrictions
+
+Example:
+```
+Original: AEVA by AEVA Development Team (AEVA-2026-LQC-dc68e33)
+Modified by: [Your Name/Company]
+Changes: [Description]
+License: [Same restrictions apply]
+```
+
+ATTRIBUTION REQUIREMENTS
+
+Minimum attribution in your project:
+
+```markdown
+## Acknowledgments
+This project is based on AEVA (Algorithm Evaluation & Validation Agent)
+by AEVA Development Team.
+
+Repository: https://github.com/liqcui/AEVA-P
+Watermark: AEVA-2026-LQC-dc68e33
+License: [Personal/Academic Free] or [Commercial - Licensed]
+```
+
+NO WARRANTY
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+
+LIMITATION OF LIABILITY
+
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+TERMINATION
+
+Your rights under this license terminate automatically if you:
+- Fail to notify the author
+- Remove or modify the watermark
+- Use commercially without permission
+- Violate any terms of this license
+
+Upon termination, you must:
+- Cease all use of the software
+- Remove AEVA from your projects
+- Delete all copies
+
+ENFORCEMENT
+
+Violation of this license may result in:
+- Formal request to cease usage
+- Requirement to obtain commercial license
+- Legal action for copyright infringement
+- Claims for damages (commercial violations)
+
+We prefer collaborative resolution but reserve all legal rights.
+
+================================================================================
+PART 4: USAGE EXAMPLES
+================================================================================
+
+Example 1: PERSONAL PROJECT ✅ (Free)
+
+Scenario: Building a personal ML evaluation tool
+
+Steps:
+1. Send notification email
+2. Add attribution in README
+3. Keep watermark in source files
+4. Use freely for personal learning
+
+Result: FREE - No permission needed
+
+---
+
+Example 2: ACADEMIC RESEARCH ✅ (Free)
+
+Scenario: Using AEVA in PhD research
+
+Steps:
+1. Notify author with research details
+2. Cite in publications:
+   "We use AEVA [1] for model evaluation..."
+   [1] AEVA Development Team. https://github.com/liqcui/AEVA-P
+3. Keep watermark in code
+4. Share research findings (optional)
+
+Result: FREE - No permission needed
+
+---
+
+Example 3: STARTUP PRODUCT ⚠️ (Requires Permission)
+
+Scenario: Building a SaaS ML platform
+
+Steps:
+1. Email for commercial license
+2. Explain business model and usage
+3. Wait for approval/terms
+4. Sign commercial license agreement
+5. Use with full commercial rights
+
+Result: MAY BE FREE (if <$1M revenue) or PAID
+
+---
+
+Example 4: ENTERPRISE USE ⚠️ (Requires Permission)
+
+Scenario: Using AEVA in internal company systems
+
+Steps:
+1. Request enterprise license
+2. Discuss usage scale and requirements
+3. Negotiate terms and pricing
+4. Sign commercial agreement
+5. Deploy with support
+
+Result: COMMERCIAL LICENSE REQUIRED
+
+---
+
+Example 5: CONSULTING ⚠️ (Requires Permission)
+
+Scenario: Providing ML consulting using AEVA
+
+Steps:
+1. Request commercial license
+2. Describe consulting services
+3. Obtain permission
+4. Provide attribution to clients
+5. Pay fees if applicable
+
+Result: COMMERCIAL LICENSE REQUIRED
+
+================================================================================
+PART 5: QUICK DECISION TREE
+================================================================================
+
+Question 1: Are you making money from this use?
+
+NO → Personal/Academic license (FREE)
+     → Notify + Attribute + Keep watermark
+
+YES → Question 2: What's your annual revenue?
+
+      < $1M → Startup license (Potentially FREE)
+              → Email for approval
+
+      ≥ $1M → Commercial license (CUSTOM TERMS)
+              → Email for negotiation
+
+Question 2: Is it open source AND non-commercial?
+
+YES → Personal/Academic license (FREE)
+NO → Commercial license needed
 
 ================================================================================
 CONTACT INFORMATION
 ================================================================================
 
-For usage notifications, questions, or permissions:
+For all inquiries:
 
 Email: liquan_cui@126.com
-GitHub: https://github.com/liqcui
-Project: https://github.com/liqcui/AEVA-P
 
-We appreciate hearing from users and are happy to:
-- Answer questions
-- Provide guidance
-- Discuss collaborations
-- Offer support
+Subjects:
+- "AEVA Usage Notification - [Project]" (personal/academic)
+- "AEVA Commercial License Request - [Company]" (commercial)
+- "AEVA Support Question" (technical help)
+- "AEVA Contribution" (code/docs improvements)
+
+Response time:
+- Usage notifications: Acknowledged within 3 days
+- Commercial inquiries: Detailed response within 7 days
+- Support questions: Best effort (community support preferred)
+
+GitHub: https://github.com/liqcui/AEVA-P
+- Report issues
+- Submit pull requests
+- Community discussions
 
 ================================================================================
 SUMMARY
 ================================================================================
 
-✅ Free to use for any purpose
-✅ Can modify and distribute
-✅ Can use commercially
+FREE USE:
+✅ Personal projects
+✅ Academic research
+✅ Learning and education
+✅ Non-profit organizations
+Requirements: Notify + Attribute + Keep watermark
 
-Requirements:
+COMMERCIAL USE:
+⚠️ Requires explicit permission
+⚠️ Contact: liquan_cui@126.com
+⚠️ May involve licensing fees (case-by-case)
+Benefits: Full rights + Support + Legal protection
+
+ALWAYS REQUIRED:
 1️⃣ Notify author: liquan_cui@126.com
-2️⃣ Provide attribution in your project
-3️⃣ Keep watermark (AEVA-2026-LQC-dc68e33) intact
-
-This is an open and permissive license that only asks for recognition
-and notification of usage.
+2️⃣ Provide attribution
+3️⃣ Keep watermark: AEVA-2026-LQC-dc68e33
 
 ================================================================================
 
+We encourage open collaboration while protecting the value created.
+Thank you for respecting this dual license structure!
+
 © 2024-2026 AEVA Development Team
 Traceable Watermark ID: AEVA-2026-LQC-dc68e33
-Open Source with Attribution Required
+Contact: liquan_cui@126.com

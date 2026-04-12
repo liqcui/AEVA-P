@@ -16,7 +16,7 @@ from typing import Tuple, List
 
 # Expected copyright strings
 EXPECTED_COPYRIGHT = "Copyright (c) 2024-2026 AEVA Development Team"
-EXPECTED_ATTRIBUTION = "Open Source with Attribution"
+EXPECTED_LICENSE_KEYWORD = "Dual License"  # Or "License:"
 EXPECTED_WATERMARK = "AEVA-2026-LQC-dc68e33"
 EXPECTED_GITHUB = "https://github.com/liqcui/AEVA-P"
 
@@ -37,8 +37,8 @@ def verify_file_copyright(filepath: Path) -> Tuple[bool, List[str]]:
         if EXPECTED_COPYRIGHT not in content:
             missing.append("Copyright notice")
 
-        if EXPECTED_ATTRIBUTION not in content:
-            missing.append("Attribution requirement")
+        if EXPECTED_LICENSE_KEYWORD not in content and "License:" not in content:
+            missing.append("License information")
 
         if EXPECTED_WATERMARK not in content:
             missing.append("Watermark ID")
@@ -114,7 +114,8 @@ def main():
         checks = [
             ("Version", aeva.__version__, "2.0.0"),
             ("Author", aeva.__author__, "AEVA Development Team"),
-            ("Copyright", aeva.__copyright__, "Copyright (c) 2024-2026 AEVA Development Team. Open Source with Attribution Required."),
+            ("Copyright", aeva.__copyright__, "Copyright (c) 2024-2026 AEVA Development Team. All rights reserved."),
+            ("License", aeva.__license__, "Dual License: Free for Personal/Academic, Commercial Requires Permission"),
             ("Watermark", aeva.__watermark__, EXPECTED_WATERMARK),
             ("GitHub", aeva.__github__, EXPECTED_GITHUB),
         ]
@@ -147,8 +148,10 @@ def main():
     print(f"Watermark ID: {aeva.__watermark__}")
     print(f"License: {aeva.__license__}")
     print(f"Files Protected: {len(valid_files)}/{len(py_files)}")
-    print("\nAll copyright watermarks and attribution requirements are valid.")
-    print("This project uses traceable watermarks for source identification.")
+    print("\nAll copyright watermarks and license requirements are valid.")
+    print("This project uses dual licensing:")
+    print("  - FREE for personal and academic use")
+    print("  - Commercial use requires permission (liquan_cui@126.com)")
     print("=" * 70)
 
 
