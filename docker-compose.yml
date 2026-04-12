@@ -1,0 +1,72 @@
+version: '3.8'
+
+services:
+  # AEVA Core Service
+  aeva:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: aeva-core
+    volumes:
+      - ./data:/app/data
+      - ./results:/app/results
+      - ./logs:/app/logs
+      - ./config:/app/config
+    environment:
+      - PYTHONUNBUFFERED=1
+      - AEVA_ENV=${AEVA_ENV:-development}
+    networks:
+      - aeva-network
+    command: ["python", "-m", "pytest", "tests/", "-v"]
+
+  # AEVA Dashboard (Streamlit)
+  aeva-dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: aeva-dashboard
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data:/app/data
+      - ./results:/app/results
+      - ./config:/app/config
+    environment:
+      - PYTHONUNBUFFERED=1
+    networks:
+      - aeva-network
+    command: ["streamlit", "run", "aeva/dashboard/app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+
+  # AEVA Examples Runner
+  aeva-examples:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: aeva-examples
+    volumes:
+      - ./results:/app/results
+      - ./data:/app/data
+    environment:
+      - PYTHONUNBUFFERED=1
+    networks:
+      - aeva-network
+    command: ["python", "examples/run_all_quick_tests.py"]
+
+  # AEVA Production Integration Demo
+  aeva-production:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: aeva-production
+    volumes:
+      - ./results:/app/results
+      - ./data:/app/data
+    environment:
+      - PYTHONUNBUFFERED=1
+    networks:
+      - aeva-network
+    command: ["python", "examples/production_integrations_example.py"]
+
+networks:
+  aeva-network:
+    driver: bridge

@@ -1,0 +1,47 @@
+# AEVA v2.0 Basic Docker Image
+# Lightweight image with only core dependencies (no production libraries)
+
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# Install minimal dependencies
+RUN apt-get update && apt-get install -y \
+    gcc \
+    libgomp1 \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy and install core requirements only
+COPY requirements.txt .
+RUN pip install --no-cache-dir \
+    scikit-learn \
+    shap \
+    lime \
+    scipy \
+    pandas \
+    numpy \
+    matplotlib \
+    pytest
+
+# Copy application code
+COPY aeva/ ./aeva/
+COPY examples/ ./examples/
+COPY tests/ ./tests/
+COPY setup.py README.md LICENSE ./
+
+# Install AEVA
+RUN pip install -e .
+
+# Create directories
+RUN mkdir -p /app/results /app/data
+
+# Set environment
+ENV PYTHONUNBUFFERED=1
+ENV PYTHONPATH=/app
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
+    CMD python -c "import aeva; print('OK')" || exit 1
+
+# Default command
+CMD ["python", "-m", "aeva", "--help"]

@@ -1,0 +1,2136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEVA - Algorithm Evaluation & Validation Agent</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            background: var(--gray-50);
+            color: var(--gray-900);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: white;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .logo-text h1 {
+            font-size: 1.5rem;
+            color: var(--gray-900);
+            font-weight: 700;
+        }
+
+        .logo-text p {
+            font-size: 0.875rem;
+            color: var(--gray-700);
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--gray-700);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+
+        nav a:hover, nav a.active {
+            background: var(--gray-100);
+            color: var(--primary);
+        }
+
+        /* Main Content */
+        main {
+            padding: 2rem 0;
+        }
+
+        .page-section {
+            display: none;
+        }
+
+        .page-section.active {
+            display: block;
+        }
+
+        /* Cards */
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--gray-900);
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .stat-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .stat-icon.success { background: rgba(16, 185, 129, 0.1); }
+        .stat-icon.warning { background: rgba(245, 158, 11, 0.1); }
+        .stat-icon.danger { background: rgba(239, 68, 68, 0.1); }
+        .stat-icon.primary { background: rgba(37, 99, 235, 0.1); }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--gray-900);
+        }
+
+        .stat-label {
+            color: var(--gray-700);
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+        }
+
+        .stat-trend {
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+        }
+
+        .stat-trend.up {
+            color: var(--success);
+        }
+
+        .stat-trend.down {
+            color: var(--danger);
+        }
+
+        /* Badge */
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .badge.success {
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--success);
+        }
+
+        .badge.warning {
+            background: rgba(245, 158, 11, 0.1);
+            color: var(--warning);
+        }
+
+        .badge.danger {
+            background: rgba(239, 68, 68, 0.1);
+            color: var(--danger);
+        }
+
+        .badge.info {
+            background: rgba(37, 99, 235, 0.1);
+            color: var(--primary);
+        }
+
+        /* Button */
+        .btn {
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            border: none;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+        }
+
+        .btn-secondary {
+            background: var(--gray-200);
+            color: var(--gray-700);
+        }
+
+        .btn-secondary:hover {
+            background: var(--gray-300);
+        }
+
+        /* Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 0.75rem;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        th {
+            font-weight: 600;
+            color: var(--gray-700);
+            font-size: 0.875rem;
+            text-transform: uppercase;
+        }
+
+        tr:hover {
+            background: var(--gray-50);
+        }
+
+        /* Progress Bar */
+        .progress {
+            width: 100%;
+            height: 8px;
+            background: var(--gray-200);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: var(--success);
+            transition: width 0.3s;
+        }
+
+        .progress-bar.warning {
+            background: var(--warning);
+        }
+
+        .progress-bar.danger {
+            background: var(--danger);
+        }
+
+        /* Chart Container */
+        .chart-container {
+            position: relative;
+            height: 300px;
+            margin: 1rem 0;
+        }
+
+        /* Grid Layout */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        /* Alert */
+        .alert {
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .alert-success {
+            background: rgba(16, 185, 129, 0.1);
+            border-left: 4px solid var(--success);
+            color: var(--success);
+        }
+
+        .alert-warning {
+            background: rgba(245, 158, 11, 0.1);
+            border-left: 4px solid var(--warning);
+            color: var(--warning);
+        }
+
+        .alert-danger {
+            background: rgba(239, 68, 68, 0.1);
+            border-left: 4px solid var(--danger);
+            color: var(--danger);
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--gray-200);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 2rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.5rem;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--primary);
+            border: 2px solid white;
+            box-shadow: 0 0 0 2px var(--primary);
+        }
+
+        .timeline-item.success::before {
+            background: var(--success);
+            box-shadow: 0 0 0 2px var(--success);
+        }
+
+        .timeline-item.danger::before {
+            background: var(--danger);
+            box-shadow: 0 0 0 2px var(--danger);
+        }
+
+        .timeline-content {
+            background: var(--gray-50);
+            padding: 1rem;
+            border-radius: 8px;
+        }
+
+        .timeline-time {
+            font-size: 0.875rem;
+            color: var(--gray-700);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Code Block */
+        .code-block {
+            background: var(--gray-900);
+            color: #e5e7eb;
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.875rem;
+            line-height: 1.5;
+        }
+
+        .code-block .keyword {
+            color: #c678dd;
+        }
+
+        .code-block .string {
+            color: #98c379;
+        }
+
+        .code-block .number {
+            color: #d19a66;
+        }
+
+        .code-block .comment {
+            color: #5c6370;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">A</div>
+                    <div class="logo-text">
+                        <h1>AEVA Platform</h1>
+                        <p>Algorithm Evaluation & Validation Agent</p>
+                    </div>
+                </div>
+                <nav>
+                    <a href="#" class="nav-link active" data-page="dashboard">仪表盘</a>
+                    <a href="#" class="nav-link" data-page="architecture">架构说明</a>
+                    <a href="#" class="nav-link" data-page="guard">Guard门禁</a>
+                    <a href="#" class="nav-link" data-page="bench">Bench基准</a>
+                    <a href="#" class="nav-link" data-page="auto">Auto流水线</a>
+                    <a href="#" class="nav-link" data-page="brain">Brain智能分析</a>
+                    <a href="#" class="nav-link" data-page="enhancements">增强功能</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Dashboard Page -->
+        <div id="dashboard" class="page-section active">
+            <h2 style="margin-bottom: 1.5rem; font-size: 1.875rem;">评测概览</h2>
+
+            <!-- Stats Grid -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <div>
+                            <div class="stat-value">42</div>
+                            <div class="stat-label">总评测次数</div>
+                        </div>
+                        <div class="stat-icon primary">📊</div>
+                    </div>
+                    <div class="stat-trend up">↗ +12% 较上周</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <div>
+                            <div class="stat-value">38</div>
+                            <div class="stat-label">通过门禁</div>
+                        </div>
+                        <div class="stat-icon success">✓</div>
+                    </div>
+                    <div class="stat-trend up">↗ 90.5% 通过率</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <div>
+                            <div class="stat-value">4</div>
+                            <div class="stat-label">失败案例</div>
+                        </div>
+                        <div class="stat-icon danger">✗</div>
+                    </div>
+                    <div class="stat-trend down">↘ -5% 较上周</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <div>
+                            <div class="stat-value">92.3%</div>
+                            <div class="stat-label">平均准确率</div>
+                        </div>
+                        <div class="stat-icon success">🎯</div>
+                    </div>
+                    <div class="stat-trend up">↗ +2.1% 较上周</div>
+                </div>
+            </div>
+
+            <!-- Recent Evaluations -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">最近评测</h3>
+                    <button class="btn btn-primary">新建评测</button>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>模型名称</th>
+                            <th>版本</th>
+                            <th>准确率</th>
+                            <th>性能</th>
+                            <th>状态</th>
+                            <th>时间</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>bert-base-chinese</strong></td>
+                            <td>v2.1.0</td>
+                            <td>94.2%</td>
+                            <td>85ms</td>
+                            <td><span class="badge success">通过</span></td>
+                            <td>2分钟前</td>
+                        </tr>
+                        <tr>
+                            <td><strong>gpt-sentiment</strong></td>
+                            <td>v1.5.2</td>
+                            <td>89.7%</td>
+                            <td>120ms</td>
+                            <td><span class="badge warning">警告</span></td>
+                            <td>15分钟前</td>
+                        </tr>
+                        <tr>
+                            <td><strong>text-classifier</strong></td>
+                            <td>v3.0.1</td>
+                            <td>91.5%</td>
+                            <td>95ms</td>
+                            <td><span class="badge success">通过</span></td>
+                            <td>1小时前</td>
+                        </tr>
+                        <tr>
+                            <td><strong>roberta-large</strong></td>
+                            <td>v2.0.0</td>
+                            <td>82.3%</td>
+                            <td>250ms</td>
+                            <td><span class="badge danger">失败</span></td>
+                            <td>2小时前</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Charts Grid -->
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">准确率趋势</h3>
+                    </div>
+                    <canvas id="accuracyChart"></canvas>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">性能分布</h3>
+                    </div>
+                    <canvas id="performanceChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Architecture Page -->
+        <div id="architecture" class="page-section">
+            <h2 style="margin-bottom: 1.5rem; font-size: 1.875rem;">🏗️ AEVA 架构与组件</h2>
+
+            <!-- Overview -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">系统架构概览</h3>
+                </div>
+                <div>
+                    <p style="margin-bottom: 1rem; color: var(--gray-700); line-height: 1.8;">
+                        AEVA (Algorithm Evaluation & Validation Agent) 是一个<strong>综合性ML模型评测与验证平台</strong>，
+                        采用模块化架构设计，涵盖从数据质量到生产部署的<strong>完整ML生命周期</strong>。
+                        系统由<strong>5大核心组件</strong>和<strong>12个增强模块</strong>构成，提供<strong>312+个API方法</strong>。
+                    </p>
+                    <div style="padding: 1rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 8px; color: white;">
+                        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; text-align: center;">
+                            <div>
+                                <div style="font-size: 1.5rem; font-weight: bold;">5</div>
+                                <div style="opacity: 0.9; font-size: 0.875rem;">核心组件</div>
+                            </div>
+                            <div>
+                                <div style="font-size: 1.5rem; font-weight: bold;">12</div>
+                                <div style="opacity: 0.9; font-size: 0.875rem;">增强模块</div>
+                            </div>
+                            <div>
+                                <div style="font-size: 1.5rem; font-weight: bold;">17K+</div>
+                                <div style="opacity: 0.9; font-size: 0.875rem;">代码行数</div>
+                            </div>
+                            <div>
+                                <div style="font-size: 1.5rem; font-weight: bold;">312+</div>
+                                <div style="opacity: 0.9; font-size: 0.875rem;">API方法</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Core Components -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">🎯 核心组件架构</h3>
+                </div>
+                <div>
+                    <p style="margin-bottom: 1.5rem; color: var(--gray-700);">
+                        AEVA采用<strong>分层架构</strong>，5大核心组件各司其职，协同工作：
+                    </p>
+
+                    <!-- Component 1: Guard -->
+                    <div style="margin-bottom: 1.5rem; padding: 1rem; border-left: 4px solid #3b82f6; background: var(--gray-50); border-radius: 4px;">
+                        <h4 style="color: #3b82f6; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="font-size: 1.5rem;">🛡️</span>
+                            <span>AEVA-Guard: 质量门禁系统</span>
+                        </h4>
+                        <p style="color: var(--gray-700); margin-bottom: 0.5rem; line-height: 1.6;">
+                            <strong>功能定位</strong>: 自动化质量检查，确保模型达到上线标准<br>
+                            <strong>核心能力</strong>:
+                        </p>
+                        <ul style="margin-left: 1.5rem; color: var(--gray-700); line-height: 1.8;">
+                            <li><strong>多维度阈值检查</strong> - 准确率、精确率、召回率、F1分数、AUC</li>
+                            <li><strong>公平性验证</strong> - 自动检测6种偏见指标，符合80% rule法律要求</li>
+                            <li><strong>性能门禁</strong> - P99延迟、吞吐量、资源消耗限制</li>
+                            <li><strong>数据质量检查</strong> - 完整性、有效性、唯一性评分</li>
+                            <li><strong>鲁棒性测试</strong> - 对抗攻击抵抗能力验证</li>
+                        </ul>
+                        <p style="margin-top: 0.5rem; padding: 0.5rem; background: white; border-radius: 4px; font-size: 0.875rem;">
+                            💡 <strong>应用场景</strong>: CI/CD流水线集成、模型上线前自动验证、质量报告生成
+                        </p>
+                    </div>
+
+                    <!-- Component 2: Bench -->
+                    <div style="margin-bottom: 1.5rem; padding: 1rem; border-left: 4px solid #10b981; background: var(--gray-50); border-radius: 4px;">
+                        <h4 style="color: #10b981; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="font-size: 1.5rem;">📊</span>
+                            <span>AEVA-Bench: 基准测试框架</span>
+                        </h4>
+                        <p style="color: var(--gray-700); margin-bottom: 0.5rem; line-height: 1.6;">
+                            <strong>功能定位</strong>: 标准化评测，横向对比不同模型<br>
+                            <strong>核心能力</strong>:
+                        </p>
+                        <ul style="margin-left: 1.5rem; color: var(--gray-700); line-height: 1.8;">
+                            <li><strong>统一评测协议</strong> - 标准化的数据集、指标、流程</li>
+                            <li><strong>多模型对比</strong> - 支持2-10个模型同时对比，加权排名</li>
+                            <li><strong>Champion/Challenger模式</strong> - 生产模型vs候选模型对比</li>
+                            <li><strong>统计显著性检验</strong> - T-test、Chi-square、Cohen's d效应量</li>
+                            <li><strong>性能基准库</strong> - 行业标准基准数据集和SOTA结果</li>
+                        </ul>
+                        <p style="margin-top: 0.5rem; padding: 0.5rem; background: white; border-radius: 4px; font-size: 0.875rem;">
+                            💡 <strong>应用场景</strong>: 模型选型决策、A/B测试、性能回归检测、技术选型
+                        </p>
+                    </div>
+
+                    <!-- Component 3: Auto -->
+                    <div style="margin-bottom: 1.5rem; padding: 1rem; border-left: 4px solid #f59e0b; background: var(--gray-50); border-radius: 4px;">
+                        <h4 style="color: #f59e0b; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="font-size: 1.5rem;">⚙️</span>
+                            <span>AEVA-Auto: 自动化评测流水线</span>
+                        </h4>
+                        <p style="color: var(--gray-700); margin-bottom: 0.5rem; line-height: 1.6;">
+                            <strong>功能定位</strong>: 端到端自动化，从数据到报告全流程<br>
+                            <strong>核心能力</strong>:
+                        </p>
+                        <ul style="margin-left: 1.5rem; color: var(--gray-700); line-height: 1.8;">
+                            <li><strong>工作流编排</strong> - DAG定义，支持条件分支和并行执行</li>
+                            <li><strong>自动调度</strong> - Cron表达式、间隔触发、事件驱动</li>
+                            <li><strong>持续评测</strong> - 实时监控生产数据，自动触发评估</li>
+                            <li><strong>增量评测</strong> - 仅评测变化部分，提升效率</li>
+                            <li><strong>结果归档</strong> - 历史记录、版本对比、趋势分析</li>
+                        </ul>
+                        <p style="margin-top: 0.5rem; padding: 0.5rem; background: white; border-radius: 4px; font-size: 0.875rem;">
+                            💡 <strong>应用场景</strong>: 定期模型健康检查、数据漂移监控、自动化报告生成
+                        </p>
+                    </div>
+
+                    <!-- Component 4: Brain -->
+                    <div style="margin-bottom: 1.5rem; padding: 1rem; border-left: 4px solid #8b5cf6; background: var(--gray-50); border-radius: 4px;">
+                        <h4 style="color: #8b5cf6; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="font-size: 1.5rem;">🧠</span>
+                            <span>AEVA-Brain: 智能分析引擎</span>
+                        </h4>
+                        <p style="color: var(--gray-700); margin-bottom: 0.5rem; line-height: 1.6;">
+                            <strong>功能定位</strong>: AI驱动的深度分析与决策建议<br>
+                            <strong>核心能力</strong>:
+                        </p>
+                        <ul style="margin-left: 1.5rem; color: var(--gray-700); line-height: 1.8;">
+                            <li><strong>根因分析</strong> - 自动识别性能下降、公平性问题的根本原因</li>
+                            <li><strong>趋势预测</strong> - 基于历史数据预测模型性能趋势</li>
+                            <li><strong>异常检测</strong> - Z-score、IQR、Isolation Forest多种算法</li>
+                            <li><strong>优化建议</strong> - 自动生成超参数调优、数据增强建议</li>
+                            <li><strong>知识库集成</strong> - Few-shot学习、Prompt工程、最佳实践推荐</li>
+                        </ul>
+                        <p style="margin-top: 0.5rem; padding: 0.5rem; background: white; border-radius: 4px; font-size: 0.875rem;">
+                            💡 <strong>应用场景</strong>: 问题诊断、性能优化、决策支持、知识沉淀
+                        </p>
+                    </div>
+
+                    <!-- Component 5: Report -->
+                    <div style="margin-bottom: 1.5rem; padding: 1rem; border-left: 4px solid #ec4899; background: var(--gray-50); border-radius: 4px;">
+                        <h4 style="color: #ec4899; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="font-size: 1.5rem;">📄</span>
+                            <span>AEVA-Report: 报告生成系统</span>
+                        </h4>
+                        <p style="color: var(--gray-700); margin-bottom: 0.5rem; line-height: 1.6;">
+                            <strong>功能定位</strong>: 多格式、可定制的专业报告输出<br>
+                            <strong>核心能力</strong>:
+                        </p>
+                        <ul style="margin-left: 1.5rem; color: var(--gray-700); line-height: 1.8;">
+                            <li><strong>多格式支持</strong> - HTML、Markdown、PDF、JSON</li>
+                            <li><strong>合规报告模板</strong> - EU AI Act、FDA医疗器械、金融监管</li>
+                            <li><strong>可视化集成</strong> - Chart.js图表、混淆矩阵、ROC曲线</li>
+                            <li><strong>自定义品牌</strong> - Logo、颜色、样式完全可配置</li>
+                            <li><strong>批量生成</strong> - 支持多模型、多数据集批量报告</li>
+                        </ul>
+                        <p style="margin-top: 0.5rem; padding: 0.5rem; background: white; border-radius: 4px; font-size: 0.875rem;">
+                            💡 <strong>应用场景</strong>: 监管提交、内部审计、业务汇报、技术文档
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enhancement Modules -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">🚀 12个增强模块</h3>
+                </div>
+                <div>
+                    <p style="margin-bottom: 1rem; color: var(--gray-700);">
+                        基于5大核心组件，AEVA提供12个专业增强模块，覆盖ML全生命周期：
+                    </p>
+
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+                        <!-- Module cards in 2 columns -->
+                        <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px; border: 1px solid var(--gray-200);">
+                            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                                <span style="font-size: 1.25rem;">📊</span>
+                                <strong style="color: var(--gray-800);">1. 报告生成</strong>
+                            </div>
+                            <p style="font-size: 0.875rem; color: var(--gray-600); margin: 0;">
+                                HTML/Markdown/PDF多格式报告，支持图表和自定义品牌
+                            </p>
+                        </div>
+
+                        <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px; border: 1px solid var(--gray-200);">
+                            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                                <span style="font-size: 1.25rem;">⚖️</span>
+                                <strong style="color: var(--gray-800);">2. 模型对比</strong>
+                            </div>
+                            <p style="font-size: 0.875rem; color: var(--gray-600); margin: 0;">
+                                多模型加权排名、Champion/Challenger模式、统计检验
+                            </p>
+                        </div>
+
+                        <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px; border: 1px solid var(--gray-200);">
+                            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                                <span style="font-size: 1.25rem;">💾</span>
+                                <strong style="color: var(--gray-800);">3. 数据集管理</strong>
+                            </div>
+                            <p style="font-size: 0.875rem; color: var(--gray-600); margin: 0;">
+                                <strong>独特</strong>: Git-like版本控制、质量分析、11种采样策略
+                            </p>
+                        </div>
+
+                        <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px; border: 1px solid var(--gray-200);">
+                            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                                <span style="font-size: 1.25rem;">⚡</span>
+                                <strong style="color: var(--gray-800);">4. 性能分析</strong>
+                            </div>
+                            <p style="font-size: 0.875rem; color: var(--gray-600); margin: 0;">
+                                延迟P50/P95/P99、资源监控、成本估算、瓶颈识别
+                            </p>
+                        </div>
+
+                        <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px; border: 1px solid var(--gray-200);">
+                            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                                <span style="font-size: 1.25rem;">🔄</span>
+                                <strong style="color: var(--gray-800);">5. 持续评测</strong>
+                            </div>
+                            <p style="font-size: 0.875rem; color: var(--gray-600); margin: 0;">
+                                实时监控、PSI/KL漂移检测、自动调度、多通道告警
+                            </p>
+                        </div>
+
+                        <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px; border: 1px solid var(--gray-200);">
+                            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                                <span style="font-size: 1.25rem;">⚖️</span>
+                                <strong style="color: var(--gray-800);">6. 公平性检测</strong>
+                            </div>
+                            <p style="font-size: 0.875rem; color: var(--gray-600); margin: 0;">
+                                <strong>高级</strong>: 6种指标、交叉偏见分析、80% rule、3阶段缓解
+                            </p>
+                        </div>
+
+                        <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px; border: 1px solid var(--gray-200);">
+                            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                                <span style="font-size: 1.25rem;">🧠</span>
+                                <strong style="color: var(--gray-800);">7. 知识库</strong>
+                            </div>
+                            <p style="font-size: 0.875rem; color: var(--gray-600); margin: 0;">
+                                Few-shot学习、4种选择策略、5种Prompt类型、A/B测试
+                            </p>
+                        </div>
+
+                        <div style="padding: 1rem; background: #e6f7ff; border-radius: 8px; border: 2px solid #1890ff;">
+                            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                                <span style="font-size: 1.25rem;">🔍</span>
+                                <strong style="color: var(--gray-800);">8. 可解释性 🆕</strong>
+                            </div>
+                            <p style="font-size: 0.875rem; color: var(--gray-600); margin: 0;">
+                                <strong>合规</strong>: SHAP(7种)、LIME、EU AI Act/FDA要求
+                            </p>
+                        </div>
+
+                        <div style="padding: 1rem; background: #e6f7ff; border-radius: 8px; border: 2px solid #1890ff;">
+                            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                                <span style="font-size: 1.25rem;">🛡️</span>
+                                <strong style="color: var(--gray-800);">9. 对抗鲁棒性 🆕</strong>
+                            </div>
+                            <p style="font-size: 0.875rem; color: var(--gray-600); margin: 0;">
+                                FGSM/PGD/BIM攻击、鲁棒性评分、安全测试
+                            </p>
+                        </div>
+
+                        <div style="padding: 1rem; background: #e6f7ff; border-radius: 8px; border: 2px solid #1890ff;">
+                            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                                <span style="font-size: 1.25rem;">📋</span>
+                                <strong style="color: var(--gray-800);">10. 模型卡片 🆕</strong>
+                            </div>
+                            <p style="font-size: 0.875rem; color: var(--gray-600); margin: 0;">
+                                自动化生成、JSON/Markdown导出、合规模板
+                            </p>
+                        </div>
+
+                        <div style="padding: 1rem; background: #e6f7ff; border-radius: 8px; border: 2px solid #1890ff;">
+                            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                                <span style="font-size: 1.25rem;">✅</span>
+                                <strong style="color: var(--gray-800);">11. 数据质量 🆕</strong>
+                            </div>
+                            <p style="font-size: 0.875rem; color: var(--gray-600); margin: 0;">
+                                0-100评分、多维度指标、缺失/重复检测
+                            </p>
+                        </div>
+
+                        <div style="padding: 1rem; background: #e6f7ff; border-radius: 8px; border: 2px solid #1890ff;">
+                            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                                <span style="font-size: 1.25rem;">🧪</span>
+                                <strong style="color: var(--gray-800);">12. A/B测试 🆕</strong>
+                            </div>
+                            <p style="font-size: 0.875rem; color: var(--gray-600); margin: 0;">
+                                T-test/Chi-square、Cohen's d、统计显著性判定
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Flow -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">🔄 典型工作流</h3>
+                </div>
+                <div>
+                    <p style="margin-bottom: 1rem; color: var(--gray-700);">
+                        AEVA支持灵活的工作流编排，典型的ML评测流程：
+                    </p>
+
+                    <div style="background: linear-gradient(to right, #667eea, #764ba2); padding: 2rem; border-radius: 8px; color: white;">
+                        <div style="display: flex; flex-direction: column; gap: 1rem;">
+                            <div style="display: flex; align-items: center; gap: 1rem;">
+                                <div style="background: white; color: #667eea; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">1</div>
+                                <div style="flex: 1;">
+                                    <strong>数据质量检查</strong> → 数据画像、缺失值、重复检测、质量评分
+                                </div>
+                            </div>
+                            <div style="border-left: 2px dashed rgba(255,255,255,0.3); height: 20px; margin-left: 15px;"></div>
+
+                            <div style="display: flex; align-items: center; gap: 1rem;">
+                                <div style="background: white; color: #667eea; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">2</div>
+                                <div style="flex: 1;">
+                                    <strong>模型训练与基准测试</strong> → 性能评估、多模型对比、统计检验
+                                </div>
+                            </div>
+                            <div style="border-left: 2px dashed rgba(255,255,255,0.3); height: 20px; margin-left: 15px;"></div>
+
+                            <div style="display: flex; align-items: center; gap: 1rem;">
+                                <div style="background: white; color: #667eea; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">3</div>
+                                <div style="flex: 1;">
+                                    <strong>公平性与可解释性分析</strong> → 偏见检测、SHAP/LIME解释、合规验证
+                                </div>
+                            </div>
+                            <div style="border-left: 2px dashed rgba(255,255,255,0.3); height: 20px; margin-left: 15px;"></div>
+
+                            <div style="display: flex; align-items: center; gap: 1rem;">
+                                <div style="background: white; color: #667eea; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">4</div>
+                                <div style="flex: 1;">
+                                    <strong>性能与鲁棒性测试</strong> → 延迟分析、资源监控、对抗攻击测试
+                                </div>
+                            </div>
+                            <div style="border-left: 2px dashed rgba(255,255,255,0.3); height: 20px; margin-left: 15px;"></div>
+
+                            <div style="display: flex; align-items: center; gap: 1rem;">
+                                <div style="background: white; color: #667eea; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">5</div>
+                                <div style="flex: 1;">
+                                    <strong>质量门禁检查</strong> → 自动化阈值验证、通过/拒绝决策
+                                </div>
+                            </div>
+                            <div style="border-left: 2px dashed rgba(255,255,255,0.3); height: 20px; margin-left: 15px;"></div>
+
+                            <div style="display: flex; align-items: center; gap: 1rem;">
+                                <div style="background: white; color: #667eea; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">6</div>
+                                <div style="flex: 1;">
+                                    <strong>生成模型卡片与报告</strong> → 多格式文档、合规材料准备
+                                </div>
+                            </div>
+                            <div style="border-left: 2px dashed rgba(255,255,255,0.3); height: 20px; margin-left: 15px;"></div>
+
+                            <div style="display: flex; align-items: center; gap: 1rem;">
+                                <div style="background: white; color: #667eea; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">7</div>
+                                <div style="flex: 1;">
+                                    <strong>A/B测试与部署决策</strong> → Champion vs Challenger、统计显著性
+                                </div>
+                            </div>
+                            <div style="border-left: 2px dashed rgba(255,255,255,0.3); height: 20px; margin-left: 15px;"></div>
+
+                            <div style="display: flex; align-items: center; gap: 1rem;">
+                                <div style="background: white; color: #667eea; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">8</div>
+                                <div style="flex: 1;">
+                                    <strong>持续监控与告警</strong> → 漂移检测、性能追踪、异常告警
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Features -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">✨ 技术特色</h3>
+                </div>
+                <div>
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+                        <div style="text-align: center; padding: 1.5rem; background: var(--gray-50); border-radius: 8px;">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🎯</div>
+                            <strong style="display: block; margin-bottom: 0.5rem;">模块化架构</strong>
+                            <p style="font-size: 0.875rem; color: var(--gray-600); margin: 0;">
+                                松耦合设计，按需组合，灵活扩展
+                            </p>
+                        </div>
+
+                        <div style="text-align: center; padding: 1.5rem; background: var(--gray-50); border-radius: 8px;">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🔌</div>
+                            <strong style="display: block; margin-bottom: 0.5rem;">插件化扩展</strong>
+                            <p style="font-size: 0.875rem; color: var(--gray-600); margin: 0;">
+                                支持自定义指标、评测器、报告模板
+                            </p>
+                        </div>
+
+                        <div style="text-align: center; padding: 1.5rem; background: var(--gray-50); border-radius: 8px;">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">⚡</div>
+                            <strong style="display: block; margin-bottom: 0.5rem;">高性能执行</strong>
+                            <p style="font-size: 0.875rem; color: var(--gray-600); margin: 0;">
+                                并行计算、增量评测、智能缓存
+                            </p>
+                        </div>
+
+                        <div style="text-align: center; padding: 1.5rem; background: var(--gray-50); border-radius: 8px;">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">📜</div>
+                            <strong style="display: block; margin-bottom: 0.5rem;">合规优先</strong>
+                            <p style="font-size: 0.875rem; color: var(--gray-600); margin: 0;">
+                                EU AI Act、FDA、金融监管全覆盖
+                            </p>
+                        </div>
+
+                        <div style="text-align: center; padding: 1.5rem; background: var(--gray-50); border-radius: 8px;">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🔐</div>
+                            <strong style="display: block; margin-bottom: 0.5rem;">安全可靠</strong>
+                            <p style="font-size: 0.875rem; color: var(--gray-600); margin: 0;">
+                                对抗攻击测试、数据隐私保护
+                            </p>
+                        </div>
+
+                        <div style="text-align: center; padding: 1.5rem; background: var(--gray-50); border-radius: 8px;">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">📊</div>
+                            <strong style="display: block; margin-bottom: 0.5rem;">可视化丰富</strong>
+                            <p style="font-size: 0.875rem; color: var(--gray-600); margin: 0;">
+                                图表、仪表板、交互式报告
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Guard Page -->
+        <div id="guard" class="page-section">
+            <h2 style="margin-bottom: 1.5rem; font-size: 1.875rem;">AEVA-Guard 质量门禁</h2>
+
+            <div class="alert alert-success">
+                <strong>✓ 所有门禁检查通过</strong> - 模型质量符合部署标准
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">门禁配置</h3>
+                    <button class="btn btn-secondary">编辑配置</button>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>门禁名称</th>
+                            <th>类型</th>
+                            <th>阈值</th>
+                            <th>当前值</th>
+                            <th>状态</th>
+                            <th>策略</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>准确率门禁</strong></td>
+                            <td>Threshold</td>
+                            <td>≥ 90%</td>
+                            <td>94.2%</td>
+                            <td><span class="badge success">通过</span></td>
+                            <td>Blocking</td>
+                        </tr>
+                        <tr>
+                            <td><strong>性能门禁</strong></td>
+                            <td>Threshold</td>
+                            <td>≤ 100ms</td>
+                            <td>85ms</td>
+                            <td><span class="badge success">通过</span></td>
+                            <td>Blocking</td>
+                        </tr>
+                        <tr>
+                            <td><strong>召回率门禁</strong></td>
+                            <td>Threshold</td>
+                            <td>≥ 85%</td>
+                            <td>91.3%</td>
+                            <td><span class="badge success">通过</span></td>
+                            <td>Non-blocking</td>
+                        </tr>
+                        <tr>
+                            <td><strong>F1分数门禁</strong></td>
+                            <td>Threshold</td>
+                            <td>≥ 88%</td>
+                            <td>92.7%</td>
+                            <td><span class="badge success">通过</span></td>
+                            <td>Non-blocking</td>
+                        </tr>
+                        <tr>
+                            <td><strong>资源使用门禁</strong></td>
+                            <td>Custom</td>
+                            <td>≤ 2GB</td>
+                            <td>1.5GB</td>
+                            <td><span class="badge success">通过</span></td>
+                            <td>Blocking</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">门禁历史</h3>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item success">
+                        <div class="timeline-time">2分钟前</div>
+                        <div class="timeline-content">
+                            <strong>bert-base-chinese v2.1.0</strong> 通过所有门禁检查<br>
+                            准确率: 94.2%, 性能: 85ms
+                        </div>
+                    </div>
+                    <div class="timeline-item success">
+                        <div class="timeline-time">15分钟前</div>
+                        <div class="timeline-content">
+                            <strong>gpt-sentiment v1.5.2</strong> 通过门禁（1个警告）<br>
+                            准确率: 89.7%, 性能: 120ms ⚠️ 略高于建议值
+                        </div>
+                    </div>
+                    <div class="timeline-item danger">
+                        <div class="timeline-time">2小时前</div>
+                        <div class="timeline-content">
+                            <strong>roberta-large v2.0.0</strong> 未通过门禁<br>
+                            准确率: 82.3% ✗ 低于阈值90%
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bench Page -->
+        <div id="bench" class="page-section">
+            <h2 style="margin-bottom: 1.5rem; font-size: 1.875rem;">AEVA-Bench 标准化基准</h2>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">基准测试套件</h3>
+                    <button class="btn btn-primary">运行新测试</button>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>基准名称</th>
+                            <th>测试项</th>
+                            <th>数据集</th>
+                            <th>最佳成绩</th>
+                            <th>平均成绩</th>
+                            <th>状态</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>文本分类基准</strong></td>
+                            <td>12项</td>
+                            <td>CLUE-10K</td>
+                            <td>94.2%</td>
+                            <td>91.5%</td>
+                            <td><span class="badge success">活跃</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>情感分析基准</strong></td>
+                            <td>8项</td>
+                            <td>Sentiment-5K</td>
+                            <td>92.8%</td>
+                            <td>89.3%</td>
+                            <td><span class="badge success">活跃</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>命名实体识别</strong></td>
+                            <td>15项</td>
+                            <td>NER-8K</td>
+                            <td>88.5%</td>
+                            <td>85.2%</td>
+                            <td><span class="badge success">活跃</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>性能基准</strong></td>
+                            <td>10项</td>
+                            <td>Perf-Suite</td>
+                            <td>78ms</td>
+                            <td>105ms</td>
+                            <td><span class="badge success">活跃</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">基准对比 - 准确率</h3>
+                    </div>
+                    <canvas id="benchmarkAccuracyChart"></canvas>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">性能对比</h3>
+                    </div>
+                    <canvas id="benchmarkPerfChart"></canvas>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">详细测试结果 - 文本分类基准</h3>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>测试项</th>
+                            <th>准确率</th>
+                            <th>精确率</th>
+                            <th>召回率</th>
+                            <th>F1</th>
+                            <th>进度</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>新闻分类</td>
+                            <td>95.2%</td>
+                            <td>94.8%</td>
+                            <td>95.6%</td>
+                            <td>95.2%</td>
+                            <td><div class="progress"><div class="progress-bar" style="width: 95.2%"></div></div></td>
+                        </tr>
+                        <tr>
+                            <td>商品评论</td>
+                            <td>93.7%</td>
+                            <td>93.2%</td>
+                            <td>94.1%</td>
+                            <td>93.6%</td>
+                            <td><div class="progress"><div class="progress-bar" style="width: 93.7%"></div></div></td>
+                        </tr>
+                        <tr>
+                            <td>问答分类</td>
+                            <td>91.5%</td>
+                            <td>90.8%</td>
+                            <td>92.1%</td>
+                            <td>91.4%</td>
+                            <td><div class="progress"><div class="progress-bar" style="width: 91.5%"></div></div></td>
+                        </tr>
+                        <tr>
+                            <td>意图识别</td>
+                            <td>88.9%</td>
+                            <td>88.3%</td>
+                            <td>89.4%</td>
+                            <td>88.8%</td>
+                            <td><div class="progress"><div class="progress-bar warning" style="width: 88.9%"></div></div></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Auto Page -->
+        <div id="auto" class="page-section">
+            <h2 style="margin-bottom: 1.5rem; font-size: 1.875rem;">AEVA-Auto 自动化流水线</h2>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Pipeline可视化</h3>
+                    <span class="badge success">运行中</span>
+                </div>
+                <div style="padding: 2rem; background: var(--gray-50); border-radius: 8px;">
+                    <div class="timeline">
+                        <div class="timeline-item success">
+                            <div class="timeline-time">Stage 1 - 完成</div>
+                            <div class="timeline-content">
+                                <strong>数据准备</strong><br>
+                                加载测试数据集 (10,000条) ✓<br>
+                                耗时: 2.3s
+                            </div>
+                        </div>
+                        <div class="timeline-item success">
+                            <div class="timeline-time">Stage 2 - 完成</div>
+                            <div class="timeline-content">
+                                <strong>模型加载</strong><br>
+                                加载 bert-base-chinese v2.1.0 ✓<br>
+                                耗时: 5.8s
+                            </div>
+                        </div>
+                        <div class="timeline-item success">
+                            <div class="timeline-time">Stage 3 - 完成</div>
+                            <div class="timeline-content">
+                                <strong>基准测试</strong><br>
+                                执行12项测试 ✓ (准确率: 94.2%)<br>
+                                耗时: 45.2s
+                            </div>
+                        </div>
+                        <div class="timeline-item success">
+                            <div class="timeline-time">Stage 4 - 完成</div>
+                            <div class="timeline-content">
+                                <strong>质量门禁</strong><br>
+                                通过5项门禁检查 ✓<br>
+                                耗时: 1.2s
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-time">Stage 5 - 进行中</div>
+                            <div class="timeline-content">
+                                <strong>智能分析</strong><br>
+                                Brain模块分析中...<br>
+                                <div class="progress" style="margin-top: 0.5rem;">
+                                    <div class="progress-bar" style="width: 65%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">流水线配置</h3>
+                    <button class="btn btn-secondary">编辑</button>
+                </div>
+                <div class="code-block">
+<span class="keyword">pipeline</span> = Pipeline(<span class="string">"bert_evaluation"</span>)
+
+<span class="comment"># Stage 1: 数据准备</span>
+pipeline.add_stage(
+    DataLoader(<span class="string">"clue-10k"</span>, batch_size=<span class="number">32</span>)
+)
+
+<span class="comment"># Stage 2: 模型加载</span>
+pipeline.add_stage(
+    ModelLoader(<span class="string">"bert-base-chinese"</span>, version=<span class="string">"v2.1.0"</span>)
+)
+
+<span class="comment"># Stage 3: 基准测试</span>
+pipeline.add_stage(
+    BenchmarkSuite.load(<span class="string">"text_classification"</span>)
+)
+
+<span class="comment"># Stage 4: 质量门禁</span>
+pipeline.add_stage(
+    QualityGate(threshold=<span class="number">0.90</span>, blocking=<span class="keyword">True</span>)
+)
+
+<span class="comment"># Stage 5: 智能分析</span>
+pipeline.add_stage(
+    BrainAnalyzer(model=<span class="string">"claude-sonnet-4"</span>)
+)
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">执行历史</h3>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Pipeline</th>
+                            <th>触发方式</th>
+                            <th>耗时</th>
+                            <th>状态</th>
+                            <th>时间</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>bert_evaluation</strong></td>
+                            <td>手动</td>
+                            <td>54.5s</td>
+                            <td><span class="badge info">运行中</span></td>
+                            <td>刚刚</td>
+                        </tr>
+                        <tr>
+                            <td><strong>gpt_sentiment</strong></td>
+                            <td>CI/CD</td>
+                            <td>62.3s</td>
+                            <td><span class="badge success">成功</span></td>
+                            <td>15分钟前</td>
+                        </tr>
+                        <tr>
+                            <td><strong>text_classifier</strong></td>
+                            <td>定时任务</td>
+                            <td>48.7s</td>
+                            <td><span class="badge success">成功</span></td>
+                            <td>1小时前</td>
+                        </tr>
+                        <tr>
+                            <td><strong>roberta_evaluation</strong></td>
+                            <td>手动</td>
+                            <td>71.2s</td>
+                            <td><span class="badge danger">失败</span></td>
+                            <td>2小时前</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Brain Page -->
+        <div id="brain" class="page-section">
+            <h2 style="margin-bottom: 1.5rem; font-size: 1.875rem;">AEVA-Brain 智能诊断</h2>
+
+            <div class="alert alert-success">
+                <strong>✓ 分析完成</strong> - Brain模块已完成评测结果分析
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">智能分析概览</h3>
+                    <span class="badge success">置信度: 87%</span>
+                </div>
+                <div style="padding: 1rem 0;">
+                    <h4 style="margin-bottom: 1rem; color: var(--gray-700);">分析摘要</h4>
+                    <p style="line-height: 1.8; color: var(--gray-800);">
+                        模型 <strong>bert-base-chinese v2.1.0</strong> 在文本分类基准测试中表现优异，
+                        准确率达到 <strong>94.2%</strong>，超过设定阈值4.2个百分点。推理性能为 <strong>85ms</strong>，
+                        满足实时应用要求。模型在新闻分类和商品评论场景表现最佳，但在意图识别任务上有轻微下降，
+                        建议针对该场景补充训练数据。
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">根因分析</h3>
+                    </div>
+                    <div style="padding: 0.5rem 0;">
+                        <div style="margin-bottom: 1.5rem;">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                                <span><strong>1. 训练数据质量</strong></span>
+                                <span class="badge success">优秀</span>
+                            </div>
+                            <p style="color: var(--gray-700); font-size: 0.875rem; line-height: 1.6;">
+                                训练数据分布均衡，样本质量高，覆盖多个领域，有利于模型泛化能力。
+                            </p>
+                        </div>
+                        <div style="margin-bottom: 1.5rem;">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                                <span><strong>2. 模型架构</strong></span>
+                                <span class="badge success">合适</span>
+                            </div>
+                            <p style="color: var(--gray-700); font-size: 0.875rem; line-height: 1.6;">
+                                BERT-base架构适合当前任务复杂度，参数量与性能平衡良好。
+                            </p>
+                        </div>
+                        <div style="margin-bottom: 1.5rem;">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                                <span><strong>3. 超参数设置</strong></span>
+                                <span class="badge warning">可优化</span>
+                            </div>
+                            <p style="color: var(--gray-700); font-size: 0.875rem; line-height: 1.6;">
+                                学习率和批次大小设置合理，但建议尝试更长的训练轮次以进一步提升性能。
+                            </p>
+                        </div>
+                        <div>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                                <span><strong>4. 推理优化</strong></span>
+                                <span class="badge success">良好</span>
+                            </div>
+                            <p style="color: var(--gray-700); font-size: 0.875rem; line-height: 1.6;">
+                                已启用模型量化和批处理优化，推理速度达标。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">优化建议</h3>
+                    </div>
+                    <div style="padding: 0.5rem 0;">
+                        <div style="margin-bottom: 1.5rem; padding: 1rem; background: var(--gray-50); border-radius: 8px; border-left: 3px solid var(--primary);">
+                            <div style="font-weight: 600; margin-bottom: 0.5rem;">🎯 建议 1: 增强意图识别场景</div>
+                            <p style="color: var(--gray-700); font-size: 0.875rem; margin-bottom: 0.5rem;">
+                                针对意图识别任务准确率偏低(88.9%)的问题，建议：
+                            </p>
+                            <ul style="color: var(--gray-700); font-size: 0.875rem; padding-left: 1.5rem;">
+                                <li>补充1000+条意图识别样本</li>
+                                <li>使用数据增强技术扩充训练集</li>
+                                <li>考虑使用对比学习提升区分度</li>
+                            </ul>
+                            <div style="margin-top: 0.5rem;">
+                                <span class="badge info">预期提升: +3-5%</span>
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: 1.5rem; padding: 1rem; background: var(--gray-50); border-radius: 8px; border-left: 3px solid var(--success);">
+                            <div style="font-weight: 600; margin-bottom: 0.5rem;">⚡ 建议 2: 性能进一步优化</div>
+                            <p style="color: var(--gray-700); font-size: 0.875rem; margin-bottom: 0.5rem;">
+                                当前推理速度85ms已达标，可进一步优化：
+                            </p>
+                            <ul style="color: var(--gray-700); font-size: 0.875rem; padding-left: 1.5rem;">
+                                <li>尝试模型蒸馏减少参数量</li>
+                                <li>启用TensorRT加速推理</li>
+                                <li>使用动态批处理提升吞吐</li>
+                            </ul>
+                            <div style="margin-top: 0.5rem;">
+                                <span class="badge success">预期提升: 20-30%</span>
+                            </div>
+                        </div>
+
+                        <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px; border-left: 3px solid var(--warning);">
+                            <div style="font-weight: 600; margin-bottom: 0.5rem;">📊 建议 3: 持续监控</div>
+                            <p style="color: var(--gray-700); font-size: 0.875rem; margin-bottom: 0.5rem;">
+                                部署后建议建立持续监控机制：
+                            </p>
+                            <ul style="color: var(--gray-700); font-size: 0.875rem; padding-left: 1.5rem;">
+                                <li>每日采样100条生产数据进行评测</li>
+                                <li>设置准确率低于92%的告警阈值</li>
+                                <li>每周生成性能趋势报告</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">分析详情 (JSON格式)</h3>
+                </div>
+                <div class="code-block">
+{
+  <span class="string">"model"</span>: <span class="string">"bert-base-chinese"</span>,
+  <span class="string">"version"</span>: <span class="string">"v2.1.0"</span>,
+  <span class="string">"summary"</span>: <span class="string">"模型表现优异，准确率94.2%超过阈值..."</span>,
+  <span class="string">"severity"</span>: <span class="string">"success"</span>,
+  <span class="string">"confidence"</span>: <span class="number">0.87</span>,
+  <span class="string">"root_causes"</span>: [
+    {
+      <span class="string">"category"</span>: <span class="string">"训练数据质量"</span>,
+      <span class="string">"status"</span>: <span class="string">"excellent"</span>,
+      <span class="string">"details"</span>: <span class="string">"训练数据分布均衡，样本质量高..."</span>
+    },
+    {
+      <span class="string">"category"</span>: <span class="string">"超参数设置"</span>,
+      <span class="string">"status"</span>: <span class="string">"optimizable"</span>,
+      <span class="string">"details"</span>: <span class="string">"建议尝试更长的训练轮次..."</span>
+    }
+  ],
+  <span class="string">"recommendations"</span>: [
+    {
+      <span class="string">"priority"</span>: <span class="string">"high"</span>,
+      <span class="string">"title"</span>: <span class="string">"增强意图识别场景"</span>,
+      <span class="string">"actions"</span>: [
+        <span class="string">"补充1000+条意图识别样本"</span>,
+        <span class="string">"使用数据增强技术"</span>,
+        <span class="string">"考虑使用对比学习"</span>
+      ],
+      <span class="string">"expected_improvement"</span>: <span class="string">"+3-5%"</span>
+    }
+  ]
+}
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">分析历史</h3>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>模型</th>
+                            <th>版本</th>
+                            <th>严重性</th>
+                            <th>置信度</th>
+                            <th>建议数</th>
+                            <th>时间</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>bert-base-chinese</strong></td>
+                            <td>v2.1.0</td>
+                            <td><span class="badge success">Success</span></td>
+                            <td>87%</td>
+                            <td>3项</td>
+                            <td>刚刚</td>
+                        </tr>
+                        <tr>
+                            <td><strong>gpt-sentiment</strong></td>
+                            <td>v1.5.2</td>
+                            <td><span class="badge warning">Warning</span></td>
+                            <td>82%</td>
+                            <td>5项</td>
+                            <td>15分钟前</td>
+                        </tr>
+                        <tr>
+                            <td><strong>text-classifier</strong></td>
+                            <td>v3.0.1</td>
+                            <td><span class="badge success">Success</span></td>
+                            <td>91%</td>
+                            <td>2项</td>
+                            <td>1小时前</td>
+                        </tr>
+                        <tr>
+                            <td><strong>roberta-large</strong></td>
+                            <td>v2.0.0</td>
+                            <td><span class="badge danger">Critical</span></td>
+                            <td>93%</td>
+                            <td>7项</td>
+                            <td>2小时前</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Enhancements Page -->
+        <div id="enhancements" class="page-section">
+            <h2 style="margin-bottom: 1.5rem; font-size: 1.875rem;">🚀 增强功能模块</h2>
+
+            <div class="alert alert-success">
+                <strong>✅ 全部完成</strong> - 8个增强模块已全部实现，共14,000+行生产级代码
+            </div>
+
+            <!-- Enhancement Stats -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <div>
+                            <div class="stat-value">8/12</div>
+                            <div class="stat-label">增强模块</div>
+                        </div>
+                        <div class="stat-icon success">✓</div>
+                    </div>
+                    <div class="stat-trend up">67% 完成</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <div>
+                            <div class="stat-value">14K+</div>
+                            <div class="stat-label">代码行数</div>
+                        </div>
+                        <div class="stat-icon primary">📝</div>
+                    </div>
+                    <div class="stat-trend">生产级质量</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <div>
+                            <div class="stat-value">277+</div>
+                            <div class="stat-label">API方法</div>
+                        </div>
+                        <div class="stat-icon success">⚡</div>
+                    </div>
+                    <div class="stat-trend">全面覆盖</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <div>
+                            <div class="stat-value">48</div>
+                            <div class="stat-label">文件创建</div>
+                        </div>
+                        <div class="stat-icon primary">📁</div>
+                    </div>
+                    <div class="stat-trend">模块化设计</div>
+                </div>
+            </div>
+
+            <!-- Module 1: Report Generation -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">📊 模块1: 报告生成 (Report Generation)</h3>
+                    <span class="badge success">已完成</span>
+                </div>
+                <div>
+                    <p style="margin-bottom: 1rem; color: var(--gray-700);">
+                        专业的评测报告生成系统，支持HTML/Markdown/PDF多格式导出
+                    </p>
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+                        <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px;">
+                            <strong>核心功能:</strong>
+                            <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--gray-700);">
+                                <li>HTML报告 (图表支持)</li>
+                                <li>Markdown文档</li>
+                                <li>PDF导出 (优雅降级)</li>
+                                <li>模型对比报告</li>
+                            </ul>
+                        </div>
+                        <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px;">
+                            <strong>技术亮点:</strong>
+                            <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--gray-700);">
+                                <li>专业CSS模板</li>
+                                <li>自定义品牌</li>
+                                <li>多语言支持</li>
+                                <li>~1,085行代码</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 2: Model Comparison -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">⚖️ 模块2: 模型对比 (Model Comparison)</h3>
+                    <span class="badge success">已完成</span>
+                </div>
+                <div>
+                    <p style="margin-bottom: 1rem; color: var(--gray-700);">
+                        多模型对比评测，Champion/Challenger部署模式
+                    </p>
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+                        <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px;">
+                            <strong>核心功能:</strong>
+                            <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--gray-700);">
+                                <li>加权排名</li>
+                                <li>成对比较</li>
+                                <li>Champion/Challenger</li>
+                                <li>晋升阈值管理</li>
+                            </ul>
+                        </div>
+                        <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px;">
+                            <strong>技术亮点:</strong>
+                            <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--gray-700);">
+                                <li>统计检验</li>
+                                <li>历史追踪</li>
+                                <li>安全部署</li>
+                                <li>~523行代码</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 3: Dataset Management -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">💾 模块3: 数据集管理 (Dataset Management)</h3>
+                    <span class="badge success">已完成</span>
+                </div>
+                <div>
+                    <p style="margin-bottom: 1rem; color: var(--gray-700);">
+                        <strong>创新功能:</strong> Git-like版本控制系统，质量分析，11种采样/拆分策略
+                    </p>
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+                        <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px;">
+                            <strong>核心功能:</strong>
+                            <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--gray-700);">
+                                <li>版本控制 (checksum, tag, diff)</li>
+                                <li>质量分析 (0-100评分)</li>
+                                <li>4种拆分策略 (含k-fold)</li>
+                                <li>7种采样策略</li>
+                            </ul>
+                        </div>
+                        <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px;">
+                            <strong>技术亮点:</strong>
+                            <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--gray-700);">
+                                <li>SHA256完整性校验</li>
+                                <li>Reservoir采样</li>
+                                <li>时序拆分</li>
+                                <li>~1,535行代码</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 4: Performance Profiling -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">⚡ 模块4: 性能分析 (Performance Profiling)</h3>
+                    <span class="badge success">已完成</span>
+                </div>
+                <div>
+                    <p style="margin-bottom: 1rem; color: var(--gray-700);">
+                        全方位性能分析，包含延迟、资源、成本、瓶颈检测
+                    </p>
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+                        <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px;">
+                            <strong>核心功能:</strong>
+                            <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--gray-700);">
+                                <li>延迟分析 (P50/P95/P99)</li>
+                                <li>CPU/Memory/GPU监控</li>
+                                <li>成本估算 (多GPU类型)</li>
+                                <li>瓶颈识别</li>
+                            </ul>
+                        </div>
+                        <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px;">
+                            <strong>技术亮点:</strong>
+                            <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--gray-700);">
+                                <li>Batch优化</li>
+                                <li>部署对比</li>
+                                <li>业务价值导向</li>
+                                <li>~1,500行代码</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 5: Continuous Evaluation -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">🔄 模块5: 持续评测 (Continuous Evaluation)</h3>
+                    <span class="badge success">已完成</span>
+                </div>
+                <div>
+                    <p style="margin-bottom: 1rem; color: var(--gray-700);">
+                        实时监控，漂移检测(PSI/KL散度)，自动告警
+                    </p>
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+                        <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px;">
+                            <strong>核心功能:</strong>
+                            <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--gray-700);">
+                                <li>实时监控</li>
+                                <li>数据漂移 (PSI, KL)</li>
+                                <li>模型漂移</li>
+                                <li>自动调度</li>
+                            </ul>
+                        </div>
+                        <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px;">
+                            <strong>技术亮点:</strong>
+                            <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--gray-700);">
+                                <li>PSI金融标准</li>
+                                <li>多通道告警</li>
+                                <li>异常检测</li>
+                                <li>~1,600行代码</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 6: Fairness Detection -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">⚖️ 模块6: 公平性检测 (Fairness & Bias Detection)</h3>
+                    <span class="badge success">已完成</span>
+                </div>
+                <div>
+                    <p style="margin-bottom: 1rem; color: var(--gray-700);">
+                        6种公平性指标，交叉偏见检测，符合80% rule法律要求
+                    </p>
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+                        <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px;">
+                            <strong>核心功能:</strong>
+                            <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--gray-700);">
+                                <li>6种公平性指标 (DPD, DIR等)</li>
+                                <li>交叉偏见分析</li>
+                                <li>80% rule合规</li>
+                                <li>3阶段缓解策略</li>
+                            </ul>
+                        </div>
+                        <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px;">
+                            <strong>技术亮点:</strong>
+                            <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--gray-700);">
+                                <li>严重性分级</li>
+                                <li>阈值调整</li>
+                                <li>HTML报告</li>
+                                <li>~2,120行代码</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 7: Knowledge Base -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">🧠 模块7: 知识库 (Knowledge Base & Few-shot)</h3>
+                    <span class="badge success">已完成</span>
+                </div>
+                <div>
+                    <p style="margin-bottom: 1rem; color: var(--gray-700);">
+                        知识管理，Few-shot学习，提示工程，A/B测试
+                    </p>
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+                        <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px;">
+                            <strong>核心功能:</strong>
+                            <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--gray-700);">
+                                <li>知识库CRUD</li>
+                                <li>语义检索</li>
+                                <li>4种Few-shot选择</li>
+                                <li>5种Prompt类型</li>
+                            </ul>
+                        </div>
+                        <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px;">
+                            <strong>技术亮点:</strong>
+                            <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--gray-700);">
+                                <li>Embedding相似度</li>
+                                <li>Prompt优化</li>
+                                <li>A/B测试</li>
+                                <li>~2,100行代码</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 8: Explainability (NEW!) -->
+            <div class="card" style="border: 2px solid var(--success);">
+                <div class="card-header">
+                    <h3 class="card-title">🔍 模块8: 可解释性 (Explainability) 🆕</h3>
+                    <span class="badge success">已完成</span>
+                </div>
+                <div>
+                    <p style="margin-bottom: 1rem; color: var(--gray-700);">
+                        <strong>合规要求:</strong> SHAP/LIME模型解释，符合EU AI Act、FDA医疗器械、金融监管要求
+                    </p>
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+                        <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px;">
+                            <strong>核心功能:</strong>
+                            <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--gray-700);">
+                                <li>SHAP (7种explainer类型)</li>
+                                <li>LIME (局部近似)</li>
+                                <li>4种特征重要性方法</li>
+                                <li>反事实建议</li>
+                            </ul>
+                        </div>
+                        <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px;">
+                            <strong>技术亮点:</strong>
+                            <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--gray-700);">
+                                <li>自动explainer选择</li>
+                                <li>Shapley值 (博弈论)</li>
+                                <li>合规报告 (HTML/Text)</li>
+                                <li>~2,000行代码</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div style="margin-top: 1rem; padding: 0.75rem; background: #e6f7ff; border-left: 4px solid var(--primary); border-radius: 4px;">
+                        <strong>监管合规:</strong> EU AI Act (高风险系统可解释性)、FDA医疗器械算法透明度、金融服务决策解释
+                    </div>
+                </div>
+            </div>
+
+            <!-- Summary -->
+            <div class="card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                <div style="padding: 2rem;">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">🎉 项目总结</h3>
+                    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 1.5rem;">
+                        <div style="text-align: center;">
+                            <div style="font-size: 2rem; font-weight: bold;">67%</div>
+                            <div style="opacity: 0.9;">任务完成度</div>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="font-size: 2rem; font-weight: bold;">14,000+</div>
+                            <div style="opacity: 0.9;">代码行数</div>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="font-size: 2rem; font-weight: bold;">277+</div>
+                            <div style="opacity: 0.9;">API方法</div>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="font-size: 2rem; font-weight: bold;">8/12</div>
+                            <div style="opacity: 0.9;">核心模块</div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 2rem; padding: 1rem; background: rgba(255,255,255,0.1); border-radius: 8px;">
+                        <strong>项目亮点:</strong>
+                        <ul style="margin-top: 0.5rem; padding-left: 1.5rem;">
+                            <li>创新的Git-like数据集版本控制（独特功能）</li>
+                            <li>完整的公平性检测体系（交叉偏见分析）</li>
+                            <li>SHAP/LIME可解释性（EU AI Act合规）</li>
+                            <li>PSI漂移检测（金融行业标准）</li>
+                            <li>成本感知的性能分析（业务价值导向）</li>
+                            <li>Few-shot学习与Prompt工程（LLM前沿技术）</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+    <script>
+        // Navigation
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const page = link.dataset.page;
+
+                // Update active nav
+                document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+
+                // Update active page
+                document.querySelectorAll('.page-section').forEach(p => p.classList.remove('active'));
+                document.getElementById(page).classList.add('active');
+
+                // Scroll to top
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+
+        // Charts with fallback for offline mode
+        function createChart(elementId, config) {
+            const canvas = document.getElementById(elementId);
+            if (!canvas) return;
+
+            // Check if Chart.js is loaded
+            if (typeof Chart === 'undefined') {
+                console.log('Chart.js not loaded, using fallback');
+                return;
+            }
+
+            try {
+                new Chart(canvas, config);
+            } catch (error) {
+                console.log('Chart creation failed:', error);
+            }
+        }
+
+        // Accuracy Trend Chart
+        createChart('accuracyChart', {
+            type: 'line',
+            data: {
+                labels: ['周一', '周二', '周三', '周四', '周五', '周六', '周日'],
+                datasets: [{
+                    label: '准确率',
+                    data: [89.5, 90.2, 91.8, 92.3, 93.1, 92.8, 94.2],
+                    borderColor: 'rgb(37, 99, 235)',
+                    backgroundColor: 'rgba(37, 99, 235, 0.1)',
+                    tension: 0.4,
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: { display: false }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        min: 85,
+                        max: 100
+                    }
+                }
+            }
+        });
+
+        // Performance Distribution Chart
+        createChart('performanceChart', {
+            type: 'bar',
+            data: {
+                labels: ['<50ms', '50-100ms', '100-150ms', '150-200ms', '>200ms'],
+                datasets: [{
+                    label: '模型数量',
+                    data: [5, 15, 12, 7, 3],
+                    backgroundColor: [
+                        'rgba(16, 185, 129, 0.8)',
+                        'rgba(16, 185, 129, 0.6)',
+                        'rgba(245, 158, 11, 0.6)',
+                        'rgba(245, 158, 11, 0.8)',
+                        'rgba(239, 68, 68, 0.8)'
+                    ]
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: { display: false }
+                }
+            }
+        });
+
+        // Benchmark Accuracy Chart
+        createChart('benchmarkAccuracyChart', {
+            type: 'radar',
+            data: {
+                labels: ['新闻分类', '商品评论', '问答分类', '意图识别', '情感分析', '实体识别'],
+                datasets: [{
+                    label: 'bert-base v2.1',
+                    data: [95.2, 93.7, 91.5, 88.9, 92.8, 90.5],
+                    borderColor: 'rgb(37, 99, 235)',
+                    backgroundColor: 'rgba(37, 99, 235, 0.2)'
+                }, {
+                    label: 'roberta v2.0',
+                    data: [87.3, 85.2, 82.1, 79.5, 84.8, 82.3],
+                    borderColor: 'rgb(239, 68, 68)',
+                    backgroundColor: 'rgba(239, 68, 68, 0.2)'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                scales: {
+                    r: {
+                        beginAtZero: true,
+                        max: 100
+                    }
+                }
+            }
+        });
+
+        // Benchmark Performance Chart
+        createChart('benchmarkPerfChart', {
+            type: 'bar',
+            data: {
+                labels: ['bert-base', 'gpt-sentiment', 'text-classifier', 'roberta-large'],
+                datasets: [{
+                    label: '推理时间 (ms)',
+                    data: [85, 120, 95, 250],
+                    backgroundColor: [
+                        'rgba(16, 185, 129, 0.8)',
+                        'rgba(245, 158, 11, 0.8)',
+                        'rgba(16, 185, 129, 0.8)',
+                        'rgba(239, 68, 68, 0.8)'
+                    ]
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: { display: false }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: '毫秒 (ms)'
+                        }
+                    }
+                }
+            }
+        });
+
+        console.log('AEVA Demo Page Loaded Successfully');
+        console.log('离线模式：所有数据使用本地Mock，无需网络连接');
+    </script>
+</body>
+</html>

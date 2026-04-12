@@ -1,0 +1,56 @@
+# AEVA Platform Configuration
+
+project_name: "AEVA"
+version: "0.1.0"
+debug: false
+log_level: "INFO"
+
+# Database Configuration
+database:
+  host: "localhost"
+  port: 5432
+  database: "aeva"
+  username: "aeva"
+  password: ""  # Set via environment variable AEVA_DB_PASSWORD
+  pool_size: 10
+
+# Redis Configuration
+redis:
+  host: "localhost"
+  port: 6379
+  db: 0
+  password: null  # Set via environment variable if needed
+
+# AEVA-Brain Configuration (LLM)
+brain:
+  provider: "anthropic"  # anthropic, openai
+  model: "claude-3-5-sonnet-20241022"
+  api_key: null  # Set via environment variable AEVA_BRAIN_API_KEY
+  max_tokens: 4096
+  temperature: 0.7
+
+# AEVA-Guard Configuration (Quality Gates)
+guard:
+  enabled: true
+  default_threshold: 0.85
+  strict_mode: false
+  auto_block: true
+
+# AEVA-Bench Configuration (Benchmarks)
+bench:
+  benchmark_dir: "./benchmarks"
+  cache_enabled: true
+  parallel_execution: true
+  max_workers: 4
+
+# AEVA-Auto Configuration (Automation)
+auto:
+  worker_concurrency: 4
+  task_timeout: 3600  # seconds
+  retry_limit: 3
+  queue_backend: "redis"
+
+# API Server Configuration
+api_host: "0.0.0.0"
+api_port: 8000
+api_workers: 4

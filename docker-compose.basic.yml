@@ -1,0 +1,34 @@
+version: '3.8'
+
+# Basic docker-compose for AEVA without production libraries
+# Faster build, smaller image, uses fallback implementations
+
+services:
+  # AEVA Basic Service
+  aeva-basic:
+    build:
+      context: .
+      dockerfile: Dockerfile.basic
+    container_name: aeva-basic
+    volumes:
+      - ./data:/app/data
+      - ./results:/app/results
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: ["python", "examples/run_all_quick_tests.py"]
+
+  # AEVA Tests (Basic)
+  aeva-tests:
+    build:
+      context: .
+      dockerfile: Dockerfile.basic
+    container_name: aeva-tests
+    volumes:
+      - ./results:/app/results
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: ["python", "-m", "pytest", "tests/", "-v", "--tb=short"]
+
+networks:
+  default:
+    name: aeva-basic-network

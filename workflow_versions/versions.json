@@ -1,0 +1,23 @@
+{
+  "production_dataset": [
+    {
+      "version": "1.0.0",
+      "dataset_name": "production_dataset",
+      "size": 1030,
+      "checksum": "5ae8093d2d438f7361402e916c049d999aca7b3e2b1d8449e2f5c369284697c2",
+      "metadata": {
+        "tags": [
+          {
+            "tag": "baseline",
+            "message": "Baseline version for comparison",
+            "created_at": "2026-04-12T00:42:49.467245"
+          }
+        ]
+      },
+      "parent_version": null,
+      "changes": "Initial production dataset",
+      "created_at": "2026-04-12T00:42:49.467113",
+      "created_by": "ml_engineer"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "sentiment_v2": [
+    {
+      "version": "1.0.0",
+      "dataset_name": "sentiment_v2",
+      "size": 515,
+      "checksum": "f9add0cad5e39c336beb7e39a8a2c48203b4c628192b3571fba5d5d3f042d56c",
+      "metadata": {
+        "description": "Initial release"
+      },
+      "parent_version": null,
+      "changes": "Initial dataset creation",
+      "created_at": "2026-04-12T00:42:49.451886",
+      "created_by": "data_team"
+    },
+    {
+      "version": "1.0.1",
+      "dataset_name": "sentiment_v2",
+      "size": 824,
+      "checksum": "cb0a7d9e3100ca7fb9e2e3db21f09b4d6cfe38825ce44d5bb6c01735cf1115ae",
+      "metadata": {
+        "description": "Expanded dataset",
+        "tags": [
+          {
+            "tag": "production",
+            "message": "Promoted to production",
+            "created_at": "2026-04-12T00:42:49.455699"
+          }
+        ]
+      },
+      "parent_version": "1.0.0",
+      "changes": "Added 300 new samples",
+      "created_at": "2026-04-12T00:42:49.455395",
+      "created_by": "data_team"
+    }
+  ]
+}

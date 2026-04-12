@@ -1,0 +1,7220 @@
+{
+  "name": "production_dataset",
+  "version": "1.0.0",
+  "data": [
+    {
+      "id": 779,
+      "text": "Sample text 779",
+      "label": "positive",
+      "score": 0.9585127454624851,
+      "timestamp": "2025-09-09T00:42:49.458855"
+    },
+    {
+      "id": 40,
+      "text": "Sample text 40",
+      "label": "neutral",
+      "score": 0.011890720367461305,
+      "timestamp": "2025-05-13T00:42:49.457135"
+    },
+    {
+      "id": 988,
+      "text": "Sample text 988",
+      "label": "positive",
+      "score": 0.3607008276888881,
+      "timestamp": "2025-05-03T00:42:49.459335"
+    },
+    {
+      "id": 278,
+      "text": "Sample text 278",
+      "label": "negative",
+      "score": 0.16551822005022265,
+      "timestamp": "2025-07-26T00:42:49.457706"
+    },
+    {
+      "id": 825,
+      "text": "Sample text 825",
+      "label": "positive",
+      "score": 0.13857204176266535,
+      "timestamp": "2025-05-30T00:42:49.458958"
+    },
+    {
+      "id": 821,
+      "text": "Sample text 821",
+      "label": "negative",
+      "score": 0.3921733664356113,
+      "timestamp": "2025-09-18T00:42:49.458949"
+    },
+    {
+      "id": 306,
+      "text": "Sample text 306",
+      "label": "neutral",
+      "score": null,
+      "timestamp": "2025-12-19T00:42:49.457770"
+    },
+    {
+      "id": 302,
+      "text": "Sample text 302",
+      "label": "positive",
+      "score": 0.08496519328893448,
+      "timestamp": "2026-01-31T00:42:49.457761"
+    },
+    {
+      "id": 693,
+      "text": "Sample text 693",
+      "label": "negative",
+      "score": 0.7674084789560567,
+      "timestamp": "2025-12-04T00:42:49.458653"
+    },
+    {
+      "id": 621,
+      "text": "Sample text 621",
+      "label": "negative",
+      "score": 0.40992581368894243,
+      "timestamp": "2026-03-03T00:42:49.458488"
+    },
+    {
+      "id": 439,
+      "text": "Sample text 439",
+      "label": "positive",
+      "score": 0.8074264962964701,
+      "timestamp": "2025-05-04T00:42:49.458073"
+    },
+    {
+      "id": 304,
+      "text": "Sample text 304",
+      "label": "positive",
+      "score": 0.2674566405079204,
+      "timestamp": "2025-07-08T00:42:49.457766"
+    },
+    {
+      "id": 241,
+      "text": "Sample text 241",
+      "label": "positive",
+      "score": 0.3545323238437156,
+      "timestamp": "2026-02-20T00:42:49.457622"
+    },
+    {
+      "id": 602,
+      "text": "Sample text 602",
+      "label": "positive",
+      "score": 0.25954080275487423,
+      "timestamp": "2025-08-02T00:42:49.458445"
+    },
+    {
+      "id": 457,
+      "text": "Sample text 457",
+      "label": "negative",
+      "score": 0.24052344693157612,
+      "timestamp": "2025-08-11T00:42:49.458114"
+    },
+    {
+      "id": 467,
+      "text": "Sample text 467",
+      "label": "negative",
+      "score": 0.7450259932145414,
+      "timestamp": "2025-12-10T00:42:49.458137"
+    },
+    {
+      "id": 938,
+      "text": "Sample text 938",
+      "label": "positive",
+      "score": 0.4756893699201443,
+      "timestamp": "2025-09-12T00:42:49.459217"
+    },
+    {
+      "id": 134,
+      "text": "Sample text 134",
+      "label": "positive",
+      "score": 0.6268373795820131,
+      "timestamp": "2025-05-28T00:42:49.457374"
+    },
+    {
+      "id": 214,
+      "text": "Sample text 214",
+      "label": "positive",
+      "score": 0.37863235139685014,
+      "timestamp": "2026-02-18T00:42:49.457559"
+    },
+    {
+      "id": 11,
+      "text": "Sample text 11",
+      "label": "negative",
+      "score": 0.95258822899053,
+      "timestamp": "2025-10-25T00:42:49.457068"
+    },
+    {
+      "id": 780,
+      "text": "Sample text 780",
+      "label": "positive",
+      "score": 0.10643055636378151,
+      "timestamp": "2026-03-01T00:42:49.458857"
+    },
+    {
+      "id": 70,
+      "text": "Sample text 70",
+      "label": "positive",
+      "score": 0.694485714104936,
+      "timestamp": "2025-08-19T00:42:49.457202"
+    },
+    {
+      "id": 789,
+      "text": "",
+      "label": "positive",
+      "score": 0.46025071566629494,
+      "timestamp": "2026-03-18T00:42:49.458877"
+    },
+    {
+      "id": 250,
+      "text": "Sample text 250",
+      "label": "negative",
+      "score": 0.8817665308704675,
+      "timestamp": "2025-07-30T00:42:49.457642"
+    },
+    {
+      "id": 433,
+      "text": "Sample text 433",
+      "label": "neutral",
+      "score": 0.603882095416534,
+      "timestamp": "2025-05-17T00:42:49.458059"
+    },
+    {
+      "id": 916,
+      "text": "Sample text 916",
+      "label": "neutral",
+      "score": 0.2301038552684116,
+      "timestamp": "2025-12-27T00:42:49.459166"
+    },
+    {
+      "id": 17,
+      "text": "",
+      "label": "neutral",
+      "score": 0.3789227579151778,
+      "timestamp": "2026-02-15T00:42:49.457082"
+    },
+    {
+      "id": 150,
+      "text": "Sample text 150",
+      "label": "neutral",
+      "score": 0.29386297320704013,
+      "timestamp": "2026-01-03T00:42:49.457410"
+    },
+    {
+      "id": 124,
+      "text": "Sample text 124",
+      "label": "negative",
+      "score": 0.5861604286294101,
+      "timestamp": "2026-03-02T00:42:49.457351"
+    },
+    {
+      "id": 260,
+      "text": "Sample text 260",
+      "label": "positive",
+      "score": 0.05095536545181756,
+      "timestamp": "2025-09-16T00:42:49.457665"
+    },
+    {
+      "id": 591,
+      "text": "Sample text 591",
+      "label": "positive",
+      "score": 0.4275491891996016,
+      "timestamp": "2026-03-14T00:42:49.458418"
+    },
+    {
+      "id": 344,
+      "text": "Sample text 344",
+      "label": "positive",
+      "score": 0.2403351535586119,
+      "timestamp": "2026-02-28T00:42:49.457856"
+    },
+    {
+      "id": 563,
+      "text": "Sample text 563",
+      "label": "positive",
+      "score": 0.9043238655477889,
+      "timestamp": "2025-04-18T00:42:49.458355"
+    },
+    {
+      "id": 917,
+      "text": "Sample text 917",
+      "label": "positive",
+      "score": 0.2329788501285185,
+      "timestamp": "2025-12-22T00:42:49.459168"
+    },
+    {
+      "id": 59,
+      "text": "Sample text 59",
+      "label": "positive",
+      "score": 0.27544097752647645,
+      "timestamp": "2026-04-09T00:42:49.457178"
+    },
+    {
+      "id": 714,
+      "text": "Sample text 714",
+      "label": "positive",
+      "score": 0.7719786826774494,
+      "timestamp": "2025-06-13T00:42:49.458703"
+    },
+    {
+      "id": 967,
+      "text": "Sample text 967",
+      "label": "positive",
+      "score": 0.07487048395968399,
+      "timestamp": "2025-04-15T00:42:49.459285"
+    },
+    {
+      "id": 558,
+      "text": "Sample text 558",
+      "label": "positive",
+      "score": 0.9318090499285411,
+      "timestamp": "2025-07-30T00:42:49.458343"
+    },
+    {
+      "id": 832,
+      "text": "Sample text 832",
+      "label": "positive",
+      "score": 0.24188364890779224,
+      "timestamp": "2026-01-12T00:42:49.458974"
+    },
+    {
+      "id": 286,
+      "text": "Sample text 286",
+      "label": "positive",
+      "score": 0.26403818072437935,
+      "timestamp": "2026-02-03T00:42:49.457725"
+    },
+    {
+      "id": 248,
+      "text": "Sample text 248",
+      "label": "neutral",
+      "score": 0.4792949852324936,
+      "timestamp": "2025-05-07T00:42:49.457638"
+    },
+    {
+      "id": 934,
+      "text": "Sample text 934",
+      "label": "positive",
+      "score": 0.84142498869584,
+      "timestamp": "2025-05-29T00:42:49.459207"
+    },
+    {
+      "id": 427,
+      "text": "Sample text 427",
+      "label": "negative",
+      "score": 0.3999421516235776,
+      "timestamp": "2026-01-04T00:42:49.458046"
+    },
+    {
+      "id": 636,
+      "text": "Sample text 636",
+      "label": "positive",
+      "score": 0.3698739087127677,
+      "timestamp": "2025-05-15T00:42:49.458523"
+    },
+    {
+      "id": 132,
+      "text": "Sample text 132",
+      "label": "negative",
+      "score": 0.9484833114611971,
+      "timestamp": "2025-08-25T00:42:49.457369"
+    },
+    {
+      "id": 513,
+      "text": "Sample text 513",
+      "label": "positive",
+      "score": 0.14058559101230306,
+      "timestamp": "2025-11-09T00:42:49.458241"
+    },
+    {
+      "id": 163,
+      "text": "Sample text 163",
+      "label": "neutral",
+      "score": null,
+      "timestamp": "2026-03-12T00:42:49.457441"
+    },
+    {
+      "id": 678,
+      "text": "",
+      "label": "negative",
+      "score": 0.024244362339416403,
+      "timestamp": "2025-05-24T00:42:49.458619"
+    },
+    {
+      "id": 776,
+      "text": "Sample text 776",
+      "label": "positive",
+      "score": 0.7516844600303527,
+      "timestamp": "2026-03-04T00:42:49.458848"
+    },
+    {
+      "id": 472,
+      "text": "Sample text 472",
+      "label": "positive",
+      "score": 0.27592569984169857,
+      "timestamp": "2025-06-05T00:42:49.458148"
+    },
+    {
+      "id": 928,
+      "text": "",
+      "label": "neutral",
+      "score": 0.7296291116428346,
+      "timestamp": "2025-10-29T00:42:49.459194"
+    },
+    {
+      "id": 823,
+      "text": "",
+      "label": "positive",
+      "score": 0.7629349042774847,
+      "timestamp": "2025-05-12T00:42:49.458954"
+    },
+    {
+      "id": 961,
+      "text": "Sample text 961",
+      "label": "negative",
+      "score": 0.04699522108033283,
+      "timestamp": "2025-07-14T00:42:49.459271"
+    },
+    {
+      "id": 261,
+      "text": "Sample text 261",
+      "label": "positive",
+      "score": 0.22177523625029505,
+      "timestamp": "2025-09-06T00:42:49.457667"
+    },
+    {
+      "id": 751,
+      "text": "Sample text 751",
+      "label": "negative",
+      "score": 0.5852229847437195,
+      "timestamp": "2026-01-23T00:42:49.458788"
+    },
+    {
+      "id": 885,
+      "text": "Sample text 885",
+      "label": "positive",
+      "score": 0.13993028532703033,
+      "timestamp": "2025-08-22T00:42:49.459095"
+    },
+    {
+      "id": 816,
+      "text": "Sample text 816",
+      "label": "neutral",
+      "score": 0.37842884367050034,
+      "timestamp": "2026-02-08T00:42:49.458938"
+    },
+    {
+      "id": 307,
+      "text": "Sample text 307",
+      "label": "positive",
+      "score": 0.6553645974907741,
+      "timestamp": "2025-12-18T00:42:49.457772"
+    },
+    {
+      "id": 483,
+      "text": "Sample text 483",
+      "label": "neutral",
+      "score": 0.24751042926734867,
+      "timestamp": "2026-02-15T00:42:49.458173"
+    },
+    {
+      "id": 505,
+      "text": "Sample text 505",
+      "label": "positive",
+      "score": 0.6785002770799744,
+      "timestamp": "2025-09-27T00:42:49.458223"
+    },
+    {
+      "id": 135,
+      "text": "Sample text 135",
+      "label": "positive",
+      "score": 0.08570706380701465,
+      "timestamp": "2026-02-08T00:42:49.457376"
+    },
+    {
+      "id": 257,
+      "text": "Sample text 257",
+      "label": "positive",
+      "score": 0.7304567136044349,
+      "timestamp": "2025-06-04T00:42:49.457658"
+    },
+    {
+      "id": 142,
+      "text": "Sample text 142",
+      "label": "negative",
+      "score": 0.8062702052308423,
+      "timestamp": "2026-04-11T00:42:49.457392"
+    },
+    {
+      "id": 758,
+      "text": "Sample text 758",
+      "label": "positive",
+      "score": 0.10020768781834477,
+      "timestamp": "2025-10-11T00:42:49.458805"
+    },
+    {
+      "id": 526,
+      "text": "Sample text 526",
+      "label": "positive",
+      "score": 0.6581593201842794,
+      "timestamp": "2026-02-08T00:42:49.458271"
+    },
+    {
+      "id": 281,
+      "text": "Sample text 281",
+      "label": "positive",
+      "score": 0.30341017136331705,
+      "timestamp": "2025-12-21T00:42:49.457713"
+    },
+    {
+      "id": 863,
+      "text": "Sample text 863",
+      "label": "positive",
+      "score": 0.091359196179438,
+      "timestamp": "2026-01-05T00:42:49.459044"
+    },
+    {
+      "id": 643,
+      "text": "Sample text 643",
+      "label": "positive",
+      "score": 0.7534688048520642,
+      "timestamp": "2025-12-15T00:42:49.458539"
+    },
+    {
+      "id": 726,
+      "text": "Sample text 726",
+      "label": "positive",
+      "score": 0.19583608539462505,
+      "timestamp": "2025-10-10T00:42:49.458730"
+    },
+    {
+      "id": 819,
+      "text": "Sample text 819",
+      "label": "positive",
+      "score": 0.5992485380089262,
+      "timestamp": "2025-10-31T00:42:49.458944"
+    },
+    {
+      "id": 523,
+      "text": "Sample text 523",
+      "label": "negative",
+      "score": 0.2042936541408823,
+      "timestamp": "2025-08-13T00:42:49.458264"
+    },
+    {
+      "id": 442,
+      "text": "Sample text 442",
+      "label": "neutral",
+      "score": 0.17113972903363905,
+      "timestamp": "2025-10-27T00:42:49.458080"
+    },
+    {
+      "id": 841,
+      "text": "Sample text 841",
+      "label": "negative",
+      "score": 0.41289305431050805,
+      "timestamp": "2025-10-21T00:42:49.458994"
+    },
+    {
+      "id": 345,
+      "text": "Sample text 345",
+      "label": "neutral",
+      "score": 0.7902257031485959,
+      "timestamp": "2026-03-20T00:42:49.457858"
+    },
+    {
+      "id": 112,
+      "text": "Sample text 112",
+      "label": "positive",
+      "score": 0.4636512347001379,
+      "timestamp": "2025-08-23T00:42:49.457323"
+    },
+    {
+      "id": 833,
+      "text": "Sample text 833",
+      "label": "neutral",
+      "score": 0.6040067958673495,
+      "timestamp": "2025-10-25T00:42:49.458976"
+    },
+    {
+      "id": 52,
+      "text": "Sample text 52",
+      "label": "negative",
+      "score": 0.6748855378695336,
+      "timestamp": "2026-01-12T00:42:49.457162"
+    },
+    {
+      "id": 593,
+      "text": "Sample text 593",
+      "label": "neutral",
+      "score": 0.5726025530637815,
+      "timestamp": "2025-06-26T00:42:49.458424"
+    },
+    {
+      "id": 447,
+      "text": "Sample text 447",
+      "label": "positive",
+      "score": 0.7746134349195261,
+      "timestamp": "2025-08-03T00:42:49.458091"
+    },
+    {
+      "id": 388,
+      "text": "Sample text 388",
+      "label": "neutral",
+      "score": 0.014371017890098758,
+      "timestamp": "2025-10-08T00:42:49.457956"
+    },
+    {
+      "id": 296,
+      "text": "Sample text 296",
+      "label": "neutral",
+      "score": 0.18784801713715582,
+      "timestamp": "2026-01-29T00:42:49.457748"
+    },
+    {
+      "id": 174,
+      "text": "Sample text 174",
+      "label": "positive",
+      "score": 0.15919322513836032,
+      "timestamp": "2026-04-01T00:42:49.457466"
+    },
+    {
+      "id": 728,
+      "text": "Sample text 728",
+      "label": "neutral",
+      "score": null,
+      "timestamp": "2025-11-24T00:42:49.458735"
+    },
+    {
+      "id": 671,
+      "text": "Sample text 671",
+      "label": "neutral",
+      "score": 0.11031562051085964,
+      "timestamp": "2025-06-02T00:42:49.458603"
+    },
+    {
+      "id": 799,
+      "text": "Sample text 799",
+      "label": "neutral",
+      "score": 0.8829253619855886,
+      "timestamp": "2025-09-03T00:42:49.458900"
+    },
+    {
+      "id": 492,
+      "text": "Sample text 492",
+      "label": "negative",
+      "score": 0.6387337528760109,
+      "timestamp": "2025-11-23T00:42:49.458193"
+    },
+    {
+      "id": 603,
+      "text": "Sample text 603",
+      "label": "positive",
+      "score": 0.6179493044017117,
+      "timestamp": "2026-03-18T00:42:49.458447"
+    },
+    {
+      "id": 610,
+      "text": "Sample text 610",
+      "label": "positive",
+      "score": 0.3349857850007625,
+      "timestamp": "2025-09-16T00:42:49.458463"
+    },
+    {
+      "id": 742,
+      "text": "Sample text 742",
+      "label": "positive",
+      "score": 0.4662522790444885,
+      "timestamp": "2025-04-21T00:42:49.458767"
+    },
+    {
+      "id": 772,
+      "text": "Sample text 772",
+      "label": "positive",
+      "score": 0.31835669847610804,
+      "timestamp": "2026-02-03T00:42:49.458839"
+    },
+    {
+      "id": 454,
+      "text": "Sample text 454",
+      "label": "positive",
+      "score": 0.8124855263498162,
+      "timestamp": "2025-11-25T00:42:49.458107"
+    },
+    {
+      "id": 140,
+      "text": "Sample text 140",
+      "label": "positive",
+      "score": 0.3707851222296058,
+      "timestamp": "2025-10-19T00:42:49.457387"
+    },
+    {
+      "id": 170,
+      "text": "Sample text 170",
+      "label": "neutral",
+      "score": 0.8286873043753583,
+      "timestamp": "2025-08-02T00:42:49.457457"
+    },
+    {
+      "id": 172,
+      "text": "Sample text 172",
+      "label": "neutral",
+      "score": 0.810418652184842,
+      "timestamp": "2025-04-19T00:42:49.457461"
+    },
+    {
+      "id": 959,
+      "text": "Sample text 959",
+      "label": "neutral",
+      "score": 0.14170842498550418,
+      "timestamp": "2025-04-29T00:42:49.459266"
+    },
+    {
+      "id": 987,
+      "text": "Sample text 987",
+      "label": "positive",
+      "score": 0.7935999679764939,
+      "timestamp": "2026-02-21T00:42:49.459333"
+    },
+    {
+      "id": 960,
+      "text": "",
+      "label": "positive",
+      "score": 0.3539364973125956,
+      "timestamp": "2025-06-09T00:42:49.459269"
+    },
+    {
+      "id": 829,
+      "text": "Sample text 829",
+      "label": "positive",
+      "score": 0.16137927366620963,
+      "timestamp": "2025-10-06T00:42:49.458967"
+    },
+    {
+      "id": 276,
+      "text": "Sample text 276",
+      "label": "positive",
+      "score": 0.2896563563156517,
+      "timestamp": "2025-06-27T00:42:49.457701"
+    },
+    {
+      "id": 649,
+      "text": "Sample text 649",
+      "label": "positive",
+      "score": 0.7316337426656154,
+      "timestamp": "2026-02-12T00:42:49.458553"
+    },
+    {
+      "id": 7,
+      "text": "Sample text 7",
+      "label": "positive",
+      "score": 0.9819232558265506,
+      "timestamp": "2025-06-09T00:42:49.457059"
+    },
+    {
+      "id": 911,
+      "text": "Sample text 911",
+      "label": "positive",
+      "score": 0.2588529501525657,
+      "timestamp": "2025-12-19T00:42:49.459155"
+    },
+    {
+      "id": 859,
+      "text": "Sample text 859",
+      "label": "positive",
+      "score": 0.5532844808821095,
+      "timestamp": "2025-07-13T00:42:49.459035"
+    },
+    {
+      "id": 892,
+      "text": "Sample text 892",
+      "label": "positive",
+      "score": 0.34269193020497424,
+      "timestamp": "2025-07-11T00:42:49.459111"
+    },
+    {
+      "id": 982,
+      "text": "Sample text 982",
+      "label": "neutral",
+      "score": 0.6402654238628115,
+      "timestamp": "2025-10-26T00:42:49.459321"
+    },
+    {
+      "id": 113,
+      "text": "Sample text 113",
+      "label": "positive",
+      "score": 0.33323413980496186,
+      "timestamp": "2025-08-15T00:42:49.457326"
+    },
+    {
+      "id": 429,
+      "text": "Sample text 429",
+      "label": "positive",
+      "score": 0.16565311546697858,
+      "timestamp": "2025-12-28T00:42:49.458050"
+    },
+    {
+      "id": 898,
+      "text": "Sample text 898",
+      "label": "negative",
+      "score": 0.90510349551367,
+      "timestamp": "2025-08-27T00:42:49.459125"
+    },
+    {
+      "id": 203,
+      "text": "Sample text 203",
+      "label": "negative",
+      "score": 0.6626169966143615,
+      "timestamp": "2026-03-21T00:42:49.457534"
+    },
+    {
+      "id": 63,
+      "text": "Sample text 63",
+      "label": "negative",
+      "score": 0.6130275117116392,
+      "timestamp": "2026-01-13T00:42:49.457187"
+    },
+    {
+      "id": 391,
+      "text": "Sample text 391",
+      "label": "positive",
+      "score": 0.9263488588915303,
+      "timestamp": "2025-08-21T00:42:49.457963"
+    },
+    {
+      "id": 25,
+      "text": "Sample text 25",
+      "label": "negative",
+      "score": 0.6148864482706267,
+      "timestamp": "2026-01-17T00:42:49.457101"
+    },
+    {
+      "id": 807,
+      "text": "Sample text 807",
+      "label": "positive",
+      "score": 0.6093161540253086,
+      "timestamp": "2025-08-20T00:42:49.458918"
+    },
+    {
+      "id": 543,
+      "text": "Sample text 543",
+      "label": "positive",
+      "score": 0.3840834629223784,
+      "timestamp": "2025-09-09T00:42:49.458309"
+    },
+    {
+      "id": 271,
+      "text": "Sample text 271",
+      "label": "positive",
+      "score": 0.6190103690542129,
+      "timestamp": "2025-11-09T00:42:49.457690"
+    },
+    {
+      "id": 283,
+      "text": "",
+      "label": "positive",
+      "score": 0.8836024722289778,
+      "timestamp": "2026-02-03T00:42:49.457718"
+    },
+    {
+      "id": 712,
+      "text": "Sample text 712",
+      "label": "positive",
+      "score": 0.5926391270192102,
+      "timestamp": "2026-02-19T00:42:49.458698"
+    },
+    {
+      "id": 997,
+      "text": "Sample text 997",
+      "label": "positive",
+      "score": 0.8154694525305778,
+      "timestamp": "2025-07-31T00:42:49.459356"
+    },
+    {
+      "id": 392,
+      "text": "Sample text 392",
+      "label": "positive",
+      "score": 0.5427628788044763,
+      "timestamp": "2025-09-29T00:42:49.457965"
+    },
+    {
+      "id": 402,
+      "text": "Sample text 402",
+      "label": "positive",
+      "score": 0.02624681706261145,
+      "timestamp": "2025-10-03T00:42:49.457989"
+    },
+    {
+      "id": 645,
+      "text": "Sample text 645",
+      "label": "positive",
+      "score": 0.5398297498964959,
+      "timestamp": "2026-01-03T00:42:49.458543"
+    },
+    {
+      "id": 218,
+      "text": "Sample text 218",
+      "label": "positive",
+      "score": 0.7887473965561549,
+      "timestamp": "2025-07-04T00:42:49.457568"
+    },
+    {
+      "id": 466,
+      "text": "Sample text 466",
+      "label": "positive",
+      "score": 0.9514945959287239,
+      "timestamp": "2025-06-21T00:42:49.458135"
+    },
+    {
+      "id": 301,
+      "text": "Sample text 301",
+      "label": "positive",
+      "score": null,
+      "timestamp": "2026-02-17T00:42:49.457759"
+    },
+    {
+      "id": 167,
+      "text": "Sample text 167",
+      "label": "neutral",
+      "score": 0.6799809221609274,
+      "timestamp": "2026-01-27T00:42:49.457450"
+    },
+    {
+      "id": 616,
+      "text": "Sample text 616",
+      "label": "neutral",
+      "score": 0.5654023848734488,
+      "timestamp": "2025-06-22T00:42:49.458476"
+    },
+    {
+      "id": 795,
+      "text": "Sample text 795",
+      "label": "positive",
+      "score": 0.9187751324889913,
+      "timestamp": "2025-07-18T00:42:49.458891"
+    },
+    {
+      "id": 0,
+      "text": "Sample text 0",
+      "label": "neutral",
+      "score": 0.35539121494447434,
+      "timestamp": "2025-08-09T00:42:49.457035"
+    },
+    {
+      "id": 129,
+      "text": "Sample text 129",
+      "label": "negative",
+      "score": 0.3081003427983843,
+      "timestamp": "2026-01-16T00:42:49.457362"
+    },
+    {
+      "id": 23,
+      "text": "Sample text 23",
+      "label": "positive",
+      "score": 0.6294591411621266,
+      "timestamp": "2025-11-20T00:42:49.457096"
+    },
+    {
+      "id": 47,
+      "text": "Sample text 47",
+      "label": "positive",
+      "score": 0.4033687171551702,
+      "timestamp": "2025-04-24T00:42:49.457151"
+    },
+    {
+      "id": 387,
+      "text": "Sample text 387",
+      "label": "negative",
+      "score": 0.2161372851437744,
+      "timestamp": "2025-12-26T00:42:49.457954"
+    },
+    {
+      "id": 475,
+      "text": "Sample text 475",
+      "label": "positive",
+      "score": 0.6995122784064957,
+      "timestamp": "2025-09-17T00:42:49.458155"
+    },
+    {
+      "id": 735,
+      "text": "Sample text 735",
+      "label": "positive",
+      "score": 0.857890304506447,
+      "timestamp": "2025-11-21T00:42:49.458750"
+    },
+    {
+      "id": 522,
+      "text": "Sample text 522",
+      "label": "neutral",
+      "score": 0.06714206188943761,
+      "timestamp": "2026-01-24T00:42:49.458262"
+    },
+    {
+      "id": 732,
+      "text": "Sample text 732",
+      "label": "positive",
+      "score": 0.5455873370724222,
+      "timestamp": "2026-02-18T00:42:49.458744"
+    },
+    {
+      "id": 538,
+      "text": "Sample text 538",
+      "label": "positive",
+      "score": 0.1803745372298281,
+      "timestamp": "2025-04-15T00:42:49.458298"
+    },
+    {
+      "id": 848,
+      "text": "Sample text 848",
+      "label": "negative",
+      "score": 0.8051986522606203,
+      "timestamp": "2026-02-06T00:42:49.459010"
+    },
+    {
+      "id": 200,
+      "text": "Sample text 200",
+      "label": "positive",
+      "score": null,
+      "timestamp": "2025-11-10T00:42:49.457526"
+    },
+    {
+      "id": 557,
+      "text": "Sample text 557",
+      "label": "positive",
+      "score": 0.15786302065934843,
+      "timestamp": "2025-11-16T00:42:49.458341"
+    },
+    {
+      "id": 437,
+      "text": "Sample text 437",
+      "label": "negative",
+      "score": 0.32156123890537003,
+      "timestamp": "2025-12-14T00:42:49.458068"
+    },
+    {
+      "id": 945,
+      "text": "Sample text 945",
+      "label": "positive",
+      "score": 0.973956744835892,
+      "timestamp": "2025-05-05T00:42:49.459233"
+    },
+    {
+      "id": 464,
+      "text": "Sample text 464",
+      "label": "neutral",
+      "score": 0.9166972440752669,
+      "timestamp": "2025-09-27T00:42:49.458130"
+    },
+    {
+      "id": 632,
+      "text": "Sample text 632",
+      "label": "neutral",
+      "score": 0.6166295938772841,
+      "timestamp": "2026-03-20T00:42:49.458513"
+    },
+    {
+      "id": 910,
+      "text": "Sample text 910",
+      "label": "neutral",
+      "score": 0.6236897470669645,
+      "timestamp": "2025-09-25T00:42:49.459152"
+    },
+    {
+      "id": 891,
+      "text": "Sample text 891",
+      "label": "positive",
+      "score": 0.2498461252461568,
+      "timestamp": "2025-06-06T00:42:49.459108"
+    },
+    {
+      "id": 489,
+      "text": "Sample text 489",
+      "label": "positive",
+      "score": 0.6398003102893179,
+      "timestamp": "2026-01-27T00:42:49.458186"
+    },
+    {
+      "id": 914,
+      "text": "Sample text 914",
+      "label": "positive",
+      "score": 0.1815867208011187,
+      "timestamp": "2026-03-30T00:42:49.459162"
+    },
+    {
+      "id": 871,
+      "text": "Sample text 871",
+      "label": "negative",
+      "score": 0.17653187609195253,
+      "timestamp": "2025-07-27T00:42:49.459062"
+    },
+    {
+      "id": 16,
+      "text": "Sample text 16",
+      "label": "positive",
+      "score": 0.02149202805815198,
+      "timestamp": "2025-11-29T00:42:49.457080"
+    },
+    {
+      "id": 95,
+      "text": "Sample text 95",
+      "label": "positive",
+      "score": 0.23639632566208602,
+      "timestamp": "2025-09-05T00:42:49.457284"
+    },
+    {
+      "id": 596,
+      "text": "Sample text 596",
+      "label": "neutral",
+      "score": 0.571082632203409,
+      "timestamp": "2026-03-24T00:42:49.458431"
+    },
+    {
+      "id": 470,
+      "text": "Sample text 470",
+      "label": "positive",
+      "score": 0.33373950461415247,
+      "timestamp": "2025-08-30T00:42:49.458144"
+    },
+    {
+      "id": 773,
+      "text": "Sample text 773",
+      "label": "positive",
+      "score": 0.6747496107993431,
+      "timestamp": "2025-09-07T00:42:49.458841"
+    },
+    {
+      "id": 309,
+      "text": "Sample text 309",
+      "label": "positive",
+      "score": 0.9564664882112225,
+      "timestamp": "2025-11-19T00:42:49.457777"
+    },
+    {
+      "id": 613,
+      "text": "Sample text 613",
+      "label": "positive",
+      "score": 0.7157679705386888,
+      "timestamp": "2025-07-26T00:42:49.458469"
+    },
+    {
+      "id": 5,
+      "text": "Sample text 5",
+      "label": "negative",
+      "score": 0.8351749297935509,
+      "timestamp": "2026-03-16T00:42:49.457054"
+    },
+    {
+      "id": 460,
+      "text": "Sample text 460",
+      "label": "negative",
+      "score": 0.07801672872263488,
+      "timestamp": "2025-08-02T00:42:49.458121"
+    },
+    {
+      "id": 731,
+      "text": "Sample text 731",
+      "label": "neutral",
+      "score": 0.6322400827294641,
+      "timestamp": "2025-08-04T00:42:49.458742"
+    },
+    {
+      "id": 216,
+      "text": "Sample text 216",
+      "label": "neutral",
+      "score": 0.700455535740838,
+      "timestamp": "2025-11-19T00:42:49.457564"
+    },
+    {
+      "id": 704,
+      "text": "Sample text 704",
+      "label": "positive",
+      "score": 0.7144748000148929,
+      "timestamp": "2025-07-21T00:42:49.458679"
+    },
+    {
+      "id": 852,
+      "text": "Sample text 852",
+      "label": "neutral",
+      "score": 0.5871354256019776,
+      "timestamp": "2025-07-30T00:42:49.459019"
+    },
+    {
+      "id": 236,
+      "text": "Sample text 236",
+      "label": "positive",
+      "score": 0.8507770506025396,
+      "timestamp": "2026-02-11T00:42:49.457611"
+    },
+    {
+      "id": 598,
+      "text": "Sample text 598",
+      "label": "positive",
+      "score": 0.8359997962751801,
+      "timestamp": "2026-01-11T00:42:49.458435"
+    },
+    {
+      "id": 785,
+      "text": "Sample text 785",
+      "label": "positive",
+      "score": 0.844168406240822,
+      "timestamp": "2025-10-08T00:42:49.458868"
+    },
+    {
+      "id": 579,
+      "text": "Sample text 579",
+      "label": "positive",
+      "score": 0.551405841802682,
+      "timestamp": "2025-05-13T00:42:49.458391"
+    },
+    {
+      "id": 222,
+      "text": "Sample text 222",
+      "label": "negative",
+      "score": 0.4577865912251511,
+      "timestamp": "2025-08-31T00:42:49.457578"
+    },
+    {
+      "id": 343,
+      "text": "Sample text 343",
+      "label": "positive",
+      "score": 0.5971107558233812,
+      "timestamp": "2025-11-05T00:42:49.457854"
+    },
+    {
+      "id": 738,
+      "text": "Sample text 738",
+      "label": "negative",
+      "score": null,
+      "timestamp": "2025-05-07T00:42:49.458757"
+    },
+    {
+      "id": 762,
+      "text": "Sample text 762",
+      "label": "positive",
+      "score": 0.9347544454102629,
+      "timestamp": "2025-07-27T00:42:49.458815"
+    },
+    {
+      "id": 854,
+      "text": "Sample text 854",
+      "label": "neutral",
+      "score": 0.3798723668920442,
+      "timestamp": "2025-05-05T00:42:49.459023"
+    },
+    {
+      "id": 268,
+      "text": "Sample text 268",
+      "label": "positive",
+      "score": 0.21003330189233427,
+      "timestamp": "2025-09-28T00:42:49.457683"
+    },
+    {
+      "id": 104,
+      "text": "Sample text 104",
+      "label": "positive",
+      "score": 0.14153201087023703,
+      "timestamp": "2025-12-29T00:42:49.457305"
+    },
+    {
+      "id": 108,
+      "text": "Sample text 108",
+      "label": "neutral",
+      "score": 0.4811707070471045,
+      "timestamp": "2025-10-10T00:42:49.457314"
+    },
+    {
+      "id": 341,
+      "text": "Sample text 341",
+      "label": "positive",
+      "score": 0.1947305893146959,
+      "timestamp": "2026-02-16T00:42:49.457849"
+    },
+    {
+      "id": 479,
+      "text": "Sample text 479",
+      "label": "negative",
+      "score": 0.6879359203474185,
+      "timestamp": "2026-01-15T00:42:49.458164"
+    },
+    {
+      "id": 501,
+      "text": "",
+      "label": "positive",
+      "score": 0.83411005139829,
+      "timestamp": "2026-03-18T00:42:49.458214"
+    },
+    {
+      "id": 778,
+      "text": "Sample text 778",
+      "label": "positive",
+      "score": 0.15074756953838553,
+      "timestamp": "2025-11-04T00:42:49.458853"
+    },
+    {
+      "id": 178,
+      "text": "Sample text 178",
+      "label": "neutral",
+      "score": 0.30407400770137083,
+      "timestamp": "2025-05-12T00:42:49.457475"
+    },
+    {
+      "id": 599,
+      "text": "",
+      "label": "positive",
+      "score": null,
+      "timestamp": "2026-03-25T00:42:49.458438"
+    },
+    {
+      "id": 781,
+      "text": "Sample text 781",
+      "label": "positive",
+      "score": 0.4044735491540301,
+      "timestamp": "2026-04-06T00:42:49.458859"
+    },
+    {
+      "id": 640,
+      "text": "Sample text 640",
+      "label": "positive",
+      "score": 0.1431965607548834,
+      "timestamp": "2025-12-26T00:42:49.458532"
+    },
+    {
+      "id": 9,
+      "text": "Sample text 9",
+      "label": "positive",
+      "score": 0.7891913869272398,
+      "timestamp": "2026-03-22T00:42:49.457064"
+    },
+    {
+      "id": 371,
+      "text": "Sample text 371",
+      "label": "positive",
+      "score": 0.278375062753101,
+      "timestamp": "2026-03-24T00:42:49.457918"
+    },
+    {
+      "id": 565,
+      "text": "Sample text 565",
+      "label": "positive",
+      "score": 0.5514252519516012,
+      "timestamp": "2026-02-05T00:42:49.458360"
+    },
+    {
+      "id": 120,
+      "text": "Sample text 120",
+      "label": "positive",
+      "score": 0.47772555824002294,
+      "timestamp": "2025-10-09T00:42:49.457342"
+    },
+    {
+      "id": 948,
+      "text": "Sample text 948",
+      "label": "negative",
+      "score": 0.7941948562703739,
+      "timestamp": "2026-01-09T00:42:49.459240"
+    },
+    {
+      "id": 942,
+      "text": "Sample text 942",
+      "label": "positive",
+      "score": 0.12583297654473125,
+      "timestamp": "2025-07-23T00:42:49.459226"
+    },
+    {
+      "id": 818,
+      "text": "Sample text 818",
+      "label": "neutral",
+      "score": 0.9788965016686656,
+      "timestamp": "2025-07-05T00:42:49.458942"
+    },
+    {
+      "id": 354,
+      "text": "Sample text 354",
+      "label": "positive",
+      "score": 0.6234707672592442,
+      "timestamp": "2025-09-04T00:42:49.457879"
+    },
+    {
+      "id": 418,
+      "text": "Sample text 418",
+      "label": "negative",
+      "score": 0.6256827568733146,
+      "timestamp": "2025-12-26T00:42:49.458025"
+    },
+    {
+      "id": 597,
+      "text": "Sample text 597",
+      "label": "negative",
+      "score": 0.782426287628942,
+      "timestamp": "2025-06-05T00:42:49.458433"
+    },
+    {
+      "id": 2,
+      "text": "Sample text 2",
+      "label": "positive",
+      "score": 0.6517049800930442,
+      "timestamp": "2025-10-11T00:42:49.457047"
+    },
+    {
+      "id": 435,
+      "text": "Sample text 435",
+      "label": "positive",
+      "score": 0.21518416447158606,
+      "timestamp": "2025-10-04T00:42:49.458064"
+    },
+    {
+      "id": 391,
+      "text": "Sample text 391",
+      "label": "positive",
+      "score": 0.9263488588915303,
+      "timestamp": "2025-08-21T00:42:49.457963"
+    },
+    {
+      "id": 477,
+      "text": "Sample text 477",
+      "label": "positive",
+      "score": 0.6368992126583497,
+      "timestamp": "2025-04-16T00:42:49.458159"
+    },
+    {
+      "id": 802,
+      "text": "Sample text 802",
+      "label": "positive",
+      "score": 0.2747867535566523,
+      "timestamp": "2025-04-25T00:42:49.458906"
+    },
+    {
+      "id": 972,
+      "text": "Sample text 972",
+      "label": "positive",
+      "score": 0.15184620176129848,
+      "timestamp": "2025-08-28T00:42:49.459297"
+    },
+    {
+      "id": 963,
+      "text": "Sample text 963",
+      "label": "positive",
+      "score": 0.8589408145709653,
+      "timestamp": "2025-12-18T00:42:49.459276"
+    },
+    {
+      "id": 367,
+      "text": "Sample text 367",
+      "label": "positive",
+      "score": 0.8741588850489151,
+      "timestamp": "2025-05-05T00:42:49.457909"
+    },
+    {
+      "id": 839,
+      "text": "Sample text 839",
+      "label": "positive",
+      "score": 0.6496298047903613,
+      "timestamp": "2025-09-05T00:42:49.458990"
+    },
+    {
+      "id": 168,
+      "text": "Sample text 168",
+      "label": "negative",
+      "score": 0.8012917550485676,
+      "timestamp": "2025-04-18T00:42:49.457452"
+    },
+    {
+      "id": 691,
+      "text": "Sample text 691",
+      "label": "neutral",
+      "score": 0.8648277144290005,
+      "timestamp": "2025-08-05T00:42:49.458648"
+    },
+    {
+      "id": 656,
+      "text": "Sample text 656",
+      "label": "positive",
+      "score": 0.7335606850439786,
+      "timestamp": "2025-11-19T00:42:49.458568"
+    },
+    {
+      "id": 478,
+      "text": "Sample text 478",
+      "label": "positive",
+      "score": 0.5032401525063994,
+      "timestamp": "2025-04-19T00:42:49.458162"
+    },
+    {
+      "id": 935,
+      "text": "Sample text 935",
+      "label": "positive",
+      "score": 0.8888204505331987,
+      "timestamp": "2026-03-26T00:42:49.459210"
+    },
+    {
+      "id": 474,
+      "text": "Sample text 474",
+      "label": "positive",
+      "score": 0.26617824464117834,
+      "timestamp": "2026-03-10T00:42:49.458153"
+    },
+    {
+      "id": 941,
+      "text": "Sample text 941",
+      "label": "negative",
+      "score": 0.7163152925401798,
+      "timestamp": "2025-08-11T00:42:49.459224"
+    },
+    {
+      "id": 420,
+      "text": "",
+      "label": "positive",
+      "score": 0.5672938498199984,
+      "timestamp": "2025-06-06T00:42:49.458030"
+    },
+    {
+      "id": 703,
+      "text": "Sample text 703",
+      "label": "positive",
+      "score": 0.16594567255316373,
+      "timestamp": "2025-11-15T00:42:49.458676"
+    },
+    {
+      "id": 968,
+      "text": "Sample text 968",
+      "label": "positive",
+      "score": 0.6131172671465942,
+      "timestamp": "2026-03-09T00:42:49.459287"
+    },
+    {
+      "id": 518,
+      "text": "Sample text 518",
+      "label": "positive",
+      "score": 0.331307596447424,
+      "timestamp": "2026-03-12T00:42:49.458253"
+    },
+    {
+      "id": 330,
+      "text": "",
+      "label": "neutral",
+      "score": 0.07899329248849896,
+      "timestamp": "2026-03-04T00:42:49.457825"
+    },
+    {
+      "id": 434,
+      "text": "Sample text 434",
+      "label": "neutral",
+      "score": 0.1146499527983682,
+      "timestamp": "2025-10-29T00:42:49.458062"
+    },
+    {
+      "id": 13,
+      "text": "Sample text 13",
+      "label": "positive",
+      "score": 0.11518929259778532,
+      "timestamp": "2025-11-15T00:42:49.457073"
+    },
+    {
+      "id": 528,
+      "text": "Sample text 528",
+      "label": "positive",
+      "score": 0.2003510406327128,
+      "timestamp": "2025-08-10T00:42:49.458275"
+    },
+    {
+      "id": 702,
+      "text": "Sample text 702",
+      "label": "positive",
+      "score": 0.6766831597023281,
+      "timestamp": "2025-07-19T00:42:49.458674"
+    },
+    {
+      "id": 844,
+      "text": "Sample text 844",
+      "label": "negative",
+      "score": 0.3306612133039083,
+      "timestamp": "2025-08-25T00:42:49.459001"
+    },
+    {
+      "id": 843,
+      "text": "Sample text 843",
+      "label": "negative",
+      "score": 0.4915769305266624,
+      "timestamp": "2025-12-08T00:42:49.458999"
+    },
+    {
+      "id": 133,
+      "text": "Sample text 133",
+      "label": "positive",
+      "score": 0.7499157352948889,
+      "timestamp": "2026-01-04T00:42:49.457371"
+    },
+    {
+      "id": 755,
+      "text": "Sample text 755",
+      "label": "neutral",
+      "score": 0.47520981833201104,
+      "timestamp": "2025-08-16T00:42:49.458798"
+    },
+    {
+      "id": 887,
+      "text": "Sample text 887",
+      "label": "positive",
+      "score": 0.7909199698448652,
+      "timestamp": "2025-10-28T00:42:49.459099"
+    },
+    {
+      "id": 903,
+      "text": "",
+      "label": "positive",
+      "score": 0.798278244786486,
+      "timestamp": "2025-07-11T00:42:49.459136"
+    },
+    {
+      "id": 653,
+      "text": "Sample text 653",
+      "label": "positive",
+      "score": 0.3175271987199684,
+      "timestamp": "2025-07-01T00:42:49.458562"
+    },
+    {
+      "id": 217,
+      "text": "Sample text 217",
+      "label": "positive",
+      "score": 0.17074741660055803,
+      "timestamp": "2025-09-25T00:42:49.457566"
+    },
+    {
+      "id": 342,
+      "text": "Sample text 342",
+      "label": "positive",
+      "score": 0.3354716601077382,
+      "timestamp": "2025-12-11T00:42:49.457851"
+    },
+    {
+      "id": 508,
+      "text": "Sample text 508",
+      "label": "positive",
+      "score": 0.4163123037985248,
+      "timestamp": "2025-12-31T00:42:49.458230"
+    },
+    {
+      "id": 395,
+      "text": "",
+      "label": "positive",
+      "score": 0.10367530209127751,
+      "timestamp": "2025-05-28T00:42:49.457972"
+    },
+    {
+      "id": 882,
+      "text": "Sample text 882",
+      "label": "positive",
+      "score": 0.8344390340418973,
+      "timestamp": "2025-10-05T00:42:49.459088"
+    },
+    {
+      "id": 689,
+      "text": "Sample text 689",
+      "label": "positive",
+      "score": 0.23211554770980236,
+      "timestamp": "2025-10-05T00:42:49.458644"
+    },
+    {
+      "id": 253,
+      "text": "Sample text 253",
+      "label": "positive",
+      "score": 0.9764385267875106,
+      "timestamp": "2026-04-08T00:42:49.457649"
+    },
+    {
+      "id": 634,
+      "text": "Sample text 634",
+      "label": "positive",
+      "score": 0.4771060474225408,
+      "timestamp": "2026-02-03T00:42:49.458518"
+    },
+    {
+      "id": 126,
+      "text": "Sample text 126",
+      "label": "negative",
+      "score": 0.8866508855133399,
+      "timestamp": "2025-06-16T00:42:49.457355"
+    },
+    {
+      "id": 381,
+      "text": "Sample text 381",
+      "label": "positive",
+      "score": 0.7227236827311104,
+      "timestamp": "2025-06-20T00:42:49.457940"
+    },
+    {
+      "id": 154,
+      "text": "Sample text 154",
+      "label": "negative",
+      "score": 0.7532525207415959,
+      "timestamp": "2025-05-10T00:42:49.457419"
+    },
+    {
+      "id": 255,
+      "text": "Sample text 255",
+      "label": "negative",
+      "score": 0.28113883559947905,
+      "timestamp": "2026-02-13T00:42:49.457653"
+    },
+    {
+      "id": 864,
+      "text": "Sample text 864",
+      "label": "negative",
+      "score": 0.132548939604742,
+      "timestamp": "2025-11-08T00:42:49.459047"
+    },
+    {
+      "id": 631,
+      "text": "Sample text 631",
+      "label": "positive",
+      "score": 0.29339189171068103,
+      "timestamp": "2025-10-22T00:42:49.458511"
+    },
+    {
+      "id": 590,
+      "text": "Sample text 590",
+      "label": "neutral",
+      "score": 0.5909586266915808,
+      "timestamp": "2026-03-29T00:42:49.458416"
+    },
+    {
+      "id": 305,
+      "text": "Sample text 305",
+      "label": "positive",
+      "score": 0.29673849122648,
+      "timestamp": "2025-07-25T00:42:49.457768"
+    },
+    {
+      "id": 824,
+      "text": "Sample text 824",
+      "label": "positive",
+      "score": 0.6531042413271956,
+      "timestamp": "2025-09-10T00:42:49.458956"
+    },
+    {
+      "id": 412,
+      "text": "Sample text 412",
+      "label": "neutral",
+      "score": 0.18655517130882948,
+      "timestamp": "2025-05-13T00:42:49.458011"
+    },
+    {
+      "id": 324,
+      "text": "Sample text 324",
+      "label": "positive",
+      "score": 0.11015631302876305,
+      "timestamp": "2025-10-16T00:42:49.457811"
+    },
+    {
+      "id": 50,
+      "text": "Sample text 50",
+      "label": "neutral",
+      "score": 0.3813185632542119,
+      "timestamp": "2025-09-24T00:42:49.457158"
+    },
+    {
+      "id": 661,
+      "text": "Sample text 661",
+      "label": "neutral",
+      "score": 0.49022197571952764,
+      "timestamp": "2025-05-25T00:42:49.458580"
+    },
+    {
+      "id": 669,
+      "text": "Sample text 669",
+      "label": "positive",
+      "score": 0.4855053926124189,
+      "timestamp": "2025-12-21T00:42:49.458598"
+    },
+    {
+      "id": 323,
+      "text": "Sample text 323",
+      "label": "negative",
+      "score": null,
+      "timestamp": "2026-04-04T00:42:49.457809"
+    },
+    {
+      "id": 636,
+      "text": "Sample text 636",
+      "label": "positive",
+      "score": 0.3698739087127677,
+      "timestamp": "2025-05-15T00:42:49.458523"
+    },
+    {
+      "id": 682,
+      "text": "Sample text 682",
+      "label": "positive",
+      "score": 0.15184755694535867,
+      "timestamp": "2025-06-15T00:42:49.458628"
+    },
+    {
+      "id": 783,
+      "text": "Sample text 783",
+      "label": "positive",
+      "score": 0.7713596601375288,
+      "timestamp": "2025-11-08T00:42:49.458864"
+    },
+    {
+      "id": 100,
+      "text": "Sample text 100",
+      "label": "neutral",
+      "score": 0.7328731293325891,
+      "timestamp": "2025-10-19T00:42:49.457296"
+    },
+    {
+      "id": 578,
+      "text": "Sample text 578",
+      "label": "neutral",
+      "score": 0.8134248357784621,
+      "timestamp": "2025-12-21T00:42:49.458389"
+    },
+    {
+      "id": 76,
+      "text": "Sample text 76",
+      "label": "positive",
+      "score": 0.15349647731079152,
+      "timestamp": "2025-10-11T00:42:49.457216"
+    },
+    {
+      "id": 595,
+      "text": "",
+      "label": "positive",
+      "score": 0.9509672319471301,
+      "timestamp": "2026-02-28T00:42:49.458428"
+    },
+    {
+      "id": 34,
+      "text": "Sample text 34",
+      "label": "positive",
+      "score": 0.6453548526457581,
+      "timestamp": "2025-10-11T00:42:49.457121"
+    },
+    {
+      "id": 90,
+      "text": "Sample text 90",
+      "label": "positive",
+      "score": 0.9814158948575997,
+      "timestamp": "2025-04-21T00:42:49.457271"
+    },
+    {
+      "id": 655,
+      "text": "Sample text 655",
+      "label": "positive",
+      "score": 0.22020955140402632,
+      "timestamp": "2026-01-02T00:42:49.458566"
+    },
+    {
+      "id": 899,
+      "text": "Sample text 899",
+      "label": "negative",
+      "score": 0.22768228099348908,
+      "timestamp": "2025-10-09T00:42:49.459127"
+    },
+    {
+      "id": 798,
+      "text": "Sample text 798",
+      "label": "positive",
+      "score": 0.40073958801018794,
+      "timestamp": "2026-01-08T00:42:49.458898"
+    },
+    {
+      "id": 295,
+      "text": "Sample text 295",
+      "label": "positive",
+      "score": 0.021047303901316372,
+      "timestamp": "2026-01-19T00:42:49.457745"
+    },
+    {
+      "id": 428,
+      "text": "Sample text 428",
+      "label": "positive",
+      "score": 0.7173961347422209,
+      "timestamp": "2025-09-23T00:42:49.458048"
+    },
+    {
+      "id": 971,
+      "text": "Sample text 971",
+      "label": "neutral",
+      "score": 0.27621787146061905,
+      "timestamp": "2025-09-19T00:42:49.459294"
+    },
+    {
+      "id": 667,
+      "text": "Sample text 667",
+      "label": "positive",
+      "score": 0.782827894456728,
+      "timestamp": "2026-03-12T00:42:49.458593"
+    },
+    {
+      "id": 905,
+      "text": "Sample text 905",
+      "label": "positive",
+      "score": 0.15822391806983183,
+      "timestamp": "2025-07-24T00:42:49.459141"
+    },
+    {
+      "id": 686,
+      "text": "Sample text 686",
+      "label": "positive",
+      "score": 0.28442298552144873,
+      "timestamp": "2025-04-18T00:42:49.458637"
+    },
+    {
+      "id": 496,
+      "text": "Sample text 496",
+      "label": "negative",
+      "score": 0.7953329045700108,
+      "timestamp": "2025-06-26T00:42:49.458203"
+    },
+    {
+      "id": 668,
+      "text": "Sample text 668",
+      "label": "positive",
+      "score": 0.4112290843678891,
+      "timestamp": "2025-08-29T00:42:49.458596"
+    },
+    {
+      "id": 901,
+      "text": "Sample text 901",
+      "label": "positive",
+      "score": 0.8060648105022127,
+      "timestamp": "2026-03-19T00:42:49.459132"
+    },
+    {
+      "id": 87,
+      "text": "Sample text 87",
+      "label": "positive",
+      "score": 0.6499449955218239,
+      "timestamp": "2025-10-06T00:42:49.457263"
+    },
+    {
+      "id": 244,
+      "text": "Sample text 244",
+      "label": "positive",
+      "score": 0.8921933858259173,
+      "timestamp": "2025-07-12T00:42:49.457629"
+    },
+    {
+      "id": 580,
+      "text": "Sample text 580",
+      "label": "positive",
+      "score": 0.5414191745478317,
+      "timestamp": "2026-02-18T00:42:49.458394"
+    },
+    {
+      "id": 242,
+      "text": "Sample text 242",
+      "label": "positive",
+      "score": 0.8985099580415388,
+      "timestamp": "2025-09-14T00:42:49.457624"
+    },
+    {
+      "id": 463,
+      "text": "Sample text 463",
+      "label": "neutral",
+      "score": 0.4540219653791885,
+      "timestamp": "2026-01-24T00:42:49.458128"
+    },
+    {
+      "id": 535,
+      "text": "Sample text 535",
+      "label": "positive",
+      "score": 0.5130451549795699,
+      "timestamp": "2026-01-13T00:42:49.458291"
+    },
+    {
+      "id": 775,
+      "text": "Sample text 775",
+      "label": "positive",
+      "score": 0.2351575819338304,
+      "timestamp": "2025-10-09T00:42:49.458846"
+    },
+    {
+      "id": 644,
+      "text": "Sample text 644",
+      "label": "negative",
+      "score": 0.838789995824532,
+      "timestamp": "2026-01-16T00:42:49.458541"
+    },
+    {
+      "id": 388,
+      "text": "Sample text 388",
+      "label": "neutral",
+      "score": 0.014371017890098758,
+      "timestamp": "2025-10-08T00:42:49.457956"
+    },
+    {
+      "id": 75,
+      "text": "Sample text 75",
+      "label": "negative",
+      "score": 0.7414464830670469,
+      "timestamp": "2026-01-16T00:42:49.457213"
+    },
+    {
+      "id": 886,
+      "text": "",
+      "label": "negative",
+      "score": 0.20860904203396002,
+      "timestamp": "2025-12-02T00:42:49.459097"
+    },
+    {
+      "id": 127,
+      "text": "Sample text 127",
+      "label": "positive",
+      "score": 0.7276520793841627,
+      "timestamp": "2026-02-26T00:42:49.457357"
+    },
+    {
+      "id": 143,
+      "text": "Sample text 143",
+      "label": "positive",
+      "score": 0.8879705512898945,
+      "timestamp": "2026-01-31T00:42:49.457394"
+    },
+    {
+      "id": 517,
+      "text": "Sample text 517",
+      "label": "positive",
+      "score": 0.10704891632112445,
+      "timestamp": "2025-06-12T00:42:49.458250"
+    },
+    {
+      "id": 673,
+      "text": "Sample text 673",
+      "label": "neutral",
+      "score": 0.9122285645656334,
+      "timestamp": "2025-07-03T00:42:49.458608"
+    },
+    {
+      "id": 937,
+      "text": "Sample text 937",
+      "label": "negative",
+      "score": 0.3486664064019076,
+      "timestamp": "2025-12-19T00:42:49.459214"
+    },
+    {
+      "id": 272,
+      "text": "Sample text 272",
+      "label": "negative",
+      "score": 0.7207694661145833,
+      "timestamp": "2026-03-21T00:42:49.457692"
+    },
+    {
+      "id": 692,
+      "text": "Sample text 692",
+      "label": "positive",
+      "score": 0.8380703961366016,
+      "timestamp": "2025-07-19T00:42:49.458651"
+    },
+    {
+      "id": 212,
+      "text": "Sample text 212",
+      "label": "positive",
+      "score": 0.6401774889899354,
+      "timestamp": "2025-10-09T00:42:49.457555"
+    },
+    {
+      "id": 866,
+      "text": "Sample text 866",
+      "label": "positive",
+      "score": 0.7900161268853075,
+      "timestamp": "2026-03-06T00:42:49.459051"
+    },
+    {
+      "id": 976,
+      "text": "Sample text 976",
+      "label": "positive",
+      "score": 0.3413771903159877,
+      "timestamp": "2025-11-24T00:42:49.459307"
+    },
+    {
+      "id": 81,
+      "text": "",
+      "label": "positive",
+      "score": 0.014559964367126144,
+      "timestamp": "2026-01-04T00:42:49.457248"
+    },
+    {
+      "id": 287,
+      "text": "Sample text 287",
+      "label": "positive",
+      "score": 0.05726343114640786,
+      "timestamp": "2026-04-07T00:42:49.457727"
+    },
+    {
+      "id": 51,
+      "text": "Sample text 51",
+      "label": "positive",
+      "score": 0.3288413626664505,
+      "timestamp": "2025-08-24T00:42:49.457160"
+    },
+    {
+      "id": 815,
+      "text": "",
+      "label": "neutral",
+      "score": 0.5564394872192443,
+      "timestamp": "2025-08-04T00:42:49.458936"
+    },
+    {
+      "id": 978,
+      "text": "Sample text 978",
+      "label": "positive",
+      "score": 0.6914369230382601,
+      "timestamp": "2025-08-06T00:42:49.459312"
+    },
+    {
+      "id": 415,
+      "text": "Sample text 415",
+      "label": "positive",
+      "score": 0.11093151911443255,
+      "timestamp": "2025-06-11T00:42:49.458018"
+    },
+    {
+      "id": 173,
+      "text": "Sample text 173",
+      "label": "negative",
+      "score": 0.8567787966691304,
+      "timestamp": "2025-09-24T00:42:49.457464"
+    },
+    {
+      "id": 443,
+      "text": "Sample text 443",
+      "label": "positive",
+      "score": 0.017836299863953853,
+      "timestamp": "2025-06-22T00:42:49.458082"
+    },
+    {
+      "id": 888,
+      "text": "Sample text 888",
+      "label": "positive",
+      "score": 0.6175558381001905,
+      "timestamp": "2025-08-30T00:42:49.459101"
+    },
+    {
+      "id": 352,
+      "text": "Sample text 352",
+      "label": "neutral",
+      "score": 0.16104702646595703,
+      "timestamp": "2025-07-30T00:42:49.457874"
+    },
+    {
+      "id": 946,
+      "text": "Sample text 946",
+      "label": "positive",
+      "score": 0.26672587364832767,
+      "timestamp": "2026-02-04T00:42:49.459235"
+    },
+    {
+      "id": 956,
+      "text": "Sample text 956",
+      "label": "positive",
+      "score": 0.11113696634976367,
+      "timestamp": "2025-07-05T00:42:49.459258"
+    },
+    {
+      "id": 879,
+      "text": "Sample text 879",
+      "label": "positive",
+      "score": 0.19190406625268885,
+      "timestamp": "2025-09-22T00:42:49.459081"
+    },
+    {
+      "id": 361,
+      "text": "Sample text 361",
+      "label": "neutral",
+      "score": 0.48825899541074513,
+      "timestamp": "2025-10-08T00:42:49.457895"
+    },
+    {
+      "id": 806,
+      "text": "Sample text 806",
+      "label": "positive",
+      "score": null,
+      "timestamp": "2025-10-28T00:42:49.458916"
+    },
+    {
+      "id": 103,
+      "text": "Sample text 103",
+      "label": "positive",
+      "score": null,
+      "timestamp": "2025-08-04T00:42:49.457303"
+    },
+    {
+      "id": 625,
+      "text": "Sample text 625",
+      "label": "positive",
+      "score": 0.31384433893832575,
+      "timestamp": "2026-03-02T00:42:49.458497"
+    },
+    {
+      "id": 160,
+      "text": "Sample text 160",
+      "label": "negative",
+      "score": 0.43696225291823954,
+      "timestamp": "2025-12-14T00:42:49.457434"
+    },
+    {
+      "id": 609,
+      "text": "Sample text 609",
+      "label": "neutral",
+      "score": 0.426475330262282,
+      "timestamp": "2025-11-19T00:42:49.458460"
+    },
+    {
+      "id": 169,
+      "text": "Sample text 169",
+      "label": "positive",
+      "score": 0.6885999971886277,
+      "timestamp": "2025-11-23T00:42:49.457455"
+    },
+    {
+      "id": 27,
+      "text": "Sample text 27",
+      "label": "positive",
+      "score": 0.5254756711014336,
+      "timestamp": "2025-08-08T00:42:49.457105"
+    },
+    {
+      "id": 867,
+      "text": "Sample text 867",
+      "label": "positive",
+      "score": 0.1973962418725781,
+      "timestamp": "2025-07-09T00:42:49.459053"
+    },
+    {
+      "id": 958,
+      "text": "Sample text 958",
+      "label": "neutral",
+      "score": 0.5047237216130821,
+      "timestamp": "2025-09-21T00:42:49.459264"
+    },
+    {
+      "id": 43,
+      "text": "Sample text 43",
+      "label": "negative",
+      "score": 0.7919148883661319,
+      "timestamp": "2025-11-03T00:42:49.457142"
+    },
+    {
+      "id": 481,
+      "text": "Sample text 481",
+      "label": "neutral",
+      "score": 0.020826847683750427,
+      "timestamp": "2025-11-28T00:42:49.458168"
+    },
+    {
+      "id": 638,
+      "text": "Sample text 638",
+      "label": "neutral",
+      "score": 0.34111721104598003,
+      "timestamp": "2025-06-28T00:42:49.458527"
+    },
+    {
+      "id": 982,
+      "text": "Sample text 982",
+      "label": "neutral",
+      "score": 0.6402654238628115,
+      "timestamp": "2025-10-26T00:42:49.459321"
+    },
+    {
+      "id": 410,
+      "text": "Sample text 410",
+      "label": "positive",
+      "score": 0.027818334237483366,
+      "timestamp": "2025-04-15T00:42:49.458007"
+    },
+    {
+      "id": 430,
+      "text": "Sample text 430",
+      "label": "neutral",
+      "score": 0.42373732176668777,
+      "timestamp": "2025-11-24T00:42:49.458053"
+    },
+    {
+      "id": 312,
+      "text": "Sample text 312",
+      "label": "positive",
+      "score": 0.6871607177076023,
+      "timestamp": "2025-05-28T00:42:49.457784"
+    },
+    {
+      "id": 161,
+      "text": "Sample text 161",
+      "label": "positive",
+      "score": 0.08913942679940046,
+      "timestamp": "2025-06-13T00:42:49.457437"
+    },
+    {
+      "id": 975,
+      "text": "Sample text 975",
+      "label": "positive",
+      "score": 0.6100356985208946,
+      "timestamp": "2026-01-24T00:42:49.459305"
+    },
+    {
+      "id": 973,
+      "text": "Sample text 973",
+      "label": "positive",
+      "score": 0.6367566072739065,
+      "timestamp": "2025-07-20T00:42:49.459300"
+    },
+    {
+      "id": 376,
+      "text": "Sample text 376",
+      "label": "positive",
+      "score": 0.87377588981544,
+      "timestamp": "2025-08-24T00:42:49.457929"
+    },
+    {
+      "id": 239,
+      "text": "Sample text 239",
+      "label": "positive",
+      "score": 0.8924939082395187,
+      "timestamp": "2025-08-06T00:42:49.457617"
+    },
+    {
+      "id": 954,
+      "text": "Sample text 954",
+      "label": "negative",
+      "score": 0.856214384305291,
+      "timestamp": "2025-07-21T00:42:49.459254"
+    },
+    {
+      "id": 862,
+      "text": "Sample text 862",
+      "label": "neutral",
+      "score": 0.7173803259139213,
+      "timestamp": "2026-01-12T00:42:49.459042"
+    },
+    {
+      "id": 77,
+      "text": "Sample text 77",
+      "label": "positive",
+      "score": 0.5322988049400337,
+      "timestamp": "2025-08-29T00:42:49.457219"
+    },
+    {
+      "id": 774,
+      "text": "Sample text 774",
+      "label": "positive",
+      "score": 0.6698766778441452,
+      "timestamp": "2025-06-16T00:42:49.458843"
+    },
+    {
+      "id": 650,
+      "text": "Sample text 650",
+      "label": "neutral",
+      "score": 0.2224417755556225,
+      "timestamp": "2026-03-05T00:42:49.458555"
+    },
+    {
+      "id": 998,
+      "text": "Sample text 998",
+      "label": "neutral",
+      "score": 0.7398593262222086,
+      "timestamp": "2025-12-17T00:42:49.459358"
+    },
+    {
+      "id": 672,
+      "text": "Sample text 672",
+      "label": "negative",
+      "score": 0.9502785632180327,
+      "timestamp": "2026-04-02T00:42:49.458605"
+    },
+    {
+      "id": 79,
+      "text": "Sample text 79",
+      "label": "neutral",
+      "score": 0.05241525618884968,
+      "timestamp": "2026-04-10T00:42:49.457223"
+    },
+    {
+      "id": 969,
+      "text": "Sample text 969",
+      "label": "positive",
+      "score": 0.8224412512798082,
+      "timestamp": "2025-12-09T00:42:49.459290"
+    },
+    {
+      "id": 139,
+      "text": "Sample text 139",
+      "label": "positive",
+      "score": 0.2658357987711457,
+      "timestamp": "2025-08-07T00:42:49.457385"
+    },
+    {
+      "id": 630,
+      "text": "Sample text 630",
+      "label": "positive",
+      "score": 0.9042603926536342,
+      "timestamp": "2025-10-13T00:42:49.458509"
+    },
+    {
+      "id": 456,
+      "text": "Sample text 456",
+      "label": "neutral",
+      "score": 0.9658362634143015,
+      "timestamp": "2025-09-13T00:42:49.458111"
+    },
+    {
+      "id": 794,
+      "text": "Sample text 794",
+      "label": "positive",
+      "score": 0.43110054651436713,
+      "timestamp": "2025-11-23T00:42:49.458888"
+    },
+    {
+      "id": 377,
+      "text": "Sample text 377",
+      "label": "neutral",
+      "score": 0.2594472258096805,
+      "timestamp": "2026-03-16T00:42:49.457932"
+    },
+    {
+      "id": 498,
+      "text": "Sample text 498",
+      "label": "neutral",
+      "score": 0.523186169316407,
+      "timestamp": "2025-11-15T00:42:49.458207"
+    },
+    {
+      "id": 715,
+      "text": "Sample text 715",
+      "label": "negative",
+      "score": 0.615887192402012,
+      "timestamp": "2025-08-13T00:42:49.458705"
+    },
+    {
+      "id": 791,
+      "text": "",
+      "label": "negative",
+      "score": 0.29323968557182967,
+      "timestamp": "2025-09-11T00:42:49.458881"
+    },
+    {
+      "id": 408,
+      "text": "Sample text 408",
+      "label": "positive",
+      "score": 0.7621718691834686,
+      "timestamp": "2025-11-30T00:42:49.458002"
+    },
+    {
+      "id": 926,
+      "text": "Sample text 926",
+      "label": "positive",
+      "score": 0.43414888490692216,
+      "timestamp": "2025-05-14T00:42:49.459189"
+    },
+    {
+      "id": 964,
+      "text": "Sample text 964",
+      "label": "neutral",
+      "score": 0.9421919878954473,
+      "timestamp": "2025-06-04T00:42:49.459278"
+    },
+    {
+      "id": 687,
+      "text": "Sample text 687",
+      "label": "positive",
+      "score": null,
+      "timestamp": "2025-08-01T00:42:49.458639"
+    },
+    {
+      "id": 80,
+      "text": "Sample text 80",
+      "label": "positive",
+      "score": 0.24969978164616746,
+      "timestamp": "2025-12-11T00:42:49.457241"
+    },
+    {
+      "id": 876,
+      "text": "Sample text 876",
+      "label": "positive",
+      "score": 0.6869589279486991,
+      "timestamp": "2026-01-09T00:42:49.459074"
+    },
+    {
+      "id": 384,
+      "text": "Sample text 384",
+      "label": "positive",
+      "score": 0.5206916982105824,
+      "timestamp": "2026-04-11T00:42:49.457947"
+    },
+    {
+      "id": 529,
+      "text": "Sample text 529",
+      "label": "positive",
+      "score": 0.49296413635715397,
+      "timestamp": "2025-05-06T00:42:49.458277"
+    },
+    {
+      "id": 955,
+      "text": "Sample text 955",
+      "label": "positive",
+      "score": 0.02541398975814535,
+      "timestamp": "2025-07-08T00:42:49.459256"
+    },
+    {
+      "id": 991,
+      "text": "Sample text 991",
+      "label": "positive",
+      "score": 0.7443863434913066,
+      "timestamp": "2025-09-03T00:42:49.459342"
+    },
+    {
+      "id": 870,
+      "text": "Sample text 870",
+      "label": "positive",
+      "score": 0.9922376871145898,
+      "timestamp": "2025-12-05T00:42:49.459060"
+    },
+    {
+      "id": 727,
+      "text": "",
+      "label": "positive",
+      "score": 0.09410848402262295,
+      "timestamp": "2025-10-06T00:42:49.458732"
+    },
+    {
+      "id": 560,
+      "text": "Sample text 560",
+      "label": "positive",
+      "score": 0.029978029670377992,
+      "timestamp": "2025-10-21T00:42:49.458348"
+    },
+    {
+      "id": 512,
+      "text": "Sample text 512",
+      "label": "positive",
+      "score": 0.46128398200625875,
+      "timestamp": "2025-06-30T00:42:49.458239"
+    },
+    {
+      "id": 333,
+      "text": "Sample text 333",
+      "label": "negative",
+      "score": 0.01320941959894495,
+      "timestamp": "2026-02-15T00:42:49.457831"
+    },
+    {
+      "id": 401,
+      "text": "Sample text 401",
+      "label": "positive",
+      "score": 0.41471652443186047,
+      "timestamp": "2025-12-10T00:42:49.457986"
+    },
+    {
+      "id": 55,
+      "text": "Sample text 55",
+      "label": "positive",
+      "score": 0.17182571684399295,
+      "timestamp": "2025-09-14T00:42:49.457169"
+    },
+    {
+      "id": 940,
+      "text": "Sample text 940",
+      "label": "positive",
+      "score": 0.25686162060647166,
+      "timestamp": "2025-10-29T00:42:49.459221"
+    },
+    {
+      "id": 571,
+      "text": "Sample text 571",
+      "label": "positive",
+      "score": 0.6156532018075477,
+      "timestamp": "2025-10-06T00:42:49.458373"
+    },
+    {
+      "id": 201,
+      "text": "Sample text 201",
+      "label": "positive",
+      "score": 0.2933968280193029,
+      "timestamp": "2025-07-13T00:42:49.457529"
+    },
+    {
+      "id": 109,
+      "text": "Sample text 109",
+      "label": "positive",
+      "score": 0.5052925542696879,
+      "timestamp": "2025-09-03T00:42:49.457316"
+    },
+    {
+      "id": 157,
+      "text": "Sample text 157",
+      "label": "neutral",
+      "score": 0.9227361867915339,
+      "timestamp": "2025-05-23T00:42:49.457426"
+    },
+    {
+      "id": 657,
+      "text": "Sample text 657",
+      "label": "positive",
+      "score": 0.5163062278714536,
+      "timestamp": "2025-12-24T00:42:49.458571"
+    },
+    {
+      "id": 606,
+      "text": "Sample text 606",
+      "label": "neutral",
+      "score": null,
+      "timestamp": "2025-10-14T00:42:49.458453"
+    },
+    {
+      "id": 685,
+      "text": "Sample text 685",
+      "label": "positive",
+      "score": 0.29123865387987025,
+      "timestamp": "2026-02-24T00:42:49.458635"
+    },
+    {
+      "id": 486,
+      "text": "Sample text 486",
+      "label": "neutral",
+      "score": 0.35078104577804436,
+      "timestamp": "2025-07-07T00:42:49.458179"
+    },
+    {
+      "id": 582,
+      "text": "Sample text 582",
+      "label": "positive",
+      "score": 0.5209949480782146,
+      "timestamp": "2025-11-07T00:42:49.458398"
+    },
+    {
+      "id": 385,
+      "text": "Sample text 385",
+      "label": "neutral",
+      "score": 0.6342930529216576,
+      "timestamp": "2025-05-20T00:42:49.457950"
+    },
+    {
+      "id": 904,
+      "text": "Sample text 904",
+      "label": "positive",
+      "score": 0.734433807995562,
+      "timestamp": "2025-06-27T00:42:49.459139"
+    },
+    {
+      "id": 337,
+      "text": "Sample text 337",
+      "label": "positive",
+      "score": 0.09193652511761363,
+      "timestamp": "2025-10-01T00:42:49.457840"
+    },
+    {
+      "id": 659,
+      "text": "Sample text 659",
+      "label": "positive",
+      "score": 0.6310263841144662,
+      "timestamp": "2025-12-13T00:42:49.458575"
+    },
+    {
+      "id": 556,
+      "text": "",
+      "label": "positive",
+      "score": 0.2898964801600078,
+      "timestamp": "2025-12-05T00:42:49.458339"
+    },
+    {
+      "id": 768,
+      "text": "Sample text 768",
+      "label": "positive",
+      "score": 0.18459365692871488,
+      "timestamp": "2025-12-29T00:42:49.458829"
+    },
+    {
+      "id": 364,
+      "text": "Sample text 364",
+      "label": "negative",
+      "score": 0.8755364566389333,
+      "timestamp": "2025-04-28T00:42:49.457902"
+    },
+    {
+      "id": 980,
+      "text": "Sample text 980",
+      "label": "neutral",
+      "score": 0.8499654133983746,
+      "timestamp": "2025-08-02T00:42:49.459317"
+    },
+    {
+      "id": 493,
+      "text": "Sample text 493",
+      "label": "neutral",
+      "score": 0.4492693467984472,
+      "timestamp": "2025-07-17T00:42:49.458196"
+    },
+    {
+      "id": 105,
+      "text": "Sample text 105",
+      "label": "positive",
+      "score": 0.795233092694079,
+      "timestamp": "2025-12-29T00:42:49.457307"
+    },
+    {
+      "id": 271,
+      "text": "Sample text 271",
+      "label": "positive",
+      "score": 0.6190103690542129,
+      "timestamp": "2025-11-09T00:42:49.457690"
+    },
+    {
+      "id": 516,
+      "text": "Sample text 516",
+      "label": "positive",
+      "score": 0.46022075294850795,
+      "timestamp": "2026-03-16T00:42:49.458248"
+    },
+    {
+      "id": 566,
+      "text": "",
+      "label": "positive",
+      "score": 0.5076042654011028,
+      "timestamp": "2025-05-15T00:42:49.458362"
+    },
+    {
+      "id": 204,
+      "text": "Sample text 204",
+      "label": "positive",
+      "score": 0.8326278046906957,
+      "timestamp": "2026-02-03T00:42:49.457536"
+    },
+    {
+      "id": 340,
+      "text": "Sample text 340",
+      "label": "neutral",
+      "score": 0.6418908343099048,
+      "timestamp": "2025-09-30T00:42:49.457847"
+    },
+    {
+      "id": 166,
+      "text": "Sample text 166",
+      "label": "positive",
+      "score": 0.4606027701193558,
+      "timestamp": "2026-01-28T00:42:49.457448"
+    },
+    {
+      "id": 767,
+      "text": "Sample text 767",
+      "label": "neutral",
+      "score": 0.0008432094649121202,
+      "timestamp": "2026-01-27T00:42:49.458827"
+    },
+    {
+      "id": 749,
+      "text": "Sample text 749",
+      "label": "neutral",
+      "score": 0.09241205818865939,
+      "timestamp": "2025-10-13T00:42:49.458783"
+    },
+    {
+      "id": 237,
+      "text": "Sample text 237",
+      "label": "positive",
+      "score": 0.002234307959867343,
+      "timestamp": "2025-05-24T00:42:49.457613"
+    },
+    {
+      "id": 414,
+      "text": "Sample text 414",
+      "label": "negative",
+      "score": 0.9349758933765405,
+      "timestamp": "2025-05-26T00:42:49.458016"
+    },
+    {
+      "id": 227,
+      "text": "Sample text 227",
+      "label": "positive",
+      "score": 0.49285053318997407,
+      "timestamp": "2026-04-07T00:42:49.457590"
+    },
+    {
+      "id": 983,
+      "text": "Sample text 983",
+      "label": "positive",
+      "score": 0.08309336016272084,
+      "timestamp": "2026-02-20T00:42:49.459324"
+    },
+    {
+      "id": 375,
+      "text": "Sample text 375",
+      "label": "neutral",
+      "score": 0.635687292934251,
+      "timestamp": "2026-03-01T00:42:49.457927"
+    },
+    {
+      "id": 931,
+      "text": "Sample text 931",
+      "label": "neutral",
+      "score": 0.41487637030520064,
+      "timestamp": "2026-01-22T00:42:49.459200"
+    },
+    {
+      "id": 213,
+      "text": "Sample text 213",
+      "label": "neutral",
+      "score": 0.7980973662865569,
+      "timestamp": "2025-11-23T00:42:49.457557"
+    },
+    {
+      "id": 525,
+      "text": "Sample text 525",
+      "label": "positive",
+      "score": 0.8417208034375927,
+      "timestamp": "2025-07-07T00:42:49.458268"
+    },
+    {
+      "id": 207,
+      "text": "Sample text 207",
+      "label": "positive",
+      "score": 0.4253433640316078,
+      "timestamp": "2025-04-22T00:42:49.457543"
+    },
+    {
+      "id": 857,
+      "text": "Sample text 857",
+      "label": "positive",
+      "score": 0.8399771358538909,
+      "timestamp": "2025-07-18T00:42:49.459030"
+    },
+    {
+      "id": 180,
+      "text": "Sample text 180",
+      "label": "positive",
+      "score": 0.6512379945004918,
+      "timestamp": "2025-10-09T00:42:49.457480"
+    },
+    {
+      "id": 320,
+      "text": "Sample text 320",
+      "label": "neutral",
+      "score": 0.4186596315304879,
+      "timestamp": "2025-08-01T00:42:49.457802"
+    },
+    {
+      "id": 64,
+      "text": "Sample text 64",
+      "label": "positive",
+      "score": 0.4320766140358757,
+      "timestamp": "2025-09-28T00:42:49.457189"
+    },
+    {
+      "id": 527,
+      "text": "Sample text 527",
+      "label": "positive",
+      "score": 0.818550100509811,
+      "timestamp": "2025-05-11T00:42:49.458273"
+    },
+    {
+      "id": 116,
+      "text": "Sample text 116",
+      "label": "neutral",
+      "score": 0.6410487218761597,
+      "timestamp": "2025-06-15T00:42:49.457332"
+    },
+    {
+      "id": 277,
+      "text": "Sample text 277",
+      "label": "positive",
+      "score": 0.8145335048250394,
+      "timestamp": "2025-08-02T00:42:49.457704"
+    },
+    {
+      "id": 797,
+      "text": "Sample text 797",
+      "label": "neutral",
+      "score": 0.3819129952239414,
+      "timestamp": "2026-03-03T00:42:49.458895"
+    },
+    {
+      "id": 607,
+      "text": "",
+      "label": "positive",
+      "score": 0.1091634785941179,
+      "timestamp": "2025-07-27T00:42:49.458456"
+    },
+    {
+      "id": 235,
+      "text": "Sample text 235",
+      "label": "neutral",
+      "score": 0.3732836989293128,
+      "timestamp": "2026-02-14T00:42:49.457608"
+    },
+    {
+      "id": 974,
+      "text": "Sample text 974",
+      "label": "positive",
+      "score": 0.47110933238402875,
+      "timestamp": "2025-05-09T00:42:49.459303"
+    },
+    {
+      "id": 586,
+      "text": "Sample text 586",
+      "label": "neutral",
+      "score": 0.6097477256054897,
+      "timestamp": "2025-08-02T00:42:49.458407"
+    },
+    {
+      "id": 153,
+      "text": "Sample text 153",
+      "label": "neutral",
+      "score": 0.9550512218153375,
+      "timestamp": "2025-08-09T00:42:49.457417"
+    },
+    {
+      "id": 359,
+      "text": "Sample text 359",
+      "label": "positive",
+      "score": 0.17918625258397325,
+      "timestamp": "2025-08-20T00:42:49.457891"
+    },
+    {
+      "id": 497,
+      "text": "Sample text 497",
+      "label": "neutral",
+      "score": 0.9694698900605356,
+      "timestamp": "2025-07-31T00:42:49.458205"
+    },
+    {
+      "id": 378,
+      "text": "Sample text 378",
+      "label": "positive",
+      "score": 0.7531760506101324,
+      "timestamp": "2026-01-18T00:42:49.457934"
+    },
+    {
+      "id": 537,
+      "text": "Sample text 537",
+      "label": "positive",
+      "score": 0.3939287295059122,
+      "timestamp": "2025-05-17T00:42:49.458296"
+    },
+    {
+      "id": 884,
+      "text": "Sample text 884",
+      "label": "positive",
+      "score": 0.005672527568211683,
+      "timestamp": "2025-09-18T00:42:49.459092"
+    },
+    {
+      "id": 890,
+      "text": "Sample text 890",
+      "label": "neutral",
+      "score": 0.9467081207484003,
+      "timestamp": "2025-05-10T00:42:49.459106"
+    },
+    {
+      "id": 666,
+      "text": "Sample text 666",
+      "label": "neutral",
+      "score": 0.6872219311808052,
+      "timestamp": "2026-03-29T00:42:49.458591"
+    },
+    {
+      "id": 89,
+      "text": "Sample text 89",
+      "label": "neutral",
+      "score": 0.9905312875078909,
+      "timestamp": "2025-06-25T00:42:49.457268"
+    },
+    {
+      "id": 700,
+      "text": "Sample text 700",
+      "label": "positive",
+      "score": 0.8031536305292628,
+      "timestamp": "2025-08-06T00:42:49.458669"
+    },
+    {
+      "id": 326,
+      "text": "Sample text 326",
+      "label": "positive",
+      "score": 0.9129539088985098,
+      "timestamp": "2025-12-09T00:42:49.457815"
+    },
+    {
+      "id": 546,
+      "text": "Sample text 546",
+      "label": "positive",
+      "score": 0.9888708638950867,
+      "timestamp": "2025-06-23T00:42:49.458316"
+    },
+    {
+      "id": 469,
+      "text": "Sample text 469",
+      "label": "positive",
+      "score": 0.08406676616092645,
+      "timestamp": "2025-09-04T00:42:49.458141"
+    },
+    {
+      "id": 999,
+      "text": "Sample text 999",
+      "label": "positive",
+      "score": 0.09043248474189436,
+      "timestamp": "2025-09-17T00:42:49.459361"
+    },
+    {
+      "id": 722,
+      "text": "Sample text 722",
+      "label": "negative",
+      "score": 0.49009350460097,
+      "timestamp": "2025-12-05T00:42:49.458721"
+    },
+    {
+      "id": 274,
+      "text": "Sample text 274",
+      "label": "neutral",
+      "score": 0.7173258745478759,
+      "timestamp": "2025-09-01T00:42:49.457697"
+    },
+    {
+      "id": 426,
+      "text": "Sample text 426",
+      "label": "positive",
+      "score": 0.6519245303744142,
+      "timestamp": "2025-08-16T00:42:49.458044"
+    },
+    {
+      "id": 936,
+      "text": "Sample text 936",
+      "label": "negative",
+      "score": 0.5394749222475049,
+      "timestamp": "2025-06-10T00:42:49.459212"
+    },
+    {
+      "id": 932,
+      "text": "Sample text 932",
+      "label": "positive",
+      "score": 0.15138049976502854,
+      "timestamp": "2025-05-05T00:42:49.459203"
+    },
+    {
+      "id": 786,
+      "text": "Sample text 786",
+      "label": "positive",
+      "score": 0.7596107824405418,
+      "timestamp": "2025-05-02T00:42:49.458870"
+    },
+    {
+      "id": 524,
+      "text": "Sample text 524",
+      "label": "positive",
+      "score": 0.926044442667152,
+      "timestamp": "2025-11-10T00:42:49.458266"
+    },
+    {
+      "id": 754,
+      "text": "Sample text 754",
+      "label": "positive",
+      "score": 0.4676881973508441,
+      "timestamp": "2026-03-27T00:42:49.458795"
+    },
+    {
+      "id": 128,
+      "text": "Sample text 128",
+      "label": "positive",
+      "score": 0.8142280216717234,
+      "timestamp": "2025-11-26T00:42:49.457360"
+    },
+    {
+      "id": 652,
+      "text": "Sample text 652",
+      "label": "negative",
+      "score": 0.8922725090736894,
+      "timestamp": "2026-03-24T00:42:49.458559"
+    },
+    {
+      "id": 985,
+      "text": "Sample text 985",
+      "label": "negative",
+      "score": 0.708529088555738,
+      "timestamp": "2025-06-29T00:42:49.459328"
+    },
+    {
+      "id": 654,
+      "text": "Sample text 654",
+      "label": "negative",
+      "score": 0.6344971554524083,
+      "timestamp": "2026-04-08T00:42:49.458564"
+    },
+    {
+      "id": 121,
+      "text": "Sample text 121",
+      "label": "negative",
+      "score": 0.6453335370710811,
+      "timestamp": "2025-11-30T00:42:49.457344"
+    },
+    {
+      "id": 741,
+      "text": "Sample text 741",
+      "label": "positive",
+      "score": 0.7468284282246531,
+      "timestamp": "2026-04-11T00:42:49.458764"
+    },
+    {
+      "id": 320,
+      "text": "Sample text 320",
+      "label": "neutral",
+      "score": 0.4186596315304879,
+      "timestamp": "2025-08-01T00:42:49.457802"
+    },
+    {
+      "id": 705,
+      "text": "Sample text 705",
+      "label": "negative",
+      "score": 0.3301771724751561,
+      "timestamp": "2026-02-02T00:42:49.458681"
+    },
+    {
+      "id": 315,
+      "text": "Sample text 315",
+      "label": "neutral",
+      "score": 0.14658908784580227,
+      "timestamp": "2026-01-27T00:42:49.457791"
+    },
+    {
+      "id": 801,
+      "text": "Sample text 801",
+      "label": "positive",
+      "score": 0.7989540997805537,
+      "timestamp": "2025-10-03T00:42:49.458904"
+    },
+    {
+      "id": 912,
+      "text": "Sample text 912",
+      "label": "positive",
+      "score": 0.6536127005919953,
+      "timestamp": "2025-12-31T00:42:49.459157"
+    },
+    {
+      "id": 716,
+      "text": "",
+      "label": "positive",
+      "score": 0.216443457389908,
+      "timestamp": "2025-06-02T00:42:49.458707"
+    },
+    {
+      "id": 330,
+      "text": "",
+      "label": "neutral",
+      "score": 0.07899329248849896,
+      "timestamp": "2026-03-04T00:42:49.457825"
+    },
+    {
+      "id": 292,
+      "text": "Sample text 292",
+      "label": "positive",
+      "score": 0.3954634081992616,
+      "timestamp": "2025-08-27T00:42:49.457739"
+    },
+    {
+      "id": 243,
+      "text": "Sample text 243",
+      "label": "positive",
+      "score": 0.6566334459940698,
+      "timestamp": "2025-12-18T00:42:49.457626"
+    },
+    {
+      "id": 421,
+      "text": "Sample text 421",
+      "label": "neutral",
+      "score": 0.3467837235622926,
+      "timestamp": "2025-06-02T00:42:49.458032"
+    },
+    {
+      "id": 332,
+      "text": "Sample text 332",
+      "label": "negative",
+      "score": 0.29950769595939286,
+      "timestamp": "2025-09-14T00:42:49.457829"
+    },
+    {
+      "id": 577,
+      "text": "Sample text 577",
+      "label": "negative",
+      "score": 0.07680383381529055,
+      "timestamp": "2025-12-05T00:42:49.458387"
+    },
+    {
+      "id": 37,
+      "text": "Sample text 37",
+      "label": "positive",
+      "score": 0.2500236429476408,
+      "timestamp": "2025-04-28T00:42:49.457128"
+    },
+    {
+      "id": 740,
+      "text": "Sample text 740",
+      "label": "positive",
+      "score": 0.04450842943434008,
+      "timestamp": "2025-06-05T00:42:49.458762"
+    },
+    {
+      "id": 619,
+      "text": "Sample text 619",
+      "label": "positive",
+      "score": 0.2440289953998066,
+      "timestamp": "2025-12-09T00:42:49.458483"
+    },
+    {
+      "id": 18,
+      "text": "Sample text 18",
+      "label": "positive",
+      "score": 0.36964065439617455,
+      "timestamp": "2025-10-04T00:42:49.457085"
+    },
+    {
+      "id": 504,
+      "text": "Sample text 504",
+      "label": "neutral",
+      "score": 0.0807179383248241,
+      "timestamp": "2025-12-21T00:42:49.458221"
+    },
+    {
+      "id": 608,
+      "text": "Sample text 608",
+      "label": "positive",
+      "score": 0.3257890460667453,
+      "timestamp": "2025-10-04T00:42:49.458458"
+    },
+    {
+      "id": 765,
+      "text": "Sample text 765",
+      "label": "neutral",
+      "score": 0.7518500919606477,
+      "timestamp": "2026-02-05T00:42:49.458822"
+    },
+    {
+      "id": 438,
+      "text": "Sample text 438",
+      "label": "positive",
+      "score": 0.5272623614777879,
+      "timestamp": "2026-02-19T00:42:49.458071"
+    },
+    {
+      "id": 61,
+      "text": "Sample text 61",
+      "label": "positive",
+      "score": 0.46020456003170795,
+      "timestamp": "2025-06-22T00:42:49.457182"
+    },
+    {
+      "id": 290,
+      "text": "Sample text 290",
+      "label": "negative",
+      "score": 0.2573451688142552,
+      "timestamp": "2025-05-27T00:42:49.457734"
+    },
+    {
+      "id": 761,
+      "text": "Sample text 761",
+      "label": "positive",
+      "score": 0.6785558417525374,
+      "timestamp": "2025-11-10T00:42:49.458813"
+    },
+    {
+      "id": 198,
+      "text": "Sample text 198",
+      "label": "positive",
+      "score": 0.8514501061519141,
+      "timestamp": "2026-03-26T00:42:49.457521"
+    },
+    {
+      "id": 850,
+      "text": "Sample text 850",
+      "label": "neutral",
+      "score": 0.012066716398456467,
+      "timestamp": "2025-10-08T00:42:49.459014"
+    },
+    {
+      "id": 827,
+      "text": "Sample text 827",
+      "label": "positive",
+      "score": 0.4719135439720977,
+      "timestamp": "2026-02-25T00:42:49.458963"
+    },
+    {
+      "id": 288,
+      "text": "Sample text 288",
+      "label": "neutral",
+      "score": 0.17673523914804457,
+      "timestamp": "2026-04-04T00:42:49.457729"
+    },
+    {
+      "id": 766,
+      "text": "Sample text 766",
+      "label": "negative",
+      "score": 0.09039864919538443,
+      "timestamp": "2026-01-30T00:42:49.458825"
+    },
+    {
+      "id": 195,
+      "text": "Sample text 195",
+      "label": "positive",
+      "score": 0.7535082157923891,
+      "timestamp": "2025-12-27T00:42:49.457514"
+    },
+    {
+      "id": 3,
+      "text": "Sample text 3",
+      "label": "positive",
+      "score": 0.14740906260552822,
+      "timestamp": "2025-11-05T00:42:49.457049"
+    },
+    {
+      "id": 606,
+      "text": "Sample text 606",
+      "label": "neutral",
+      "score": null,
+      "timestamp": "2025-10-14T00:42:49.458453"
+    },
+    {
+      "id": 482,
+      "text": "Sample text 482",
+      "label": "neutral",
+      "score": 0.009733875051179175,
+      "timestamp": "2025-10-14T00:42:49.458171"
+    },
+    {
+      "id": 629,
+      "text": "",
+      "label": "positive",
+      "score": 0.6900465649883123,
+      "timestamp": "2026-03-06T00:42:49.458506"
+    },
+    {
+      "id": 461,
+      "text": "",
+      "label": "positive",
+      "score": 0.8185114442189054,
+      "timestamp": "2026-01-06T00:42:49.458123"
+    },
+    {
+      "id": 920,
+      "text": "Sample text 920",
+      "label": "positive",
+      "score": 0.2056322676761726,
+      "timestamp": "2025-09-30T00:42:49.459175"
+    },
+    {
+      "id": 19,
+      "text": "Sample text 19",
+      "label": "negative",
+      "score": 0.9976949142158312,
+      "timestamp": "2025-09-02T00:42:49.457087"
+    },
+    {
+      "id": 189,
+      "text": "Sample text 189",
+      "label": "positive",
+      "score": 0.5097484977911043,
+      "timestamp": "2026-04-01T00:42:49.457500"
+    },
+    {
+      "id": 164,
+      "text": "Sample text 164",
+      "label": "positive",
+      "score": 0.4236984947297199,
+      "timestamp": "2025-10-08T00:42:49.457443"
+    },
+    {
+      "id": 370,
+      "text": "Sample text 370",
+      "label": "negative",
+      "score": 0.31728486226814634,
+      "timestamp": "2025-06-07T00:42:49.457916"
+    },
+    {
+      "id": 86,
+      "text": "Sample text 86",
+      "label": "positive",
+      "score": null,
+      "timestamp": "2025-12-25T00:42:49.457261"
+    },
+    {
+      "id": 368,
+      "text": "Sample text 368",
+      "label": "positive",
+      "score": 0.9001265154651533,
+      "timestamp": "2025-08-17T00:42:49.457911"
+    },
+    {
+      "id": 316,
+      "text": "Sample text 316",
+      "label": "positive",
+      "score": 0.4784320132035744,
+      "timestamp": "2026-03-09T00:42:49.457793"
+    },
+    {
+      "id": 8,
+      "text": "Sample text 8",
+      "label": "negative",
+      "score": 0.3356604845531518,
+      "timestamp": "2025-11-10T00:42:49.457061"
+    },
+    {
+      "id": 273,
+      "text": "Sample text 273",
+      "label": "positive",
+      "score": 0.8915866529723654,
+      "timestamp": "2025-06-30T00:42:49.457694"
+    },
+    {
+      "id": 265,
+      "text": "Sample text 265",
+      "label": "positive",
+      "score": 0.18484000304537296,
+      "timestamp": "2025-08-04T00:42:49.457676"
+    },
+    {
+      "id": 680,
+      "text": "Sample text 680",
+      "label": "negative",
+      "score": 0.26999866114544635,
+      "timestamp": "2026-02-28T00:42:49.458624"
+    },
+    {
+      "id": 33,
+      "text": "Sample text 33",
+      "label": "positive",
+      "score": 0.4975430616514416,
+      "timestamp": "2025-11-24T00:42:49.457119"
+    },
+    {
+      "id": 350,
+      "text": "Sample text 350",
+      "label": "positive",
+      "score": 0.1612230029071704,
+      "timestamp": "2025-04-28T00:42:49.457869"
+    },
+    {
+      "id": 514,
+      "text": "Sample text 514",
+      "label": "negative",
+      "score": 0.6208897422497686,
+      "timestamp": "2025-06-27T00:42:49.458243"
+    },
+    {
+      "id": 29,
+      "text": "Sample text 29",
+      "label": "negative",
+      "score": 0.4520800699529667,
+      "timestamp": "2025-12-13T00:42:49.457110"
+    },
+    {
+      "id": 568,
+      "text": "Sample text 568",
+      "label": "positive",
+      "score": 0.8113631695223918,
+      "timestamp": "2025-07-13T00:42:49.458366"
+    },
+    {
+      "id": 992,
+      "text": "",
+      "label": "negative",
+      "score": 0.024144423235366252,
+      "timestamp": "2025-10-26T00:42:49.459344"
+    },
+    {
+      "id": 73,
+      "text": "Sample text 73",
+      "label": "positive",
+      "score": 0.2422936090348775,
+      "timestamp": "2025-08-31T00:42:49.457209"
+    },
+    {
+      "id": 82,
+      "text": "Sample text 82",
+      "label": "negative",
+      "score": 0.09660320577713966,
+      "timestamp": "2025-05-07T00:42:49.457251"
+    },
+    {
+      "id": 285,
+      "text": "",
+      "label": "positive",
+      "score": 0.605159535797079,
+      "timestamp": "2025-10-06T00:42:49.457722"
+    },
+    {
+      "id": 849,
+      "text": "Sample text 849",
+      "label": "positive",
+      "score": 0.636762330144033,
+      "timestamp": "2026-03-29T00:42:49.459012"
+    },
+    {
+      "id": 270,
+      "text": "Sample text 270",
+      "label": "positive",
+      "score": 0.19043360049223523,
+      "timestamp": "2025-04-17T00:42:49.457687"
+    },
+    {
+      "id": 308,
+      "text": "Sample text 308",
+      "label": "neutral",
+      "score": 0.7148511992602412,
+      "timestamp": "2026-02-14T00:42:49.457774"
+    },
+    {
+      "id": 125,
+      "text": "Sample text 125",
+      "label": "positive",
+      "score": 0.8297495650266965,
+      "timestamp": "2025-12-04T00:42:49.457353"
+    },
+    {
+      "id": 431,
+      "text": "Sample text 431",
+      "label": "neutral",
+      "score": 0.4293129757025895,
+      "timestamp": "2025-06-26T00:42:49.458055"
+    },
+    {
+      "id": 35,
+      "text": "Sample text 35",
+      "label": "neutral",
+      "score": 0.5466518897090434,
+      "timestamp": "2026-03-03T00:42:49.457123"
+    },
+    {
+      "id": 225,
+      "text": "Sample text 225",
+      "label": "neutral",
+      "score": 0.31273691240881085,
+      "timestamp": "2026-02-25T00:42:49.457585"
+    },
+    {
+      "id": 533,
+      "text": "Sample text 533",
+      "label": "neutral",
+      "score": 0.8824241885771249,
+      "timestamp": "2025-08-21T00:42:49.458286"
+    },
+    {
+      "id": 952,
+      "text": "Sample text 952",
+      "label": "negative",
+      "score": 0.2793051947315074,
+      "timestamp": "2025-07-23T00:42:49.459249"
+    },
+    {
+      "id": 986,
+      "text": "Sample text 986",
+      "label": "negative",
+      "score": 0.8703934619221321,
+      "timestamp": "2025-05-06T00:42:49.459331"
+    },
+    {
+      "id": 369,
+      "text": "Sample text 369",
+      "label": "positive",
+      "score": 0.9595481449551191,
+      "timestamp": "2025-09-21T00:42:49.457914"
+    },
+    {
+      "id": 336,
+      "text": "Sample text 336",
+      "label": "positive",
+      "score": 0.501872437492266,
+      "timestamp": "2025-04-14T00:42:49.457838"
+    },
+    {
+      "id": 562,
+      "text": "Sample text 562",
+      "label": "positive",
+      "score": 0.6633361273431743,
+      "timestamp": "2026-03-12T00:42:49.458353"
+    },
+    {
+      "id": 873,
+      "text": "Sample text 873",
+      "label": "positive",
+      "score": 0.30880401749850594,
+      "timestamp": "2025-08-30T00:42:49.459067"
+    },
+    {
+      "id": 639,
+      "text": "Sample text 639",
+      "label": "positive",
+      "score": 0.9280435698232764,
+      "timestamp": "2025-11-17T00:42:49.458529"
+    },
+    {
+      "id": 94,
+      "text": "Sample text 94",
+      "label": "negative",
+      "score": 0.9883808643616115,
+      "timestamp": "2025-12-14T00:42:49.457282"
+    },
+    {
+      "id": 115,
+      "text": "Sample text 115",
+      "label": "negative",
+      "score": 0.41582016602370875,
+      "timestamp": "2025-09-22T00:42:49.457330"
+    },
+    {
+      "id": 32,
+      "text": "Sample text 32",
+      "label": "positive",
+      "score": 0.6211258198050705,
+      "timestamp": "2025-09-06T00:42:49.457117"
+    },
+    {
+      "id": 835,
+      "text": "",
+      "label": "positive",
+      "score": 0.8670627140981518,
+      "timestamp": "2025-08-15T00:42:49.458980"
+    },
+    {
+      "id": 149,
+      "text": "Sample text 149",
+      "label": "positive",
+      "score": 0.4761219172691662,
+      "timestamp": "2025-05-10T00:42:49.457408"
+    },
+    {
+      "id": 484,
+      "text": "",
+      "label": "positive",
+      "score": 0.29065856959938274,
+      "timestamp": "2025-12-17T00:42:49.458175"
+    },
+    {
+      "id": 521,
+      "text": "Sample text 521",
+      "label": "neutral",
+      "score": 0.6282394626057954,
+      "timestamp": "2026-04-09T00:42:49.458259"
+    },
+    {
+      "id": 389,
+      "text": "Sample text 389",
+      "label": "positive",
+      "score": 0.8677581483479242,
+      "timestamp": "2025-04-19T00:42:49.457959"
+    },
+    {
+      "id": 400,
+      "text": "Sample text 400",
+      "label": "neutral",
+      "score": 0.2676091408700284,
+      "timestamp": "2025-05-10T00:42:49.457984"
+    },
+    {
+      "id": 57,
+      "text": "Sample text 57",
+      "label": "positive",
+      "score": 0.8704490676945225,
+      "timestamp": "2025-11-05T00:42:49.457173"
+    },
+    {
+      "id": 748,
+      "text": "Sample text 748",
+      "label": "positive",
+      "score": 0.8835685789527344,
+      "timestamp": "2026-01-12T00:42:49.458781"
+    },
+    {
+      "id": 473,
+      "text": "Sample text 473",
+      "label": "positive",
+      "score": 0.6463448572825211,
+      "timestamp": "2026-02-15T00:42:49.458150"
+    },
+    {
+      "id": 358,
+      "text": "Sample text 358",
+      "label": "positive",
+      "score": 0.2956081789841688,
+      "timestamp": "2026-03-09T00:42:49.457888"
+    },
+    {
+      "id": 179,
+      "text": "Sample text 179",
+      "label": "positive",
+      "score": 0.2910815693230784,
+      "timestamp": "2026-01-28T00:42:49.457477"
+    },
+    {
+      "id": 256,
+      "text": "Sample text 256",
+      "label": "neutral",
+      "score": 0.8206094162848512,
+      "timestamp": "2026-01-01T00:42:49.457655"
+    },
+    {
+      "id": 349,
+      "text": "Sample text 349",
+      "label": "positive",
+      "score": 0.5871755093043245,
+      "timestamp": "2025-09-29T00:42:49.457867"
+    },
+    {
+      "id": 156,
+      "text": "Sample text 156",
+      "label": "neutral",
+      "score": 0.2576285426760664,
+      "timestamp": "2025-08-12T00:42:49.457424"
+    },
+    {
+      "id": 14,
+      "text": "Sample text 14",
+      "label": "positive",
+      "score": 0.35990923675823816,
+      "timestamp": "2026-03-28T00:42:49.457075"
+    },
+    {
+      "id": 44,
+      "text": "Sample text 44",
+      "label": "neutral",
+      "score": 0.417687864673024,
+      "timestamp": "2025-08-31T00:42:49.457144"
+    },
+    {
+      "id": 325,
+      "text": "Sample text 325",
+      "label": "positive",
+      "score": 0.1393492765329576,
+      "timestamp": "2025-08-20T00:42:49.457813"
+    },
+    {
+      "id": 215,
+      "text": "Sample text 215",
+      "label": "negative",
+      "score": 0.8755119242262062,
+      "timestamp": "2025-06-15T00:42:49.457561"
+    },
+    {
+      "id": 497,
+      "text": "Sample text 497",
+      "label": "neutral",
+      "score": 0.9694698900605356,
+      "timestamp": "2025-07-31T00:42:49.458205"
+    },
+    {
+      "id": 515,
+      "text": "Sample text 515",
+      "label": "neutral",
+      "score": 0.12593584062860996,
+      "timestamp": "2025-05-04T00:42:49.458246"
+    },
+    {
+      "id": 575,
+      "text": "Sample text 575",
+      "label": "neutral",
+      "score": 0.18059347780492885,
+      "timestamp": "2026-03-21T00:42:49.458382"
+    },
+    {
+      "id": 452,
+      "text": "Sample text 452",
+      "label": "neutral",
+      "score": null,
+      "timestamp": "2025-04-25T00:42:49.458102"
+    },
+    {
+      "id": 146,
+      "text": "",
+      "label": "negative",
+      "score": 0.9419377059684623,
+      "timestamp": "2025-10-30T00:42:49.457401"
+    },
+    {
+      "id": 876,
+      "text": "Sample text 876",
+      "label": "positive",
+      "score": 0.6869589279486991,
+      "timestamp": "2026-01-09T00:42:49.459074"
+    },
+    {
+      "id": 623,
+      "text": "Sample text 623",
+      "label": "positive",
+      "score": 0.8278211044280522,
+      "timestamp": "2026-02-07T00:42:49.458492"
+    },
+    {
+      "id": 894,
+      "text": "Sample text 894",
+      "label": "positive",
+      "score": 0.15177258755229872,
+      "timestamp": "2026-01-25T00:42:49.459116"
+    },
+    {
+      "id": 247,
+      "text": "Sample text 247",
+      "label": "positive",
+      "score": 0.3945460052866918,
+      "timestamp": "2025-10-25T00:42:49.457635"
+    },
+    {
+      "id": 69,
+      "text": "Sample text 69",
+      "label": "positive",
+      "score": 0.16483910570119775,
+      "timestamp": "2025-12-27T00:42:49.457200"
+    },
+    {
+      "id": 85,
+      "text": "Sample text 85",
+      "label": "neutral",
+      "score": 0.3565763259184943,
+      "timestamp": "2026-01-14T00:42:49.457259"
+    },
+    {
+      "id": 790,
+      "text": "Sample text 790",
+      "label": "neutral",
+      "score": 0.3374617448076328,
+      "timestamp": "2025-11-12T00:42:49.458879"
+    },
+    {
+      "id": 397,
+      "text": "Sample text 397",
+      "label": "negative",
+      "score": 0.7768802527683218,
+      "timestamp": "2025-07-04T00:42:49.457977"
+    },
+    {
+      "id": 38,
+      "text": "Sample text 38",
+      "label": "neutral",
+      "score": 0.13786512612108204,
+      "timestamp": "2025-07-08T00:42:49.457130"
+    },
+    {
+      "id": 234,
+      "text": "Sample text 234",
+      "label": "neutral",
+      "score": 0.133318800581131,
+      "timestamp": "2025-10-14T00:42:49.457606"
+    },
+    {
+      "id": 114,
+      "text": "Sample text 114",
+      "label": "positive",
+      "score": null,
+      "timestamp": "2025-07-30T00:42:49.457328"
+    },
+    {
+      "id": 554,
+      "text": "Sample text 554",
+      "label": "positive",
+      "score": 0.5691524228315339,
+      "timestamp": "2026-02-06T00:42:49.458334"
+    },
+    {
+      "id": 490,
+      "text": "Sample text 490",
+      "label": "neutral",
+      "score": 0.1416331258207142,
+      "timestamp": "2025-08-01T00:42:49.458189"
+    },
+    {
+      "id": 480,
+      "text": "Sample text 480",
+      "label": "positive",
+      "score": 0.899869221860292,
+      "timestamp": "2026-01-30T00:42:49.458166"
+    },
+    {
+      "id": 36,
+      "text": "Sample text 36",
+      "label": "negative",
+      "score": 0.07134867727932992,
+      "timestamp": "2026-03-24T00:42:49.457126"
+    },
+    {
+      "id": 720,
+      "text": "Sample text 720",
+      "label": "negative",
+      "score": 0.31697192438457533,
+      "timestamp": "2026-03-03T00:42:49.458717"
+    },
+    {
+      "id": 130,
+      "text": "",
+      "label": "neutral",
+      "score": 0.6963167072671622,
+      "timestamp": "2025-07-18T00:42:49.457365"
+    },
+    {
+      "id": 710,
+      "text": "",
+      "label": "positive",
+      "score": 0.28418757632936853,
+      "timestamp": "2025-09-06T00:42:49.458693"
+    },
+    {
+      "id": 752,
+      "text": "Sample text 752",
+      "label": "positive",
+      "score": 0.34692153070873,
+      "timestamp": "2025-04-28T00:42:49.458790"
+    },
+    {
+      "id": 88,
+      "text": "Sample text 88",
+      "label": "positive",
+      "score": 0.7675451308404586,
+      "timestamp": "2025-07-31T00:42:49.457266"
+    },
+    {
+      "id": 206,
+      "text": "Sample text 206",
+      "label": "positive",
+      "score": 0.6497689403866226,
+      "timestamp": "2026-01-19T00:42:49.457541"
+    },
+    {
+      "id": 681,
+      "text": "Sample text 681",
+      "label": "positive",
+      "score": 0.7326388315512241,
+      "timestamp": "2026-04-02T00:42:49.458626"
+    },
+    {
+      "id": 949,
+      "text": "Sample text 949",
+      "label": "positive",
+      "score": 0.23782932878945173,
+      "timestamp": "2025-09-21T00:42:49.459242"
+    },
+    {
+      "id": 111,
+      "text": "Sample text 111",
+      "label": "positive",
+      "score": 0.30023155059802054,
+      "timestamp": "2025-07-11T00:42:49.457321"
+    },
+    {
+      "id": 951,
+      "text": "Sample text 951",
+      "label": "neutral",
+      "score": 0.992698782792957,
+      "timestamp": "2025-08-23T00:42:49.459247"
+    },
+    {
+      "id": 676,
+      "text": "Sample text 676",
+      "label": "neutral",
+      "score": 0.7333343494586925,
+      "timestamp": "2026-04-06T00:42:49.458615"
+    },
+    {
+      "id": 293,
+      "text": "Sample text 293",
+      "label": "positive",
+      "score": 0.9021681433842099,
+      "timestamp": "2026-02-24T00:42:49.457741"
+    },
+    {
+      "id": 966,
+      "text": "Sample text 966",
+      "label": "positive",
+      "score": 0.8937444945912497,
+      "timestamp": "2025-08-16T00:42:49.459283"
+    },
+    {
+      "id": 291,
+      "text": "Sample text 291",
+      "label": "negative",
+      "score": 0.22063903752165304,
+      "timestamp": "2025-11-26T00:42:49.457736"
+    },
+    {
+      "id": 407,
+      "text": "Sample text 407",
+      "label": "positive",
+      "score": 0.8011719742888977,
+      "timestamp": "2025-07-28T00:42:49.458000"
+    },
+    {
+      "id": 262,
+      "text": "Sample text 262",
+      "label": "positive",
+      "score": 0.3042899899933855,
+      "timestamp": "2025-11-26T00:42:49.457669"
+    },
+    {
+      "id": 930,
+      "text": "Sample text 930",
+      "label": "positive",
+      "score": 0.061181460292670686,
+      "timestamp": "2025-12-26T00:42:49.459198"
+    },
+    {
+      "id": 335,
+      "text": "Sample text 335",
+      "label": "positive",
+      "score": 0.948241963058535,
+      "timestamp": "2025-08-23T00:42:49.457836"
+    },
+    {
+      "id": 549,
+      "text": "",
+      "label": "positive",
+      "score": 0.0962061152125866,
+      "timestamp": "2026-03-26T00:42:49.458323"
+    },
+    {
+      "id": 800,
+      "text": "Sample text 800",
+      "label": "neutral",
+      "score": 0.9949184082687006,
+      "timestamp": "2025-06-01T00:42:49.458902"
+    },
+    {
+      "id": 68,
+      "text": "Sample text 68",
+      "label": "positive",
+      "score": 0.36873206553260707,
+      "timestamp": "2026-02-18T00:42:49.457198"
+    },
+    {
+      "id": 500,
+      "text": "",
+      "label": "positive",
+      "score": 0.5930716181057376,
+      "timestamp": "2026-03-16T00:42:49.458212"
+    },
+    {
+      "id": 162,
+      "text": "Sample text 162",
+      "label": "neutral",
+      "score": 0.36773702597184077,
+      "timestamp": "2025-11-03T00:42:49.457439"
+    },
+    {
+      "id": 118,
+      "text": "Sample text 118",
+      "label": "positive",
+      "score": 0.7712703787765353,
+      "timestamp": "2025-10-16T00:42:49.457337"
+    },
+    {
+      "id": 117,
+      "text": "Sample text 117",
+      "label": "positive",
+      "score": 0.12447750855107609,
+      "timestamp": "2025-06-27T00:42:49.457335"
+    },
+    {
+      "id": 724,
+      "text": "Sample text 724",
+      "label": "neutral",
+      "score": 0.34599155730375275,
+      "timestamp": "2025-09-07T00:42:49.458726"
+    },
+    {
+      "id": 228,
+      "text": "Sample text 228",
+      "label": "neutral",
+      "score": 0.7307973663242785,
+      "timestamp": "2025-08-10T00:42:49.457592"
+    },
+    {
+      "id": 925,
+      "text": "",
+      "label": "neutral",
+      "score": 0.42001395225754634,
+      "timestamp": "2026-02-20T00:42:49.459187"
+    },
+    {
+      "id": 889,
+      "text": "Sample text 889",
+      "label": "neutral",
+      "score": 0.3254830369565572,
+      "timestamp": "2025-08-10T00:42:49.459104"
+    },
+    {
+      "id": 647,
+      "text": "Sample text 647",
+      "label": "positive",
+      "score": 0.4538493774454413,
+      "timestamp": "2026-02-15T00:42:49.458548"
+    },
+    {
+      "id": 404,
+      "text": "Sample text 404",
+      "label": "neutral",
+      "score": 0.9734903230619608,
+      "timestamp": "2026-01-04T00:42:49.457993"
+    },
+    {
+      "id": 585,
+      "text": "Sample text 585",
+      "label": "positive",
+      "score": 0.5882401569498826,
+      "timestamp": "2025-11-10T00:42:49.458405"
+    },
+    {
+      "id": 259,
+      "text": "Sample text 259",
+      "label": "positive",
+      "score": 0.19217739201410355,
+      "timestamp": "2026-01-28T00:42:49.457663"
+    },
+    {
+      "id": 499,
+      "text": "Sample text 499",
+      "label": "negative",
+      "score": 0.2882599537418521,
+      "timestamp": "2025-11-13T00:42:49.458210"
+    },
+    {
+      "id": 194,
+      "text": "Sample text 194",
+      "label": "neutral",
+      "score": 0.06393166273013584,
+      "timestamp": "2025-06-17T00:42:49.457512"
+    },
+    {
+      "id": 284,
+      "text": "Sample text 284",
+      "label": "positive",
+      "score": 0.24900807432484817,
+      "timestamp": "2025-12-26T00:42:49.457720"
+    },
+    {
+      "id": 981,
+      "text": "Sample text 981",
+      "label": "neutral",
+      "score": 0.6380599074452377,
+      "timestamp": "2025-11-20T00:42:49.459319"
+    },
+    {
+      "id": 830,
+      "text": "Sample text 830",
+      "label": "negative",
+      "score": 0.7127925226195579,
+      "timestamp": "2025-12-31T00:42:49.458969"
+    },
+    {
+      "id": 425,
+      "text": "Sample text 425",
+      "label": "positive",
+      "score": 0.267590532255668,
+      "timestamp": "2025-08-09T00:42:49.458041"
+    },
+    {
+      "id": 10,
+      "text": "Sample text 10",
+      "label": "positive",
+      "score": 0.6932205574979932,
+      "timestamp": "2025-08-17T00:42:49.457066"
+    },
+    {
+      "id": 419,
+      "text": "Sample text 419",
+      "label": "negative",
+      "score": 0.9083023998951801,
+      "timestamp": "2026-01-20T00:42:49.458027"
+    },
+    {
+      "id": 279,
+      "text": "Sample text 279",
+      "label": "positive",
+      "score": 0.27149418895635447,
+      "timestamp": "2026-01-08T00:42:49.457709"
+    },
+    {
+      "id": 209,
+      "text": "Sample text 209",
+      "label": "negative",
+      "score": 0.6573180530054205,
+      "timestamp": "2025-07-25T00:42:49.457548"
+    },
+    {
+      "id": 860,
+      "text": "Sample text 860",
+      "label": "neutral",
+      "score": 0.797917806029132,
+      "timestamp": "2025-08-27T00:42:49.459037"
+    },
+    {
+      "id": 611,
+      "text": "Sample text 611",
+      "label": "neutral",
+      "score": 0.2940630363070694,
+      "timestamp": "2026-03-28T00:42:49.458465"
+    },
+    {
+      "id": 432,
+      "text": "Sample text 432",
+      "label": "positive",
+      "score": 0.4494033840838748,
+      "timestamp": "2026-03-26T00:42:49.458057"
+    },
+    {
+      "id": 264,
+      "text": "",
+      "label": "positive",
+      "score": 0.3216396064458604,
+      "timestamp": "2025-11-17T00:42:49.457674"
+    },
+    {
+      "id": 808,
+      "text": "Sample text 808",
+      "label": "positive",
+      "score": 0.3890395125419116,
+      "timestamp": "2025-07-01T00:42:49.458920"
+    },
+    {
+      "id": 145,
+      "text": "Sample text 145",
+      "label": "positive",
+      "score": 0.4751994275667816,
+      "timestamp": "2025-09-13T00:42:49.457398"
+    },
+    {
+      "id": 159,
+      "text": "Sample text 159",
+      "label": "negative",
+      "score": 0.3770103224379354,
+      "timestamp": "2025-09-29T00:42:49.457432"
+    },
+    {
+      "id": 622,
+      "text": "Sample text 622",
+      "label": "positive",
+      "score": 0.6533299273562022,
+      "timestamp": "2025-06-07T00:42:49.458490"
+    },
+    {
+      "id": 788,
+      "text": "Sample text 788",
+      "label": "positive",
+      "score": 0.4549893620229366,
+      "timestamp": "2026-03-19T00:42:49.458875"
+    },
+    {
+      "id": 380,
+      "text": "Sample text 380",
+      "label": "neutral",
+      "score": 0.5703168689395335,
+      "timestamp": "2026-04-07T00:42:49.457938"
+    },
+    {
+      "id": 913,
+      "text": "Sample text 913",
+      "label": "negative",
+      "score": 0.8803117403008376,
+      "timestamp": "2025-06-21T00:42:49.459159"
+    },
+    {
+      "id": 399,
+      "text": "Sample text 399",
+      "label": "positive",
+      "score": 0.741153056888346,
+      "timestamp": "2026-04-09T00:42:49.457981"
+    },
+    {
+      "id": 877,
+      "text": "Sample text 877",
+      "label": "positive",
+      "score": 0.3072003387047325,
+      "timestamp": "2025-11-07T00:42:49.459077"
+    },
+    {
+      "id": 855,
+      "text": "Sample text 855",
+      "label": "neutral",
+      "score": 0.22430998943812042,
+      "timestamp": "2025-11-21T00:42:49.459025"
+    },
+    {
+      "id": 246,
+      "text": "Sample text 246",
+      "label": "positive",
+      "score": null,
+      "timestamp": "2025-04-14T00:42:49.457633"
+    },
+    {
+      "id": 763,
+      "text": "Sample text 763",
+      "label": "positive",
+      "score": 0.5774879932459452,
+      "timestamp": "2025-06-13T00:42:49.458818"
+    },
+    {
+      "id": 297,
+      "text": "Sample text 297",
+      "label": "positive",
+      "score": 0.9703854650445602,
+      "timestamp": "2026-02-20T00:42:49.457750"
+    },
+    {
+      "id": 706,
+      "text": "Sample text 706",
+      "label": "positive",
+      "score": 0.31768802863585155,
+      "timestamp": "2026-01-11T00:42:49.458684"
+    },
+    {
+      "id": 210,
+      "text": "Sample text 210",
+      "label": "negative",
+      "score": 0.9924489914460782,
+      "timestamp": "2025-09-02T00:42:49.457550"
+    },
+    {
+      "id": 805,
+      "text": "Sample text 805",
+      "label": "negative",
+      "score": 0.7902582211486817,
+      "timestamp": "2025-05-22T00:42:49.458913"
+    },
+    {
+      "id": 46,
+      "text": "Sample text 46",
+      "label": "positive",
+      "score": 0.6588481279782867,
+      "timestamp": "2025-10-13T00:42:49.457149"
+    },
+    {
+      "id": 15,
+      "text": "Sample text 15",
+      "label": "positive",
+      "score": 0.26199885248271126,
+      "timestamp": "2026-01-13T00:42:49.457077"
+    },
+    {
+      "id": 957,
+      "text": "Sample text 957",
+      "label": "negative",
+      "score": 0.45256482389691544,
+      "timestamp": "2025-07-03T00:42:49.459261"
+    },
+    {
+      "id": 211,
+      "text": "Sample text 211",
+      "label": "positive",
+      "score": 0.27012523356542895,
+      "timestamp": "2025-07-14T00:42:49.457552"
+    },
+    {
+      "id": 507,
+      "text": "Sample text 507",
+      "label": "positive",
+      "score": 0.8759324053114644,
+      "timestamp": "2025-06-20T00:42:49.458227"
+    },
+    {
+      "id": 208,
+      "text": "Sample text 208",
+      "label": "positive",
+      "score": 0.2693996876132433,
+      "timestamp": "2025-05-23T00:42:49.457545"
+    },
+    {
+      "id": 74,
+      "text": "Sample text 74",
+      "label": "positive",
+      "score": 0.17058909564089664,
+      "timestamp": "2026-04-03T00:42:49.457211"
+    },
+    {
+      "id": 939,
+      "text": "Sample text 939",
+      "label": "neutral",
+      "score": 0.6032710955249154,
+      "timestamp": "2025-05-21T00:42:49.459219"
+    },
+    {
+      "id": 226,
+      "text": "Sample text 226",
+      "label": "negative",
+      "score": 0.09363360826010347,
+      "timestamp": "2025-06-22T00:42:49.457587"
+    },
+    {
+      "id": 962,
+      "text": "Sample text 962",
+      "label": "positive",
+      "score": 0.5308700737860311,
+      "timestamp": "2025-10-03T00:42:49.459273"
+    },
+    {
+      "id": 468,
+      "text": "Sample text 468",
+      "label": "positive",
+      "score": 0.47624042378280684,
+      "timestamp": "2025-07-15T00:42:49.458139"
+    },
+    {
+      "id": 688,
+      "text": "Sample text 688",
+      "label": "negative",
+      "score": 0.7145787336550973,
+      "timestamp": "2025-08-24T00:42:49.458642"
+    },
+    {
+      "id": 219,
+      "text": "Sample text 219",
+      "label": "positive",
+      "score": 0.12757220312253403,
+      "timestamp": "2026-04-08T00:42:49.457571"
+    },
+    {
+      "id": 45,
+      "text": "Sample text 45",
+      "label": "positive",
+      "score": 0.5775084486138091,
+      "timestamp": "2026-02-06T00:42:49.457146"
+    },
+    {
+      "id": 917,
+      "text": "Sample text 917",
+      "label": "positive",
+      "score": 0.2329788501285185,
+      "timestamp": "2025-12-22T00:42:49.459168"
+    },
+    {
+      "id": 804,
+      "text": "Sample text 804",
+      "label": "negative",
+      "score": 0.018718948826570547,
+      "timestamp": "2025-09-12T00:42:49.458911"
+    },
+    {
+      "id": 182,
+      "text": "Sample text 182",
+      "label": "positive",
+      "score": 0.16822291855503124,
+      "timestamp": "2026-03-15T00:42:49.457484"
+    },
+    {
+      "id": 947,
+      "text": "Sample text 947",
+      "label": "positive",
+      "score": 0.7364103267686397,
+      "timestamp": "2026-03-26T00:42:49.459237"
+    },
+    {
+      "id": 851,
+      "text": "Sample text 851",
+      "label": "negative",
+      "score": 0.4058446323646182,
+      "timestamp": "2025-05-31T00:42:49.459017"
+    },
+    {
+      "id": 444,
+      "text": "Sample text 444",
+      "label": "neutral",
+      "score": 0.8416428638015206,
+      "timestamp": "2025-09-18T00:42:49.458084"
+    },
+    {
+      "id": 53,
+      "text": "Sample text 53",
+      "label": "positive",
+      "score": 0.18669210522620927,
+      "timestamp": "2026-03-08T00:42:49.457164"
+    },
+    {
+      "id": 906,
+      "text": "Sample text 906",
+      "label": "neutral",
+      "score": 0.6100314829511493,
+      "timestamp": "2026-01-05T00:42:49.459143"
+    },
+    {
+      "id": 360,
+      "text": "Sample text 360",
+      "label": "positive",
+      "score": 0.8766578692350192,
+      "timestamp": "2025-05-15T00:42:49.457893"
+    },
+    {
+      "id": 646,
+      "text": "Sample text 646",
+      "label": "positive",
+      "score": 0.2031409388917499,
+      "timestamp": "2025-06-24T00:42:49.458546"
+    },
+    {
+      "id": 448,
+      "text": "Sample text 448",
+      "label": "negative",
+      "score": 0.4545817411939548,
+      "timestamp": "2025-05-19T00:42:49.458093"
+    },
+    {
+      "id": 310,
+      "text": "Sample text 310",
+      "label": "positive",
+      "score": 0.9233196074120865,
+      "timestamp": "2026-02-28T00:42:49.457779"
+    },
+    {
+      "id": 48,
+      "text": "Sample text 48",
+      "label": "positive",
+      "score": 0.7853578107968642,
+      "timestamp": "2026-01-31T00:42:49.457153"
+    },
+    {
+      "id": 759,
+      "text": "Sample text 759",
+      "label": "positive",
+      "score": 0.02174996911740823,
+      "timestamp": "2025-06-01T00:42:49.458807"
+    },
+    {
+      "id": 547,
+      "text": "Sample text 547",
+      "label": "positive",
+      "score": 0.6788490212417344,
+      "timestamp": "2025-12-18T00:42:49.458318"
+    },
+    {
+      "id": 49,
+      "text": "Sample text 49",
+      "label": "positive",
+      "score": 0.629839307063414,
+      "timestamp": "2025-06-08T00:42:49.457155"
+    },
+    {
+      "id": 918,
+      "text": "",
+      "label": "negative",
+      "score": 0.9443866345259617,
+      "timestamp": "2026-02-08T00:42:49.459171"
+    },
+    {
+      "id": 177,
+      "text": "Sample text 177",
+      "label": "negative",
+      "score": 0.3234185856004541,
+      "timestamp": "2025-06-19T00:42:49.457473"
+    },
+    {
+      "id": 555,
+      "text": "Sample text 555",
+      "label": "negative",
+      "score": 0.23057350554674116,
+      "timestamp": "2025-06-09T00:42:49.458336"
+    },
+    {
+      "id": 584,
+      "text": "Sample text 584",
+      "label": "positive",
+      "score": 0.7641919810605271,
+      "timestamp": "2026-02-13T00:42:49.458402"
+    },
+    {
+      "id": 837,
+      "text": "Sample text 837",
+      "label": "positive",
+      "score": 0.5341708117333368,
+      "timestamp": "2026-03-31T00:42:49.458985"
+    },
+    {
+      "id": 314,
+      "text": "Sample text 314",
+      "label": "positive",
+      "score": 0.7986835396019331,
+      "timestamp": "2026-04-11T00:42:49.457789"
+    },
+    {
+      "id": 813,
+      "text": "Sample text 813",
+      "label": "positive",
+      "score": 0.6745013703955718,
+      "timestamp": "2026-03-28T00:42:49.458931"
+    },
+    {
+      "id": 696,
+      "text": "Sample text 696",
+      "label": "positive",
+      "score": 0.49981546635192753,
+      "timestamp": "2025-05-14T00:42:49.458660"
+    },
+    {
+      "id": 694,
+      "text": "Sample text 694",
+      "label": "positive",
+      "score": 0.03650970996501279,
+      "timestamp": "2025-04-25T00:42:49.458656"
+    },
+    {
+      "id": 540,
+      "text": "Sample text 540",
+      "label": "positive",
+      "score": 0.8298862681073982,
+      "timestamp": "2026-03-09T00:42:49.458303"
+    },
+    {
+      "id": 56,
+      "text": "Sample text 56",
+      "label": "positive",
+      "score": 0.4184132030475969,
+      "timestamp": "2026-03-08T00:42:49.457171"
+    },
+    {
+      "id": 294,
+      "text": "Sample text 294",
+      "label": "positive",
+      "score": 0.17611055216833882,
+      "timestamp": "2025-06-25T00:42:49.457743"
+    },
+    {
+      "id": 809,
+      "text": "Sample text 809",
+      "label": "positive",
+      "score": 0.4443830635531144,
+      "timestamp": "2025-08-19T00:42:49.458922"
+    },
+    {
+      "id": 760,
+      "text": "Sample text 760",
+      "label": "positive",
+      "score": 0.3993334805486505,
+      "timestamp": "2025-12-09T00:42:49.458810"
+    },
+    {
+      "id": 708,
+      "text": "Sample text 708",
+      "label": "positive",
+      "score": 0.09471456752052743,
+      "timestamp": "2025-05-28T00:42:49.458688"
+    },
+    {
+      "id": 842,
+      "text": "Sample text 842",
+      "label": "positive",
+      "score": 0.2645077042067475,
+      "timestamp": "2025-10-26T00:42:49.458996"
+    },
+    {
+      "id": 495,
+      "text": "Sample text 495",
+      "label": "positive",
+      "score": 0.04109997734067461,
+      "timestamp": "2025-07-20T00:42:49.458201"
+    },
+    {
+      "id": 574,
+      "text": "Sample text 574",
+      "label": "positive",
+      "score": null,
+      "timestamp": "2025-12-06T00:42:49.458380"
+    },
+    {
+      "id": 933,
+      "text": "Sample text 933",
+      "label": "positive",
+      "score": 0.16237371437236758,
+      "timestamp": "2025-08-01T00:42:49.459205"
+    },
+    {
+      "id": 825,
+      "text": "Sample text 825",
+      "label": "positive",
+      "score": 0.13857204176266535,
+      "timestamp": "2025-05-30T00:42:49.458958"
+    },
+    {
+      "id": 503,
+      "text": "Sample text 503",
+      "label": "neutral",
+      "score": 0.7131970991989143,
+      "timestamp": "2026-01-29T00:42:49.458219"
+    },
+    {
+      "id": 24,
+      "text": "Sample text 24",
+      "label": "neutral",
+      "score": 0.8858342877700227,
+      "timestamp": "2025-12-26T00:42:49.457098"
+    },
+    {
+      "id": 915,
+      "text": "Sample text 915",
+      "label": "positive",
+      "score": 0.12732354208883823,
+      "timestamp": "2025-10-16T00:42:49.459164"
+    },
+    {
+      "id": 509,
+      "text": "Sample text 509",
+      "label": "positive",
+      "score": 0.6283188273098645,
+      "timestamp": "2025-07-07T00:42:49.458232"
+    },
+    {
+      "id": 386,
+      "text": "Sample text 386",
+      "label": "neutral",
+      "score": 0.979031988886423,
+      "timestamp": "2025-09-09T00:42:49.457952"
+    },
+    {
+      "id": 445,
+      "text": "Sample text 445",
+      "label": "positive",
+      "score": 0.33738986883145317,
+      "timestamp": "2026-04-04T00:42:49.458086"
+    },
+    {
+      "id": 695,
+      "text": "Sample text 695",
+      "label": "positive",
+      "score": null,
+      "timestamp": "2025-04-24T00:42:49.458658"
+    },
+    {
+      "id": 436,
+      "text": "Sample text 436",
+      "label": "positive",
+      "score": 0.31858914113262604,
+      "timestamp": "2026-04-07T00:42:49.458066"
+    },
+    {
+      "id": 641,
+      "text": "Sample text 641",
+      "label": "positive",
+      "score": 0.3143673919101546,
+      "timestamp": "2025-10-17T00:42:49.458534"
+    },
+    {
+      "id": 299,
+      "text": "",
+      "label": "positive",
+      "score": 0.7634457560667182,
+      "timestamp": "2025-05-18T00:42:49.457754"
+    },
+    {
+      "id": 202,
+      "text": "Sample text 202",
+      "label": "positive",
+      "score": 0.5226662599353726,
+      "timestamp": "2025-10-14T00:42:49.457531"
+    },
+    {
+      "id": 707,
+      "text": "Sample text 707",
+      "label": "positive",
+      "score": 0.3118405096342014,
+      "timestamp": "2026-01-06T00:42:49.458686"
+    },
+    {
+      "id": 138,
+      "text": "Sample text 138",
+      "label": "positive",
+      "score": 0.5223345442994426,
+      "timestamp": "2026-04-09T00:42:49.457383"
+    },
+    {
+      "id": 993,
+      "text": "Sample text 993",
+      "label": "positive",
+      "score": 0.7290573675678906,
+      "timestamp": "2025-12-04T00:42:49.459347"
+    },
+    {
+      "id": 289,
+      "text": "Sample text 289",
+      "label": "positive",
+      "score": 0.7805131866280824,
+      "timestamp": "2026-02-17T00:42:49.457731"
+    },
+    {
+      "id": 787,
+      "text": "",
+      "label": "positive",
+      "score": 0.7075647159677223,
+      "timestamp": "2025-12-01T00:42:49.458873"
+    },
+    {
+      "id": 658,
+      "text": "Sample text 658",
+      "label": "positive",
+      "score": 0.20854697160415725,
+      "timestamp": "2026-01-11T00:42:49.458573"
+    },
+    {
+      "id": 559,
+      "text": "Sample text 559",
+      "label": "positive",
+      "score": 0.8918083765422885,
+      "timestamp": "2025-06-18T00:42:49.458345"
+    },
+    {
+      "id": 403,
+      "text": "Sample text 403",
+      "label": "neutral",
+      "score": 0.3174709628156568,
+      "timestamp": "2026-01-15T00:42:49.457991"
+    },
+    {
+      "id": 534,
+      "text": "Sample text 534",
+      "label": "positive",
+      "score": 0.8558395718114239,
+      "timestamp": "2025-07-29T00:42:49.458289"
+    },
+    {
+      "id": 544,
+      "text": "Sample text 544",
+      "label": "neutral",
+      "score": 0.03741827493013328,
+      "timestamp": "2026-03-06T00:42:49.458312"
+    },
+    {
+      "id": 902,
+      "text": "Sample text 902",
+      "label": "neutral",
+      "score": 0.3734743596330379,
+      "timestamp": "2025-06-27T00:42:49.459134"
+    },
+    {
+      "id": 757,
+      "text": "Sample text 757",
+      "label": "positive",
+      "score": 0.9010240585200362,
+      "timestamp": "2026-01-21T00:42:49.458802"
+    },
+    {
+      "id": 228,
+      "text": "Sample text 228",
+      "label": "neutral",
+      "score": 0.7307973663242785,
+      "timestamp": "2025-08-10T00:42:49.457592"
+    },
+    {
+      "id": 328,
+      "text": "Sample text 328",
+      "label": "negative",
+      "score": 0.96491319257549,
+      "timestamp": "2025-10-04T00:42:49.457820"
+    },
+    {
+      "id": 670,
+      "text": "Sample text 670",
+      "label": "positive",
+      "score": 0.40981154308699097,
+      "timestamp": "2025-06-23T00:42:49.458600"
+    },
+    {
+      "id": 679,
+      "text": "Sample text 679",
+      "label": "negative",
+      "score": 0.12364283064749715,
+      "timestamp": "2025-10-01T00:42:49.458621"
+    },
+    {
+      "id": 93,
+      "text": "",
+      "label": "positive",
+      "score": 0.44891156541087773,
+      "timestamp": "2025-07-25T00:42:49.457279"
+    },
+    {
+      "id": 532,
+      "text": "Sample text 532",
+      "label": "positive",
+      "score": 0.6198764625525428,
+      "timestamp": "2026-03-22T00:42:49.458284"
+    },
+    {
+      "id": 101,
+      "text": "Sample text 101",
+      "label": "positive",
+      "score": 0.6650060190884491,
+      "timestamp": "2025-12-06T00:42:49.457298"
+    },
+    {
+      "id": 895,
+      "text": "Sample text 895",
+      "label": "positive",
+      "score": 0.43826119784434636,
+      "timestamp": "2025-10-27T00:42:49.459118"
+    },
+    {
+      "id": 675,
+      "text": "Sample text 675",
+      "label": "neutral",
+      "score": 0.2901874840355321,
+      "timestamp": "2026-01-20T00:42:49.458612"
+    },
+    {
+      "id": 491,
+      "text": "Sample text 491",
+      "label": "positive",
+      "score": 0.43072051077648943,
+      "timestamp": "2025-12-28T00:42:49.458191"
+    },
+    {
+      "id": 771,
+      "text": "Sample text 771",
+      "label": "negative",
+      "score": 0.8313469921312032,
+      "timestamp": "2025-04-16T00:42:49.458836"
+    },
+    {
+      "id": 838,
+      "text": "Sample text 838",
+      "label": "positive",
+      "score": 0.8116623937964196,
+      "timestamp": "2026-03-23T00:42:49.458987"
+    },
+    {
+      "id": 42,
+      "text": "Sample text 42",
+      "label": "negative",
+      "score": 0.5870036392359036,
+      "timestamp": "2025-07-04T00:42:49.457140"
+    },
+    {
+      "id": 811,
+      "text": "",
+      "label": "positive",
+      "score": 0.9677236086026468,
+      "timestamp": "2025-05-24T00:42:49.458927"
+    },
+    {
+      "id": 192,
+      "text": "Sample text 192",
+      "label": "positive",
+      "score": 0.713768146253232,
+      "timestamp": "2025-07-11T00:42:49.457507"
+    },
+    {
+      "id": 869,
+      "text": "Sample text 869",
+      "label": "neutral",
+      "score": 0.7773958641486417,
+      "timestamp": "2026-01-03T00:42:49.459058"
+    },
+    {
+      "id": 245,
+      "text": "Sample text 245",
+      "label": "neutral",
+      "score": 0.8393574613284819,
+      "timestamp": "2026-01-20T00:42:49.457631"
+    },
+    {
+      "id": 144,
+      "text": "Sample text 144",
+      "label": "positive",
+      "score": 0.9510619394426392,
+      "timestamp": "2025-12-06T00:42:49.457396"
+    },
+    {
+      "id": 374,
+      "text": "Sample text 374",
+      "label": "negative",
+      "score": 0.2114928876461133,
+      "timestamp": "2026-04-01T00:42:49.457925"
+    },
+    {
+      "id": 929,
+      "text": "Sample text 929",
+      "label": "positive",
+      "score": 0.009273947238536917,
+      "timestamp": "2025-07-21T00:42:49.459196"
+    },
+    {
+      "id": 346,
+      "text": "Sample text 346",
+      "label": "positive",
+      "score": 0.9805416267860616,
+      "timestamp": "2025-11-19T00:42:49.457860"
+    },
+    {
+      "id": 67,
+      "text": "Sample text 67",
+      "label": "negative",
+      "score": 0.9022347198222195,
+      "timestamp": "2025-08-03T00:42:49.457196"
+    },
+    {
+      "id": 907,
+      "text": "Sample text 907",
+      "label": "negative",
+      "score": 0.2768649121054646,
+      "timestamp": "2025-08-24T00:42:49.459146"
+    },
+    {
+      "id": 684,
+      "text": "Sample text 684",
+      "label": "positive",
+      "score": 0.4589056387742362,
+      "timestamp": "2026-02-20T00:42:49.458633"
+    },
+    {
+      "id": 119,
+      "text": "Sample text 119",
+      "label": "positive",
+      "score": 0.6964554120429204,
+      "timestamp": "2025-05-14T00:42:49.457339"
+    },
+    {
+      "id": 458,
+      "text": "Sample text 458",
+      "label": "negative",
+      "score": 0.730864580591815,
+      "timestamp": "2025-12-18T00:42:49.458116"
+    },
+    {
+      "id": 398,
+      "text": "Sample text 398",
+      "label": "positive",
+      "score": 0.12444056086699418,
+      "timestamp": "2025-08-18T00:42:49.457979"
+    },
+    {
+      "id": 995,
+      "text": "",
+      "label": "positive",
+      "score": 0.9909756901473352,
+      "timestamp": "2025-11-29T00:42:49.459351"
+    },
+    {
+      "id": 674,
+      "text": "",
+      "label": "positive",
+      "score": 0.5354726627352819,
+      "timestamp": "2026-01-22T00:42:49.458610"
+    },
+    {
+      "id": 465,
+      "text": "Sample text 465",
+      "label": "neutral",
+      "score": 0.7800210595146186,
+      "timestamp": "2026-01-06T00:42:49.458132"
+    },
+    {
+      "id": 345,
+      "text": "Sample text 345",
+      "label": "neutral",
+      "score": 0.7902257031485959,
+      "timestamp": "2026-03-20T00:42:49.457858"
+    },
+    {
+      "id": 627,
+      "text": "Sample text 627",
+      "label": "neutral",
+      "score": null,
+      "timestamp": "2026-02-10T00:42:49.458502"
+    },
+    {
+      "id": 743,
+      "text": "Sample text 743",
+      "label": "positive",
+      "score": 0.9180110923242697,
+      "timestamp": "2026-01-09T00:42:49.458769"
+    },
+    {
+      "id": 617,
+      "text": "Sample text 617",
+      "label": "negative",
+      "score": 0.12124237304624219,
+      "timestamp": "2025-07-16T00:42:49.458479"
+    },
+    {
+      "id": 197,
+      "text": "Sample text 197",
+      "label": "positive",
+      "score": 0.03914316094529613,
+      "timestamp": "2025-06-22T00:42:49.457519"
+    },
+    {
+      "id": 984,
+      "text": "Sample text 984",
+      "label": "negative",
+      "score": 0.2213881357840034,
+      "timestamp": "2025-09-02T00:42:49.459326"
+    },
+    {
+      "id": 102,
+      "text": "Sample text 102",
+      "label": "neutral",
+      "score": 0.8727057828119837,
+      "timestamp": "2025-07-20T00:42:49.457300"
+    },
+    {
+      "id": 171,
+      "text": "Sample text 171",
+      "label": "positive",
+      "score": 0.8102101782943647,
+      "timestamp": "2026-01-24T00:42:49.457459"
+    },
+    {
+      "id": 530,
+      "text": "Sample text 530",
+      "label": "positive",
+      "score": 0.46396369797659265,
+      "timestamp": "2025-09-07T00:42:49.458280"
+    },
+    {
+      "id": 604,
+      "text": "Sample text 604",
+      "label": "positive",
+      "score": 0.5067191858632137,
+      "timestamp": "2025-08-30T00:42:49.458449"
+    },
+    {
+      "id": 184,
+      "text": "Sample text 184",
+      "label": "negative",
+      "score": 0.6269725465964556,
+      "timestamp": "2025-09-18T00:42:49.457489"
+    },
+    {
+      "id": 744,
+      "text": "Sample text 744",
+      "label": "negative",
+      "score": 0.9657655955859077,
+      "timestamp": "2026-01-16T00:42:49.458771"
+    },
+    {
+      "id": 357,
+      "text": "Sample text 357",
+      "label": "neutral",
+      "score": 0.5471360524560039,
+      "timestamp": "2026-02-27T00:42:49.457886"
+    },
+    {
+      "id": 110,
+      "text": "Sample text 110",
+      "label": "negative",
+      "score": 0.01981107713229424,
+      "timestamp": "2025-09-29T00:42:49.457319"
+    },
+    {
+      "id": 16,
+      "text": "Sample text 16",
+      "label": "positive",
+      "score": 0.02149202805815198,
+      "timestamp": "2025-11-29T00:42:49.457080"
+    },
+    {
+      "id": 319,
+      "text": "Sample text 319",
+      "label": "positive",
+      "score": 0.63660418490667,
+      "timestamp": "2026-02-01T00:42:49.457800"
+    },
+    {
+      "id": 123,
+      "text": "Sample text 123",
+      "label": "neutral",
+      "score": null,
+      "timestamp": "2026-02-24T00:42:49.457348"
+    },
+    {
+      "id": 550,
+      "text": "Sample text 550",
+      "label": "neutral",
+      "score": 0.4080273700378464,
+      "timestamp": "2025-07-07T00:42:49.458325"
+    },
+    {
+      "id": 39,
+      "text": "",
+      "label": "neutral",
+      "score": 0.8223088558512356,
+      "timestamp": "2025-09-18T00:42:49.457133"
+    },
+    {
+      "id": 637,
+      "text": "Sample text 637",
+      "label": "positive",
+      "score": 0.7225331856912439,
+      "timestamp": "2025-11-20T00:42:49.458525"
+    },
+    {
+      "id": 31,
+      "text": "Sample text 31",
+      "label": "positive",
+      "score": 0.2950480166413285,
+      "timestamp": "2025-07-21T00:42:49.457115"
+    },
+    {
+      "id": 455,
+      "text": "Sample text 455",
+      "label": "negative",
+      "score": 0.1199014196268372,
+      "timestamp": "2025-10-31T00:42:49.458109"
+    },
+    {
+      "id": 152,
+      "text": "Sample text 152",
+      "label": "positive",
+      "score": 0.8323541110237103,
+      "timestamp": "2025-07-06T00:42:49.457415"
+    },
+    {
+      "id": 922,
+      "text": "Sample text 922",
+      "label": "negative",
+      "score": 0.12035832509916844,
+      "timestamp": "2025-08-05T00:42:49.459180"
+    },
+    {
+      "id": 739,
+      "text": "Sample text 739",
+      "label": "positive",
+      "score": 0.06495490068897547,
+      "timestamp": "2025-07-30T00:42:49.458760"
+    },
+    {
+      "id": 883,
+      "text": "Sample text 883",
+      "label": "positive",
+      "score": 0.7452139356385666,
+      "timestamp": "2025-08-25T00:42:49.459090"
+    },
+    {
+      "id": 451,
+      "text": "Sample text 451",
+      "label": "negative",
+      "score": 0.724107912944827,
+      "timestamp": "2025-10-06T00:42:49.458100"
+    },
+    {
+      "id": 796,
+      "text": "",
+      "label": "positive",
+      "score": 0.038287379940974975,
+      "timestamp": "2025-06-05T00:42:49.458893"
+    },
+    {
+      "id": 810,
+      "text": "Sample text 810",
+      "label": "neutral",
+      "score": 0.1700134103967692,
+      "timestamp": "2025-09-25T00:42:49.458925"
+    },
+    {
+      "id": 756,
+      "text": "Sample text 756",
+      "label": "positive",
+      "score": 0.5883907817399121,
+      "timestamp": "2026-03-26T00:42:49.458800"
+    },
+    {
+      "id": 614,
+      "text": "Sample text 614",
+      "label": "negative",
+      "score": 0.37883969270234374,
+      "timestamp": "2025-06-18T00:42:49.458472"
+    },
+    {
+      "id": 654,
+      "text": "Sample text 654",
+      "label": "negative",
+      "score": 0.6344971554524083,
+      "timestamp": "2026-04-08T00:42:49.458564"
+    },
+    {
+      "id": 770,
+      "text": "Sample text 770",
+      "label": "positive",
+      "score": 0.5498290709166708,
+      "timestamp": "2025-09-23T00:42:49.458834"
+    },
+    {
+      "id": 99,
+      "text": "Sample text 99",
+      "label": "negative",
+      "score": 0.9775675044573351,
+      "timestamp": "2025-05-16T00:42:49.457293"
+    },
+    {
+      "id": 353,
+      "text": "Sample text 353",
+      "label": "positive",
+      "score": 0.9302272034334854,
+      "timestamp": "2025-10-20T00:42:49.457877"
+    },
+    {
+      "id": 223,
+      "text": "Sample text 223",
+      "label": "neutral",
+      "score": 0.27582297438842296,
+      "timestamp": "2025-09-05T00:42:49.457580"
+    },
+    {
+      "id": 919,
+      "text": "Sample text 919",
+      "label": "neutral",
+      "score": 0.7439423788650937,
+      "timestamp": "2025-12-27T00:42:49.459173"
+    },
+    {
+      "id": 186,
+      "text": "Sample text 186",
+      "label": "neutral",
+      "score": 0.6917948498663601,
+      "timestamp": "2025-05-04T00:42:49.457493"
+    },
+    {
+      "id": 510,
+      "text": "Sample text 510",
+      "label": "positive",
+      "score": 0.09604229881323778,
+      "timestamp": "2025-07-17T00:42:49.458234"
+    },
+    {
+      "id": 635,
+      "text": "Sample text 635",
+      "label": "negative",
+      "score": 0.820106066291194,
+      "timestamp": "2025-07-26T00:42:49.458520"
+    },
+    {
+      "id": 651,
+      "text": "Sample text 651",
+      "label": "positive",
+      "score": 0.6306239421332012,
+      "timestamp": "2025-07-24T00:42:49.458557"
+    },
+    {
+      "id": 193,
+      "text": "Sample text 193",
+      "label": "positive",
+      "score": null,
+      "timestamp": "2025-07-02T00:42:49.457510"
+    },
+    {
+      "id": 176,
+      "text": "Sample text 176",
+      "label": "positive",
+      "score": 0.6963763156761511,
+      "timestamp": "2026-01-03T00:42:49.457471"
+    },
+    {
+      "id": 71,
+      "text": "Sample text 71",
+      "label": "positive",
+      "score": 0.39667432783376166,
+      "timestamp": "2026-04-07T00:42:49.457205"
+    },
+    {
+      "id": 383,
+      "text": "Sample text 383",
+      "label": "positive",
+      "score": 0.49944566834197446,
+      "timestamp": "2025-11-01T00:42:49.457945"
+    },
+    {
+      "id": 576,
+      "text": "Sample text 576",
+      "label": "positive",
+      "score": 0.998088809046244,
+      "timestamp": "2026-02-05T00:42:49.458384"
+    },
+    {
+      "id": 965,
+      "text": "Sample text 965",
+      "label": "positive",
+      "score": 0.9691463779576056,
+      "timestamp": "2025-09-19T00:42:49.459280"
+    },
+    {
+      "id": 872,
+      "text": "Sample text 872",
+      "label": "positive",
+      "score": 0.2641999041085017,
+      "timestamp": "2025-07-14T00:42:49.459065"
+    },
+    {
+      "id": 313,
+      "text": "Sample text 313",
+      "label": "neutral",
+      "score": 0.916234355414292,
+      "timestamp": "2025-05-09T00:42:49.457786"
+    },
+    {
+      "id": 393,
+      "text": "Sample text 393",
+      "label": "positive",
+      "score": 0.6341072342041757,
+      "timestamp": "2025-04-18T00:42:49.457968"
+    },
+    {
+      "id": 334,
+      "text": "Sample text 334",
+      "label": "positive",
+      "score": 0.7511329291282609,
+      "timestamp": "2025-07-29T00:42:49.457834"
+    },
+    {
+      "id": 4,
+      "text": "Sample text 4",
+      "label": "negative",
+      "score": 0.5176805897536867,
+      "timestamp": "2025-05-11T00:42:49.457051"
+    },
+    {
+      "id": 977,
+      "text": "",
+      "label": "neutral",
+      "score": 0.25545237297443724,
+      "timestamp": "2025-05-27T00:42:49.459310"
+    },
+    {
+      "id": 541,
+      "text": "Sample text 541",
+      "label": "positive",
+      "score": 0.09654044110522397,
+      "timestamp": "2026-02-17T00:42:49.458305"
+    },
+    {
+      "id": 1,
+      "text": "Sample text 1",
+      "label": "negative",
+      "score": 0.7970255840127973,
+      "timestamp": "2026-03-13T00:42:49.457044"
+    },
+    {
+      "id": 172,
+      "text": "Sample text 172",
+      "label": "neutral",
+      "score": 0.810418652184842,
+      "timestamp": "2025-04-19T00:42:49.457461"
+    },
+    {
+      "id": 97,
+      "text": "Sample text 97",
+      "label": "positive",
+      "score": 0.2380639681474055,
+      "timestamp": "2025-06-10T00:42:49.457289"
+    },
+    {
+      "id": 382,
+      "text": "Sample text 382",
+      "label": "negative",
+      "score": 0.9389690587994202,
+      "timestamp": "2025-11-01T00:42:49.457943"
+    },
+    {
+      "id": 699,
+      "text": "Sample text 699",
+      "label": "positive",
+      "score": 0.4376012598704484,
+      "timestamp": "2026-02-13T00:42:49.458667"
+    },
+    {
+      "id": 60,
+      "text": "Sample text 60",
+      "label": "neutral",
+      "score": 0.6048485994902687,
+      "timestamp": "2025-12-07T00:42:49.457180"
+    },
+    {
+      "id": 570,
+      "text": "Sample text 570",
+      "label": "positive",
+      "score": 0.42971864865226883,
+      "timestamp": "2025-09-06T00:42:49.458371"
+    },
+    {
+      "id": 62,
+      "text": "Sample text 62",
+      "label": "positive",
+      "score": 0.9188958663963275,
+      "timestamp": "2025-10-17T00:42:49.457184"
+    },
+    {
+      "id": 620,
+      "text": "Sample text 620",
+      "label": "negative",
+      "score": 0.31481637618085945,
+      "timestamp": "2026-02-12T00:42:49.458486"
+    },
+    {
+      "id": 20,
+      "text": "Sample text 20",
+      "label": "neutral",
+      "score": 0.9241554672330221,
+      "timestamp": "2026-01-05T00:42:49.457089"
+    },
+    {
+      "id": 263,
+      "text": "Sample text 263",
+      "label": "positive",
+      "score": 0.24696863680959402,
+      "timestamp": "2026-03-19T00:42:49.457671"
+    },
+    {
+      "id": 536,
+      "text": "Sample text 536",
+      "label": "negative",
+      "score": 0.33929107680530646,
+      "timestamp": "2026-01-31T00:42:49.458293"
+    },
+    {
+      "id": 812,
+      "text": "Sample text 812",
+      "label": "positive",
+      "score": 0.7480108960335597,
+      "timestamp": "2025-07-15T00:42:49.458929"
+    },
+    {
+      "id": 769,
+      "text": "Sample text 769",
+      "label": "positive",
+      "score": 0.5553482312386363,
+      "timestamp": "2025-10-03T00:42:49.458832"
+    },
+    {
+      "id": 861,
+      "text": "Sample text 861",
+      "label": "positive",
+      "score": 0.7394357784292448,
+      "timestamp": "2025-04-24T00:42:49.459040"
+    },
+    {
+      "id": 347,
+      "text": "Sample text 347",
+      "label": "neutral",
+      "score": 0.39064130727714386,
+      "timestamp": "2025-10-12T00:42:49.457863"
+    },
+    {
+      "id": 83,
+      "text": "Sample text 83",
+      "label": "positive",
+      "score": 0.10768382858950143,
+      "timestamp": "2025-10-27T00:42:49.457254"
+    },
+    {
+      "id": 648,
+      "text": "Sample text 648",
+      "label": "negative",
+      "score": 0.888879756869867,
+      "timestamp": "2025-08-03T00:42:49.458550"
+    },
+    {
+      "id": 662,
+      "text": "Sample text 662",
+      "label": "positive",
+      "score": 0.09653323306836581,
+      "timestamp": "2026-02-14T00:42:49.458582"
+    },
+    {
+      "id": 359,
+      "text": "Sample text 359",
+      "label": "positive",
+      "score": 0.17918625258397325,
+      "timestamp": "2025-08-20T00:42:49.457891"
+    },
+    {
+      "id": 232,
+      "text": "Sample text 232",
+      "label": "neutral",
+      "score": 0.5281114182180024,
+      "timestamp": "2025-06-05T00:42:49.457601"
+    },
+    {
+      "id": 205,
+      "text": "Sample text 205",
+      "label": "negative",
+      "score": 0.12849211490977108,
+      "timestamp": "2025-05-29T00:42:49.457538"
+    },
+    {
+      "id": 411,
+      "text": "Sample text 411",
+      "label": "positive",
+      "score": 0.0252898763294489,
+      "timestamp": "2026-02-05T00:42:49.458009"
+    },
+    {
+      "id": 266,
+      "text": "Sample text 266",
+      "label": "positive",
+      "score": 0.013661583386074816,
+      "timestamp": "2025-07-04T00:42:49.457678"
+    },
+    {
+      "id": 188,
+      "text": "Sample text 188",
+      "label": "negative",
+      "score": null,
+      "timestamp": "2026-02-12T00:42:49.457498"
+    },
+    {
+      "id": 92,
+      "text": "Sample text 92",
+      "label": "negative",
+      "score": 0.8515542124686434,
+      "timestamp": "2025-08-09T00:42:49.457276"
+    },
+    {
+      "id": 511,
+      "text": "Sample text 511",
+      "label": "positive",
+      "score": 0.7125985052999778,
+      "timestamp": "2025-08-16T00:42:49.458237"
+    },
+    {
+      "id": 874,
+      "text": "Sample text 874",
+      "label": "positive",
+      "score": 0.0065172859967316255,
+      "timestamp": "2025-07-26T00:42:49.459069"
+    },
+    {
+      "id": 440,
+      "text": "Sample text 440",
+      "label": "positive",
+      "score": 0.7562012034297404,
+      "timestamp": "2025-11-01T00:42:49.458075"
+    },
+    {
+      "id": 724,
+      "text": "Sample text 724",
+      "label": "neutral",
+      "score": 0.34599155730375275,
+      "timestamp": "2025-09-07T00:42:49.458726"
+    },
+    {
+      "id": 181,
+      "text": "Sample text 181",
+      "label": "negative",
+      "score": 0.988484187859526,
+      "timestamp": "2026-01-27T00:42:49.457482"
+    },
+    {
+      "id": 363,
+      "text": "Sample text 363",
+      "label": "positive",
+      "score": 0.3136454103416435,
+      "timestamp": "2026-03-01T00:42:49.457900"
+    },
+    {
+      "id": 318,
+      "text": "Sample text 318",
+      "label": "neutral",
+      "score": 0.3193157799110299,
+      "timestamp": "2025-09-07T00:42:49.457798"
+    },
+    {
+      "id": 924,
+      "text": "Sample text 924",
+      "label": "neutral",
+      "score": 0.25528453669499795,
+      "timestamp": "2026-02-14T00:42:49.459185"
+    },
+    {
+      "id": 187,
+      "text": "Sample text 187",
+      "label": "negative",
+      "score": 0.6503109364368089,
+      "timestamp": "2025-11-23T00:42:49.457496"
+    },
+    {
+      "id": 351,
+      "text": "Sample text 351",
+      "label": "positive",
+      "score": 0.718462707337514,
+      "timestamp": "2025-12-23T00:42:49.457872"
+    },
+    {
+      "id": 141,
+      "text": "Sample text 141",
+      "label": "neutral",
+      "score": 0.665078285325105,
+      "timestamp": "2025-10-01T00:42:49.457389"
+    },
+    {
+      "id": 485,
+      "text": "Sample text 485",
+      "label": "positive",
+      "score": 0.09391009882086854,
+      "timestamp": "2025-11-08T00:42:49.458177"
+    },
+    {
+      "id": 970,
+      "text": "Sample text 970",
+      "label": "positive",
+      "score": 0.5914164050919659,
+      "timestamp": "2025-12-06T00:42:49.459292"
+    },
+    {
+      "id": 390,
+      "text": "Sample text 390",
+      "label": "positive",
+      "score": 0.35172897839703565,
+      "timestamp": "2025-07-09T00:42:49.457961"
+    },
+    {
+      "id": 417,
+      "text": "Sample text 417",
+      "label": "positive",
+      "score": 0.39080020860337994,
+      "timestamp": "2025-08-04T00:42:49.458023"
+    },
+    {
+      "id": 953,
+      "text": "Sample text 953",
+      "label": "neutral",
+      "score": 0.2552844236864372,
+      "timestamp": "2025-08-06T00:42:49.459251"
+    },
+    {
+      "id": 701,
+      "text": "Sample text 701",
+      "label": "positive",
+      "score": 0.00925852579437958,
+      "timestamp": "2026-02-11T00:42:49.458672"
+    },
+    {
+      "id": 717,
+      "text": "Sample text 717",
+      "label": "positive",
+      "score": 0.3233378758861677,
+      "timestamp": "2026-03-17T00:42:49.458710"
+    },
+    {
+      "id": 587,
+      "text": "Sample text 587",
+      "label": "positive",
+      "score": 0.2244484514424958,
+      "timestamp": "2025-09-30T00:42:49.458409"
+    },
+    {
+      "id": 413,
+      "text": "Sample text 413",
+      "label": "neutral",
+      "score": 0.24525441770488476,
+      "timestamp": "2025-10-01T00:42:49.458014"
+    },
+    {
+      "id": 96,
+      "text": "Sample text 96",
+      "label": "negative",
+      "score": 0.37452362849359566,
+      "timestamp": "2025-11-12T00:42:49.457286"
+    },
+    {
+      "id": 91,
+      "text": "Sample text 91",
+      "label": "positive",
+      "score": 0.1329314360920082,
+      "timestamp": "2026-01-13T00:42:49.457274"
+    },
+    {
+      "id": 339,
+      "text": "Sample text 339",
+      "label": "positive",
+      "score": 0.6050834047921969,
+      "timestamp": "2026-03-04T00:42:49.457845"
+    },
+    {
+      "id": 836,
+      "text": "Sample text 836",
+      "label": "neutral",
+      "score": 0.26002924802420313,
+      "timestamp": "2025-07-11T00:42:49.458983"
+    },
+    {
+      "id": 746,
+      "text": "Sample text 746",
+      "label": "positive",
+      "score": 0.8645859076908682,
+      "timestamp": "2026-02-04T00:42:49.458776"
+    },
+    {
+      "id": 990,
+      "text": "Sample text 990",
+      "label": "positive",
+      "score": 0.5733449225381856,
+      "timestamp": "2025-07-19T00:42:49.459340"
+    },
+    {
+      "id": 664,
+      "text": "Sample text 664",
+      "label": "positive",
+      "score": 0.46473593232270716,
+      "timestamp": "2025-10-31T00:42:49.458586"
+    },
+    {
+      "id": 30,
+      "text": "Sample text 30",
+      "label": "positive",
+      "score": 0.5713703867585161,
+      "timestamp": "2025-10-03T00:42:49.457112"
+    },
+    {
+      "id": 635,
+      "text": "Sample text 635",
+      "label": "negative",
+      "score": 0.820106066291194,
+      "timestamp": "2025-07-26T00:42:49.458520"
+    },
+    {
+      "id": 183,
+      "text": "Sample text 183",
+      "label": "positive",
+      "score": 0.052472115437290356,
+      "timestamp": "2025-07-23T00:42:49.457486"
+    },
+    {
+      "id": 777,
+      "text": "Sample text 777",
+      "label": "negative",
+      "score": 0.21123234407557478,
+      "timestamp": "2025-09-02T00:42:49.458850"
+    },
+    {
+      "id": 792,
+      "text": "Sample text 792",
+      "label": "positive",
+      "score": 0.5957789056873566,
+      "timestamp": "2025-10-12T00:42:49.458884"
+    },
+    {
+      "id": 615,
+      "text": "Sample text 615",
+      "label": "positive",
+      "score": 0.997820851573438,
+      "timestamp": "2026-03-03T00:42:49.458474"
+    },
+    {
+      "id": 254,
+      "text": "Sample text 254",
+      "label": "positive",
+      "score": 0.760899897135436,
+      "timestamp": "2025-12-07T00:42:49.457651"
+    },
+    {
+      "id": 199,
+      "text": "Sample text 199",
+      "label": "positive",
+      "score": 0.9662761654289599,
+      "timestamp": "2026-01-15T00:42:49.457523"
+    },
+    {
+      "id": 750,
+      "text": "Sample text 750",
+      "label": "positive",
+      "score": 0.4496731447391217,
+      "timestamp": "2025-05-24T00:42:49.458785"
+    },
+    {
+      "id": 165,
+      "text": "Sample text 165",
+      "label": "negative",
+      "score": 0.6637427777172449,
+      "timestamp": "2025-06-14T00:42:49.457446"
+    },
+    {
+      "id": 747,
+      "text": "Sample text 747",
+      "label": "positive",
+      "score": 0.27896339550931804,
+      "timestamp": "2025-06-27T00:42:49.458778"
+    },
+    {
+      "id": 423,
+      "text": "",
+      "label": "positive",
+      "score": 0.5117447209429813,
+      "timestamp": "2026-01-24T00:42:49.458037"
+    },
+    {
+      "id": 542,
+      "text": "Sample text 542",
+      "label": "positive",
+      "score": 0.23153457031643676,
+      "timestamp": "2025-12-12T00:42:49.458307"
+    },
+    {
+      "id": 881,
+      "text": "Sample text 881",
+      "label": "neutral",
+      "score": 0.779754912305387,
+      "timestamp": "2025-11-26T00:42:49.459086"
+    },
+    {
+      "id": 774,
+      "text": "Sample text 774",
+      "label": "positive",
+      "score": 0.6698766778441452,
+      "timestamp": "2025-06-16T00:42:49.458843"
+    },
+    {
+      "id": 72,
+      "text": "Sample text 72",
+      "label": "positive",
+      "score": 0.6702955718984903,
+      "timestamp": "2025-08-18T00:42:49.457207"
+    },
+    {
+      "id": 793,
+      "text": "Sample text 793",
+      "label": "negative",
+      "score": 0.17523364785348516,
+      "timestamp": "2025-07-13T00:42:49.458886"
+    },
+    {
+      "id": 122,
+      "text": "Sample text 122",
+      "label": "negative",
+      "score": 0.24741480203084143,
+      "timestamp": "2025-06-20T00:42:49.457346"
+    },
+    {
+      "id": 601,
+      "text": "Sample text 601",
+      "label": "positive",
+      "score": 0.5514478706868479,
+      "timestamp": "2026-03-11T00:42:49.458442"
+    },
+    {
+      "id": 366,
+      "text": "",
+      "label": "neutral",
+      "score": 0.2906606001840657,
+      "timestamp": "2026-01-21T00:42:49.457907"
+    },
+    {
+      "id": 772,
+      "text": "Sample text 772",
+      "label": "positive",
+      "score": 0.31835669847610804,
+      "timestamp": "2026-02-03T00:42:49.458839"
+    },
+    {
+      "id": 729,
+      "text": "Sample text 729",
+      "label": "positive",
+      "score": 0.04391738769216713,
+      "timestamp": "2025-04-21T00:42:49.458737"
+    },
+    {
+      "id": 900,
+      "text": "Sample text 900",
+      "label": "positive",
+      "score": 0.2553577766091889,
+      "timestamp": "2026-04-01T00:42:49.459129"
+    },
+    {
+      "id": 624,
+      "text": "Sample text 624",
+      "label": "neutral",
+      "score": 0.6741051270421992,
+      "timestamp": "2025-05-07T00:42:49.458495"
+    },
+    {
+      "id": 6,
+      "text": "Sample text 6",
+      "label": "positive",
+      "score": 0.9085002184008153,
+      "timestamp": "2026-03-08T00:42:49.457057"
+    },
+    {
+      "id": 322,
+      "text": "Sample text 322",
+      "label": "positive",
+      "score": 0.6934989527709192,
+      "timestamp": "2025-12-21T00:42:49.457806"
+    },
+    {
+      "id": 600,
+      "text": "Sample text 600",
+      "label": "neutral",
+      "score": 0.21784249997594118,
+      "timestamp": "2026-03-14T00:42:49.458440"
+    },
+    {
+      "id": 697,
+      "text": "Sample text 697",
+      "label": "positive",
+      "score": 0.5548072446782358,
+      "timestamp": "2026-03-02T00:42:49.458663"
+    },
+    {
+      "id": 552,
+      "text": "Sample text 552",
+      "label": "positive",
+      "score": 0.827575739277399,
+      "timestamp": "2025-07-30T00:42:49.458330"
+    },
+    {
+      "id": 784,
+      "text": "Sample text 784",
+      "label": "positive",
+      "score": 0.8071250900806366,
+      "timestamp": "2025-08-25T00:42:49.458866"
+    },
+    {
+      "id": 147,
+      "text": "Sample text 147",
+      "label": "positive",
+      "score": 0.8075578118548767,
+      "timestamp": "2025-10-28T00:42:49.457403"
+    },
+    {
+      "id": 416,
+      "text": "Sample text 416",
+      "label": "positive",
+      "score": 0.18062769690734992,
+      "timestamp": "2026-03-04T00:42:49.458021"
+    },
+    {
+      "id": 520,
+      "text": "Sample text 520",
+      "label": "positive",
+      "score": 0.4953046525746788,
+      "timestamp": "2025-12-19T00:42:49.458257"
+    },
+    {
+      "id": 207,
+      "text": "Sample text 207",
+      "label": "positive",
+      "score": 0.4253433640316078,
+      "timestamp": "2025-04-22T00:42:49.457543"
+    },
+    {
+      "id": 875,
+      "text": "Sample text 875",
+      "label": "positive",
+      "score": 0.43201491738093034,
+      "timestamp": "2025-11-08T00:42:49.459072"
+    },
+    {
+      "id": 238,
+      "text": "Sample text 238",
+      "label": "positive",
+      "score": 0.9331114438111703,
+      "timestamp": "2025-05-18T00:42:49.457615"
+    },
+    {
+      "id": 338,
+      "text": "Sample text 338",
+      "label": "neutral",
+      "score": 0.6190437604188682,
+      "timestamp": "2025-12-21T00:42:49.457843"
+    },
+    {
+      "id": 311,
+      "text": "Sample text 311",
+      "label": "neutral",
+      "score": 0.530480640641183,
+      "timestamp": "2025-06-09T00:42:49.457782"
+    },
+    {
+      "id": 690,
+      "text": "Sample text 690",
+      "label": "positive",
+      "score": 0.14377125955880266,
+      "timestamp": "2025-05-25T00:42:49.458646"
+    },
+    {
+      "id": 713,
+      "text": "Sample text 713",
+      "label": "negative",
+      "score": 0.10232212488877834,
+      "timestamp": "2025-07-19T00:42:49.458700"
+    },
+    {
+      "id": 927,
+      "text": "Sample text 927",
+      "label": "positive",
+      "score": 0.6435819552106367,
+      "timestamp": "2025-09-25T00:42:49.459191"
+    },
+    {
+      "id": 317,
+      "text": "Sample text 317",
+      "label": "positive",
+      "score": 0.14466781981622434,
+      "timestamp": "2025-10-29T00:42:49.457795"
+    },
+    {
+      "id": 462,
+      "text": "Sample text 462",
+      "label": "positive",
+      "score": 0.7616025323245275,
+      "timestamp": "2025-07-23T00:42:49.458125"
+    },
+    {
+      "id": 677,
+      "text": "",
+      "label": "positive",
+      "score": 0.102520730357612,
+      "timestamp": "2025-09-21T00:42:49.458617"
+    },
+    {
+      "id": 220,
+      "text": "Sample text 220",
+      "label": "negative",
+      "score": 0.14267014249265686,
+      "timestamp": "2025-06-26T00:42:49.457573"
+    },
+    {
+      "id": 405,
+      "text": "Sample text 405",
+      "label": "negative",
+      "score": 0.9319403661627591,
+      "timestamp": "2025-09-05T00:42:49.457995"
+    },
+    {
+      "id": 370,
+      "text": "Sample text 370",
+      "label": "negative",
+      "score": 0.31728486226814634,
+      "timestamp": "2025-06-07T00:42:49.457916"
+    },
+    {
+      "id": 782,
+      "text": "Sample text 782",
+      "label": "positive",
+      "score": 0.6862986494205301,
+      "timestamp": "2026-04-07T00:42:49.458861"
+    },
+    {
+      "id": 721,
+      "text": "Sample text 721",
+      "label": "neutral",
+      "score": 0.9454899328482886,
+      "timestamp": "2025-11-21T00:42:49.458719"
+    },
+    {
+      "id": 944,
+      "text": "Sample text 944",
+      "label": "negative",
+      "score": 0.24977879394757296,
+      "timestamp": "2025-12-05T00:42:49.459230"
+    },
+    {
+      "id": 502,
+      "text": "Sample text 502",
+      "label": "positive",
+      "score": 0.8590105436890813,
+      "timestamp": "2025-05-07T00:42:49.458216"
+    },
+    {
+      "id": 612,
+      "text": "",
+      "label": "positive",
+      "score": 0.9118726595582621,
+      "timestamp": "2026-03-30T00:42:49.458467"
+    },
+    {
+      "id": 730,
+      "text": "Sample text 730",
+      "label": "negative",
+      "score": 0.5721809180328675,
+      "timestamp": "2026-03-28T00:42:49.458739"
+    },
+    {
+      "id": 28,
+      "text": "Sample text 28",
+      "label": "negative",
+      "score": 0.40094607053775777,
+      "timestamp": "2025-06-18T00:42:49.457108"
+    },
+    {
+      "id": 745,
+      "text": "Sample text 745",
+      "label": "negative",
+      "score": 0.08127493319808232,
+      "timestamp": "2025-12-07T00:42:49.458774"
+    },
+    {
+      "id": 258,
+      "text": "Sample text 258",
+      "label": "positive",
+      "score": 0.634477191781447,
+      "timestamp": "2025-12-16T00:42:49.457660"
+    },
+    {
+      "id": 190,
+      "text": "Sample text 190",
+      "label": "positive",
+      "score": 0.6937258522611803,
+      "timestamp": "2026-02-23T00:42:49.457502"
+    },
+    {
+      "id": 282,
+      "text": "Sample text 282",
+      "label": "positive",
+      "score": 0.2239294502557252,
+      "timestamp": "2025-07-13T00:42:49.457715"
+    },
+    {
+      "id": 736,
+      "text": "Sample text 736",
+      "label": "neutral",
+      "score": 0.016674454008526962,
+      "timestamp": "2025-05-03T00:42:49.458753"
+    },
+    {
+      "id": 893,
+      "text": "Sample text 893",
+      "label": "positive",
+      "score": 0.1342847338382135,
+      "timestamp": "2026-03-06T00:42:49.459113"
+    },
+    {
+      "id": 163,
+      "text": "Sample text 163",
+      "label": "neutral",
+      "score": null,
+      "timestamp": "2026-03-12T00:42:49.457441"
+    },
+    {
+      "id": 698,
+      "text": "Sample text 698",
+      "label": "neutral",
+      "score": 0.12728248355453242,
+      "timestamp": "2026-04-06T00:42:49.458665"
+    },
+    {
+      "id": 65,
+      "text": "Sample text 65",
+      "label": "neutral",
+      "score": 0.39355131759229856,
+      "timestamp": "2026-03-21T00:42:49.457191"
+    },
+    {
+      "id": 151,
+      "text": "Sample text 151",
+      "label": "negative",
+      "score": 0.7848619435489371,
+      "timestamp": "2025-07-28T00:42:49.457412"
+    },
+    {
+      "id": 950,
+      "text": "Sample text 950",
+      "label": "positive",
+      "score": 0.34390176972559283,
+      "timestamp": "2025-05-26T00:42:49.459244"
+    },
+    {
+      "id": 488,
+      "text": "Sample text 488",
+      "label": "positive",
+      "score": 0.6639370237064075,
+      "timestamp": "2025-06-11T00:42:49.458184"
+    },
+    {
+      "id": 355,
+      "text": "Sample text 355",
+      "label": "positive",
+      "score": 0.23911062783614268,
+      "timestamp": "2025-06-04T00:42:49.457881"
+    },
+    {
+      "id": 58,
+      "text": "Sample text 58",
+      "label": "positive",
+      "score": 0.603709448688413,
+      "timestamp": "2025-11-05T00:42:49.457176"
+    },
+    {
+      "id": 665,
+      "text": "Sample text 665",
+      "label": "negative",
+      "score": 0.1280578656023873,
+      "timestamp": "2025-08-08T00:42:49.458589"
+    },
+    {
+      "id": 572,
+      "text": "Sample text 572",
+      "label": "positive",
+      "score": 0.23817020827556712,
+      "timestamp": "2026-02-24T00:42:49.458375"
+    },
+    {
+      "id": 459,
+      "text": "Sample text 459",
+      "label": "positive",
+      "score": 0.35300969748582856,
+      "timestamp": "2025-12-09T00:42:49.458118"
+    },
+    {
+      "id": 573,
+      "text": "Sample text 573",
+      "label": "positive",
+      "score": 0.8883353382925319,
+      "timestamp": "2025-07-12T00:42:49.458378"
+    },
+    {
+      "id": 22,
+      "text": "",
+      "label": "positive",
+      "score": 0.18910216431644133,
+      "timestamp": "2025-07-12T00:42:49.457094"
+    },
+    {
+      "id": 175,
+      "text": "Sample text 175",
+      "label": "positive",
+      "score": 0.9903142999731537,
+      "timestamp": "2025-09-24T00:42:49.457468"
+    },
+    {
+      "id": 66,
+      "text": "Sample text 66",
+      "label": "positive",
+      "score": 0.6280832032690759,
+      "timestamp": "2025-11-14T00:42:49.457194"
+    },
+    {
+      "id": 446,
+      "text": "Sample text 446",
+      "label": "positive",
+      "score": 0.7232536695971956,
+      "timestamp": "2025-11-23T00:42:49.458089"
+    },
+    {
+      "id": 605,
+      "text": "",
+      "label": "positive",
+      "score": 0.06081286781805595,
+      "timestamp": "2025-04-12T00:42:49.458451"
+    },
+    {
+      "id": 509,
+      "text": "Sample text 509",
+      "label": "positive",
+      "score": 0.6283188273098645,
+      "timestamp": "2025-07-07T00:42:49.458232"
+    },
+    {
+      "id": 448,
+      "text": "Sample text 448",
+      "label": "negative",
+      "score": 0.4545817411939548,
+      "timestamp": "2025-05-19T00:42:49.458093"
+    },
+    {
+      "id": 633,
+      "text": "Sample text 633",
+      "label": "positive",
+      "score": 0.9106742248600328,
+      "timestamp": "2025-05-25T00:42:49.458516"
+    },
+    {
+      "id": 471,
+      "text": "Sample text 471",
+      "label": "positive",
+      "score": 0.7320016095639762,
+      "timestamp": "2025-09-08T00:42:49.458146"
+    },
+    {
+      "id": 54,
+      "text": "Sample text 54",
+      "label": "neutral",
+      "score": 0.2911055286196611,
+      "timestamp": "2025-07-18T00:42:49.457167"
+    },
+    {
+      "id": 856,
+      "text": "Sample text 856",
+      "label": "negative",
+      "score": 0.196942205403011,
+      "timestamp": "2025-07-31T00:42:49.459028"
+    },
+    {
+      "id": 588,
+      "text": "Sample text 588",
+      "label": "positive",
+      "score": 0.30514807277400857,
+      "timestamp": "2025-07-09T00:42:49.458411"
+    },
+    {
+      "id": 275,
+      "text": "Sample text 275",
+      "label": "positive",
+      "score": 0.5038694276726631,
+      "timestamp": "2026-04-01T00:42:49.457699"
+    },
+    {
+      "id": 476,
+      "text": "Sample text 476",
+      "label": "positive",
+      "score": 0.8795276708281322,
+      "timestamp": "2025-11-26T00:42:49.458157"
+    },
+    {
+      "id": 989,
+      "text": "Sample text 989",
+      "label": "negative",
+      "score": 0.7182890008711053,
+      "timestamp": "2026-03-23T00:42:49.459337"
+    },
+    {
+      "id": 840,
+      "text": "Sample text 840",
+      "label": "negative",
+      "score": 0.7579404251667007,
+      "timestamp": "2025-06-20T00:42:49.458992"
+    },
+    {
+      "id": 567,
+      "text": "Sample text 567",
+      "label": "positive",
+      "score": 0.8764498008151773,
+      "timestamp": "2025-12-17T00:42:49.458364"
+    },
+    {
+      "id": 660,
+      "text": "Sample text 660",
+      "label": "negative",
+      "score": 0.1800643345556382,
+      "timestamp": "2025-11-10T00:42:49.458577"
+    },
+    {
+      "id": 718,
+      "text": "Sample text 718",
+      "label": "positive",
+      "score": 0.4716890776685577,
+      "timestamp": "2025-11-09T00:42:49.458712"
+    },
+    {
+      "id": 734,
+      "text": "Sample text 734",
+      "label": "neutral",
+      "score": 0.8458031350331512,
+      "timestamp": "2026-03-15T00:42:49.458748"
+    },
+    {
+      "id": 356,
+      "text": "Sample text 356",
+      "label": "negative",
+      "score": 0.9944045282715769,
+      "timestamp": "2026-02-22T00:42:49.457884"
+    },
+    {
+      "id": 737,
+      "text": "Sample text 737",
+      "label": "neutral",
+      "score": 0.9057247488667836,
+      "timestamp": "2025-06-16T00:42:49.458755"
+    },
+    {
+      "id": 233,
+      "text": "Sample text 233",
+      "label": "positive",
+      "score": 0.9301853618169618,
+      "timestamp": "2025-07-18T00:42:49.457604"
+    },
+    {
+      "id": 618,
+      "text": "Sample text 618",
+      "label": "negative",
+      "score": 0.52033599794669,
+      "timestamp": "2025-11-01T00:42:49.458481"
+    },
+    {
+      "id": 846,
+      "text": "",
+      "label": "positive",
+      "score": 0.563539433201583,
+      "timestamp": "2025-04-12T00:42:49.459005"
+    },
+    {
+      "id": 826,
+      "text": "Sample text 826",
+      "label": "positive",
+      "score": 0.4087752695790605,
+      "timestamp": "2026-04-01T00:42:49.458961"
+    },
+    {
+      "id": 107,
+      "text": "Sample text 107",
+      "label": "positive",
+      "score": 0.2853528900177913,
+      "timestamp": "2025-08-26T00:42:49.457312"
+    },
+    {
+      "id": 321,
+      "text": "Sample text 321",
+      "label": "positive",
+      "score": 0.2301145150112156,
+      "timestamp": "2026-03-01T00:42:49.457804"
+    },
+    {
+      "id": 548,
+      "text": "Sample text 548",
+      "label": "positive",
+      "score": 0.8086722179502562,
+      "timestamp": "2026-01-04T00:42:49.458321"
+    },
+    {
+      "id": 487,
+      "text": "Sample text 487",
+      "label": "positive",
+      "score": 0.013561053780834942,
+      "timestamp": "2025-10-14T00:42:49.458182"
+    },
+    {
+      "id": 725,
+      "text": "Sample text 725",
+      "label": "positive",
+      "score": 0.9394071488900781,
+      "timestamp": "2025-09-29T00:42:49.458728"
+    },
+    {
+      "id": 519,
+      "text": "Sample text 519",
+      "label": "positive",
+      "score": 0.7169513780848701,
+      "timestamp": "2025-04-18T00:42:49.458255"
+    },
+    {
+      "id": 803,
+      "text": "Sample text 803",
+      "label": "negative",
+      "score": 0.6046225681801932,
+      "timestamp": "2026-01-10T00:42:49.458909"
+    },
+    {
+      "id": 98,
+      "text": "Sample text 98",
+      "label": "neutral",
+      "score": 0.13426701186691548,
+      "timestamp": "2025-11-01T00:42:49.457291"
+    },
+    {
+      "id": 131,
+      "text": "Sample text 131",
+      "label": "positive",
+      "score": 0.17640129755922695,
+      "timestamp": "2026-01-07T00:42:49.457367"
+    },
+    {
+      "id": 592,
+      "text": "Sample text 592",
+      "label": "neutral",
+      "score": 0.9324726959911698,
+      "timestamp": "2025-11-16T00:42:49.458421"
+    },
+    {
+      "id": 551,
+      "text": "Sample text 551",
+      "label": "neutral",
+      "score": 0.9577436142488457,
+      "timestamp": "2025-05-19T00:42:49.458327"
+    },
+    {
+      "id": 814,
+      "text": "Sample text 814",
+      "label": "positive",
+      "score": 0.5648924367988913,
+      "timestamp": "2025-09-12T00:42:49.458934"
+    },
+    {
+      "id": 252,
+      "text": "Sample text 252",
+      "label": "negative",
+      "score": 0.013648955280966657,
+      "timestamp": "2025-04-27T00:42:49.457647"
+    },
+    {
+      "id": 719,
+      "text": "Sample text 719",
+      "label": "positive",
+      "score": 0.3773095516407461,
+      "timestamp": "2025-09-27T00:42:49.458714"
+    },
+    {
+      "id": 847,
+      "text": "Sample text 847",
+      "label": "positive",
+      "score": 0.6338945798929136,
+      "timestamp": "2025-08-12T00:42:49.459008"
+    },
+    {
+      "id": 880,
+      "text": "Sample text 880",
+      "label": "negative",
+      "score": 0.1571326578086708,
+      "timestamp": "2025-07-22T00:42:49.459083"
+    },
+    {
+      "id": 329,
+      "text": "Sample text 329",
+      "label": "positive",
+      "score": 0.4768265697169094,
+      "timestamp": "2025-06-12T00:42:49.457822"
+    },
+    {
+      "id": 137,
+      "text": "",
+      "label": "negative",
+      "score": 0.9552137330712873,
+      "timestamp": "2025-05-07T00:42:49.457380"
+    },
+    {
+      "id": 709,
+      "text": "Sample text 709",
+      "label": "positive",
+      "score": 0.5591560891519723,
+      "timestamp": "2025-12-18T00:42:49.458691"
+    },
+    {
+      "id": 78,
+      "text": "Sample text 78",
+      "label": "negative",
+      "score": 0.6410121892581875,
+      "timestamp": "2025-05-10T00:42:49.457221"
+    },
+    {
+      "id": 365,
+      "text": "Sample text 365",
+      "label": "positive",
+      "score": 0.790590638256198,
+      "timestamp": "2025-04-19T00:42:49.457904"
+    },
+    {
+      "id": 553,
+      "text": "Sample text 553",
+      "label": "positive",
+      "score": 0.13787353636023314,
+      "timestamp": "2026-03-09T00:42:49.458332"
+    },
+    {
+      "id": 327,
+      "text": "Sample text 327",
+      "label": "positive",
+      "score": 0.11723580928185562,
+      "timestamp": "2025-04-21T00:42:49.457818"
+    },
+    {
+      "id": 240,
+      "text": "",
+      "label": "positive",
+      "score": 0.29835064972857195,
+      "timestamp": "2026-02-17T00:42:49.457620"
+    },
+    {
+      "id": 921,
+      "text": "Sample text 921",
+      "label": "positive",
+      "score": 0.5067033314204454,
+      "timestamp": "2025-06-20T00:42:49.459178"
+    },
+    {
+      "id": 373,
+      "text": "Sample text 373",
+      "label": "positive",
+      "score": 0.9364596665541349,
+      "timestamp": "2025-10-09T00:42:49.457923"
+    },
+    {
+      "id": 379,
+      "text": "Sample text 379",
+      "label": "positive",
+      "score": 0.5355062908592111,
+      "timestamp": "2026-01-20T00:42:49.457936"
+    },
+    {
+      "id": 441,
+      "text": "Sample text 441",
+      "label": "neutral",
+      "score": 0.49393426253386563,
+      "timestamp": "2026-03-20T00:42:49.458077"
+    },
+    {
+      "id": 269,
+      "text": "Sample text 269",
+      "label": "positive",
+      "score": 0.6018351250913317,
+      "timestamp": "2026-03-22T00:42:49.457685"
+    },
+    {
+      "id": 820,
+      "text": "Sample text 820",
+      "label": "negative",
+      "score": 0.6868438792246535,
+      "timestamp": "2025-05-23T00:42:49.458947"
+    },
+    {
+      "id": 822,
+      "text": "Sample text 822",
+      "label": "positive",
+      "score": 0.44945592550164304,
+      "timestamp": "2026-01-12T00:42:49.458951"
+    },
+    {
+      "id": 372,
+      "text": "Sample text 372",
+      "label": "positive",
+      "score": 0.2134701409949855,
+      "timestamp": "2025-06-26T00:42:49.457920"
+    },
+    {
+      "id": 815,
+      "text": "",
+      "label": "neutral",
+      "score": 0.5564394872192443,
+      "timestamp": "2025-08-04T00:42:49.458936"
+    },
+    {
+      "id": 723,
+      "text": "Sample text 723",
+      "label": "negative",
+      "score": 0.3481804890782565,
+      "timestamp": "2026-03-31T00:42:49.458723"
+    },
+    {
+      "id": 267,
+      "text": "Sample text 267",
+      "label": "negative",
+      "score": 0.810035246322937,
+      "timestamp": "2025-06-15T00:42:49.457680"
+    },
+    {
+      "id": 764,
+      "text": "Sample text 764",
+      "label": "positive",
+      "score": 0.8865952461723323,
+      "timestamp": "2025-04-20T00:42:49.458820"
+    },
+    {
+      "id": 396,
+      "text": "Sample text 396",
+      "label": "neutral",
+      "score": 0.5812335819443363,
+      "timestamp": "2026-03-27T00:42:49.457975"
+    },
+    {
+      "id": 923,
+      "text": "Sample text 923",
+      "label": "negative",
+      "score": 0.41512786739305507,
+      "timestamp": "2025-12-26T00:42:49.459182"
+    },
+    {
+      "id": 909,
+      "text": "Sample text 909",
+      "label": "negative",
+      "score": 0.6925861667056278,
+      "timestamp": "2025-09-03T00:42:49.459150"
+    },
+    {
+      "id": 589,
+      "text": "Sample text 589",
+      "label": "negative",
+      "score": 0.754478073814283,
+      "timestamp": "2025-10-22T00:42:49.458414"
+    },
+    {
+      "id": 642,
+      "text": "Sample text 642",
+      "label": "positive",
+      "score": 0.43891674446786455,
+      "timestamp": "2026-01-16T00:42:49.458536"
+    },
+    {
+      "id": 409,
+      "text": "Sample text 409",
+      "label": "neutral",
+      "score": 0.09325442532647699,
+      "timestamp": "2026-03-30T00:42:49.458005"
+    },
+    {
+      "id": 594,
+      "text": "Sample text 594",
+      "label": "negative",
+      "score": 0.4673324729921956,
+      "timestamp": "2025-12-12T00:42:49.458426"
+    },
+    {
+      "id": 531,
+      "text": "Sample text 531",
+      "label": "positive",
+      "score": 0.3894293979631337,
+      "timestamp": "2025-06-19T00:42:49.458282"
+    },
+    {
+      "id": 868,
+      "text": "Sample text 868",
+      "label": "positive",
+      "score": 0.009602476520192194,
+      "timestamp": "2025-09-04T00:42:49.459055"
+    },
+    {
+      "id": 190,
+      "text": "Sample text 190",
+      "label": "positive",
+      "score": 0.6937258522611803,
+      "timestamp": "2026-02-23T00:42:49.457502"
+    },
+    {
+      "id": 422,
+      "text": "",
+      "label": "positive",
+      "score": 0.25450102185147383,
+      "timestamp": "2026-02-09T00:42:49.458034"
+    },
+    {
+      "id": 196,
+      "text": "Sample text 196",
+      "label": "neutral",
+      "score": 0.5991026065887204,
+      "timestamp": "2026-01-10T00:42:49.457517"
+    },
+    {
+      "id": 581,
+      "text": "Sample text 581",
+      "label": "positive",
+      "score": 0.6218717805013634,
+      "timestamp": "2025-11-20T00:42:49.458396"
+    },
+    {
+      "id": 564,
+      "text": "Sample text 564",
+      "label": "neutral",
+      "score": 0.07076309584012463,
+      "timestamp": "2025-09-11T00:42:49.458357"
+    },
+    {
+      "id": 569,
+      "text": "Sample text 569",
+      "label": "negative",
+      "score": 0.018094864133715305,
+      "timestamp": "2025-08-09T00:42:49.458369"
+    },
+    {
+      "id": 424,
+      "text": "Sample text 424",
+      "label": "positive",
+      "score": 0.029497618433384054,
+      "timestamp": "2026-02-01T00:42:49.458039"
+    },
+    {
+      "id": 449,
+      "text": "Sample text 449",
+      "label": "neutral",
+      "score": 0.6179770015384526,
+      "timestamp": "2026-03-29T00:42:49.458095"
+    },
+    {
+      "id": 858,
+      "text": "Sample text 858",
+      "label": "neutral",
+      "score": 0.03284053056308045,
+      "timestamp": "2025-05-27T00:42:49.459032"
+    },
+    {
+      "id": 494,
+      "text": "Sample text 494",
+      "label": "positive",
+      "score": 0.3311956702994273,
+      "timestamp": "2025-06-15T00:42:49.458198"
+    },
+    {
+      "id": 626,
+      "text": "Sample text 626",
+      "label": "positive",
+      "score": 0.49420023435823435,
+      "timestamp": "2026-01-01T00:42:49.458500"
+    },
+    {
+      "id": 878,
+      "text": "Sample text 878",
+      "label": "positive",
+      "score": 0.30006141906642536,
+      "timestamp": "2025-06-04T00:42:49.459079"
+    },
+    {
+      "id": 21,
+      "text": "Sample text 21",
+      "label": "positive",
+      "score": 0.5995491626079392,
+      "timestamp": "2025-05-22T00:42:49.457091"
+    },
+    {
+      "id": 249,
+      "text": "Sample text 249",
+      "label": "neutral",
+      "score": 0.4955675959573692,
+      "timestamp": "2025-04-28T00:42:49.457640"
+    },
+    {
+      "id": 303,
+      "text": "Sample text 303",
+      "label": "positive",
+      "score": 0.16314444174904363,
+      "timestamp": "2025-10-25T00:42:49.457763"
+    },
+    {
+      "id": 12,
+      "text": "Sample text 12",
+      "label": "neutral",
+      "score": 0.8260843231519911,
+      "timestamp": "2026-04-09T00:42:49.457071"
+    },
+    {
+      "id": 148,
+      "text": "Sample text 148",
+      "label": "negative",
+      "score": 0.7392046348198678,
+      "timestamp": "2026-03-02T00:42:49.457405"
+    },
+    {
+      "id": 221,
+      "text": "Sample text 221",
+      "label": "negative",
+      "score": 0.9744998467724821,
+      "timestamp": "2025-04-15T00:42:49.457576"
+    },
+    {
+      "id": 831,
+      "text": "Sample text 831",
+      "label": "positive",
+      "score": 0.20700727088453053,
+      "timestamp": "2025-08-19T00:42:49.458972"
+    },
+    {
+      "id": 663,
+      "text": "Sample text 663",
+      "label": "neutral",
+      "score": 0.4195940268737237,
+      "timestamp": "2025-08-27T00:42:49.458584"
+    },
+    {
+      "id": 450,
+      "text": "Sample text 450",
+      "label": "positive",
+      "score": 0.9935403713796961,
+      "timestamp": "2025-04-25T00:42:49.458098"
+    },
+    {
+      "id": 231,
+      "text": "Sample text 231",
+      "label": "positive",
+      "score": 0.9942219461424883,
+      "timestamp": "2025-05-09T00:42:49.457599"
+    },
+    {
+      "id": 896,
+      "text": "Sample text 896",
+      "label": "positive",
+      "score": 0.5310274795987456,
+      "timestamp": "2025-11-14T00:42:49.459120"
+    },
+    {
+      "id": 996,
+      "text": "Sample text 996",
+      "label": "negative",
+      "score": 0.8634829040413924,
+      "timestamp": "2025-05-16T00:42:49.459354"
+    },
+    {
+      "id": 224,
+      "text": "Sample text 224",
+      "label": "positive",
+      "score": 0.22876410413673087,
+      "timestamp": "2025-05-22T00:42:49.457582"
+    },
+    {
+      "id": 711,
+      "text": "Sample text 711",
+      "label": "positive",
+      "score": 0.4032683591120535,
+      "timestamp": "2025-12-03T00:42:49.458695"
+    },
+    {
+      "id": 853,
+      "text": "Sample text 853",
+      "label": "positive",
+      "score": 0.4852457839874662,
+      "timestamp": "2026-01-16T00:42:49.459021"
+    },
+    {
+      "id": 229,
+      "text": "Sample text 229",
+      "label": "positive",
+      "score": 0.5324093453428295,
+      "timestamp": "2026-02-08T00:42:49.457594"
+    },
+    {
+      "id": 506,
+      "text": "Sample text 506",
+      "label": "positive",
+      "score": 0.2612609112277189,
+      "timestamp": "2025-11-09T00:42:49.458225"
+    },
+    {
+      "id": 26,
+      "text": "Sample text 26",
+      "label": "positive",
+      "score": 0.5091585172285593,
+      "timestamp": "2025-07-31T00:42:49.457103"
+    },
+    {
+      "id": 280,
+      "text": "Sample text 280",
+      "label": "positive",
+      "score": 0.008861324780844226,
+      "timestamp": "2025-07-24T00:42:49.457711"
+    },
+    {
+      "id": 683,
+      "text": "Sample text 683",
+      "label": "negative",
+      "score": 0.31218970406630453,
+      "timestamp": "2025-10-29T00:42:49.458631"
+    },
+    {
+      "id": 158,
+      "text": "Sample text 158",
+      "label": "negative",
+      "score": 0.8719406070098743,
+      "timestamp": "2025-06-22T00:42:49.457429"
+    },
+    {
+      "id": 561,
+      "text": "Sample text 561",
+      "label": "positive",
+      "score": 0.05939196899003252,
+      "timestamp": "2025-12-29T00:42:49.458351"
+    },
+    {
+      "id": 251,
+      "text": "Sample text 251",
+      "label": "negative",
+      "score": 0.1314176701734422,
+      "timestamp": "2026-02-16T00:42:49.457644"
+    },
+    {
+      "id": 41,
+      "text": "Sample text 41",
+      "label": "positive",
+      "score": 0.3975052850513048,
+      "timestamp": "2025-12-17T00:42:49.457138"
+    },
+    {
+      "id": 845,
+      "text": "Sample text 845",
+      "label": "negative",
+      "score": 0.7613227377833499,
+      "timestamp": "2026-01-27T00:42:49.459003"
+    },
+    {
+      "id": 453,
+      "text": "Sample text 453",
+      "label": "neutral",
+      "score": 0.11080359703304898,
+      "timestamp": "2025-11-08T00:42:49.458105"
+    },
+    {
+      "id": 230,
+      "text": "Sample text 230",
+      "label": "positive",
+      "score": 0.7459172607011366,
+      "timestamp": "2025-04-12T00:42:49.457596"
+    },
+    {
+      "id": 331,
+      "text": "Sample text 331",
+      "label": "positive",
+      "score": 0.7654177038552202,
+      "timestamp": "2025-08-15T00:42:49.457827"
+    },
+    {
+      "id": 84,
+      "text": "Sample text 84",
+      "label": "positive",
+      "score": 0.9343273680038947,
+      "timestamp": "2025-09-22T00:42:49.457256"
+    },
+    {
+      "id": 994,
+      "text": "Sample text 994",
+      "label": "positive",
+      "score": 0.9655885938458225,
+      "timestamp": "2025-11-22T00:42:49.459349"
+    },
+    {
+      "id": 583,
+      "text": "Sample text 583",
+      "label": "negative",
+      "score": 0.816379709451944,
+      "timestamp": "2026-01-30T00:42:49.458400"
+    },
+    {
+      "id": 628,
+      "text": "Sample text 628",
+      "label": "positive",
+      "score": 0.4698602687035053,
+      "timestamp": "2026-02-20T00:42:49.458504"
+    },
+    {
+      "id": 300,
+      "text": "Sample text 300",
+      "label": "neutral",
+      "score": 0.2676564763682753,
+      "timestamp": "2025-05-26T00:42:49.457757"
+    },
+    {
+      "id": 817,
+      "text": "Sample text 817",
+      "label": "positive",
+      "score": 0.5707450158100499,
+      "timestamp": "2026-01-11T00:42:49.458940"
+    },
+    {
+      "id": 908,
+      "text": "Sample text 908",
+      "label": "neutral",
+      "score": 0.3304294427709712,
+      "timestamp": "2026-01-09T00:42:49.459148"
+    },
+    {
+      "id": 897,
+      "text": "Sample text 897",
+      "label": "negative",
+      "score": 0.8707253246448986,
+      "timestamp": "2025-04-19T00:42:49.459122"
+    },
+    {
+      "id": 834,
+      "text": "Sample text 834",
+      "label": "neutral",
+      "score": 0.7220462632363589,
+      "timestamp": "2026-03-08T00:42:49.458978"
+    },
+    {
+      "id": 753,
+      "text": "Sample text 753",
+      "label": "negative",
+      "score": 0.5037652518720269,
+      "timestamp": "2025-11-26T00:42:49.458792"
+    },
+    {
+      "id": 979,
+      "text": "Sample text 979",
+      "label": "negative",
+      "score": 0.9976053068917937,
+      "timestamp": "2025-06-08T00:42:49.459314"
+    },
+    {
+      "id": 865,
+      "text": "Sample text 865",
+      "label": "positive",
+      "score": 0.5812704375183754,
+      "timestamp": "2025-08-18T00:42:49.459049"
+    },
+    {
+      "id": 106,
+      "text": "Sample text 106",
+      "label": "positive",
+      "score": 0.3114629698109538,
+      "timestamp": "2026-01-01T00:42:49.457309"
+    },
+    {
+      "id": 394,
+      "text": "Sample text 394",
+      "label": "negative",
+      "score": 0.9953632212252927,
+      "timestamp": "2026-02-18T00:42:49.457970"
+    },
+    {
+      "id": 943,
+      "text": "Sample text 943",
+      "label": "positive",
+      "score": 0.08218898432839838,
+      "timestamp": "2026-02-23T00:42:49.459228"
+    },
+    {
+      "id": 136,
+      "text": "Sample text 136",
+      "label": "positive",
+      "score": 0.4778971186667259,
+      "timestamp": "2025-05-03T00:42:49.457378"
+    },
+    {
+      "id": 364,
+      "text": "Sample text 364",
+      "label": "negative",
+      "score": 0.8755364566389333,
+      "timestamp": "2025-04-28T00:42:49.457902"
+    },
+    {
+      "id": 362,
+      "text": "Sample text 362",
+      "label": "neutral",
+      "score": 0.917140116397923,
+      "timestamp": "2026-02-05T00:42:49.457898"
+    },
+    {
+      "id": 545,
+      "text": "Sample text 545",
+      "label": "positive",
+      "score": 0.029459453549614878,
+      "timestamp": "2026-01-13T00:42:49.458314"
+    },
+    {
+      "id": 348,
+      "text": "Sample text 348",
+      "label": "neutral",
+      "score": 0.40728656125449514,
+      "timestamp": "2025-07-29T00:42:49.457865"
+    },
+    {
+      "id": 733,
+      "text": "",
+      "label": "positive",
+      "score": 0.15319175053864398,
+      "timestamp": "2026-01-12T00:42:49.458746"
+    },
+    {
+      "id": 298,
+      "text": "Sample text 298",
+      "label": "negative",
+      "score": 0.011788529182177099,
+      "timestamp": "2026-02-20T00:42:49.457752"
+    },
+    {
+      "id": 539,
+      "text": "Sample text 539",
+      "label": "neutral",
+      "score": 0.12942196948653983,
+      "timestamp": "2025-10-29T00:42:49.458300"
+    },
+    {
+      "id": 828,
+      "text": "",
+      "label": "neutral",
+      "score": 0.7898798633673492,
+      "timestamp": "2025-09-25T00:42:49.458965"
+    },
+    {
+      "id": 185,
+      "text": "Sample text 185",
+      "label": "positive",
+      "score": 0.302689609587074,
+      "timestamp": "2025-06-11T00:42:49.457491"
+    },
+    {
+      "id": 191,
+      "text": "Sample text 191",
+      "label": "negative",
+      "score": 0.6445966489816977,
+      "timestamp": "2025-09-02T00:42:49.457505"
+    },
+    {
+      "id": 406,
+      "text": "Sample text 406",
+      "label": "positive",
+      "score": 0.17371727081476906,
+      "timestamp": "2025-11-01T00:42:49.457998"
+    },
+    {
+      "id": 155,
+      "text": "Sample text 155",
+      "label": "negative",
+      "score": 0.029221781792009405,
+      "timestamp": "2025-10-27T00:42:49.457422"
+    }
+  ],
+  "metadata": {
+    "stage": "development"
+  },
+  "created_at": "2026-04-12T00:42:49.459552"
+}
