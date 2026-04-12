@@ -7,6 +7,7 @@
 
 **Traceable Watermark ID**: AEVA-2026-LQC-dc68e33
 **GitHub**: https://github.com/liqcui/AEVA-P
+**Live Demo**: https://liqcui.github.io/AEVA-P/ 🌐
 **License**: Dual License (Personal/Academic Free, Commercial Requires Permission)
 
 📧 **Contact**: liquan_cui@126.com
@@ -128,6 +129,61 @@ AVEA-P/
 ```
 
 ## Quick Start
+
+### 🌐 Try Online Demo (No Installation Required)
+
+**Live Demo**: https://liqcui.github.io/AEVA-P/
+
+Experience AEVA's full functionality directly in your browser:
+- ✅ No installation needed
+- ✅ No API keys required
+- ✅ Fully offline-capable
+- ✅ All features with mock data
+- ✅ 8 interactive pages
+
+### 🎭 Dual Interface - Choose Your Interaction Method
+
+AEVA provides **two powerful ways** to interact with the platform:
+
+#### 🖥️ Command-Line Interface (CLI)
+**Best for**: Automation, CI/CD, scripting, batch processing
+
+```bash
+# Model evaluation
+aeva evaluate model models/classifier.pkl data/test.csv --metrics accuracy --metrics f1
+
+# Data validation
+aeva data validate data/dataset.csv --output reports/
+
+# Generate explainability report
+aeva evaluate explainability models/model.pkl data/test.csv --method shap
+
+# Launch API server
+aeva server --port 8000
+```
+
+📖 **Full CLI Guide**: See [`docs/CLI_USAGE.md`](docs/CLI_USAGE.md) for complete CLI reference.
+
+#### 🌐 Web Dashboard
+**Best for**: Exploration, visualization, collaboration, demos
+
+```bash
+# Launch interactive dashboard
+aeva dashboard
+
+# Access at: http://localhost:8501
+```
+
+**Dashboard Features**:
+- 🏠 Overview & Metrics
+- 🔍 SHAP/LIME Explainability
+- 🛡️ Adversarial Robustness
+- 📊 Data Quality Analysis
+- 📈 A/B Testing & Deployment
+- 📝 Model Card Generation
+- ⚙️ Production Integrations
+
+📖 **CLI vs Web Comparison**: See [`docs/CLI_VS_WEB.md`](docs/CLI_VS_WEB.md) for detailed comparison.
 
 ### 🎬 Interactive Demo (Offline-Ready)
 
@@ -260,10 +316,21 @@ Contributions are welcome! Please read our [Contributing Guide](docs/CONTRIBUTIN
 
 [MIT License](LICENSE)
 
+## Links
+
+- 🌐 **Live Demo**: https://liqcui.github.io/AEVA-P/
+- 📦 **GitHub Repository**: https://github.com/liqcui/AEVA-P
+- 📖 **Documentation**: [docs/](docs/)
+- 🐛 **Issue Tracker**: https://github.com/liqcui/AEVA-P/issues
+
 ## Contact
 
-For questions and support, please open an issue or contact the maintainers.
+- **Email**: liquan_cui@126.com
+- **GitHub Issues**: https://github.com/liqcui/AEVA-P/issues
+- **License Inquiries**: liquan_cui@126.com (for commercial use)
 
 ---
 
 **AEVA**: Transforming algorithm evaluation from manual operation to intelligent automation.
+
+**Watermark**: AEVA-2026-LQC-dc68e33

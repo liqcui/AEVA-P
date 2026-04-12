@@ -461,8 +461,9 @@
                     </div>
                 </div>
                 <nav>
-                    <a href="#" class="nav-link active" data-page="dashboard">仪表盘</a>
-                    <a href="#" class="nav-link" data-page="architecture">架构说明</a>
+                    <a href="#" class="nav-link active" data-page="architecture">架构说明</a>
+                    <a href="#" class="nav-link" data-page="dashboard">仪表盘</a>
+                    <a href="#" class="nav-link" data-page="interfaces">交互方式 ⭐</a>
                     <a href="#" class="nav-link" data-page="guard">Guard门禁</a>
                     <a href="#" class="nav-link" data-page="bench">Bench基准</a>
                     <a href="#" class="nav-link" data-page="auto">Auto流水线</a>
@@ -476,7 +477,7 @@
     <!-- Main Content -->
     <main class="container">
         <!-- Dashboard Page -->
-        <div id="dashboard" class="page-section active">
+        <div id="dashboard" class="page-section">
             <h2 style="margin-bottom: 1.5rem; font-size: 1.875rem;">评测概览</h2>
 
             <!-- Stats Grid -->
@@ -523,6 +524,110 @@
                         <div class="stat-icon primary">💻</div>
                     </div>
                     <div class="stat-trend up">↗ +34% 优化后</div>
+                </div>
+
+                <div class="stat-card" style="border: 2px solid var(--warning);">
+                    <div class="stat-header">
+                        <div>
+                            <div class="stat-value">2</div>
+                            <div class="stat-label">交互方式 ⭐ NEW</div>
+                        </div>
+                        <div class="stat-icon warning">🎭</div>
+                    </div>
+                    <div class="stat-trend up">✓ CLI + Web 双重接口</div>
+                </div>
+
+                <div class="stat-card" style="border: 2px solid var(--success);">
+                    <div class="stat-header">
+                        <div>
+                            <div class="stat-value">11</div>
+                            <div class="stat-label">CLI 命令 ⭐ NEW</div>
+                        </div>
+                        <div class="stat-icon success">⌨️</div>
+                    </div>
+                    <div class="stat-trend up">✓ 全自动化支持</div>
+                </div>
+
+                <div class="stat-card" style="border: 2px solid var(--primary);">
+                    <div class="stat-header">
+                        <div>
+                            <div class="stat-value">7</div>
+                            <div class="stat-label">Web 页面 ⭐ NEW</div>
+                        </div>
+                        <div class="stat-icon primary">🌐</div>
+                    </div>
+                    <div class="stat-trend up">✓ 交互式仪表板</div>
+                </div>
+
+                <div class="stat-card" style="background: linear-gradient(135deg, #fef3c7, #fde68a);">
+                    <div class="stat-header">
+                        <div>
+                            <div class="stat-value">100%</div>
+                            <div class="stat-label">接口一致性</div>
+                        </div>
+                        <div class="stat-icon">🔄</div>
+                    </div>
+                    <div class="stat-trend up">✓ CLI 和 Web 功能等价</div>
+                </div>
+            </div>
+
+            <!-- Dual Interface Highlight -->
+            <div class="card" style="background: linear-gradient(135deg, #e0f2fe, #bae6fd); border: 2px solid var(--primary); margin-top: 2rem;">
+                <div class="card-header">
+                    <h3 class="card-title" style="display: flex; align-items: center; gap: 0.5rem;">
+                        🎭 双重交互方式 - 灵活选择
+                        <span class="badge" style="background: var(--warning); color: white;">NEW</span>
+                    </h3>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                    <div style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--primary);">
+                        <h4 style="color: var(--primary); font-size: 1.25rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                            🖥️ CLI 命令行
+                        </h4>
+                        <p style="color: var(--gray-700); margin-bottom: 1rem; line-height: 1.6;">
+                            为<strong>自动化、CI/CD和脚本</strong>设计,提供完整的命令行工具集
+                        </p>
+                        <div style="background: var(--gray-900); color: #00ff00; padding: 1rem; border-radius: 6px; font-family: 'Courier New', monospace; font-size: 0.8rem; margin-bottom: 1rem;">
+                            <div>aeva evaluate model \</div>
+                            <div style="margin-left: 1rem;">model.pkl data.csv</div>
+                            <div style="margin-top: 0.5rem;">aeva dashboard</div>
+                        </div>
+                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                            <span style="background: #dbeafe; color: var(--primary); padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem;">⚡ 快速</span>
+                            <span style="background: #dbeafe; color: var(--primary); padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem;">🔄 自动化</span>
+                            <span style="background: #dbeafe; color: var(--primary); padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem;">📦 批处理</span>
+                        </div>
+                    </div>
+
+                    <div style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--success);">
+                        <h4 style="color: var(--success); font-size: 1.25rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                            🌐 Web 仪表板
+                        </h4>
+                        <p style="color: var(--gray-700); margin-bottom: 1rem; line-height: 1.6;">
+                            为<strong>探索、可视化和协作</strong>设计,提供7个交互式页面
+                        </p>
+                        <div style="background: var(--gray-100); padding: 1rem; border-radius: 6px; margin-bottom: 1rem;">
+                            <div style="font-size: 0.85rem; color: var(--gray-700);">
+                                <div style="margin-bottom: 0.5rem;">✓ 交互式图表和可视化</div>
+                                <div style="margin-bottom: 0.5rem;">✓ 文件上传和实时分析</div>
+                                <div>✓ 团队协作友好</div>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                            <span style="background: #d1fae5; color: var(--success); padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem;">📊 可视化</span>
+                            <span style="background: #d1fae5; color: var(--success); padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem;">👥 协作</span>
+                            <span style="background: #d1fae5; color: var(--success); padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem;">🎯 易用</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 1.5rem; padding: 1rem; background: white; border-radius: 8px; text-align: center;">
+                    <p style="color: var(--gray-700); font-size: 0.9rem; margin-bottom: 0.5rem;">
+                        💡 <strong>最佳实践</strong>: 使用 Web 探索和调试,使用 CLI 实现自动化和部署
+                    </p>
+                    <a href="#" class="nav-link" data-page="interfaces" style="display: inline-block; padding: 0.5rem 1.5rem; background: var(--primary); color: white; border-radius: 6px; text-decoration: none; margin-top: 0.5rem;">
+                        了解更多 →
+                    </a>
                 </div>
             </div>
 
@@ -597,8 +702,522 @@
             </div>
         </div>
 
+        <!-- Interfaces Page -->
+        <div id="interfaces" class="page-section">
+            <h2 style="margin-bottom: 1.5rem; font-size: 1.875rem;">🎭 双重交互方式</h2>
+
+            <!-- Overview -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">灵活的交互选择</h3>
+                    <span class="badge" style="background: linear-gradient(135deg, #10b981, #059669); color: white;">新特性</span>
+                </div>
+                <div>
+                    <p style="margin-bottom: 1rem; color: var(--gray-700); line-height: 1.8;">
+                        AEVA 提供 <strong>CLI (命令行)</strong> 和 <strong>Web (仪表板)</strong> 两种强大的交互方式，
+                        满足不同场景的使用需求。无论您需要<strong>自动化脚本</strong>还是<strong>可视化探索</strong>，
+                        AEVA 都能为您提供最佳体验。
+                    </p>
+                </div>
+            </div>
+
+            <!-- Comparison -->
+            <div class="stats-grid" style="margin-top: 2rem;">
+                <div class="card" style="border: 2px solid var(--primary);">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--primary);">
+                        🖥️ CLI - 命令行界面
+                    </h3>
+                    <p style="color: var(--gray-700); margin-bottom: 1rem; line-height: 1.8;">
+                        <strong>最适合</strong>: 自动化、CI/CD、脚本、批处理
+                    </p>
+                    <div style="background: var(--gray-100); padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+                        <div style="font-family: 'Courier New', monospace; font-size: 0.875rem; color: var(--gray-900);">
+                            <div style="margin-bottom: 0.5rem;"># 模型评测</div>
+                            <div style="color: var(--primary);">aeva evaluate model</div>
+                            <div style="margin-left: 1rem;">models/classifier.pkl data/test.csv</div>
+                            <div style="margin-left: 1rem;">--metrics accuracy --metrics f1</div>
+                            <div style="margin-top: 1rem; margin-bottom: 0.5rem;"># 数据验证</div>
+                            <div style="color: var(--primary);">aeva data validate</div>
+                            <div style="margin-left: 1rem;">data/dataset.csv --output reports/</div>
+                            <div style="margin-top: 1rem; margin-bottom: 0.5rem;"># 启动仪表板</div>
+                            <div style="color: var(--primary);">aeva dashboard</div>
+                        </div>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+                        <div style="padding: 0.5rem; background: #e0f2fe; border-radius: 4px; text-align: center;">
+                            <div style="font-weight: bold; color: var(--primary);">⚡ 快速</div>
+                            <div style="font-size: 0.875rem; color: var(--gray-700);">启动 &lt;1s</div>
+                        </div>
+                        <div style="padding: 0.5rem; background: #e0f2fe; border-radius: 4px; text-align: center;">
+                            <div style="font-weight: bold; color: var(--primary);">🔄 自动化</div>
+                            <div style="font-size: 0.875rem; color: var(--gray-700);">脚本友好</div>
+                        </div>
+                        <div style="padding: 0.5rem; background: #e0f2fe; border-radius: 4px; text-align: center;">
+                            <div style="font-weight: bold; color: var(--primary);">📦 批处理</div>
+                            <div style="font-size: 0.875rem; color: var(--gray-700);">多模型</div>
+                        </div>
+                        <div style="padding: 0.5rem; background: #e0f2fe; border-radius: 4px; text-align: center;">
+                            <div style="font-weight: bold; color: var(--primary);">🔌 CI/CD</div>
+                            <div style="font-size: 0.875rem; color: var(--gray-700);">完美集成</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" style="border: 2px solid var(--success);">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--success);">
+                        🌐 Web - 交互式仪表板
+                    </h3>
+                    <p style="color: var(--gray-700); margin-bottom: 1rem; line-height: 1.8;">
+                        <strong>最适合</strong>: 探索、可视化、协作、演示
+                    </p>
+                    <div style="background: var(--gray-100); padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+                        <div style="margin-bottom: 1rem;">
+                            <div style="font-family: 'Courier New', monospace; font-size: 0.875rem; color: var(--success); margin-bottom: 0.5rem;">
+                                aeva dashboard
+                            </div>
+                            <div style="font-size: 0.875rem; color: var(--gray-700);">
+                                → 打开 http://localhost:8501
+                            </div>
+                        </div>
+                        <div style="background: white; padding: 0.75rem; border-radius: 4px; border: 1px solid var(--gray-300);">
+                            <div style="font-size: 0.875rem; color: var(--gray-700); margin-bottom: 0.5rem;">
+                                <strong>7个交互页面:</strong>
+                            </div>
+                            <div style="font-size: 0.75rem; color: var(--gray-600);">
+                                🏠 主页 | 🔍 可解释性 | 🛡️ 鲁棒性<br>
+                                📊 数据质量 | 📈 A/B测试<br>
+                                📝 模型卡片 | ⚙️ 生产集成
+                            </div>
+                        </div>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+                        <div style="padding: 0.5rem; background: #d1fae5; border-radius: 4px; text-align: center;">
+                            <div style="font-weight: bold; color: var(--success);">📊 可视化</div>
+                            <div style="font-size: 0.875rem; color: var(--gray-700);">交互图表</div>
+                        </div>
+                        <div style="padding: 0.5rem; background: #d1fae5; border-radius: 4px; text-align: center;">
+                            <div style="font-weight: bold; color: var(--success);">👥 协作</div>
+                            <div style="font-size: 0.875rem; color: var(--gray-700);">团队共享</div>
+                        </div>
+                        <div style="padding: 0.5rem; background: #d1fae5; border-radius: 4px; text-align: center;">
+                            <div style="font-weight: bold; color: var(--success);">🎯 易用</div>
+                            <div style="font-size: 0.875rem; color: var(--gray-700);">无需编码</div>
+                        </div>
+                        <div style="padding: 0.5rem; background: #d1fae5; border-radius: 4px; text-align: center;">
+                            <div style="font-weight: bold; color: var(--success);">🔬 探索</div>
+                            <div style="font-size: 0.875rem; color: var(--gray-700);">实时反馈</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CLI Commands -->
+            <div class="card" style="margin-top: 2rem;">
+                <div class="card-header">
+                    <h3 class="card-title">🖥️ CLI 命令速查</h3>
+                </div>
+                <div>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
+                        <!-- Model Evaluation -->
+                        <div style="background: var(--gray-50); padding: 1rem; border-radius: 8px; border-left: 4px solid var(--primary);">
+                            <h4 style="color: var(--primary); margin-bottom: 0.5rem; font-size: 1rem;">模型评测</h4>
+                            <code style="display: block; font-size: 0.8rem; color: var(--gray-700); background: white; padding: 0.5rem; border-radius: 4px;">
+                                aeva evaluate model<br>
+                                &nbsp;&nbsp;MODEL.pkl DATA.csv<br>
+                                &nbsp;&nbsp;--metrics accuracy<br>
+                                &nbsp;&nbsp;--format html
+                            </code>
+                        </div>
+
+                        <!-- Explainability -->
+                        <div style="background: var(--gray-50); padding: 1rem; border-radius: 8px; border-left: 4px solid var(--primary);">
+                            <h4 style="color: var(--primary); margin-bottom: 0.5rem; font-size: 1rem;">可解释性</h4>
+                            <code style="display: block; font-size: 0.8rem; color: var(--gray-700); background: white; padding: 0.5rem; border-radius: 4px;">
+                                aeva evaluate<br>
+                                &nbsp;&nbsp;explainability<br>
+                                &nbsp;&nbsp;MODEL.pkl DATA.csv<br>
+                                &nbsp;&nbsp;--method shap
+                            </code>
+                        </div>
+
+                        <!-- Data Quality -->
+                        <div style="background: var(--gray-50); padding: 1rem; border-radius: 8px; border-left: 4px solid var(--success);">
+                            <h4 style="color: var(--success); margin-bottom: 0.5rem; font-size: 1rem;">数据验证</h4>
+                            <code style="display: block; font-size: 0.8rem; color: var(--gray-700); background: white; padding: 0.5rem; border-radius: 4px;">
+                                aeva data validate<br>
+                                &nbsp;&nbsp;dataset.csv<br>
+                                &nbsp;&nbsp;--output reports/
+                            </code>
+                        </div>
+
+                        <!-- Data Profiling -->
+                        <div style="background: var(--gray-50); padding: 1rem; border-radius: 8px; border-left: 4px solid var(--success);">
+                            <h4 style="color: var(--success); margin-bottom: 0.5rem; font-size: 1rem;">数据分析</h4>
+                            <code style="display: block; font-size: 0.8rem; color: var(--gray-700); background: white; padding: 0.5rem; border-radius: 4px;">
+                                aeva data profile<br>
+                                &nbsp;&nbsp;dataset.csv<br>
+                                &nbsp;&nbsp;--output profile.html
+                            </code>
+                        </div>
+
+                        <!-- Dashboard -->
+                        <div style="background: var(--gray-50); padding: 1rem; border-radius: 8px; border-left: 4px solid var(--warning);">
+                            <h4 style="color: var(--warning); margin-bottom: 0.5rem; font-size: 1rem;">启动仪表板</h4>
+                            <code style="display: block; font-size: 0.8rem; color: var(--gray-700); background: white; padding: 0.5rem; border-radius: 4px;">
+                                aeva dashboard<br>
+                                &nbsp;&nbsp;--port 8501<br>
+                                &nbsp;&nbsp;--host localhost
+                            </code>
+                        </div>
+
+                        <!-- API Server -->
+                        <div style="background: var(--gray-50); padding: 1rem; border-radius: 8px; border-left: 4px solid var(--warning);">
+                            <h4 style="color: var(--warning); margin-bottom: 0.5rem; font-size: 1rem;">API服务器</h4>
+                            <code style="display: block; font-size: 0.8rem; color: var(--gray-700); background: white; padding: 0.5rem; border-radius: 4px;">
+                                aeva server<br>
+                                &nbsp;&nbsp;--port 8000<br>
+                                &nbsp;&nbsp;--reload
+                            </code>
+                        </div>
+
+                        <!-- Project Init -->
+                        <div style="background: var(--gray-50); padding: 1rem; border-radius: 8px; border-left: 4px solid #8b5cf6;">
+                            <h4 style="color: #8b5cf6; margin-bottom: 0.5rem; font-size: 1rem;">项目初始化</h4>
+                            <code style="display: block; font-size: 0.8rem; color: var(--gray-700); background: white; padding: 0.5rem; border-radius: 4px;">
+                                aeva init<br>
+                                &nbsp;&nbsp;my-project<br>
+                                &nbsp;&nbsp;--template full
+                            </code>
+                        </div>
+
+                        <!-- System Info -->
+                        <div style="background: var(--gray-50); padding: 1rem; border-radius: 8px; border-left: 4px solid #8b5cf6;">
+                            <h4 style="color: #8b5cf6; margin-bottom: 0.5rem; font-size: 1rem;">系统信息</h4>
+                            <code style="display: block; font-size: 0.8rem; color: var(--gray-700); background: white; padding: 0.5rem; border-radius: 4px;">
+                                aeva info<br>
+                                aeva --version<br>
+                                aeva --help
+                            </code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Web Dashboard Features -->
+            <div class="card" style="margin-top: 2rem;">
+                <div class="card-header">
+                    <h3 class="card-title">🌐 Web 仪表板功能</h3>
+                </div>
+                <div>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;">
+                        <!-- Page 1 -->
+                        <div style="background: linear-gradient(135deg, #e0f2fe, #bae6fd); padding: 1rem; border-radius: 8px;">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🏠</div>
+                            <h4 style="font-weight: bold; margin-bottom: 0.5rem;">主页</h4>
+                            <p style="font-size: 0.875rem; color: var(--gray-700);">
+                                系统概览、关键指标、模型状态监控
+                            </p>
+                        </div>
+
+                        <!-- Page 2 -->
+                        <div style="background: linear-gradient(135deg, #fef3c7, #fde68a); padding: 1rem; border-radius: 8px;">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🔍</div>
+                            <h4 style="font-weight: bold; margin-bottom: 0.5rem;">可解释性分析</h4>
+                            <p style="font-size: 0.875rem; color: var(--gray-700);">
+                                SHAP/LIME分析、特征重要性、交互式可视化
+                            </p>
+                        </div>
+
+                        <!-- Page 3 -->
+                        <div style="background: linear-gradient(135deg, #fce7f3, #fbcfe8); padding: 1rem; border-radius: 8px;">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🛡️</div>
+                            <h4 style="font-weight: bold; margin-bottom: 0.5rem;">对抗鲁棒性</h4>
+                            <p style="font-size: 0.875rem; color: var(--gray-700);">
+                                FGSM/PGD攻击测试、鲁棒性评分、防御策略
+                            </p>
+                        </div>
+
+                        <!-- Page 4 -->
+                        <div style="background: linear-gradient(135deg, #ddd6fe, #c4b5fd); padding: 1rem; border-radius: 8px;">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">📊</div>
+                            <h4 style="font-weight: bold; margin-bottom: 0.5rem;">数据质量</h4>
+                            <p style="font-size: 0.875rem; color: var(--gray-700);">
+                                完整性检查、分布分析、质量评分、建议
+                            </p>
+                        </div>
+
+                        <!-- Page 5 -->
+                        <div style="background: linear-gradient(135deg, #d1fae5, #a7f3d0); padding: 1rem; border-radius: 8px;">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">📈</div>
+                            <h4 style="font-weight: bold; margin-bottom: 0.5rem;">A/B 测试</h4>
+                            <p style="font-size: 0.875rem; color: var(--gray-700);">
+                                流量分配、统计检验、Canary部署、回滚
+                            </p>
+                        </div>
+
+                        <!-- Page 6 -->
+                        <div style="background: linear-gradient(135deg, #fee2e2, #fecaca); padding: 1rem; border-radius: 8px;">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">📝</div>
+                            <h4 style="font-weight: bold; margin-bottom: 0.5rem;">模型卡片</h4>
+                            <p style="font-size: 0.875rem; color: var(--gray-700);">
+                                自动生成、FDA/ISO模板、合规性文档
+                            </p>
+                        </div>
+
+                        <!-- Page 7 -->
+                        <div style="background: linear-gradient(135deg, #e5e7eb, #d1d5db); padding: 1rem; border-radius: 8px;">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">⚙️</div>
+                            <h4 style="font-weight: bold; margin-bottom: 0.5rem;">生产集成</h4>
+                            <p style="font-size: 0.875rem; color: var(--gray-700);">
+                                Docker容器化、API文档、监控告警
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature Comparison -->
+            <div class="card" style="margin-top: 2rem;">
+                <div class="card-header">
+                    <h3 class="card-title">⚖️ 功能对比矩阵</h3>
+                </div>
+                <div style="overflow-x: auto;">
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <thead>
+                            <tr style="background: var(--gray-100);">
+                                <th style="padding: 0.75rem; text-align: left; border-bottom: 2px solid var(--gray-300);">功能</th>
+                                <th style="padding: 0.75rem; text-align: center; border-bottom: 2px solid var(--gray-300);">CLI</th>
+                                <th style="padding: 0.75rem; text-align: center; border-bottom: 2px solid var(--gray-300);">Web</th>
+                                <th style="padding: 0.75rem; text-align: left; border-bottom: 2px solid var(--gray-300);">说明</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="padding: 0.75rem; border-bottom: 1px solid var(--gray-200);">模型评测</td>
+                                <td style="padding: 0.75rem; text-align: center; border-bottom: 1px solid var(--gray-200);">
+                                    <span style="color: var(--success); font-weight: bold;">✅</span>
+                                </td>
+                                <td style="padding: 0.75rem; text-align: center; border-bottom: 1px solid var(--gray-200);">
+                                    <span style="color: var(--success); font-weight: bold;">✅</span>
+                                </td>
+                                <td style="padding: 0.75rem; border-bottom: 1px solid var(--gray-200); font-size: 0.875rem;">完全支持</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0.75rem; border-bottom: 1px solid var(--gray-200);">SHAP/LIME可解释性</td>
+                                <td style="padding: 0.75rem; text-align: center; border-bottom: 1px solid var(--gray-200);">
+                                    <span style="color: var(--success); font-weight: bold;">✅</span>
+                                </td>
+                                <td style="padding: 0.75rem; text-align: center; border-bottom: 1px solid var(--gray-200);">
+                                    <span style="color: var(--success); font-weight: bold;">✅</span>
+                                </td>
+                                <td style="padding: 0.75rem; border-bottom: 1px solid var(--gray-200); font-size: 0.875rem;">Web有交互图表</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0.75rem; border-bottom: 1px solid var(--gray-200);">数据质量分析</td>
+                                <td style="padding: 0.75rem; text-align: center; border-bottom: 1px solid var(--gray-200);">
+                                    <span style="color: var(--success); font-weight: bold;">✅</span>
+                                </td>
+                                <td style="padding: 0.75rem; text-align: center; border-bottom: 1px solid var(--gray-200);">
+                                    <span style="color: var(--success); font-weight: bold;">✅</span>
+                                </td>
+                                <td style="padding: 0.75rem; border-bottom: 1px solid var(--gray-200); font-size: 0.875rem;">Web有可视化仪表板</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0.75rem; border-bottom: 1px solid var(--gray-200);">批量处理</td>
+                                <td style="padding: 0.75rem; text-align: center; border-bottom: 1px solid var(--gray-200);">
+                                    <span style="color: var(--success); font-weight: bold;">✅</span>
+                                </td>
+                                <td style="padding: 0.75rem; text-align: center; border-bottom: 1px solid var(--gray-200);">
+                                    <span style="color: var(--gray-500);">❌</span>
+                                </td>
+                                <td style="padding: 0.75rem; border-bottom: 1px solid var(--gray-200); font-size: 0.875rem;">CLI专有</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0.75rem; border-bottom: 1px solid var(--gray-200);">交互式可视化</td>
+                                <td style="padding: 0.75rem; text-align: center; border-bottom: 1px solid var(--gray-200);">
+                                    <span style="color: var(--gray-500);">❌</span>
+                                </td>
+                                <td style="padding: 0.75rem; text-align: center; border-bottom: 1px solid var(--gray-200);">
+                                    <span style="color: var(--success); font-weight: bold;">✅</span>
+                                </td>
+                                <td style="padding: 0.75rem; border-bottom: 1px solid var(--gray-200); font-size: 0.875rem;">Web专有</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0.75rem; border-bottom: 1px solid var(--gray-200);">CI/CD集成</td>
+                                <td style="padding: 0.75rem; text-align: center; border-bottom: 1px solid var(--gray-200);">
+                                    <span style="color: var(--success); font-weight: bold;">✅</span>
+                                </td>
+                                <td style="padding: 0.75rem; text-align: center; border-bottom: 1px solid var(--gray-200);">
+                                    <span style="color: var(--gray-500);">❌</span>
+                                </td>
+                                <td style="padding: 0.75rem; border-bottom: 1px solid var(--gray-200); font-size: 0.875rem;">CLI专有</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0.75rem; border-bottom: 1px solid var(--gray-200);">实时反馈</td>
+                                <td style="padding: 0.75rem; text-align: center; border-bottom: 1px solid var(--gray-200);">
+                                    <span style="color: var(--warning); font-weight: bold;">⚠️</span>
+                                </td>
+                                <td style="padding: 0.75rem; text-align: center; border-bottom: 1px solid var(--gray-200);">
+                                    <span style="color: var(--success); font-weight: bold;">✅</span>
+                                </td>
+                                <td style="padding: 0.75rem; border-bottom: 1px solid var(--gray-200); font-size: 0.875rem;">Web更优</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0.75rem; border-bottom: 1px solid var(--gray-200);">自动化脚本</td>
+                                <td style="padding: 0.75rem; text-align: center; border-bottom: 1px solid var(--gray-200);">
+                                    <span style="color: var(--success); font-weight: bold;">✅</span>
+                                </td>
+                                <td style="padding: 0.75rem; text-align: center; border-bottom: 1px solid var(--gray-200);">
+                                    <span style="color: var(--gray-500);">❌</span>
+                                </td>
+                                <td style="padding: 0.75rem; border-bottom: 1px solid var(--gray-200); font-size: 0.875rem;">CLI专有</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0.75rem;">易用性</td>
+                                <td style="padding: 0.75rem; text-align: center;">
+                                    <span style="color: var(--warning); font-weight: bold;">⚠️</span>
+                                </td>
+                                <td style="padding: 0.75rem; text-align: center;">
+                                    <span style="color: var(--success); font-weight: bold;">✅</span>
+                                </td>
+                                <td style="padding: 0.75rem; font-size: 0.875rem;">Web对初学者更友好</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div style="margin-top: 1rem; padding: 0.75rem; background: var(--gray-50); border-radius: 6px; font-size: 0.875rem;">
+                        <strong>图例:</strong>
+                        <span style="color: var(--success); margin-left: 1rem;">✅ 完全支持</span>
+                        <span style="color: var(--warning); margin-left: 1rem;">⚠️ 部分支持</span>
+                        <span style="color: var(--gray-500); margin-left: 1rem;">❌ 不支持</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Usage Recommendations -->
+            <div class="card" style="margin-top: 2rem;">
+                <div class="card-header">
+                    <h3 class="card-title">💡 使用建议</h3>
+                </div>
+                <div>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+                        <!-- When to use CLI -->
+                        <div style="border: 2px solid var(--primary); border-radius: 8px; padding: 1.5rem;">
+                            <h4 style="color: var(--primary); font-size: 1.125rem; margin-bottom: 1rem;">
+                                🖥️ 使用 CLI 当您需要:
+                            </h4>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="padding: 0.5rem 0; display: flex; align-items: start;">
+                                    <span style="color: var(--primary); margin-right: 0.5rem;">✓</span>
+                                    <span><strong>自动化流水线</strong> - CI/CD集成</span>
+                                </li>
+                                <li style="padding: 0.5rem 0; display: flex; align-items: start;">
+                                    <span style="color: var(--primary); margin-right: 0.5rem;">✓</span>
+                                    <span><strong>批量处理</strong> - 多个模型/数据集</span>
+                                </li>
+                                <li style="padding: 0.5rem 0; display: flex; align-items: start;">
+                                    <span style="color: var(--primary); margin-right: 0.5rem;">✓</span>
+                                    <span><strong>脚本编写</strong> - Bash/Python脚本</span>
+                                </li>
+                                <li style="padding: 0.5rem 0; display: flex; align-items: start;">
+                                    <span style="color: var(--primary); margin-right: 0.5rem;">✓</span>
+                                    <span><strong>远程服务器</strong> - SSH无界面访问</span>
+                                </li>
+                                <li style="padding: 0.5rem 0; display: flex; align-items: start;">
+                                    <span style="color: var(--primary); margin-right: 0.5rem;">✓</span>
+                                    <span><strong>快速任务</strong> - 一次性操作</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- When to use Web -->
+                        <div style="border: 2px solid var(--success); border-radius: 8px; padding: 1.5rem;">
+                            <h4 style="color: var(--success); font-size: 1.125rem; margin-bottom: 1rem;">
+                                🌐 使用 Web 当您需要:
+                            </h4>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="padding: 0.5rem 0; display: flex; align-items: start;">
+                                    <span style="color: var(--success); margin-right: 0.5rem;">✓</span>
+                                    <span><strong>探索分析</strong> - 交互式探索</span>
+                                </li>
+                                <li style="padding: 0.5rem 0; display: flex; align-items: start;">
+                                    <span style="color: var(--success); margin-right: 0.5rem;">✓</span>
+                                    <span><strong>可视化</strong> - 图表和仪表板</span>
+                                </li>
+                                <li style="padding: 0.5rem 0; display: flex; align-items: start;">
+                                    <span style="color: var(--success); margin-right: 0.5rem;">✓</span>
+                                    <span><strong>演示展示</strong> - 向团队展示结果</span>
+                                </li>
+                                <li style="padding: 0.5rem 0; display: flex; align-items: start;">
+                                    <span style="color: var(--success); margin-right: 0.5rem;">✓</span>
+                                    <span><strong>团队协作</strong> - 非技术人员使用</span>
+                                </li>
+                                <li style="padding: 0.5rem 0; display: flex; align-items: start;">
+                                    <span style="color: var(--success); margin-right: 0.5rem;">✓</span>
+                                    <span><strong>学习培训</strong> - 新用户友好</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Best Practice -->
+                    <div style="margin-top: 1.5rem; padding: 1.5rem; background: linear-gradient(135deg, #fef3c7, #fde68a); border-radius: 8px; border-left: 4px solid var(--warning);">
+                        <h4 style="font-size: 1.125rem; margin-bottom: 1rem; color: var(--gray-900);">
+                            🎯 最佳实践: 两者结合使用!
+                        </h4>
+                        <div style="background: white; padding: 1rem; border-radius: 6px; margin-top: 1rem;">
+                            <ol style="margin-left: 1.5rem; color: var(--gray-700); line-height: 2;">
+                                <li><strong>探索阶段</strong> - 使用 Web 仪表板探索数据和模型</li>
+                                <li><strong>确定参数</strong> - 找到最佳配置和工作流程</li>
+                                <li><strong>自动化实施</strong> - 将工作流转换为 CLI 脚本</li>
+                                <li><strong>生产部署</strong> - 使用 CLI 集成到 CI/CD 流水线</li>
+                                <li><strong>监控维护</strong> - Web 仪表板监控，CLI 定期评测</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Installation & Quick Start -->
+            <div class="card" style="margin-top: 2rem;">
+                <div class="card-header">
+                    <h3 class="card-title">🚀 快速开始</h3>
+                </div>
+                <div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                        <!-- CLI Installation -->
+                        <div>
+                            <h4 style="margin-bottom: 1rem; color: var(--primary);">安装</h4>
+                            <div style="background: var(--gray-900); color: #00ff00; padding: 1rem; border-radius: 8px; font-family: 'Courier New', monospace; font-size: 0.875rem;">
+                                <div style="margin-bottom: 0.5rem;"># 克隆仓库</div>
+                                <div style="margin-bottom: 0.5rem;">git clone https://github.com/liqcui/AEVA-P</div>
+                                <div style="margin-bottom: 1rem;">cd AEVA-P</div>
+                                <div style="margin-bottom: 0.5rem;"># 安装依赖</div>
+                                <div style="margin-bottom: 0.5rem;">pip install -e .</div>
+                                <div style="margin-top: 1rem; margin-bottom: 0.5rem;"># 验证安装</div>
+                                <div>aeva --version</div>
+                            </div>
+                        </div>
+
+                        <!-- Quick Commands -->
+                        <div>
+                            <h4 style="margin-bottom: 1rem; color: var(--success);">快速命令</h4>
+                            <div style="background: var(--gray-900); color: #00ff00; padding: 1rem; border-radius: 8px; font-family: 'Courier New', monospace; font-size: 0.875rem;">
+                                <div style="margin-bottom: 0.5rem;"># 查看帮助</div>
+                                <div style="margin-bottom: 1rem;">aeva --help</div>
+                                <div style="margin-bottom: 0.5rem;"># 启动Web仪表板</div>
+                                <div style="margin-bottom: 1rem;">aeva dashboard</div>
+                                <div style="margin-bottom: 0.5rem;"># 评测模型</div>
+                                <div style="margin-bottom: 0.5rem;">aeva evaluate model \</div>
+                                <div style="margin-left: 1rem;">model.pkl data.csv</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Architecture Page -->
-        <div id="architecture" class="page-section">
+        <div id="architecture" class="page-section active">
             <h2 style="margin-bottom: 1.5rem; font-size: 1.875rem;">🏗️ AEVA 架构与组件</h2>
 
             <!-- Overview -->

@@ -132,3 +132,17 @@ st.sidebar.markdown("""
     <small>AEVA v2.0 © 2026</small>
 </div>
 """, unsafe_allow_html=True)
+
+
+def main():
+    """Main entry point for CLI"""
+    import sys
+    import os
+
+    # This is called when running: aeva-dashboard or streamlit run app.py
+    # Streamlit will handle the app automatically
+    pass
+
+
+if __name__ == "__main__":
+    main()

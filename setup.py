@@ -69,9 +69,10 @@ setup(
     },
     entry_points={
         "console_scripts": [
-            "aeva=aeva.cli:main",
+            "aeva=aeva.cli_enhanced:cli",
             "aeva-server=aeva.api.server:main",
             "aeva-worker=aeva.auto.worker:main",
+            "aeva-dashboard=aeva.dashboard.app:main",
         ],
     },
     include_package_data=True,
