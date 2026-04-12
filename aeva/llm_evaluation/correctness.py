@@ -133,17 +133,19 @@ class HallucinationDetector:
         sentences = output.split('.')
 
         # Look for negation patterns
-        negation_patterns = [
-            (r'is\s+(\w+)', r'is\s+not\s+\1'),
-            (r'can\s+(\w+)', r'cannot\s+\1'),
-            (r'will\s+(\w+)', r'will\s+not\s+\1'),
+        negation_keywords = [
+            ('is ', 'is not ', 'isn\'t '),
+            ('can ', 'cannot ', 'can\'t '),
+            ('will ', 'will not ', 'won\'t '),
         ]
 
         contradictions = 0
         for i, sent1 in enumerate(sentences):
+            sent1_lower = sent1.lower()
             for sent2 in sentences[i+1:]:
-                for pos_pattern, neg_pattern in negation_patterns:
-                    if re.search(pos_pattern, sent1) and re.search(neg_pattern, sent2):
+                sent2_lower = sent2.lower()
+                for pos_word, neg_word1, neg_word2 in negation_keywords:
+                    if pos_word in sent1_lower and (neg_word1 in sent2_lower or neg_word2 in sent2_lower):
                         contradictions += 1
 
         # Score based on contradictions
