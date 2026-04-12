@@ -952,6 +952,128 @@
                 </div>
             </div>
 
+            <!-- CLI Output Examples -->
+            <div class="card" style="margin-top: 2rem;">
+                <div class="card-header">
+                    <h3 class="card-title">💻 CLI 输出示例</h3>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem;">
+
+                    <!-- Example 1: Model Evaluation -->
+                    <div>
+                        <h4 style="color: var(--primary); margin-bottom: 0.75rem; font-size: 1rem;">📊 模型评测输出</h4>
+                        <div style="background: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 8px; font-family: 'Courier New', monospace; font-size: 0.8rem; overflow-x: auto;">
+                            <div style="color: #9cdcfe;">$ aeva evaluate model models/classifier.pkl data/test.csv --metrics accuracy --metrics f1</div>
+                            <div style="margin-top: 0.5rem; color: #4ec9b0;">🔍 Evaluating model: models/classifier.pkl</div>
+                            <div style="color: #4ec9b0;">📊 Data: data/test.csv</div>
+                            <div style="margin-top: 0.5rem; color: #d4d4d4;">
+==================================================<br>
+📊 Evaluation Results<br>
+==================================================<br>
+<span style="color: #ce9178;">Accuracy</span>: <span style="color: #b5cea8;">0.9420</span><br>
+<span style="color: #ce9178;">F1</span>: <span style="color: #b5cea8;">0.9385</span><br>
+==================================================
+                            </div>
+                            <div style="margin-top: 0.5rem; color: #6a9955;">✅ Results saved to: reports/evaluation_results.json</div>
+                        </div>
+                    </div>
+
+                    <!-- Example 2: Data Validation -->
+                    <div>
+                        <h4 style="color: var(--success); margin-bottom: 0.75rem; font-size: 1rem;">📁 数据验证输出</h4>
+                        <div style="background: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 8px; font-family: 'Courier New', monospace; font-size: 0.8rem; overflow-x: auto;">
+                            <div style="color: #9cdcfe;">$ aeva data validate data/dataset.csv --output reports/</div>
+                            <div style="margin-top: 0.5rem; color: #4ec9b0;">📊 Validating data: data/dataset.csv</div>
+                            <div style="margin-top: 0.5rem; color: #d4d4d4;">
+⚠️ Data Quality Issues:<br>
+<span style="color: #ce9178;">  - Missing values found in 3 columns</span><br>
+<span style="color: #ce9178;">  - 15 duplicate rows found</span>
+                            </div>
+                            <div style="margin-top: 0.5rem; color: #d4d4d4;">
+📊 Data Summary:<br>
+  Rows: <span style="color: #b5cea8;">10,000</span><br>
+  Columns: <span style="color: #b5cea8;">25</span><br>
+  Memory: <span style="color: #b5cea8;">1.92 MB</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Example 3: Dashboard Launch -->
+                    <div>
+                        <h4 style="color: var(--warning); margin-bottom: 0.75rem; font-size: 1rem;">🌐 启动仪表板输出</h4>
+                        <div style="background: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 8px; font-family: 'Courier New', monospace; font-size: 0.8rem; overflow-x: auto;">
+                            <div style="color: #9cdcfe;">$ aeva dashboard --port 8501</div>
+                            <div style="margin-top: 0.5rem; color: #4ec9b0;">🚀 Starting AEVA Dashboard...</div>
+                            <div style="color: #4ec9b0;">🌐 URL: <span style="color: #569cd6; text-decoration: underline;">http://localhost:8501</span></div>
+                            <div style="color: #ce9178;">💡 Press Ctrl+C to stop</div>
+                            <div style="margin-top: 0.5rem; color: #d4d4d4;">
+  You can now view your Streamlit app in your browser.<br>
+<br>
+  Local URL: <span style="color: #569cd6;">http://localhost:8501</span><br>
+  Network URL: <span style="color: #569cd6;">http://192.168.1.100:8501</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Example 4: System Info -->
+                    <div>
+                        <h4 style="color: #8b5cf6; margin-bottom: 0.75rem; font-size: 1rem;">🔧 系统信息输出</h4>
+                        <div style="background: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 8px; font-family: 'Courier New', monospace; font-size: 0.8rem; overflow-x: auto;">
+                            <div style="color: #9cdcfe;">$ aeva info</div>
+                            <div style="margin-top: 0.5rem; color: #d4d4d4;">
+============================================================<br>
+<span style="color: #4ec9b0; font-weight: bold;">AEVA - Algorithm Evaluation & Validation Agent</span><br>
+============================================================<br>
+<span style="color: #ce9178;">Version</span>:    <span style="color: #b5cea8;">2.0.0</span><br>
+<span style="color: #ce9178;">Author</span>:     AEVA Development Team<br>
+<span style="color: #ce9178;">License</span>:    Dual License (Personal/Academic Free)<br>
+<span style="color: #ce9178;">Watermark</span>:  AEVA-2026-LQC-dc68e33<br>
+<span style="color: #ce9178;">GitHub</span>:     <span style="color: #569cd6;">https://github.com/liqcui/AEVA-P</span><br>
+============================================================
+                            </div>
+                            <div style="margin-top: 0.5rem; color: #d4d4d4;">
+📦 Dependencies:<br>
+  <span style="color: #6a9955;">✓</span> click               - CLI framework<br>
+  <span style="color: #6a9955;">✓</span> streamlit           - Dashboard<br>
+  <span style="color: #6a9955;">✓</span> scikit-learn        - ML metrics<br>
+  <span style="color: #6a9955;">✓</span> pandas              - Data processing<br>
+  <span style="color: #6a9955;">✓</span> shap                - Explainability<br>
+  <span style="color: #6a9955;">✓</span> fastapi             - API server
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Example 5: Project Init -->
+                    <div>
+                        <h4 style="color: #8b5cf6; margin-bottom: 0.75rem; font-size: 1rem;">🎬 项目初始化输出</h4>
+                        <div style="background: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 8px; font-family: 'Courier New', monospace; font-size: 0.8rem; overflow-x: auto;">
+                            <div style="color: #9cdcfe;">$ aeva init my-project --template full</div>
+                            <div style="margin-top: 0.5rem; color: #4ec9b0;">🎬 Initializing AEVA project: my-project</div>
+                            <div style="margin-top: 0.5rem; color: #d4d4d4;">
+  <span style="color: #6a9955;">✓</span> Created: data/<br>
+  <span style="color: #6a9955;">✓</span> Created: models/<br>
+  <span style="color: #6a9955;">✓</span> Created: results/<br>
+  <span style="color: #6a9955;">✓</span> Created: configs/<br>
+  <span style="color: #6a9955;">✓</span> Created: notebooks/<br>
+  <span style="color: #6a9955;">✓</span> Created: tests/<br>
+  <span style="color: #6a9955;">✓</span> Created: docs/<br>
+  <span style="color: #6a9955;">✓</span> Created: configs/aeva.yaml<br>
+  <span style="color: #6a9955;">✓</span> Created: README.md
+                            </div>
+                            <div style="margin-top: 0.5rem; color: #6a9955;">
+✅ Project initialized successfully!
+                            </div>
+                            <div style="margin-top: 0.5rem; color: #d4d4d4;">
+Next steps:<br>
+  cd my-project<br>
+  aeva dashboard
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
             <!-- Web Dashboard Features -->
             <div class="card" style="margin-top: 2rem;">
                 <div class="card-header">
