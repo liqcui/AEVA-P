@@ -12,6 +12,10 @@ Compliance:
 - EU AI Act (explainability for high-risk systems)
 - FDA medical device requirements
 - Financial services regulations
+
+Copyright (c) 2024-2026 Liquan Cui. All rights reserved.
+Author: Liquan Cui | GitHub: https://github.com/liqcui/AEVA-P
+Project ID: AEVA-2026-LQC-dc68e33
 """
 
 from aeva.explainability.shap_explainer import (

@@ -1,6 +1,19 @@
 # AEVA - Algorithm Evaluation & Validation Agent
 **算法评测与验证智能体**
 
+---
+
+**Copyright (c) 2024-2026 Liquan Cui. All rights reserved.**
+
+**Author**: Liquan Cui
+**GitHub**: https://github.com/liqcui/AEVA-P
+**Project ID**: AEVA-2026-LQC-dc68e33
+**Contact**: liqcui@redhat.com
+
+This software is the proprietary work of Liquan Cui. Unauthorized copying, modification, distribution, or use of this software, via any medium, is strictly prohibited without explicit permission.
+
+---
+
 ## Overview
 AEVA is an intelligent platform for algorithm evaluation and validation, designed to transform algorithm testing from manual operations to AI-driven standardized processes. It implements "Evaluation-as-a-Service" (EaaS) philosophy.
 

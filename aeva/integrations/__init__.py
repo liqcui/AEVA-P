@@ -8,6 +8,10 @@ Available integrations:
 - Great Expectations for data quality
 - statsmodels for advanced statistical testing
 - SHAP optimizations for parallel computation
+
+Copyright (c) 2024-2026 Liquan Cui. All rights reserved.
+Author: Liquan Cui | GitHub: https://github.com/liqcui/AEVA-P
+Project ID: AEVA-2026-LQC-dc68e33
 """
 
 from .robustness_art import ARTRobustnessTester

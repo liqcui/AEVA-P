@@ -2,6 +2,10 @@
 AEVA Fairness and Bias Detection Module
 
 Provides fairness metrics, bias detection, and mitigation recommendations for ML models.
+
+Copyright (c) 2024-2026 Liquan Cui. All rights reserved.
+Author: Liquan Cui | GitHub: https://github.com/liqcui/AEVA-P
+Project ID: AEVA-2026-LQC-dc68e33
 """
 
 from aeva.fairness.metrics import FairnessMetrics, BiasMetrics
