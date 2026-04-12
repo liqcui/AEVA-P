@@ -176,8 +176,9 @@ Experience AEVA's full functionality directly in your browser:
 - ✅ No API keys required
 - ✅ Fully offline-capable
 - ✅ All features with mock data
-- ✅ 8 interactive pages
+- ✅ Interactive Dashboard UI with 5 functional tabs ⭐ NEW
 - ✅ LLM evaluation demos (hallucination, performance, safety) ⭐ NEW
+- ✅ Enterprise scalability architecture showcase ⭐ NEW
 
 ### 🎭 Dual Interface - Choose Your Interaction Method
 
@@ -217,9 +218,12 @@ aeva dashboard
 - 🔍 SHAP/LIME Explainability
 - 🛡️ Adversarial Robustness
 - 📊 Data Quality Analysis
+- 🤖 LLM Evaluation ⭐ NEW
 - 📈 A/B Testing & Deployment
 - 📝 Model Card Generation
 - ⚙️ Production Integrations
+
+💡 **Try it now**: Experience the full Dashboard UI in our [interactive demo](https://liqcui.github.io/AEVA-P/) (no server required)
 
 📖 **CLI vs Web Comparison**: See [`docs/CLI_VS_WEB.md`](docs/CLI_VS_WEB.md) for detailed comparison.
 
@@ -233,13 +237,21 @@ cd demo
 open index.html  # or double-click the file
 
 # The demo is fully offline-capable and showcases:
-# - Dashboard with key metrics
+# - Interactive Dashboard UI with 5 tabs (Overview, Explainability, Robustness, Data Quality, LLM Eval) ⭐ NEW
 # - Guard quality gates
 # - Bench standardized benchmarks
 # - Auto pipeline visualization
 # - Brain intelligent analysis (core innovation)
 # - LLM Evaluation (hallucination, performance, safety, UX) ⭐ NEW
+# - Enterprise scalability & Kubernetes deployment ⭐ NEW
 ```
+
+**Dashboard Features**:
+- 📊 **Overview**: 4 KPI cards, performance trends, quality distribution chart, recent models table
+- 🔍 **Explainability**: SHAP feature importance, LIME analysis, counterfactual explanations
+- 🛡️ **Robustness**: FGSM/PGD attack testing, defense effectiveness evaluation
+- 📊 **Data Quality**: Quality metrics, missing values detection, distribution drift analysis
+- 🤖 **LLM Evaluation**: Hallucination detection, safety assessment, relevance & fluency scoring
 
 📖 **Demo Guide**: See [`demo/README.md`](demo/README.md) for detailed demo usage and presentation scripts.
 
