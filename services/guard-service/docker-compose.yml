@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: guard-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    command: redis-server --appendonly yes
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+
+  guard-service:
+    build: .
+    container_name: guard-service
+    ports:
+      - "8002:8002"
+    environment:
+      - REDIS_URL=redis://redis:6379/0
+      - DEFAULT_THRESHOLD=0.85
+      - DEFAULT_STRICT_MODE=false
+      - DEFAULT_AUTO_BLOCK=true
+      - MAX_HISTORY_SIZE=1000
+    depends_on:
+      redis:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  redis-data:
