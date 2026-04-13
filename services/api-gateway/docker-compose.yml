@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  api-gateway:
+    build: .
+    container_name: api-gateway
+    ports:
+      - "8000:8000"
+    environment:
+      - API_V1_STR=/api/v1
+      - BENCH_SERVICE_URL=http://bench-service:8001
+      - GUARD_SERVICE_URL=http://guard-service:8002
+      - AUTO_SERVICE_URL=http://auto-service:8003
+      - BRAIN_SERVICE_URL=http://brain-service:8004
+      - REQUEST_TIMEOUT=300
+      - MAX_RETRIES=3
+      - ENABLE_RATE_LIMITING=true
+      - RATE_LIMIT_PER_MINUTE=100
+    restart: unless-stopped
+    networks:
+      - aeva-network
+
+networks:
+  aeva-network:
+    external: true
