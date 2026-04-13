@@ -1,0 +1,76 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: auto-postgres
+    environment:
+      POSTGRES_USER: aeva
+      POSTGRES_PASSWORD: aeva
+      POSTGRES_DB: auto_service
+    ports:
+      - "5434:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U aeva"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+
+  redis:
+    image: redis:7-alpine
+    container_name: auto-redis
+    ports:
+      - "6380:6379"
+    volumes:
+      - redis-data:/data
+    command: redis-server --appendonly yes
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+
+  auto-service:
+    build: .
+    container_name: auto-service
+    ports:
+      - "8003:8003"
+    environment:
+      - DATABASE_URL=postgresql://aeva:aeva@postgres:5432/auto_service
+      - REDIS_URL=redis://redis:6379/0
+      - CELERY_BROKER_URL=redis://redis:6379/0
+      - CELERY_RESULT_BACKEND=redis://redis:6379/1
+      - BENCH_SERVICE_URL=http://bench-service:8001
+      - GUARD_SERVICE_URL=http://guard-service:8002
+      - BRAIN_SERVICE_URL=http://brain-service:8004
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    restart: unless-stopped
+
+  celery-worker:
+    build: .
+    container_name: auto-celery-worker
+    command: celery -A app.core.celery_app worker --loglevel=info
+    environment:
+      - DATABASE_URL=postgresql://aeva:aeva@postgres:5432/auto_service
+      - REDIS_URL=redis://redis:6379/0
+      - CELERY_BROKER_URL=redis://redis:6379/0
+      - CELERY_RESULT_BACKEND=redis://redis:6379/1
+      - BENCH_SERVICE_URL=http://bench-service:8001
+      - GUARD_SERVICE_URL=http://guard-service:8002
+      - BRAIN_SERVICE_URL=http://brain-service:8004
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  postgres-data:
+  redis-data:
