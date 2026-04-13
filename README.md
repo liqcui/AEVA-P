@@ -32,10 +32,33 @@ AEVA is an intelligent platform for algorithm evaluation and validation, designe
 
 ## Architecture
 
+### 🏗️ Deployment Modes
+
+AEVA supports **two deployment architectures** to fit different scales and requirements:
+
+**📦 Monolithic Deployment** (`deployment/monolithic` branch - **this branch**)
+- Single application, all modules in one process
+- Best for: Small-medium deployments, development, quick setup
+- Resources: 4-8 cores, 8-16 GB RAM
+- Simple deployment with `streamlit run`
+
+**🔷 Microservices Deployment** (`main` branch)
+- Distributed services, independently scalable
+- Best for: Large scale, high availability, cloud-native
+- Resources: 16+ cores, 32+ GB RAM (distributed)
+- Requires Docker/Kubernetes for deployment
+
+> **Note**: This branch (`deployment/monolithic`) provides the simpler monolithic architecture. For microservices, see the `main` branch.
+
+See [DEPLOYMENT_MODE.md](DEPLOYMENT_MODE.md) for detailed comparison.
+
+### Monolithic Architecture (This Branch)
+
 ```
 ┌─────────────────────────────────────────┐
 │           AEVA Platform                 │
 │  Algorithm Evaluation & Validation Agent│
+│        (Single Application)             │
 ├─────────────────────────────────────────┤
 │  ┌─────────┐ ┌─────────┐ ┌─────────┐   │
 │  │ AEVA-   │ │ AEVA-   │ │ AEVA-   │   │
@@ -51,8 +74,18 @@ AEVA is an intelligent platform for algorithm evaluation and validation, designe
 │              │ (Quality│                │
 │              │  LLM)   │                │
 │              └─────────┘                │
+│                                         │
+│  All 23 modules in one process          │
+│  Direct function calls (fast!)          │
 └─────────────────────────────────────────┘
 ```
+
+**Advantages**:
+- ✅ Simple deployment (single application)
+- ✅ Fast communication (direct function calls, no network overhead)
+- ✅ Easy debugging (single process)
+- ✅ Lower operational complexity
+- ✅ Minimal infrastructure requirements
 
 ## Core Modules
 
