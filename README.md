@@ -32,27 +32,60 @@ AEVA is an intelligent platform for algorithm evaluation and validation, designe
 
 ## Architecture
 
+### 🏗️ Deployment Modes
+
+AEVA supports **two deployment architectures** to fit different scales and requirements:
+
+**📦 Monolithic Deployment** (`deployment/monolithic` branch)
+- Single application, all modules in one process
+- Best for: Small-medium deployments, development, quick setup
+- Resources: 4-8 cores, 8-16 GB RAM
+
+**🔷 Microservices Deployment** (`main` branch - current)
+- Distributed services, independently scalable
+- Best for: Large scale, high availability, cloud-native
+- Resources: 16+ cores, 32+ GB RAM (distributed)
+
+See [DEPLOYMENT_MODE.md](DEPLOYMENT_MODE.md) for detailed comparison.
+
+### Microservices Architecture (Current Branch)
+
 ```
-┌─────────────────────────────────────────┐
-│           AEVA Platform                 │
-│  Algorithm Evaluation & Validation Agent│
-├─────────────────────────────────────────┤
-│  ┌─────────┐ ┌─────────┐ ┌─────────┐   │
-│  │ AEVA-   │ │ AEVA-   │ │ AEVA-   │   │
-│  │ Guard   │ │ Bench   │ │ Auto    │   │
-│  │ 质量门禁 │ │ 标准基准 │ │ 自动化  │   │
-│  └────┬────┘ └────┬────┘ └────┬────┘   │
-│       └─────────────┼───────────┘       │
-│                     ▼                   │
-│              ┌─────────┐                │
-│              │ AEVA-   │                │
-│              │ Brain   │                │
-│              │ 智能诊断 │                │
-│              │ (Quality│                │
-│              │  LLM)   │                │
-│              └─────────┘                │
-└─────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────┐
+│                      Frontend Layer                      │
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐  │
+│  │ Web Dashboard│  │  Mobile App  │  │   CLI Tool   │  │
+│  └──────────────┘  └──────────────┘  └──────────────┘  │
+└────────────────┬────────────────────────────────────────┘
+                 │
+┌────────────────▼────────────────────────────────────────┐
+│                      API Gateway                         │
+│              (FastAPI / Kong / Nginx)                    │
+└─────┬────────┬────────┬────────┬───────────────────────┘
+      │        │        │        │
+┌─────▼──┐ ┌──▼────┐┌──▼────┐┌──▼────┐
+│ Bench  │ │ Guard ││ Auto  ││ Brain │  Core Services
+│:8001   │ │:8002  ││:8003  ││:8004  │  (独立部署)
+└────────┘ └───────┘└───────┘└───────┘
+
+┌─────────────────────────────────────────────────────────┐
+│                   Shared Infrastructure                  │
+│  ┌──────────┐  ┌──────────┐  ┌──────────┐              │
+│  │PostgreSQL│  │  Redis   │  │aeva-common│              │
+│  │   DB     │  │  Cache   │  │   SDK    │              │
+│  └──────────┘  └──────────┘  └──────────┘              │
+└─────────────────────────────────────────────────────────┘
 ```
+
+### Shared SDK (aeva-common)
+
+The `aeva-common` package provides shared data structures and service interfaces:
+- 📊 Data Models: `EvaluationResult`, `MetricResult`, `GateResult`, `Analysis`
+- ⚙️ Configuration: Service configs, database, Redis
+- 🔌 Service Interfaces: Standardized API contracts
+- 🌐 HTTP Clients: Async clients for service communication
+
+See [aeva-common/README.md](aeva-common/README.md) for details.
 
 ## Core Modules
 
