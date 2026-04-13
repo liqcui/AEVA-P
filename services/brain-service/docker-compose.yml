@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: brain-postgres
+    environment:
+      POSTGRES_USER: aeva
+      POSTGRES_PASSWORD: aeva
+      POSTGRES_DB: brain_service
+    ports:
+      - "5435:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U aeva"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+
+  brain-service:
+    build: .
+    container_name: brain-service
+    ports:
+      - "8004:8004"
+    environment:
+      - DATABASE_URL=postgresql://aeva:aeva@postgres:5432/brain_service
+      - LLM_PROVIDER=openai
+      - LLM_MODEL=gpt-4
+      - LLM_API_KEY=${LLM_API_KEY}
+      - LLM_TEMPERATURE=0.7
+      - LLM_MAX_TOKENS=2000
+      - BENCH_SERVICE_URL=http://bench-service:8001
+      - GUARD_SERVICE_URL=http://guard-service:8002
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  postgres-data:
