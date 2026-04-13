@@ -59,23 +59,88 @@ See [DEPLOYMENT_MODE.md](DEPLOYMENT_MODE.md) for detailed comparison.
 └────────────────┬────────────────────────────────────────┘
                  │
 ┌────────────────▼────────────────────────────────────────┐
-│                      API Gateway                         │
-│              (FastAPI / Kong / Nginx)                    │
+│                   API Gateway :8000                      │
+│         (Request Routing, Rate Limiting, CORS)          │
 └─────┬────────┬────────┬────────┬───────────────────────┘
       │        │        │        │
 ┌─────▼──┐ ┌──▼────┐┌──▼────┐┌──▼────┐
 │ Bench  │ │ Guard ││ Auto  ││ Brain │  Core Services
-│:8001   │ │:8002  ││:8003  ││:8004  │  (独立部署)
-└────────┘ └───────┘└───────┘└───────┘
-
-┌─────────────────────────────────────────────────────────┐
-│                   Shared Infrastructure                  │
-│  ┌──────────┐  ┌──────────┐  ┌──────────┐              │
-│  │PostgreSQL│  │  Redis   │  │aeva-common│              │
-│  │   DB     │  │  Cache   │  │   SDK    │              │
-│  └──────────┘  └──────────┘  └──────────┘              │
-└─────────────────────────────────────────────────────────┘
+│:8001   │ │:8002  ││:8003  ││:8004  │  (FastAPI)
+└───┬────┘ └───┬───┘└───┬───┘└───┬───┘
+    │          │        │  │      │
+    ▼          ▼        ▼  ▼      ▼
+PostgreSQL   Redis   PostgreSQL  PostgreSQL
+  :5433      :6379   :5434+Redis :5435
+                        :6380
+                       +Celery
 ```
+
+### 🚀 Quick Start - Microservices Deployment
+
+Deploy all services with a single command:
+
+```bash
+# Clone repository
+git clone https://github.com/liqcui/AEVA-P.git
+cd AEVA-P
+
+# Set up environment (optional - for Brain Service LLM)
+echo "LLM_API_KEY=your-api-key-here" > .env
+
+# Start all microservices
+docker-compose -f docker-compose.microservices.yml up -d
+
+# Verify deployment
+curl http://localhost:8000/health
+
+# Access API documentation
+open http://localhost:8000/api/v1/docs
+```
+
+**What Gets Deployed:**
+- ✅ 5 Application Services (API Gateway, Bench, Guard, Auto, Brain)
+- ✅ 1 Background Worker (Celery for Auto Service)
+- ✅ 3 PostgreSQL Databases
+- ✅ 2 Redis Instances
+- ✅ All with health checks and auto-restart
+
+📖 **Full Guide**: See [MICROSERVICES.md](MICROSERVICES.md) for complete deployment documentation.
+
+### Microservices Components
+
+**🌐 API Gateway (Port 8000)**
+- Unified entry point: `/api/v1/*`
+- Request routing to backend services
+- Rate limiting (100 req/min per client)
+- CORS and error handling
+- FastAPI with async HTTP client
+
+**📊 Bench Service (Port 8001)**
+- Benchmark evaluation and management
+- Performance testing and comparison
+- PostgreSQL for benchmark data
+- REST API: `/v1/benchmark/*`
+
+**🛡️ Guard Service (Port 8002)**
+- Quality gate validation
+- Metric threshold checking
+- Auto-blocking for failed validations
+- Redis for fast caching
+- REST API: `/v1/gate/*`
+
+**⚙️ Auto Service (Port 8003)**
+- Pipeline orchestration
+- Multi-step workflow automation
+- Celery workers for async execution
+- PostgreSQL + Redis (broker)
+- REST API: `/v1/pipeline/*`
+
+**🧠 Brain Service (Port 8004)**
+- AI-powered analysis
+- LLM integration (OpenAI, Anthropic, Ollama)
+- Intelligent insights and recommendations
+- PostgreSQL for analysis history
+- REST API: `/v1/analysis/*`
 
 ### Shared SDK (aeva-common)
 
@@ -86,6 +151,18 @@ The `aeva-common` package provides shared data structures and service interfaces
 - 🌐 HTTP Clients: Async clients for service communication
 
 See [aeva-common/README.md](aeva-common/README.md) for details.
+
+### Service Endpoints
+
+| Service | Direct Access | Via Gateway | Documentation |
+|---------|--------------|-------------|---------------|
+| API Gateway | - | http://localhost:8000 | [Swagger](http://localhost:8000/api/v1/docs) |
+| Bench | http://localhost:8001 | /api/v1/benchmark/* | [README](services/bench-service/README.md) |
+| Guard | http://localhost:8002 | /api/v1/gate/* | [README](services/guard-service/README.md) |
+| Auto | http://localhost:8003 | /api/v1/pipeline/* | [README](services/auto-service/README.md) |
+| Brain | http://localhost:8004 | /api/v1/analysis/* | [README](services/brain-service/README.md) |
+
+**Recommended**: Use API Gateway endpoints for unified access and rate limiting.
 
 ## Core Modules
 
@@ -568,12 +645,71 @@ open index.html  # or double-click the file
 
 📖 **Demo Guide**: See [`demo/README.md`](demo/README.md) for detailed demo usage and presentation scripts.
 
-### Installation
+## Installation & Deployment
 
+### Option 1: Microservices Deployment (Recommended for Production)
+
+**Prerequisites:**
+- Docker Engine 20.10+
+- Docker Compose 2.0+
+- 8GB RAM minimum
+- 20GB disk space
+
+**Quick Start:**
+```bash
+# Clone repository
+git clone https://github.com/liqcui/AEVA-P.git
+cd AEVA-P
+
+# Optional: Set LLM API key for Brain Service
+echo "LLM_API_KEY=your-openai-api-key" > .env
+
+# Start all services (11 containers)
+docker-compose -f docker-compose.microservices.yml up -d
+
+# Verify deployment
+curl http://localhost:8000/health
+
+# Access API documentation
+open http://localhost:8000/api/v1/docs
+```
+
+**Services Started:**
+- API Gateway (http://localhost:8000) - Unified API access
+- Bench Service (http://localhost:8001) - Benchmark evaluation
+- Guard Service (http://localhost:8002) - Quality gates
+- Auto Service (http://localhost:8003) - Pipeline orchestration
+- Brain Service (http://localhost:8004) - AI analysis
+- 3 PostgreSQL databases (ports 5433-5435)
+- 2 Redis instances (ports 6379-6380)
+- 1 Celery worker (background tasks)
+
+**Management Commands:**
+```bash
+# View logs
+docker-compose -f docker-compose.microservices.yml logs -f
+
+# Check status
+docker-compose -f docker-compose.microservices.yml ps
+
+# Stop all services
+docker-compose -f docker-compose.microservices.yml down
+```
+
+📖 **Complete Guide**: See [MICROSERVICES.md](MICROSERVICES.md) for detailed deployment, usage examples, troubleshooting, and production configuration.
+
+### Option 2: Monolithic Deployment (For Development)
+
+**Switch to monolithic branch:**
+```bash
+git checkout deployment/monolithic
+```
+
+**Local Installation:**
 ```bash
 # Clone the repository
-git clone <repository-url>
-cd AVEA-P
+git clone https://github.com/liqcui/AEVA-P.git
+cd AEVA-P
 
 # Create virtual environment
 python3 -m venv venv
@@ -586,7 +722,80 @@ pip install -r requirements.txt
 pip install -e .
 ```
 
-### Basic Usage
+📖 **Deployment Comparison**: See [DEPLOYMENT_MODE.md](DEPLOYMENT_MODE.md) for choosing between monolithic and microservices.
+
+## Usage
+
+### Microservices API (via API Gateway)
+
+**Create and Run Benchmark:**
+```bash
+# Create benchmark
+curl -X POST http://localhost:8000/api/v1/benchmark/ \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "model_evaluation",
+    "algorithm": "RandomForest",
+    "dataset": "test_data"
+  }'
+
+# Run benchmark
+curl -X POST http://localhost:8000/api/v1/benchmark/{id}/run
+```
+
+**Quality Gate Validation:**
+```bash
+# Create quality gate
+curl -X POST http://localhost:8000/api/v1/gate/ \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "production_gate",
+    "threshold": 0.85,
+    "metrics": ["accuracy", "f1_score"]
+  }'
+
+# Validate metrics
+curl -X POST http://localhost:8000/api/v1/gate/{id}/validate \
+  -H "Content-Type: application/json" \
+  -d '{
+    "metrics": {"accuracy": 0.92, "f1_score": 0.88}
+  }'
+```
+
+**Execute Complete Pipeline:**
+```bash
+# Create pipeline
+curl -X POST http://localhost:8000/api/v1/pipeline/ \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "ml_evaluation",
+    "config": {
+      "steps": [
+        {"name": "benchmark", "type": "benchmark", "config": {"benchmark_id": "bench-123"}},
+        {"name": "validate", "type": "validate", "config": {"gate_id": "gate-456"}},
+        {"name": "analyze", "type": "analyze", "config": {"analysis_type": "comprehensive"}}
+      ]
+    }
+  }'
+
+# Execute pipeline
+curl -X POST http://localhost:8000/api/v1/pipeline/{id}/execute
+```
+
+**AI-Powered Analysis:**
+```bash
+# Quick analysis
+curl -X POST http://localhost:8000/api/v1/analysis/quick \
+  -H "Content-Type: application/json" \
+  -d '{
+    "analysis_type": "comprehensive",
+    "data": {"metrics": {"accuracy": 0.95, "precision": 0.93}}
+  }'
+```
+
+📖 **Interactive API Docs**: http://localhost:8000/api/v1/docs
+
+### Python SDK (Monolithic Mode)
 
 ```python
 from aeva import AEVA
@@ -661,13 +870,32 @@ print(result.summary())
 
 ## Technology Stack
 
-- **Language**: Python 3.8+
-- **Framework**: FastAPI, SQLAlchemy
-- **AI/ML**: PyTorch, scikit-learn, transformers
-- **Database**: PostgreSQL, Redis
-- **Message Queue**: RabbitMQ/Kafka
-- **Monitoring**: Prometheus, Grafana
-- **Containerization**: Docker, Kubernetes
+### Microservices Stack
+- **Language**: Python 3.11+
+- **Framework**: FastAPI (async web framework)
+- **ORM**: SQLAlchemy 2.0
+- **Databases**:
+  - PostgreSQL 15 (Bench, Auto, Brain services)
+  - Redis 7 (Guard service, Celery broker)
+- **Task Queue**: Celery 5.3 (Auto service background workers)
+- **API Gateway**: FastAPI with httpx async client
+- **AI/ML**: OpenAI, Anthropic, Ollama (Brain service)
+- **Testing**: Pytest with async support
+- **Containerization**: Docker, Docker Compose
+- **Orchestration**: Kubernetes (planned)
+- **Monitoring**: Prometheus, Grafana (planned)
+
+### Shared Components
+- **SDK**: aeva-common (shared data models and interfaces)
+- **Communication**: HTTP/REST with JSON
+- **Authentication**: JWT (planned)
+- **Rate Limiting**: In-memory (production: Redis)
+
+### Development Tools
+- **AI/ML Libraries**: PyTorch, scikit-learn, transformers
+- **Data Processing**: pandas, numpy
+- **Visualization**: matplotlib, seaborn
+- **Documentation**: Swagger/OpenAPI, ReDoc
 
 ## Development Roadmap
 
