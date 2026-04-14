@@ -496,7 +496,7 @@
                         <a href="#" class="nav-link" data-page="brain" data-lang="nav-brain">Brain智能分析</a>
                         <a href="#" class="nav-link" data-page="enhancements" data-lang="nav-enhancements">增强功能</a>
                     </nav>
-                    <button class="lang-toggle" onclick="toggleLanguage()">中文/EN</button>
+                    <button class="lang-toggle" onclick="toggleLanguage()" data-lang="lang-toggle">中文/EN</button>
                 </div>
             </div>
         </div>
@@ -950,7 +950,7 @@
 
                         <!-- API Server -->
                         <div style="background: var(--gray-50); padding: 1rem; border-radius: 8px; border-left: 4px solid var(--warning);">
-                            <h4 style="color: var(--warning); margin-bottom: 0.5rem; font-size: 1rem;">API服务器</h4>
+                            <h4 style="color: var(--warning); margin-bottom: 0.5rem; font-size: 1rem;" data-lang="cmd-api-server">API服务器</h4>
                             <code style="display: block; font-size: 0.8rem; color: var(--gray-700); background: white; padding: 0.5rem; border-radius: 4px;">
                                 aeva server<br>
                                 &nbsp;&nbsp;--port 8000<br>
@@ -960,7 +960,7 @@
 
                         <!-- Project Init -->
                         <div style="background: var(--gray-50); padding: 1rem; border-radius: 8px; border-left: 4px solid #8b5cf6;">
-                            <h4 style="color: #8b5cf6; margin-bottom: 0.5rem; font-size: 1rem;">项目初始化</h4>
+                            <h4 style="color: #8b5cf6; margin-bottom: 0.5rem; font-size: 1rem;" data-lang="cmd-project-init">项目初始化</h4>
                             <code style="display: block; font-size: 0.8rem; color: var(--gray-700); background: white; padding: 0.5rem; border-radius: 4px;">
                                 aeva init<br>
                                 &nbsp;&nbsp;my-project<br>
@@ -970,7 +970,7 @@
 
                         <!-- System Info -->
                         <div style="background: var(--gray-50); padding: 1rem; border-radius: 8px; border-left: 4px solid #8b5cf6;">
-                            <h4 style="color: #8b5cf6; margin-bottom: 0.5rem; font-size: 1rem;">系统信息</h4>
+                            <h4 style="color: #8b5cf6; margin-bottom: 0.5rem; font-size: 1rem;" data-lang="cmd-system-info">系统信息</h4>
                             <code style="display: block; font-size: 0.8rem; color: var(--gray-700); background: white; padding: 0.5rem; border-radius: 4px;">
                                 aeva info<br>
                                 aeva --version<br>
@@ -984,13 +984,13 @@
             <!-- CLI Output Examples -->
             <div class="card" style="margin-top: 2rem;">
                 <div class="card-header">
-                    <h3 class="card-title">💻 CLI 输出示例</h3>
+                    <h3 class="card-title" data-lang="cli-output-examples">💻 CLI 输出示例</h3>
                 </div>
                 <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem;">
 
                     <!-- Example 1: Model Evaluation -->
                     <div>
-                        <h4 style="color: var(--primary); margin-bottom: 0.75rem; font-size: 1rem;">📊 模型评测输出</h4>
+                        <h4 style="color: var(--primary); margin-bottom: 0.75rem; font-size: 1rem;" data-lang="output-model-eval">📊 模型评测输出</h4>
                         <div style="background: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 8px; font-family: 'Courier New', monospace; font-size: 0.8rem; overflow-x: auto;">
                             <div style="color: #9cdcfe;">$ aeva evaluate model models/classifier.pkl data/test.csv --metrics accuracy --metrics f1</div>
                             <div style="margin-top: 0.5rem; color: #4ec9b0;">🔍 Evaluating model: models/classifier.pkl</div>
@@ -1009,7 +1009,7 @@
 
                     <!-- Example 2: Data Validation -->
                     <div>
-                        <h4 style="color: var(--success); margin-bottom: 0.75rem; font-size: 1rem;">📁 数据验证输出</h4>
+                        <h4 style="color: var(--success); margin-bottom: 0.75rem; font-size: 1rem;" data-lang="output-data-validation">📁 数据验证输出</h4>
                         <div style="background: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 8px; font-family: 'Courier New', monospace; font-size: 0.8rem; overflow-x: auto;">
                             <div style="color: #9cdcfe;">$ aeva data validate data/dataset.csv --output reports/</div>
                             <div style="margin-top: 0.5rem; color: #4ec9b0;">📊 Validating data: data/dataset.csv</div>
@@ -1029,7 +1029,7 @@
 
                     <!-- Example 3: Dashboard Launch -->
                     <div>
-                        <h4 style="color: var(--warning); margin-bottom: 0.75rem; font-size: 1rem;">🌐 启动仪表板输出</h4>
+                        <h4 style="color: var(--warning); margin-bottom: 0.75rem; font-size: 1rem;" data-lang="output-dashboard-start">🌐 启动仪表板输出</h4>
                         <div style="background: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 8px; font-family: 'Courier New', monospace; font-size: 0.8rem; overflow-x: auto;">
                             <div style="color: #9cdcfe;">$ aeva dashboard --port 8501</div>
                             <div style="margin-top: 0.5rem; color: #4ec9b0;">🚀 Starting AEVA Dashboard...</div>
@@ -1046,7 +1046,7 @@
 
                     <!-- Example 4: System Info -->
                     <div>
-                        <h4 style="color: #8b5cf6; margin-bottom: 0.75rem; font-size: 1rem;">🔧 系统信息输出</h4>
+                        <h4 style="color: #8b5cf6; margin-bottom: 0.75rem; font-size: 1rem;" data-lang="output-system-info">🔧 系统信息输出</h4>
                         <div style="background: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 8px; font-family: 'Courier New', monospace; font-size: 0.8rem; overflow-x: auto;">
                             <div style="color: #9cdcfe;">$ aeva info</div>
                             <div style="margin-top: 0.5rem; color: #d4d4d4;">
@@ -1074,7 +1074,7 @@
 
                     <!-- Example 5: Project Init -->
                     <div>
-                        <h4 style="color: #8b5cf6; margin-bottom: 0.75rem; font-size: 1rem;">🎬 项目初始化输出</h4>
+                        <h4 style="color: #8b5cf6; margin-bottom: 0.75rem; font-size: 1rem;" data-lang="output-project-init">🎬 项目初始化输出</h4>
                         <div style="background: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 8px; font-family: 'Courier New', monospace; font-size: 0.8rem; overflow-x: auto;">
                             <div style="color: #9cdcfe;">$ aeva init my-project --template full</div>
                             <div style="margin-top: 0.5rem; color: #4ec9b0;">🎬 Initializing AEVA project: my-project</div>
@@ -1305,41 +1305,41 @@ Next steps:<br>
 
                             <!-- Recent Models -->
                             <div style="background: var(--gray-50); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--gray-200);">
-                                <h5 style="margin: 0 0 1rem 0; color: var(--gray-800);">📋 最近评测模型</h5>
+                                <h5 style="margin: 0 0 1rem 0; color: var(--gray-800);" data-lang="table-recent-models">📋 最近评测模型</h5>
                                 <div style="background: white; border-radius: 6px; overflow: hidden;">
                                     <table style="width: 100%; border-collapse: collapse;">
                                         <thead>
                                             <tr style="background: var(--gray-100); border-bottom: 2px solid var(--gray-200);">
-                                                <th style="padding: 0.75rem; text-align: left; font-size: 0.875rem; font-weight: 600;">模型名称</th>
-                                                <th style="padding: 0.75rem; text-align: center; font-size: 0.875rem; font-weight: 600;">准确率</th>
-                                                <th style="padding: 0.75rem; text-align: center; font-size: 0.875rem; font-weight: 600;">状态</th>
-                                                <th style="padding: 0.75rem; text-align: center; font-size: 0.875rem; font-weight: 600;">时间</th>
+                                                <th style="padding: 0.75rem; text-align: left; font-size: 0.875rem; font-weight: 600;" data-lang="table-header-model-name">模型名称</th>
+                                                <th style="padding: 0.75rem; text-align: center; font-size: 0.875rem; font-weight: 600;" data-lang="table-header-accuracy">准确率</th>
+                                                <th style="padding: 0.75rem; text-align: center; font-size: 0.875rem; font-weight: 600;" data-lang="table-header-status">状态</th>
+                                                <th style="padding: 0.75rem; text-align: center; font-size: 0.875rem; font-weight: 600;" data-lang="table-header-time">时间</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr style="border-bottom: 1px solid var(--gray-200);">
                                                 <td style="padding: 0.75rem; font-size: 0.875rem;">classifier_v2.3.pkl</td>
                                                 <td style="padding: 0.75rem; text-align: center; font-size: 0.875rem; font-weight: bold; color: var(--success);">92.5%</td>
-                                                <td style="padding: 0.75rem; text-align: center;"><span style="background: #d1fae5; color: #059669; padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem; font-weight: 600;">✓ 通过</span></td>
-                                                <td style="padding: 0.75rem; text-align: center; font-size: 0.75rem; color: var(--gray-600);">2分钟前</td>
+                                                <td style="padding: 0.75rem; text-align: center;"><span style="background: #d1fae5; color: #059669; padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem; font-weight: 600;" data-lang="status-passed">✓ 通过</span></td>
+                                                <td style="padding: 0.75rem; text-align: center; font-size: 0.75rem; color: var(--gray-600);" data-lang="time-2min">2分钟前</td>
                                             </tr>
                                             <tr style="border-bottom: 1px solid var(--gray-200);">
                                                 <td style="padding: 0.75rem; font-size: 0.875rem;">llm_model_gpt4.pkl</td>
                                                 <td style="padding: 0.75rem; text-align: center; font-size: 0.875rem; font-weight: bold; color: var(--success);">89.3%</td>
-                                                <td style="padding: 0.75rem; text-align: center;"><span style="background: #d1fae5; color: #059669; padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem; font-weight: 600;">✓ 通过</span></td>
-                                                <td style="padding: 0.75rem; text-align: center; font-size: 0.75rem; color: var(--gray-600);">15分钟前</td>
+                                                <td style="padding: 0.75rem; text-align: center;"><span style="background: #d1fae5; color: #059669; padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem; font-weight: 600;" data-lang="status-passed">✓ 通过</span></td>
+                                                <td style="padding: 0.75rem; text-align: center; font-size: 0.75rem; color: var(--gray-600);" data-lang="time-15min">15分钟前</td>
                                             </tr>
                                             <tr style="border-bottom: 1px solid var(--gray-200);">
                                                 <td style="padding: 0.75rem; font-size: 0.875rem;">bert_sentiment.pkl</td>
                                                 <td style="padding: 0.75rem; text-align: center; font-size: 0.875rem; font-weight: bold; color: var(--warning);">78.1%</td>
-                                                <td style="padding: 0.75rem; text-align: center;"><span style="background: #fef3c7; color: #d97706; padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem; font-weight: 600;">⚠ 警告</span></td>
-                                                <td style="padding: 0.75rem; text-align: center; font-size: 0.75rem; color: var(--gray-600);">1小时前</td>
+                                                <td style="padding: 0.75rem; text-align: center;"><span style="background: #fef3c7; color: #d97706; padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem; font-weight: 600;" data-lang="status-warning">⚠ 警告</span></td>
+                                                <td style="padding: 0.75rem; text-align: center; font-size: 0.75rem; color: var(--gray-600);" data-lang="time-1hour">1小时前</td>
                                             </tr>
                                             <tr>
                                                 <td style="padding: 0.75rem; font-size: 0.875rem;">detector_v1.0.pkl</td>
                                                 <td style="padding: 0.75rem; text-align: center; font-size: 0.875rem; font-weight: bold; color: var(--danger);">65.7%</td>
-                                                <td style="padding: 0.75rem; text-align: center;"><span style="background: #fee2e2; color: #dc2626; padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem; font-weight: 600;">✗ 失败</span></td>
-                                                <td style="padding: 0.75rem; text-align: center; font-size: 0.75rem; color: var(--gray-600);">3小时前</td>
+                                                <td style="padding: 0.75rem; text-align: center;"><span style="background: #fee2e2; color: #dc2626; padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem; font-weight: 600;" data-lang="status-failed">✗ 失败</span></td>
+                                                <td style="padding: 0.75rem; text-align: center; font-size: 0.75rem; color: var(--gray-600);" data-lang="time-3hours">3小时前</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -2347,7 +2347,7 @@ Next steps:<br>
 
                         <!-- Core Components Layer -->
                         <div style="border: 2px solid #e5e7eb; border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem;">
-                            <div style="text-align: center; font-weight: bold; color: #6366f1; margin-bottom: 1rem; font-size: 1.1rem;" data-lang="core-components">
+                            <div style="text-align: center; font-weight: bold; color: #6366f1; margin-bottom: 1rem; font-size: 1.1rem;" data-lang="core-components-layer">
                                 核心组件层 (Core Components)
                             </div>
                             <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
@@ -2390,7 +2390,7 @@ Next steps:<br>
 
                         <!-- Enhancement Layer -->
                         <div style="border: 2px dashed #d1d5db; border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem;">
-                            <div style="text-align: center; font-weight: bold; color: #10b981; margin-bottom: 1rem; font-size: 1.1rem;">
+                            <div style="text-align: center; font-weight: bold; color: #10b981; margin-bottom: 1rem; font-size: 1.1rem;" data-lang="enhancement-modules-layer">
                                 增强模块层 (Enhancement Modules)
                             </div>
                             <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem;">
@@ -3547,65 +3547,65 @@ k8s/<br>
             <h2 style="margin-bottom: 1.5rem; font-size: 1.875rem;" data-lang="guard-page-title">AEVA-Guard 质量门禁</h2>
 
             <div class="alert alert-success">
-                <strong>✓ 所有门禁检查通过</strong> - 模型质量符合部署标准
+                <strong data-lang="guard.alert.title">✓ 所有门禁检查通过</strong> - <span data-lang="guard.alert.desc">模型质量符合部署标准</span>
             </div>
 
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">门禁配置</h3>
-                    <button class="btn btn-secondary">编辑配置</button>
+                    <h3 class="card-title" data-lang="guard.config.title">门禁配置</h3>
+                    <button class="btn btn-secondary" data-lang="guard.config.edit-btn">编辑配置</button>
                 </div>
 
                 <table>
                     <thead>
                         <tr>
-                            <th>门禁名称</th>
-                            <th>类型</th>
-                            <th>阈值</th>
-                            <th>当前值</th>
-                            <th>状态</th>
-                            <th>策略</th>
+                            <th data-lang="guard.table.gate-name">门禁名称</th>
+                            <th data-lang="guard.table.type">类型</th>
+                            <th data-lang="guard.table.threshold">阈值</th>
+                            <th data-lang="guard.table.current-value">当前值</th>
+                            <th data-lang="guard.table.status">状态</th>
+                            <th data-lang="guard.table.policy">策略</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>准确率门禁</strong></td>
+                            <td><strong data-lang="guard.gate.accuracy">准确率门禁</strong></td>
                             <td>Threshold</td>
                             <td>≥ 90%</td>
                             <td>94.2%</td>
-                            <td><span class="badge success">通过</span></td>
+                            <td><span class="badge success" data-lang="guard.status.passed">通过</span></td>
                             <td>Blocking</td>
                         </tr>
                         <tr>
-                            <td><strong>性能门禁</strong></td>
+                            <td><strong data-lang="guard.gate.performance">性能门禁</strong></td>
                             <td>Threshold</td>
                             <td>≤ 100ms</td>
                             <td>85ms</td>
-                            <td><span class="badge success">通过</span></td>
+                            <td><span class="badge success" data-lang="guard.status.passed">通过</span></td>
                             <td>Blocking</td>
                         </tr>
                         <tr>
-                            <td><strong>召回率门禁</strong></td>
+                            <td><strong data-lang="guard.gate.recall">召回率门禁</strong></td>
                             <td>Threshold</td>
                             <td>≥ 85%</td>
                             <td>91.3%</td>
-                            <td><span class="badge success">通过</span></td>
+                            <td><span class="badge success" data-lang="guard.status.passed">通过</span></td>
                             <td>Non-blocking</td>
                         </tr>
                         <tr>
-                            <td><strong>F1分数门禁</strong></td>
+                            <td><strong data-lang="guard.gate.f1">F1分数门禁</strong></td>
                             <td>Threshold</td>
                             <td>≥ 88%</td>
                             <td>92.7%</td>
-                            <td><span class="badge success">通过</span></td>
+                            <td><span class="badge success" data-lang="guard.status.passed">通过</span></td>
                             <td>Non-blocking</td>
                         </tr>
                         <tr>
-                            <td><strong>资源使用门禁</strong></td>
+                            <td><strong data-lang="guard.gate.resource">资源使用门禁</strong></td>
                             <td>Custom</td>
                             <td>≤ 2GB</td>
                             <td>1.5GB</td>
-                            <td><span class="badge success">通过</span></td>
+                            <td><span class="badge success" data-lang="guard.status.passed">通过</span></td>
                             <td>Blocking</td>
                         </tr>
                     </tbody>
@@ -3614,28 +3614,28 @@ k8s/<br>
 
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">门禁历史</h3>
+                    <h3 class="card-title" data-lang="guard.history.title">门禁历史</h3>
                 </div>
                 <div class="timeline">
                     <div class="timeline-item success">
-                        <div class="timeline-time">2分钟前</div>
+                        <div class="timeline-time" data-lang="time-2min">2分钟前</div>
                         <div class="timeline-content">
-                            <strong>bert-base-chinese v2.1.0</strong> 通过所有门禁检查<br>
-                            准确率: 94.2%, 性能: 85ms
+                            <strong>bert-base-chinese v2.1.0</strong> <span data-lang="guard.history.item1">通过所有门禁检查</span><br>
+                            <span data-lang="guard.history.item1-detail">准确率: 94.2%, 性能: 85ms</span>
                         </div>
                     </div>
                     <div class="timeline-item success">
-                        <div class="timeline-time">15分钟前</div>
+                        <div class="timeline-time" data-lang="time-15min">15分钟前</div>
                         <div class="timeline-content">
-                            <strong>gpt-sentiment v1.5.2</strong> 通过门禁（1个警告）<br>
-                            准确率: 89.7%, 性能: 120ms ⚠️ 略高于建议值
+                            <strong>gpt-sentiment v1.5.2</strong> <span data-lang="guard.history.item2">通过门禁（1个警告）</span><br>
+                            <span data-lang="guard.history.item2-detail">准确率: 89.7%, 性能: 120ms ⚠️ 略高于建议值</span>
                         </div>
                     </div>
                     <div class="timeline-item danger">
-                        <div class="timeline-time">2小时前</div>
+                        <div class="timeline-time" data-lang="time-2hours">2小时前</div>
                         <div class="timeline-content">
-                            <strong>roberta-large v2.0.0</strong> 未通过门禁<br>
-                            准确率: 82.3% ✗ 低于阈值90%
+                            <strong>roberta-large v2.0.0</strong> <span data-lang="guard.history.item3">未通过门禁</span><br>
+                            <span data-lang="guard.history.item3-detail">准确率: 82.3% ✗ 低于阈值90%</span>
                         </div>
                     </div>
                 </div>
@@ -3648,53 +3648,53 @@ k8s/<br>
 
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">基准测试套件</h3>
-                    <button class="btn btn-primary">运行新测试</button>
+                    <h3 class="card-title" data-lang="bench.suite.title">基准测试套件</h3>
+                    <button class="btn btn-primary" data-lang="bench.suite.run-btn">运行新测试</button>
                 </div>
 
                 <table>
                     <thead>
                         <tr>
-                            <th>基准名称</th>
-                            <th>测试项</th>
-                            <th>数据集</th>
-                            <th>最佳成绩</th>
-                            <th>平均成绩</th>
-                            <th>状态</th>
+                            <th data-lang="bench.table.benchmark-name">基准名称</th>
+                            <th data-lang="bench.table.test-items">测试项</th>
+                            <th data-lang="bench.table.dataset">数据集</th>
+                            <th data-lang="bench.table.best-score">最佳成绩</th>
+                            <th data-lang="bench.table.avg-score">平均成绩</th>
+                            <th data-lang="bench.table.status">状态</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>文本分类基准</strong></td>
-                            <td>12项</td>
+                            <td><strong data-lang="bench.benchmark.text-classification">文本分类基准</strong></td>
+                            <td data-lang="bench.items.12">12项</td>
                             <td>CLUE-10K</td>
                             <td>94.2%</td>
                             <td>91.5%</td>
-                            <td><span class="badge success">活跃</span></td>
+                            <td><span class="badge success" data-lang="bench.status.active">活跃</span></td>
                         </tr>
                         <tr>
-                            <td><strong>情感分析基准</strong></td>
-                            <td>8项</td>
+                            <td><strong data-lang="bench.benchmark.sentiment">情感分析基准</strong></td>
+                            <td data-lang="bench.items.8">8项</td>
                             <td>Sentiment-5K</td>
                             <td>92.8%</td>
                             <td>89.3%</td>
-                            <td><span class="badge success">活跃</span></td>
+                            <td><span class="badge success" data-lang="bench.status.active">活跃</span></td>
                         </tr>
                         <tr>
-                            <td><strong>命名实体识别</strong></td>
-                            <td>15项</td>
+                            <td><strong data-lang="bench.benchmark.ner">命名实体识别</strong></td>
+                            <td data-lang="bench.items.15">15项</td>
                             <td>NER-8K</td>
                             <td>88.5%</td>
                             <td>85.2%</td>
-                            <td><span class="badge success">活跃</span></td>
+                            <td><span class="badge success" data-lang="bench.status.active">活跃</span></td>
                         </tr>
                         <tr>
-                            <td><strong>性能基准</strong></td>
-                            <td>10项</td>
+                            <td><strong data-lang="bench.benchmark.performance">性能基准</strong></td>
+                            <td data-lang="bench.items.10">10项</td>
                             <td>Perf-Suite</td>
                             <td>78ms</td>
                             <td>105ms</td>
-                            <td><span class="badge success">活跃</span></td>
+                            <td><span class="badge success" data-lang="bench.status.active">活跃</span></td>
                         </tr>
                     </tbody>
                 </table>
@@ -3703,13 +3703,13 @@ k8s/<br>
             <div class="grid-2">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">基准对比 - 准确率</h3>
+                        <h3 class="card-title" data-lang="bench.chart.accuracy">基准对比 - 准确率</h3>
                     </div>
                     <canvas id="benchmarkAccuracyChart"></canvas>
                 </div>
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">性能对比</h3>
+                        <h3 class="card-title" data-lang="bench.chart.performance">性能对比</h3>
                     </div>
                     <canvas id="benchmarkPerfChart"></canvas>
                 </div>
@@ -3717,22 +3717,22 @@ k8s/<br>
 
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">详细测试结果 - 文本分类基准</h3>
+                    <h3 class="card-title" data-lang="bench.details.title">详细测试结果 - 文本分类基准</h3>
                 </div>
                 <table>
                     <thead>
                         <tr>
-                            <th>测试项</th>
-                            <th>准确率</th>
-                            <th>精确率</th>
-                            <th>召回率</th>
-                            <th>F1</th>
-                            <th>进度</th>
+                            <th data-lang="bench.details.test-item">测试项</th>
+                            <th data-lang="bench.details.accuracy">准确率</th>
+                            <th data-lang="bench.details.precision">精确率</th>
+                            <th data-lang="bench.details.recall">召回率</th>
+                            <th data-lang="bench.details.f1">F1</th>
+                            <th data-lang="bench.details.progress">进度</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>新闻分类</td>
+                            <td data-lang="bench.test.news">新闻分类</td>
                             <td>95.2%</td>
                             <td>94.8%</td>
                             <td>95.6%</td>
@@ -3740,7 +3740,7 @@ k8s/<br>
                             <td><div class="progress"><div class="progress-bar" style="width: 95.2%"></div></div></td>
                         </tr>
                         <tr>
-                            <td>商品评论</td>
+                            <td data-lang="bench.test.product">商品评论</td>
                             <td>93.7%</td>
                             <td>93.2%</td>
                             <td>94.1%</td>
@@ -3748,7 +3748,7 @@ k8s/<br>
                             <td><div class="progress"><div class="progress-bar" style="width: 93.7%"></div></div></td>
                         </tr>
                         <tr>
-                            <td>问答分类</td>
+                            <td data-lang="bench.test.qa">问答分类</td>
                             <td>91.5%</td>
                             <td>90.8%</td>
                             <td>92.1%</td>
@@ -3756,7 +3756,7 @@ k8s/<br>
                             <td><div class="progress"><div class="progress-bar" style="width: 91.5%"></div></div></td>
                         </tr>
                         <tr>
-                            <td>意图识别</td>
+                            <td data-lang="bench.test.intent">意图识别</td>
                             <td>88.9%</td>
                             <td>88.3%</td>
                             <td>89.4%</td>
@@ -3774,48 +3774,48 @@ k8s/<br>
 
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Pipeline可视化</h3>
-                    <span class="badge success">运行中</span>
+                    <h3 class="card-title" data-lang="auto.pipeline.title">Pipeline可视化</h3>
+                    <span class="badge success" data-lang="auto.pipeline.running">运行中</span>
                 </div>
                 <div style="padding: 2rem; background: var(--gray-50); border-radius: 8px;">
                     <div class="timeline">
                         <div class="timeline-item success">
-                            <div class="timeline-time">Stage 1 - 完成</div>
+                            <div class="timeline-time" data-lang="auto.stage1.status">Stage 1 - 完成</div>
                             <div class="timeline-content">
-                                <strong>数据准备</strong><br>
-                                加载测试数据集 (10,000条) ✓<br>
-                                耗时: 2.3s
+                                <strong data-lang="auto.stage1.name">数据准备</strong><br>
+                                <span data-lang="auto.stage1.detail">加载测试数据集 (10,000条) ✓</span><br>
+                                <span data-lang="auto.stage1.time">耗时: 2.3s</span>
                             </div>
                         </div>
                         <div class="timeline-item success">
-                            <div class="timeline-time">Stage 2 - 完成</div>
+                            <div class="timeline-time" data-lang="auto.stage2.status">Stage 2 - 完成</div>
                             <div class="timeline-content">
-                                <strong>模型加载</strong><br>
-                                加载 bert-base-chinese v2.1.0 ✓<br>
-                                耗时: 5.8s
+                                <strong data-lang="auto.stage2.name">模型加载</strong><br>
+                                <span data-lang="auto.stage2.detail">加载 bert-base-chinese v2.1.0 ✓</span><br>
+                                <span data-lang="auto.stage2.time">耗时: 5.8s</span>
                             </div>
                         </div>
                         <div class="timeline-item success">
-                            <div class="timeline-time">Stage 3 - 完成</div>
+                            <div class="timeline-time" data-lang="auto.stage3.status">Stage 3 - 完成</div>
                             <div class="timeline-content">
-                                <strong>基准测试</strong><br>
-                                执行12项测试 ✓ (准确率: 94.2%)<br>
-                                耗时: 45.2s
+                                <strong data-lang="auto.stage3.name">基准测试</strong><br>
+                                <span data-lang="auto.stage3.detail">执行12项测试 ✓ (准确率: 94.2%)</span><br>
+                                <span data-lang="auto.stage3.time">耗时: 45.2s</span>
                             </div>
                         </div>
                         <div class="timeline-item success">
-                            <div class="timeline-time">Stage 4 - 完成</div>
+                            <div class="timeline-time" data-lang="auto.stage4.status">Stage 4 - 完成</div>
                             <div class="timeline-content">
-                                <strong>质量门禁</strong><br>
-                                通过5项门禁检查 ✓<br>
-                                耗时: 1.2s
+                                <strong data-lang="auto.stage4.name">质量门禁</strong><br>
+                                <span data-lang="auto.stage4.detail">通过5项门禁检查 ✓</span><br>
+                                <span data-lang="auto.stage4.time">耗时: 1.2s</span>
                             </div>
                         </div>
                         <div class="timeline-item">
-                            <div class="timeline-time">Stage 5 - 进行中</div>
+                            <div class="timeline-time" data-lang="auto.stage5.status">Stage 5 - 进行中</div>
                             <div class="timeline-content">
-                                <strong>智能分析</strong><br>
-                                Brain模块分析中...<br>
+                                <strong data-lang="auto.stage5.name">智能分析</strong><br>
+                                <span data-lang="auto.stage5.detail">Brain模块分析中...</span><br>
                                 <div class="progress" style="margin-top: 0.5rem;">
                                     <div class="progress-bar" style="width: 65%"></div>
                                 </div>
@@ -3827,33 +3827,33 @@ k8s/<br>
 
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">流水线配置</h3>
-                    <button class="btn btn-secondary">编辑</button>
+                    <h3 class="card-title" data-lang="auto.config.title">流水线配置</h3>
+                    <button class="btn btn-secondary" data-lang="auto.config.edit-btn">编辑</button>
                 </div>
                 <div class="code-block">
 <span class="keyword">pipeline</span> = Pipeline(<span class="string">"bert_evaluation"</span>)
 
-<span class="comment"># Stage 1: 数据准备</span>
+<span class="comment" data-lang="auto.config.comment1"># Stage 1: 数据准备</span>
 pipeline.add_stage(
     DataLoader(<span class="string">"clue-10k"</span>, batch_size=<span class="number">32</span>)
 )
 
-<span class="comment"># Stage 2: 模型加载</span>
+<span class="comment" data-lang="auto.config.comment2"># Stage 2: 模型加载</span>
 pipeline.add_stage(
     ModelLoader(<span class="string">"bert-base-chinese"</span>, version=<span class="string">"v2.1.0"</span>)
 )
 
-<span class="comment"># Stage 3: 基准测试</span>
+<span class="comment" data-lang="auto.config.comment3"># Stage 3: 基准测试</span>
 pipeline.add_stage(
     BenchmarkSuite.load(<span class="string">"text_classification"</span>)
 )
 
-<span class="comment"># Stage 4: 质量门禁</span>
+<span class="comment" data-lang="auto.config.comment4"># Stage 4: 质量门禁</span>
 pipeline.add_stage(
     QualityGate(threshold=<span class="number">0.90</span>, blocking=<span class="keyword">True</span>)
 )
 
-<span class="comment"># Stage 5: 智能分析</span>
+<span class="comment" data-lang="auto.config.comment5"># Stage 5: 智能分析</span>
 pipeline.add_stage(
     BrainAnalyzer(model=<span class="string">"claude-sonnet-4"</span>)
 )
@@ -3862,46 +3862,46 @@ pipeline.add_stage(
 
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">执行历史</h3>
+                    <h3 class="card-title" data-lang="auto.history.title">执行历史</h3>
                 </div>
                 <table>
                     <thead>
                         <tr>
                             <th>Pipeline</th>
-                            <th>触发方式</th>
-                            <th>耗时</th>
-                            <th>状态</th>
-                            <th>时间</th>
+                            <th data-lang="auto.history.trigger">触发方式</th>
+                            <th data-lang="auto.history.duration">耗时</th>
+                            <th data-lang="auto.history.status">状态</th>
+                            <th data-lang="auto.history.time">时间</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td><strong>bert_evaluation</strong></td>
-                            <td>手动</td>
+                            <td data-lang="auto.trigger.manual">手动</td>
                             <td>54.5s</td>
-                            <td><span class="badge info">运行中</span></td>
-                            <td>刚刚</td>
+                            <td><span class="badge info" data-lang="auto.status.running">运行中</span></td>
+                            <td data-lang="time-now">刚刚</td>
                         </tr>
                         <tr>
                             <td><strong>gpt_sentiment</strong></td>
                             <td>CI/CD</td>
                             <td>62.3s</td>
-                            <td><span class="badge success">成功</span></td>
-                            <td>15分钟前</td>
+                            <td><span class="badge success" data-lang="auto.status.success">成功</span></td>
+                            <td data-lang="time-15min">15分钟前</td>
                         </tr>
                         <tr>
                             <td><strong>text_classifier</strong></td>
-                            <td>定时任务</td>
+                            <td data-lang="auto.trigger.scheduled">定时任务</td>
                             <td>48.7s</td>
-                            <td><span class="badge success">成功</span></td>
-                            <td>1小时前</td>
+                            <td><span class="badge success" data-lang="auto.status.success">成功</span></td>
+                            <td data-lang="time-1hour">1小时前</td>
                         </tr>
                         <tr>
                             <td><strong>roberta_evaluation</strong></td>
-                            <td>手动</td>
+                            <td data-lang="auto.trigger.manual">手动</td>
                             <td>71.2s</td>
-                            <td><span class="badge danger">失败</span></td>
-                            <td>2小时前</td>
+                            <td><span class="badge danger" data-lang="auto.status.failed">失败</span></td>
+                            <td data-lang="time-2hours">2小时前</td>
                         </tr>
                     </tbody>
                 </table>
@@ -3913,17 +3913,17 @@ pipeline.add_stage(
             <h2 style="margin-bottom: 1.5rem; font-size: 1.875rem;" data-lang="brain-page-title">AEVA-Brain 智能诊断</h2>
 
             <div class="alert alert-success">
-                <strong>✓ 分析完成</strong> - Brain模块已完成评测结果分析
+                <strong data-lang="brain.alert.title">✓ 分析完成</strong> - <span data-lang="brain.alert.desc">Brain模块已完成评测结果分析</span>
             </div>
 
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">智能分析概览</h3>
-                    <span class="badge success">置信度: 87%</span>
+                    <h3 class="card-title" data-lang="brain.overview.title">智能分析概览</h3>
+                    <span class="badge success" data-lang="brain.overview.confidence">置信度: 87%</span>
                 </div>
                 <div style="padding: 1rem 0;">
-                    <h4 style="margin-bottom: 1rem; color: var(--gray-700);">分析摘要</h4>
-                    <p style="line-height: 1.8; color: var(--gray-800);">
+                    <h4 style="margin-bottom: 1rem; color: var(--gray-700);" data-lang="brain.overview.summary-title">分析摘要</h4>
+                    <p style="line-height: 1.8; color: var(--gray-800);" data-lang="brain.overview.summary">
                         模型 <strong>bert-base-chinese v2.1.0</strong> 在文本分类基准测试中表现优异，
                         准确率达到 <strong>94.2%</strong>，超过设定阈值4.2个百分点。推理性能为 <strong>85ms</strong>，
                         满足实时应用要求。模型在新闻分类和商品评论场景表现最佳，但在意图识别任务上有轻微下降，
@@ -3935,42 +3935,42 @@ pipeline.add_stage(
             <div class="grid-2">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">根因分析</h3>
+                        <h3 class="card-title" data-lang="brain.root-cause.title">根因分析</h3>
                     </div>
                     <div style="padding: 0.5rem 0;">
                         <div style="margin-bottom: 1.5rem;">
                             <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-                                <span><strong>1. 训练数据质量</strong></span>
-                                <span class="badge success">优秀</span>
+                                <span><strong data-lang="brain.root-cause.item1-title">1. 训练数据质量</strong></span>
+                                <span class="badge success" data-lang="brain.root-cause.item1-status">优秀</span>
                             </div>
-                            <p style="color: var(--gray-700); font-size: 0.875rem; line-height: 1.6;">
+                            <p style="color: var(--gray-700); font-size: 0.875rem; line-height: 1.6;" data-lang="brain.root-cause.item1-detail">
                                 训练数据分布均衡，样本质量高，覆盖多个领域，有利于模型泛化能力。
                             </p>
                         </div>
                         <div style="margin-bottom: 1.5rem;">
                             <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-                                <span><strong>2. 模型架构</strong></span>
-                                <span class="badge success">合适</span>
+                                <span><strong data-lang="brain.root-cause.item2-title">2. 模型架构</strong></span>
+                                <span class="badge success" data-lang="brain.root-cause.item2-status">合适</span>
                             </div>
-                            <p style="color: var(--gray-700); font-size: 0.875rem; line-height: 1.6;">
+                            <p style="color: var(--gray-700); font-size: 0.875rem; line-height: 1.6;" data-lang="brain.root-cause.item2-detail">
                                 BERT-base架构适合当前任务复杂度，参数量与性能平衡良好。
                             </p>
                         </div>
                         <div style="margin-bottom: 1.5rem;">
                             <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-                                <span><strong>3. 超参数设置</strong></span>
-                                <span class="badge warning">可优化</span>
+                                <span><strong data-lang="brain.root-cause.item3-title">3. 超参数设置</strong></span>
+                                <span class="badge warning" data-lang="brain.root-cause.item3-status">可优化</span>
                             </div>
-                            <p style="color: var(--gray-700); font-size: 0.875rem; line-height: 1.6;">
+                            <p style="color: var(--gray-700); font-size: 0.875rem; line-height: 1.6;" data-lang="brain.root-cause.item3-detail">
                                 学习率和批次大小设置合理，但建议尝试更长的训练轮次以进一步提升性能。
                             </p>
                         </div>
                         <div>
                             <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-                                <span><strong>4. 推理优化</strong></span>
-                                <span class="badge success">良好</span>
+                                <span><strong data-lang="brain.root-cause.item4-title">4. 推理优化</strong></span>
+                                <span class="badge success" data-lang="brain.root-cause.item4-status">良好</span>
                             </div>
-                            <p style="color: var(--gray-700); font-size: 0.875rem; line-height: 1.6;">
+                            <p style="color: var(--gray-700); font-size: 0.875rem; line-height: 1.6;" data-lang="brain.root-cause.item4-detail">
                                 已启用模型量化和批处理优化，推理速度达标。
                             </p>
                         </div>
@@ -3979,48 +3979,48 @@ pipeline.add_stage(
 
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">优化建议</h3>
+                        <h3 class="card-title" data-lang="brain.recommend.title">优化建议</h3>
                     </div>
                     <div style="padding: 0.5rem 0;">
                         <div style="margin-bottom: 1.5rem; padding: 1rem; background: var(--gray-50); border-radius: 8px; border-left: 3px solid var(--primary);">
-                            <div style="font-weight: 600; margin-bottom: 0.5rem;">🎯 建议 1: 增强意图识别场景</div>
-                            <p style="color: var(--gray-700); font-size: 0.875rem; margin-bottom: 0.5rem;">
+                            <div style="font-weight: 600; margin-bottom: 0.5rem;" data-lang="brain.recommend.rec1-title">🎯 建议 1: 增强意图识别场景</div>
+                            <p style="color: var(--gray-700); font-size: 0.875rem; margin-bottom: 0.5rem;" data-lang="brain.recommend.rec1-desc">
                                 针对意图识别任务准确率偏低(88.9%)的问题，建议：
                             </p>
                             <ul style="color: var(--gray-700); font-size: 0.875rem; padding-left: 1.5rem;">
-                                <li>补充1000+条意图识别样本</li>
-                                <li>使用数据增强技术扩充训练集</li>
-                                <li>考虑使用对比学习提升区分度</li>
+                                <li data-lang="brain.recommend.rec1-action1">补充1000+条意图识别样本</li>
+                                <li data-lang="brain.recommend.rec1-action2">使用数据增强技术扩充训练集</li>
+                                <li data-lang="brain.recommend.rec1-action3">考虑使用对比学习提升区分度</li>
                             </ul>
                             <div style="margin-top: 0.5rem;">
-                                <span class="badge info">预期提升: +3-5%</span>
+                                <span class="badge info" data-lang="brain.recommend.rec1-impact">预期提升: +3-5%</span>
                             </div>
                         </div>
 
                         <div style="margin-bottom: 1.5rem; padding: 1rem; background: var(--gray-50); border-radius: 8px; border-left: 3px solid var(--success);">
-                            <div style="font-weight: 600; margin-bottom: 0.5rem;">⚡ 建议 2: 性能进一步优化</div>
-                            <p style="color: var(--gray-700); font-size: 0.875rem; margin-bottom: 0.5rem;">
+                            <div style="font-weight: 600; margin-bottom: 0.5rem;" data-lang="brain.recommend.rec2-title">⚡ 建议 2: 性能进一步优化</div>
+                            <p style="color: var(--gray-700); font-size: 0.875rem; margin-bottom: 0.5rem;" data-lang="brain.recommend.rec2-desc">
                                 当前推理速度85ms已达标，可进一步优化：
                             </p>
                             <ul style="color: var(--gray-700); font-size: 0.875rem; padding-left: 1.5rem;">
-                                <li>尝试模型蒸馏减少参数量</li>
-                                <li>启用TensorRT加速推理</li>
-                                <li>使用动态批处理提升吞吐</li>
+                                <li data-lang="brain.recommend.rec2-action1">尝试模型蒸馏减少参数量</li>
+                                <li data-lang="brain.recommend.rec2-action2">启用TensorRT加速推理</li>
+                                <li data-lang="brain.recommend.rec2-action3">使用动态批处理提升吞吐</li>
                             </ul>
                             <div style="margin-top: 0.5rem;">
-                                <span class="badge success">预期提升: 20-30%</span>
+                                <span class="badge success" data-lang="brain.recommend.rec2-impact">预期提升: 20-30%</span>
                             </div>
                         </div>
 
                         <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px; border-left: 3px solid var(--warning);">
-                            <div style="font-weight: 600; margin-bottom: 0.5rem;">📊 建议 3: 持续监控</div>
-                            <p style="color: var(--gray-700); font-size: 0.875rem; margin-bottom: 0.5rem;">
+                            <div style="font-weight: 600; margin-bottom: 0.5rem;" data-lang="brain.recommend.rec3-title">📊 建议 3: 持续监控</div>
+                            <p style="color: var(--gray-700); font-size: 0.875rem; margin-bottom: 0.5rem;" data-lang="brain.recommend.rec3-desc">
                                 部署后建议建立持续监控机制：
                             </p>
                             <ul style="color: var(--gray-700); font-size: 0.875rem; padding-left: 1.5rem;">
-                                <li>每日采样100条生产数据进行评测</li>
-                                <li>设置准确率低于92%的告警阈值</li>
-                                <li>每周生成性能趋势报告</li>
+                                <li data-lang="brain.recommend.rec3-action1">每日采样100条生产数据进行评测</li>
+                                <li data-lang="brain.recommend.rec3-action2">设置准确率低于92%的告警阈值</li>
+                                <li data-lang="brain.recommend.rec3-action3">每周生成性能趋势报告</li>
                             </ul>
                         </div>
                     </div>
@@ -4029,35 +4029,35 @@ pipeline.add_stage(
 
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">分析详情 (JSON格式)</h3>
+                    <h3 class="card-title" data-lang="brain.json.title">分析详情 (JSON格式)</h3>
                 </div>
                 <div class="code-block">
 {
   <span class="string">"model"</span>: <span class="string">"bert-base-chinese"</span>,
   <span class="string">"version"</span>: <span class="string">"v2.1.0"</span>,
-  <span class="string">"summary"</span>: <span class="string">"模型表现优异，准确率94.2%超过阈值..."</span>,
+  <span class="string">"summary"</span>: <span class="string" data-lang="brain.json.summary">"模型表现优异，准确率94.2%超过阈值..."</span>,
   <span class="string">"severity"</span>: <span class="string">"success"</span>,
   <span class="string">"confidence"</span>: <span class="number">0.87</span>,
   <span class="string">"root_causes"</span>: [
     {
-      <span class="string">"category"</span>: <span class="string">"训练数据质量"</span>,
+      <span class="string">"category"</span>: <span class="string" data-lang="brain.json.category1">"训练数据质量"</span>,
       <span class="string">"status"</span>: <span class="string">"excellent"</span>,
-      <span class="string">"details"</span>: <span class="string">"训练数据分布均衡，样本质量高..."</span>
+      <span class="string">"details"</span>: <span class="string" data-lang="brain.json.details1">"训练数据分布均衡，样本质量高..."</span>
     },
     {
-      <span class="string">"category"</span>: <span class="string">"超参数设置"</span>,
+      <span class="string">"category"</span>: <span class="string" data-lang="brain.json.category2">"超参数设置"</span>,
       <span class="string">"status"</span>: <span class="string">"optimizable"</span>,
-      <span class="string">"details"</span>: <span class="string">"建议尝试更长的训练轮次..."</span>
+      <span class="string">"details"</span>: <span class="string" data-lang="brain.json.details2">"建议尝试更长的训练轮次..."</span>
     }
   ],
   <span class="string">"recommendations"</span>: [
     {
       <span class="string">"priority"</span>: <span class="string">"high"</span>,
-      <span class="string">"title"</span>: <span class="string">"增强意图识别场景"</span>,
+      <span class="string">"title"</span>: <span class="string" data-lang="brain.json.rec-title">"增强意图识别场景"</span>,
       <span class="string">"actions"</span>: [
-        <span class="string">"补充1000+条意图识别样本"</span>,
-        <span class="string">"使用数据增强技术"</span>,
-        <span class="string">"考虑使用对比学习"</span>
+        <span class="string" data-lang="brain.json.action1">"补充1000+条意图识别样本"</span>,
+        <span class="string" data-lang="brain.json.action2">"使用数据增强技术"</span>,
+        <span class="string" data-lang="brain.json.action3">"考虑使用对比学习"</span>
       ],
       <span class="string">"expected_improvement"</span>: <span class="string">"+3-5%"</span>
     }
@@ -4068,17 +4068,17 @@ pipeline.add_stage(
 
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">分析历史</h3>
+                    <h3 class="card-title" data-lang="brain.history.title">分析历史</h3>
                 </div>
                 <table>
                     <thead>
                         <tr>
-                            <th>模型</th>
-                            <th>版本</th>
-                            <th>严重性</th>
-                            <th>置信度</th>
-                            <th>建议数</th>
-                            <th>时间</th>
+                            <th data-lang="brain.history.model">模型</th>
+                            <th data-lang="brain.history.version">版本</th>
+                            <th data-lang="brain.history.severity">严重性</th>
+                            <th data-lang="brain.history.confidence">置信度</th>
+                            <th data-lang="brain.history.recommendations">建议数</th>
+                            <th data-lang="brain.history.time">时间</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -4087,32 +4087,32 @@ pipeline.add_stage(
                             <td>v2.1.0</td>
                             <td><span class="badge success">Success</span></td>
                             <td>87%</td>
-                            <td>3项</td>
-                            <td>刚刚</td>
+                            <td data-lang="brain.history.items3">3项</td>
+                            <td data-lang="time-now">刚刚</td>
                         </tr>
                         <tr>
                             <td><strong>gpt-sentiment</strong></td>
                             <td>v1.5.2</td>
                             <td><span class="badge warning">Warning</span></td>
                             <td>82%</td>
-                            <td>5项</td>
-                            <td>15分钟前</td>
+                            <td data-lang="brain.history.items5">5项</td>
+                            <td data-lang="time-15min">15分钟前</td>
                         </tr>
                         <tr>
                             <td><strong>text-classifier</strong></td>
                             <td>v3.0.1</td>
                             <td><span class="badge success">Success</span></td>
                             <td>91%</td>
-                            <td>2项</td>
-                            <td>1小时前</td>
+                            <td data-lang="brain.history.items2">2项</td>
+                            <td data-lang="time-1hour">1小时前</td>
                         </tr>
                         <tr>
                             <td><strong>roberta-large</strong></td>
                             <td>v2.0.0</td>
                             <td><span class="badge danger">Critical</span></td>
                             <td>93%</td>
-                            <td>7项</td>
-                            <td>2小时前</td>
+                            <td data-lang="brain.history.items7">7项</td>
+                            <td data-lang="time-2hours">2小时前</td>
                         </tr>
                     </tbody>
                 </table>
@@ -4124,7 +4124,7 @@ pipeline.add_stage(
             <h2 style="margin-bottom: 1.5rem; font-size: 1.875rem;" data-lang="enhancements-page-title">🚀 增强功能模块</h2>
 
             <div class="alert alert-success">
-                <strong>✅ 全部完成 + 优化升级</strong> - 12个核心模块 + 3个生产集成 + 仪表板 + Docker，共23,000+行企业级代码
+                <strong data-lang="enh.alert.title">✅ 全部完成 + 优化升级</strong> - <span data-lang="enh.alert.desc">12个核心模块 + 3个生产集成 + 仪表板 + Docker，共23,000+行企业级代码</span>
             </div>
 
             <!-- Enhancement Stats -->
@@ -4133,74 +4133,74 @@ pipeline.add_stage(
                     <div class="stat-header">
                         <div>
                             <div class="stat-value">15/15</div>
-                            <div class="stat-label">全部模块 (12+3集成)</div>
+                            <div class="stat-label" data-lang="enh.stat.all-modules">全部模块 (12+3集成)</div>
                         </div>
                         <div class="stat-icon success">✓</div>
                     </div>
-                    <div class="stat-trend up">100% 完成</div>
+                    <div class="stat-trend up" data-lang="enh.stat.complete">100% 完成</div>
                 </div>
 
                 <div class="stat-card">
                     <div class="stat-header">
                         <div>
                             <div class="stat-value">23K+</div>
-                            <div class="stat-label">代码行数</div>
+                            <div class="stat-label" data-lang="enh.stat.lines-of-code">代码行数</div>
                         </div>
                         <div class="stat-icon primary">📝</div>
                     </div>
-                    <div class="stat-trend up">+34% 企业级质量</div>
+                    <div class="stat-trend up" data-lang="enh.stat.quality">+34% 企业级质量</div>
                 </div>
 
                 <div class="stat-card">
                     <div class="stat-header">
                         <div>
                             <div class="stat-value">347+</div>
-                            <div class="stat-label">API方法</div>
+                            <div class="stat-label" data-lang="enh.stat.api-methods">API方法</div>
                         </div>
                         <div class="stat-icon success">⚡</div>
                     </div>
-                    <div class="stat-trend up">+11% 功能增强</div>
+                    <div class="stat-trend up" data-lang="enh.stat.enhanced">+11% 功能增强</div>
                 </div>
 
                 <div class="stat-card">
                     <div class="stat-header">
                         <div>
                             <div class="stat-value">176</div>
-                            <div class="stat-label">项目文件</div>
+                            <div class="stat-label" data-lang="enh.stat.project-files">项目文件</div>
                         </div>
                         <div class="stat-icon primary">📁</div>
                     </div>
-                    <div class="stat-trend">完整架构</div>
+                    <div class="stat-trend" data-lang="enh.stat.complete-arch">完整架构</div>
                 </div>
             </div>
 
             <!-- Module 1: Report Generation -->
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">📊 模块1: 报告生成 (Report Generation)</h3>
-                    <span class="badge success">已完成</span>
+                    <h3 class="card-title" data-lang="enh.module1.title">📊 模块1: 报告生成 (Report Generation)</h3>
+                    <span class="badge success" data-lang="enh.badge.completed">已完成</span>
                 </div>
                 <div>
-                    <p style="margin-bottom: 1rem; color: var(--gray-700);">
+                    <p style="margin-bottom: 1rem; color: var(--gray-700);" data-lang="enh.module1.desc">
                         专业的评测报告生成系统，支持HTML/Markdown/PDF多格式导出
                     </p>
                     <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
                         <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px;">
-                            <strong>核心功能:</strong>
+                            <strong data-lang="enh.core-features">核心功能:</strong>
                             <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--gray-700);">
-                                <li>HTML报告 (图表支持)</li>
-                                <li>Markdown文档</li>
-                                <li>PDF导出 (优雅降级)</li>
-                                <li>模型对比报告</li>
+                                <li data-lang="enh.module1.feature1">HTML报告 (图表支持)</li>
+                                <li data-lang="enh.module1.feature2">Markdown文档</li>
+                                <li data-lang="enh.module1.feature3">PDF导出 (优雅降级)</li>
+                                <li data-lang="enh.module1.feature4">模型对比报告</li>
                             </ul>
                         </div>
                         <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px;">
-                            <strong>技术亮点:</strong>
+                            <strong data-lang="enh.tech-highlights">技术亮点:</strong>
                             <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--gray-700);">
-                                <li>专业CSS模板</li>
-                                <li>自定义品牌</li>
-                                <li>多语言支持</li>
-                                <li>~1,085行代码</li>
+                                <li data-lang="enh.module1.tech1">专业CSS模板</li>
+                                <li data-lang="enh.module1.tech2">自定义品牌</li>
+                                <li data-lang="enh.module1.tech3">多语言支持</li>
+                                <li data-lang="enh.module1.tech4">~1,085行代码</li>
                             </ul>
                         </div>
                     </div>
@@ -4210,30 +4210,30 @@ pipeline.add_stage(
             <!-- Module 2: Model Comparison -->
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">⚖️ 模块2: 模型对比 (Model Comparison)</h3>
-                    <span class="badge success">已完成</span>
+                    <h3 class="card-title" data-lang="enh.module2.title">⚖️ 模块2: 模型对比 (Model Comparison)</h3>
+                    <span class="badge success" data-lang="enh.badge.completed">已完成</span>
                 </div>
                 <div>
-                    <p style="margin-bottom: 1rem; color: var(--gray-700);">
+                    <p style="margin-bottom: 1rem; color: var(--gray-700);" data-lang="enh.module2.desc">
                         多模型对比评测，Champion/Challenger部署模式
                     </p>
                     <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
                         <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px;">
-                            <strong>核心功能:</strong>
+                            <strong data-lang="enh.core-features">核心功能:</strong>
                             <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--gray-700);">
-                                <li>加权排名</li>
-                                <li>成对比较</li>
-                                <li>Champion/Challenger</li>
-                                <li>晋升阈值管理</li>
+                                <li data-lang="enh.module2.feature1">加权排名</li>
+                                <li data-lang="enh.module2.feature2">成对比较</li>
+                                <li data-lang="enh.module2.feature3">Champion/Challenger</li>
+                                <li data-lang="enh.module2.feature4">晋升阈值管理</li>
                             </ul>
                         </div>
                         <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px;">
-                            <strong>技术亮点:</strong>
+                            <strong data-lang="enh.tech-highlights">技术亮点:</strong>
                             <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--gray-700);">
-                                <li>统计检验</li>
-                                <li>历史追踪</li>
-                                <li>安全部署</li>
-                                <li>~523行代码</li>
+                                <li data-lang="enh.module2.tech1">统计检验</li>
+                                <li data-lang="enh.module2.tech2">历史追踪</li>
+                                <li data-lang="enh.module2.tech3">安全部署</li>
+                                <li data-lang="enh.module2.tech4">~523行代码</li>
                             </ul>
                         </div>
                     </div>
@@ -4243,30 +4243,30 @@ pipeline.add_stage(
             <!-- Module 3: Dataset Management -->
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">💾 模块3: 数据集管理 (Dataset Management)</h3>
-                    <span class="badge success">已完成</span>
+                    <h3 class="card-title" data-lang="enh.module3.title">💾 模块3: 数据集管理 (Dataset Management)</h3>
+                    <span class="badge success" data-lang="enh.badge.completed">已完成</span>
                 </div>
                 <div>
-                    <p style="margin-bottom: 1rem; color: var(--gray-700);">
+                    <p style="margin-bottom: 1rem; color: var(--gray-700);" data-lang="enh.module3.desc">
                         <strong>创新功能:</strong> Git-like版本控制系统，质量分析，11种采样/拆分策略
                     </p>
                     <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
                         <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px;">
-                            <strong>核心功能:</strong>
+                            <strong data-lang="enh.core-features">核心功能:</strong>
                             <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--gray-700);">
-                                <li>版本控制 (checksum, tag, diff)</li>
-                                <li>质量分析 (0-100评分)</li>
-                                <li>4种拆分策略 (含k-fold)</li>
-                                <li>7种采样策略</li>
+                                <li data-lang="enh.module3.feature1">版本控制 (checksum, tag, diff)</li>
+                                <li data-lang="enh.module3.feature2">质量分析 (0-100评分)</li>
+                                <li data-lang="enh.module3.feature3">4种拆分策略 (含k-fold)</li>
+                                <li data-lang="enh.module3.feature4">7种采样策略</li>
                             </ul>
                         </div>
                         <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px;">
-                            <strong>技术亮点:</strong>
+                            <strong data-lang="enh.tech-highlights">技术亮点:</strong>
                             <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--gray-700);">
-                                <li>SHA256完整性校验</li>
-                                <li>Reservoir采样</li>
-                                <li>时序拆分</li>
-                                <li>~1,535行代码</li>
+                                <li data-lang="enh.module3.tech1">SHA256完整性校验</li>
+                                <li data-lang="enh.module3.tech2">Reservoir采样</li>
+                                <li data-lang="enh.module3.tech3">时序拆分</li>
+                                <li data-lang="enh.module3.tech4">~1,535行代码</li>
                             </ul>
                         </div>
                     </div>
@@ -4276,30 +4276,30 @@ pipeline.add_stage(
             <!-- Module 4: Performance Profiling -->
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">⚡ 模块4: 性能分析 (Performance Profiling)</h3>
-                    <span class="badge success">已完成</span>
+                    <h3 class="card-title" data-lang="enh.module4.title">⚡ 模块4: 性能分析 (Performance Profiling)</h3>
+                    <span class="badge success" data-lang="enh.badge.completed">已完成</span>
                 </div>
                 <div>
-                    <p style="margin-bottom: 1rem; color: var(--gray-700);">
+                    <p style="margin-bottom: 1rem; color: var(--gray-700);" data-lang="enh.module4.desc">
                         全方位性能分析，包含延迟、资源、成本、瓶颈检测
                     </p>
                     <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
                         <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px;">
-                            <strong>核心功能:</strong>
+                            <strong data-lang="enh.core-features">核心功能:</strong>
                             <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--gray-700);">
-                                <li>延迟分析 (P50/P95/P99)</li>
-                                <li>CPU/Memory/GPU监控</li>
-                                <li>成本估算 (多GPU类型)</li>
-                                <li>瓶颈识别</li>
+                                <li data-lang="enh.module4.feature1">延迟分析 (P50/P95/P99)</li>
+                                <li data-lang="enh.module4.feature2">CPU/Memory/GPU监控</li>
+                                <li data-lang="enh.module4.feature3">成本估算 (多GPU类型)</li>
+                                <li data-lang="enh.module4.feature4">瓶颈识别</li>
                             </ul>
                         </div>
                         <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px;">
-                            <strong>技术亮点:</strong>
+                            <strong data-lang="enh.tech-highlights">技术亮点:</strong>
                             <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--gray-700);">
-                                <li>Batch优化</li>
-                                <li>部署对比</li>
-                                <li>业务价值导向</li>
-                                <li>~1,500行代码</li>
+                                <li data-lang="enh.module4.tech1">Batch优化</li>
+                                <li data-lang="enh.module4.tech2">部署对比</li>
+                                <li data-lang="enh.module4.tech3">业务价值导向</li>
+                                <li data-lang="enh.module4.tech4">~1,500行代码</li>
                             </ul>
                         </div>
                     </div>
@@ -4309,30 +4309,30 @@ pipeline.add_stage(
             <!-- Module 5: Continuous Evaluation -->
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">🔄 模块5: 持续评测 (Continuous Evaluation)</h3>
-                    <span class="badge success">已完成</span>
+                    <h3 class="card-title" data-lang="enh.module5.title">🔄 模块5: 持续评测 (Continuous Evaluation)</h3>
+                    <span class="badge success" data-lang="enh.badge.completed">已完成</span>
                 </div>
                 <div>
-                    <p style="margin-bottom: 1rem; color: var(--gray-700);">
+                    <p style="margin-bottom: 1rem; color: var(--gray-700);" data-lang="enh.module5.desc">
                         实时监控，漂移检测(PSI/KL散度)，自动告警
                     </p>
                     <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
                         <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px;">
-                            <strong>核心功能:</strong>
+                            <strong data-lang="enh.core-features">核心功能:</strong>
                             <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--gray-700);">
-                                <li>实时监控</li>
-                                <li>数据漂移 (PSI, KL)</li>
-                                <li>模型漂移</li>
-                                <li>自动调度</li>
+                                <li data-lang="enh.module5.feature1">实时监控</li>
+                                <li data-lang="enh.module5.feature2">数据漂移 (PSI, KL)</li>
+                                <li data-lang="enh.module5.feature3">模型漂移</li>
+                                <li data-lang="enh.module5.feature4">自动调度</li>
                             </ul>
                         </div>
                         <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px;">
-                            <strong>技术亮点:</strong>
+                            <strong data-lang="enh.tech-highlights">技术亮点:</strong>
                             <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--gray-700);">
-                                <li>PSI金融标准</li>
-                                <li>多通道告警</li>
-                                <li>异常检测</li>
-                                <li>~1,600行代码</li>
+                                <li data-lang="enh.module5.tech1">PSI金融标准</li>
+                                <li data-lang="enh.module5.tech2">多通道告警</li>
+                                <li data-lang="enh.module5.tech3">异常检测</li>
+                                <li data-lang="enh.module5.tech4">~1,600行代码</li>
                             </ul>
                         </div>
                     </div>
@@ -4342,30 +4342,30 @@ pipeline.add_stage(
             <!-- Module 6: Fairness Detection -->
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">⚖️ 模块6: 公平性检测 (Fairness & Bias Detection)</h3>
-                    <span class="badge success">已完成</span>
+                    <h3 class="card-title" data-lang="enh.module6.title">⚖️ 模块6: 公平性检测 (Fairness & Bias Detection)</h3>
+                    <span class="badge success" data-lang="enh.badge.completed">已完成</span>
                 </div>
                 <div>
-                    <p style="margin-bottom: 1rem; color: var(--gray-700);">
+                    <p style="margin-bottom: 1rem; color: var(--gray-700);" data-lang="enh.module6.desc">
                         6种公平性指标，交叉偏见检测，符合80% rule法律要求
                     </p>
                     <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
                         <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px;">
-                            <strong>核心功能:</strong>
+                            <strong data-lang="enh.core-features">核心功能:</strong>
                             <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--gray-700);">
-                                <li>6种公平性指标 (DPD, DIR等)</li>
-                                <li>交叉偏见分析</li>
-                                <li>80% rule合规</li>
-                                <li>3阶段缓解策略</li>
+                                <li data-lang="enh.module6.feature1">6种公平性指标 (DPD, DIR等)</li>
+                                <li data-lang="enh.module6.feature2">交叉偏见分析</li>
+                                <li data-lang="enh.module6.feature3">80% rule合规</li>
+                                <li data-lang="enh.module6.feature4">3阶段缓解策略</li>
                             </ul>
                         </div>
                         <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px;">
-                            <strong>技术亮点:</strong>
+                            <strong data-lang="enh.tech-highlights">技术亮点:</strong>
                             <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--gray-700);">
-                                <li>严重性分级</li>
-                                <li>阈值调整</li>
-                                <li>HTML报告</li>
-                                <li>~2,120行代码</li>
+                                <li data-lang="enh.module6.tech1">严重性分级</li>
+                                <li data-lang="enh.module6.tech2">阈值调整</li>
+                                <li data-lang="enh.module6.tech3">HTML报告</li>
+                                <li data-lang="enh.module6.tech4">~2,120行代码</li>
                             </ul>
                         </div>
                     </div>
@@ -4375,30 +4375,30 @@ pipeline.add_stage(
             <!-- Module 7: Knowledge Base -->
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">🧠 模块7: 知识库 (Knowledge Base & Few-shot)</h3>
-                    <span class="badge success">已完成</span>
+                    <h3 class="card-title" data-lang="enh.module7.title">🧠 模块7: 知识库 (Knowledge Base & Few-shot)</h3>
+                    <span class="badge success" data-lang="enh.badge.completed">已完成</span>
                 </div>
                 <div>
-                    <p style="margin-bottom: 1rem; color: var(--gray-700);">
+                    <p style="margin-bottom: 1rem; color: var(--gray-700);" data-lang="enh.module7.desc">
                         知识管理，Few-shot学习，提示工程，A/B测试
                     </p>
                     <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
                         <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px;">
-                            <strong>核心功能:</strong>
+                            <strong data-lang="enh.core-features">核心功能:</strong>
                             <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--gray-700);">
-                                <li>知识库CRUD</li>
-                                <li>语义检索</li>
-                                <li>4种Few-shot选择</li>
-                                <li>5种Prompt类型</li>
+                                <li data-lang="enh.module7.feature1">知识库CRUD</li>
+                                <li data-lang="enh.module7.feature2">语义检索</li>
+                                <li data-lang="enh.module7.feature3">4种Few-shot选择</li>
+                                <li data-lang="enh.module7.feature4">5种Prompt类型</li>
                             </ul>
                         </div>
                         <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px;">
-                            <strong>技术亮点:</strong>
+                            <strong data-lang="enh.tech-highlights">技术亮点:</strong>
                             <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--gray-700);">
-                                <li>Embedding相似度</li>
-                                <li>Prompt优化</li>
-                                <li>A/B测试</li>
-                                <li>~2,100行代码</li>
+                                <li data-lang="enh.module7.tech1">Embedding相似度</li>
+                                <li data-lang="enh.module7.tech2">Prompt优化</li>
+                                <li data-lang="enh.module7.tech3">A/B测试</li>
+                                <li data-lang="enh.module7.tech4">~2,100行代码</li>
                             </ul>
                         </div>
                     </div>
@@ -4408,35 +4408,35 @@ pipeline.add_stage(
             <!-- Module 8: Explainability (NEW!) -->
             <div class="card" style="border: 2px solid var(--success);">
                 <div class="card-header">
-                    <h3 class="card-title">🔍 模块8: 可解释性 (Explainability) 🆕</h3>
-                    <span class="badge success">已完成</span>
+                    <h3 class="card-title" data-lang="enh.module8.title">🔍 模块8: 可解释性 (Explainability) 🆕</h3>
+                    <span class="badge success" data-lang="enh.badge.completed">已完成</span>
                 </div>
                 <div>
-                    <p style="margin-bottom: 1rem; color: var(--gray-700);">
+                    <p style="margin-bottom: 1rem; color: var(--gray-700);" data-lang="enh.module8.desc">
                         <strong>合规要求:</strong> SHAP/LIME模型解释，符合EU AI Act、FDA医疗器械、金融监管要求
                     </p>
                     <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
                         <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px;">
-                            <strong>核心功能:</strong>
+                            <strong data-lang="enh.core-features">核心功能:</strong>
                             <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--gray-700);">
-                                <li>SHAP (7种explainer类型)</li>
-                                <li>LIME (局部近似)</li>
-                                <li>4种特征重要性方法</li>
-                                <li>反事实建议</li>
+                                <li data-lang="enh.module8.feature1">SHAP (7种explainer类型)</li>
+                                <li data-lang="enh.module8.feature2">LIME (局部近似)</li>
+                                <li data-lang="enh.module8.feature3">4种特征重要性方法</li>
+                                <li data-lang="enh.module8.feature4">反事实建议</li>
                             </ul>
                         </div>
                         <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px;">
-                            <strong>技术亮点:</strong>
+                            <strong data-lang="enh.tech-highlights">技术亮点:</strong>
                             <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--gray-700);">
-                                <li>自动explainer选择</li>
-                                <li>Shapley值 (博弈论)</li>
-                                <li>合规报告 (HTML/Text)</li>
-                                <li>~2,000行代码</li>
+                                <li data-lang="enh.module8.tech1">自动explainer选择</li>
+                                <li data-lang="enh.module8.tech2">Shapley值 (博弈论)</li>
+                                <li data-lang="enh.module8.tech3">合规报告 (HTML/Text)</li>
+                                <li data-lang="enh.module8.tech4">~2,000行代码</li>
                             </ul>
                         </div>
                     </div>
                     <div style="margin-top: 1rem; padding: 0.75rem; background: #e6f7ff; border-left: 4px solid var(--primary); border-radius: 4px;">
-                        <strong>监管合规:</strong> EU AI Act (高风险系统可解释性)、FDA医疗器械算法透明度、金融服务决策解释
+                        <strong data-lang="enh.module8.compliance">监管合规:</strong> <span data-lang="enh.module8.compliance-desc">EU AI Act (高风险系统可解释性)、FDA医疗器械算法透明度、金融服务决策解释</span>
                     </div>
                 </div>
             </div>
@@ -4444,52 +4444,52 @@ pipeline.add_stage(
             <!-- V2.0 New Features -->
             <div class="card" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; margin-top: 2rem;">
                 <div style="padding: 2rem;">
-                    <h3 style="font-size: 1.75rem; margin-bottom: 1rem;">🚀 v2.0 新增功能</h3>
-                    <p style="opacity: 0.95; margin-bottom: 1.5rem;">企业级生产优化与功能增强</p>
+                    <h3 style="font-size: 1.75rem; margin-bottom: 1rem;" data-lang="enh.v2.title">🚀 v2.0 新增功能</h3>
+                    <p style="opacity: 0.95; margin-bottom: 1.5rem;" data-lang="enh.v2.subtitle">企业级生产优化与功能增强</p>
                 </div>
             </div>
 
             <!-- Production Integrations -->
             <div class="card" style="border: 2px solid #10b981;">
                 <div class="card-header">
-                    <h3 class="card-title">⚙️ 生产级集成</h3>
-                    <span class="badge success">已完成</span>
+                    <h3 class="card-title" data-lang="enh.prod-integration.title">⚙️ 生产级集成</h3>
+                    <span class="badge success" data-lang="enh.badge.completed">已完成</span>
                 </div>
                 <div>
-                    <p style="margin-bottom: 1rem; color: var(--gray-700);">
+                    <p style="margin-bottom: 1rem; color: var(--gray-700);" data-lang="enh.prod-integration.desc">
                         <strong>企业级库集成:</strong> 智能Fallback机制，100% API兼容，零侵入设计
                     </p>
                     <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
                         <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px;">
-                            <strong>🛡️ ART集成</strong>
+                            <strong data-lang="enh.art.title">🛡️ ART集成</strong>
                             <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--gray-700); font-size: 0.9rem;">
-                                <li>40+ 攻击方法 (vs 3)</li>
-                                <li>2-3x 性能提升</li>
-                                <li>GPU加速支持</li>
-                                <li>智能Fallback</li>
+                                <li data-lang="enh.art.feature1">40+ 攻击方法 (vs 3)</li>
+                                <li data-lang="enh.art.feature2">2-3x 性能提升</li>
+                                <li data-lang="enh.art.feature3">GPU加速支持</li>
+                                <li data-lang="enh.art.feature4">智能Fallback</li>
                             </ul>
                         </div>
                         <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px;">
-                            <strong>📊 Great Expectations</strong>
+                            <strong data-lang="enh.ge.title">📊 Great Expectations</strong>
                             <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--gray-700); font-size: 0.9rem;">
-                                <li>50+ 数据期望 (vs 5)</li>
-                                <li>专业HTML报告</li>
-                                <li>自动化验证</li>
-                                <li>Pipeline集成</li>
+                                <li data-lang="enh.ge.feature1">50+ 数据期望 (vs 5)</li>
+                                <li data-lang="enh.ge.feature2">专业HTML报告</li>
+                                <li data-lang="enh.ge.feature3">自动化验证</li>
+                                <li data-lang="enh.ge.feature4">Pipeline集成</li>
                             </ul>
                         </div>
                         <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px;">
-                            <strong>📈 statsmodels</strong>
+                            <strong data-lang="enh.statsmodels.title">📈 statsmodels</strong>
                             <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--gray-700); font-size: 0.9rem;">
-                                <li>100+ 统计方法 (vs 20+)</li>
-                                <li>贝叶斯A/B测试</li>
-                                <li>功效分析</li>
-                                <li>序贯检验</li>
+                                <li data-lang="enh.statsmodels.feature1">100+ 统计方法 (vs 20+)</li>
+                                <li data-lang="enh.statsmodels.feature2">贝叶斯A/B测试</li>
+                                <li data-lang="enh.statsmodels.feature3">功效分析</li>
+                                <li data-lang="enh.statsmodels.feature4">序贯检验</li>
                             </ul>
                         </div>
                     </div>
                     <div style="margin-top: 1rem; padding: 0.75rem; background: #f0fdf4; border-left: 4px solid #10b981; border-radius: 4px;">
-                        <strong>功能提升:</strong> 对抗攻击 13x | 数据期望 10x | 统计方法 5x | 性能 2-3x
+                        <strong data-lang="enh.prod-integration.improvements">功能提升:</strong> <span data-lang="enh.prod-integration.improvements-detail">对抗攻击 13x | 数据期望 10x | 统计方法 5x | 性能 2-3x</span>
                     </div>
                 </div>
             </div>
@@ -4497,35 +4497,35 @@ pipeline.add_stage(
             <!-- Interactive Dashboard -->
             <div class="card" style="border: 2px solid #3b82f6;">
                 <div class="card-header">
-                    <h3 class="card-title">🎨 交互式仪表板</h3>
-                    <span class="badge success">已完成</span>
+                    <h3 class="card-title" data-lang="enh.dashboard.title">🎨 交互式仪表板</h3>
+                    <span class="badge success" data-lang="enh.badge.completed">已完成</span>
                 </div>
                 <div>
-                    <p style="margin-bottom: 1rem; color: var(--gray-700);">
+                    <p style="margin-bottom: 1rem; color: var(--gray-700);" data-lang="enh.dashboard.desc">
                         <strong>Streamlit Web界面:</strong> 9个主页面+4个高级功能，17个交互演示，零代码体验
                     </p>
                     <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
                         <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px;">
-                            <strong>核心页面:</strong>
+                            <strong data-lang="enh.dashboard.core-pages">核心页面:</strong>
                             <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--gray-700);">
-                                <li>🏠 主页 - 系统概览</li>
-                                <li>🔍 可解释性 - SHAP/LIME演示</li>
-                                <li>🛡️ 对抗鲁棒性 - 攻击测试</li>
-                                <li>📊 数据质量 - 质量分析</li>
+                                <li data-lang="enh.dashboard.page1">🏠 主页 - 系统概览</li>
+                                <li data-lang="enh.dashboard.page2">🔍 可解释性 - SHAP/LIME演示</li>
+                                <li data-lang="enh.dashboard.page3">🛡️ 对抗鲁棒性 - 攻击测试</li>
+                                <li data-lang="enh.dashboard.page4">📊 数据质量 - 质量分析</li>
                             </ul>
                         </div>
                         <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px;">
-                            <strong>更多功能:</strong>
+                            <strong data-lang="enh.dashboard.more-features">更多功能:</strong>
                             <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--gray-700);">
-                                <li>📈 A/B测试 - 统计比较</li>
-                                <li>📝 模型卡片 - 文档生成</li>
-                                <li>⚙️ 生产集成 - 库状态</li>
-                                <li>💻 完整代码示例</li>
+                                <li data-lang="enh.dashboard.feature1">📈 A/B测试 - 统计比较</li>
+                                <li data-lang="enh.dashboard.feature2">📝 模型卡片 - 文档生成</li>
+                                <li data-lang="enh.dashboard.feature3">⚙️ 生产集成 - 库状态</li>
+                                <li data-lang="enh.dashboard.feature4">💻 完整代码示例</li>
                             </ul>
                         </div>
                     </div>
                     <div style="margin-top: 1rem; padding: 0.75rem; background: #eff6ff; border-left: 4px solid #3b82f6; border-radius: 4px;">
-                        <strong>使用:</strong> <code>streamlit run aeva/dashboard/app.py</code> 访问 http://localhost:8501
+                        <strong data-lang="enh.dashboard.usage">使用:</strong> <code>streamlit run aeva/dashboard/app.py</code> <span data-lang="enh.dashboard.access">访问 http://localhost:8501</span>
                     </div>
                 </div>
             </div>
@@ -4533,35 +4533,35 @@ pipeline.add_stage(
             <!-- Docker Containerization -->
             <div class="card" style="border: 2px solid #8b5cf6;">
                 <div class="card-header">
-                    <h3 class="card-title">🐳 Docker容器化</h3>
-                    <span class="badge success">已完成</span>
+                    <h3 class="card-title" data-lang="enh.docker.title">🐳 Docker容器化</h3>
+                    <span class="badge success" data-lang="enh.badge.completed">已完成</span>
                 </div>
                 <div>
-                    <p style="margin-bottom: 1rem; color: var(--gray-700);">
+                    <p style="margin-bottom: 1rem; color: var(--gray-700);" data-lang="enh.docker.desc">
                         <strong>完整Docker支持:</strong> 多阶段构建，Compose编排，企业级部署
                     </p>
                     <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
                         <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px;">
-                            <strong>镜像配置:</strong>
+                            <strong data-lang="enh.docker.image-config">镜像配置:</strong>
                             <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--gray-700);">
-                                <li>生产版 - 全功能 (~2GB)</li>
-                                <li>基础版 - 快速轻量 (~800MB)</li>
-                                <li>多阶段优化 (33%减小)</li>
-                                <li>健康检查支持</li>
+                                <li data-lang="enh.docker.feature1">生产版 - 全功能 (~2GB)</li>
+                                <li data-lang="enh.docker.feature2">基础版 - 快速轻量 (~800MB)</li>
+                                <li data-lang="enh.docker.feature3">多阶段优化 (33%减小)</li>
+                                <li data-lang="enh.docker.feature4">健康检查支持</li>
                             </ul>
                         </div>
                         <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px;">
-                            <strong>编排功能:</strong>
+                            <strong data-lang="enh.docker.orchestration">编排功能:</strong>
                             <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--gray-700);">
-                                <li>Docker Compose (4服务)</li>
-                                <li>智能入口脚本 (8命令)</li>
-                                <li>数据持久化</li>
-                                <li>网络隔离</li>
+                                <li data-lang="enh.docker.orch1">Docker Compose (4服务)</li>
+                                <li data-lang="enh.docker.orch2">智能入口脚本 (8命令)</li>
+                                <li data-lang="enh.docker.orch3">数据持久化</li>
+                                <li data-lang="enh.docker.orch4">网络隔离</li>
                             </ul>
                         </div>
                     </div>
                     <div style="margin-top: 1rem; padding: 0.75rem; background: #f5f3ff; border-left: 4px solid #8b5cf6; border-radius: 4px;">
-                        <strong>快速启动:</strong> <code>docker-compose up aeva-dashboard</code>
+                        <strong data-lang="enh.docker.quick-start">快速启动:</strong> <code>docker-compose up aeva-dashboard</code>
                     </div>
                 </div>
             </div>
@@ -4569,29 +4569,29 @@ pipeline.add_stage(
             <!-- Testing Framework -->
             <div class="card" style="border: 2px solid #f59e0b;">
                 <div class="card-header">
-                    <h3 class="card-title">🧪 测试框架</h3>
-                    <span class="badge success">已完成</span>
+                    <h3 class="card-title" data-lang="enh.testing.title">🧪 测试框架</h3>
+                    <span class="badge success" data-lang="enh.badge.completed">已完成</span>
                 </div>
                 <div>
-                    <p style="margin-bottom: 1rem; color: var(--gray-700);">
+                    <p style="margin-bottom: 1rem; color: var(--gray-700);" data-lang="enh.testing.desc">
                         <strong>完整pytest框架:</strong> 68个测试用例，65%代码覆盖率
                     </p>
                     <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
                         <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px; text-align: center;">
                             <div style="font-size: 1.5rem; font-weight: bold; color: #10b981;">100%</div>
-                            <div style="font-size: 0.875rem; color: var(--gray-700); margin-top: 0.25rem;">模型卡片模块</div>
+                            <div style="font-size: 0.875rem; color: var(--gray-700); margin-top: 0.25rem;" data-lang="enh.testing.module1">模型卡片模块</div>
                         </div>
                         <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px; text-align: center;">
                             <div style="font-size: 1.5rem; font-weight: bold; color: #10b981;">92%</div>
-                            <div style="font-size: 0.875rem; color: var(--gray-700); margin-top: 0.25rem;">对抗鲁棒性</div>
+                            <div style="font-size: 0.875rem; color: var(--gray-700); margin-top: 0.25rem;" data-lang="enh.testing.module2">对抗鲁棒性</div>
                         </div>
                         <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px; text-align: center;">
                             <div style="font-size: 1.5rem; font-weight: bold; color: #10b981;">88%</div>
-                            <div style="font-size: 0.875rem; color: var(--gray-700); margin-top: 0.25rem;">可解释性</div>
+                            <div style="font-size: 0.875rem; color: var(--gray-700); margin-top: 0.25rem;" data-lang="enh.testing.module3">可解释性</div>
                         </div>
                     </div>
                     <div style="margin-top: 1rem; padding: 0.75rem; background: #fffbeb; border-left: 4px solid #f59e0b; border-radius: 4px;">
-                        <strong>测试统计:</strong> 68个用例 | 47通过 (69%) | 65%覆盖 | pytest框架
+                        <strong data-lang="enh.testing.stats">测试统计:</strong> <span data-lang="enh.testing.stats-detail">68个用例 | 47通过 (69%) | 65%覆盖 | pytest框架</span>
                     </div>
                 </div>
             </div>
@@ -4599,39 +4599,39 @@ pipeline.add_stage(
             <!-- Summary -->
             <div class="card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
                 <div style="padding: 2rem;">
-                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">🎉 AEVA v2.0 完成总结</h3>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem;" data-lang="enh.summary.title">🎉 AEVA v2.0 完成总结</h3>
                     <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 1.5rem;">
                         <div style="text-align: center;">
                             <div style="font-size: 2rem; font-weight: bold;">100%</div>
-                            <div style="opacity: 0.9;">全部任务完成 (6/6)</div>
+                            <div style="opacity: 0.9;" data-lang="enh.summary.stat1">全部任务完成 (6/6)</div>
                         </div>
                         <div style="text-align: center;">
                             <div style="font-size: 2rem; font-weight: bold;">23,000+</div>
-                            <div style="opacity: 0.9;">代码行数 (+34%)</div>
+                            <div style="opacity: 0.9;" data-lang="enh.summary.stat2">代码行数 (+34%)</div>
                         </div>
                         <div style="text-align: center;">
                             <div style="font-size: 2rem; font-weight: bold;">347+</div>
-                            <div style="opacity: 0.9;">API方法 (+11%)</div>
+                            <div style="opacity: 0.9;" data-lang="enh.summary.stat3">API方法 (+11%)</div>
                         </div>
                         <div style="text-align: center;">
                             <div style="font-size: 2rem; font-weight: bold;">15/15</div>
-                            <div style="opacity: 0.9;">模块 (12+3集成)</div>
+                            <div style="opacity: 0.9;" data-lang="enh.summary.stat4">模块 (12+3集成)</div>
                         </div>
                     </div>
                     <div style="margin-top: 2rem; padding: 1rem; background: rgba(255,255,255,0.1); border-radius: 8px;">
-                        <strong>🚀 v2.0 新增亮点:</strong>
+                        <strong data-lang="enh.summary.highlights">🚀 v2.0 新增亮点:</strong>
                         <ul style="margin-top: 0.5rem; padding-left: 1.5rem;">
-                            <li><strong>生产级集成</strong> - ART (40+攻击), GE (50+期望), statsmodels (100+方法)</li>
-                            <li><strong>交互式仪表板</strong> - Streamlit界面，7页面，16个演示</li>
-                            <li><strong>Docker容器化</strong> - 多阶段构建，Compose编排，企业就绪</li>
-                            <li><strong>完整测试</strong> - 68测试用例，65%覆盖率，pytest框架</li>
-                            <li><strong>性能优化</strong> - 2-3x速度提升，智能Fallback机制</li>
-                            <li><strong>企业成熟度</strong> - 95%生产就绪，28+文档，完整合规</li>
+                            <li data-lang="enh.summary.highlight1"><strong>生产级集成</strong> - ART (40+攻击), GE (50+期望), statsmodels (100+方法)</li>
+                            <li data-lang="enh.summary.highlight2"><strong>交互式仪表板</strong> - Streamlit界面，7页面，16个演示</li>
+                            <li data-lang="enh.summary.highlight3"><strong>Docker容器化</strong> - 多阶段构建，Compose编排，企业就绪</li>
+                            <li data-lang="enh.summary.highlight4"><strong>完整测试</strong> - 68测试用例，65%覆盖率，pytest框架</li>
+                            <li data-lang="enh.summary.highlight5"><strong>性能优化</strong> - 2-3x速度提升，智能Fallback机制</li>
+                            <li data-lang="enh.summary.highlight6"><strong>企业成熟度</strong> - 95%生产就绪，28+文档，完整合规</li>
                         </ul>
                     </div>
                     <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(16, 185, 129, 0.2); border-radius: 8px; border-left: 4px solid #10b981;">
-                        <strong>✅ 项目状态: ENTERPRISE READY</strong><br>
-                        <small style="opacity: 0.9;">完成日期: 2026-04-12 | 版本: v2.0 Complete</small>
+                        <strong data-lang="enh.summary.status">✅ 项目状态: ENTERPRISE READY</strong><br>
+                        <small style="opacity: 0.9;" data-lang="enh.summary.completion">完成日期: 2026-04-12 | 版本: v2.0 Complete</small>
                     </div>
                 </div>
             </div>
@@ -5481,9 +5481,362 @@ pipeline.add_stage(
                 'enhancements.module11.desc': '0-100评分、多维度指标、缺失/重复检测',
                 'enhancements.module12.title': '12. A/B测试 🆕',
                 'enhancements.module12.desc': 'T-test/Chi-square、Cohen\'s d、统计显著性判定',
+
+                // Enhancement Page - New translations
+                'enh.alert.title': '✅ 全部完成 + 优化升级',
+                'enh.alert.desc': '12个核心模块 + 3个生产集成 + 仪表板 + Docker，共23,000+行企业级代码',
+                'enh.stat.all-modules': '全部模块 (12+3集成)',
+                'enh.stat.complete': '100% 完成',
+                'enh.stat.lines-of-code': '代码行数',
+                'enh.stat.quality': '+34% 企业级质量',
+                'enh.stat.api-methods': 'API方法',
+                'enh.stat.enhanced': '+11% 功能增强',
+                'enh.stat.project-files': '项目文件',
+                'enh.stat.complete-arch': '完整架构',
+                'enh.badge.completed': '已完成',
+                'enh.core-features': '核心功能:',
+                'enh.tech-highlights': '技术亮点:',
+
+                // Module 1
+                'enh.module1.title': '📊 模块1: 报告生成 (Report Generation)',
+                'enh.module1.desc': '专业的评测报告生成系统，支持HTML/Markdown/PDF多格式导出',
+                'enh.module1.feature1': 'HTML报告 (图表支持)',
+                'enh.module1.feature2': 'Markdown文档',
+                'enh.module1.feature3': 'PDF导出 (优雅降级)',
+                'enh.module1.feature4': '模型对比报告',
+                'enh.module1.tech1': '专业CSS模板',
+                'enh.module1.tech2': '自定义品牌',
+                'enh.module1.tech3': '多语言支持',
+                'enh.module1.tech4': '~1,085行代码',
+
+                // Module 2
+                'enh.module2.title': '⚖️ 模块2: 模型对比 (Model Comparison)',
+                'enh.module2.desc': '多模型对比评测，Champion/Challenger部署模式',
+                'enh.module2.feature1': '加权排名',
+                'enh.module2.feature2': '成对比较',
+                'enh.module2.feature3': 'Champion/Challenger',
+                'enh.module2.feature4': '晋升阈值管理',
+                'enh.module2.tech1': '统计检验',
+                'enh.module2.tech2': '历史追踪',
+                'enh.module2.tech3': '安全部署',
+                'enh.module2.tech4': '~523行代码',
+
+                // Module 3
+                'enh.module3.title': '💾 模块3: 数据集管理 (Dataset Management)',
+                'enh.module3.desc': '<strong>创新功能:</strong> Git-like版本控制系统，质量分析，11种采样/拆分策略',
+                'enh.module3.feature1': '版本控制 (checksum, tag, diff)',
+                'enh.module3.feature2': '质量分析 (0-100评分)',
+                'enh.module3.feature3': '4种拆分策略 (含k-fold)',
+                'enh.module3.feature4': '7种采样策略',
+                'enh.module3.tech1': 'SHA256完整性校验',
+                'enh.module3.tech2': 'Reservoir采样',
+                'enh.module3.tech3': '时序拆分',
+                'enh.module3.tech4': '~1,535行代码',
+
+                // Module 4
+                'enh.module4.title': '⚡ 模块4: 性能分析 (Performance Profiling)',
+                'enh.module4.desc': '全方位性能分析，包含延迟、资源、成本、瓶颈检测',
+                'enh.module4.feature1': '延迟分析 (P50/P95/P99)',
+                'enh.module4.feature2': 'CPU/Memory/GPU监控',
+                'enh.module4.feature3': '成本估算 (多GPU类型)',
+                'enh.module4.feature4': '瓶颈识别',
+                'enh.module4.tech1': 'Batch优化',
+                'enh.module4.tech2': '部署对比',
+                'enh.module4.tech3': '业务价值导向',
+                'enh.module4.tech4': '~1,500行代码',
+
+                // Module 5
+                'enh.module5.title': '🔄 模块5: 持续评测 (Continuous Evaluation)',
+                'enh.module5.desc': '实时监控，漂移检测(PSI/KL散度)，自动告警',
+                'enh.module5.feature1': '实时监控',
+                'enh.module5.feature2': '数据漂移 (PSI, KL)',
+                'enh.module5.feature3': '模型漂移',
+                'enh.module5.feature4': '自动调度',
+                'enh.module5.tech1': 'PSI金融标准',
+                'enh.module5.tech2': '多通道告警',
+                'enh.module5.tech3': '异常检测',
+                'enh.module5.tech4': '~1,600行代码',
+
+                // Module 6
+                'enh.module6.title': '⚖️ 模块6: 公平性检测 (Fairness & Bias Detection)',
+                'enh.module6.desc': '6种公平性指标，交叉偏见检测，符合80% rule法律要求',
+                'enh.module6.feature1': '6种公平性指标 (DPD, DIR等)',
+                'enh.module6.feature2': '交叉偏见分析',
+                'enh.module6.feature3': '80% rule合规',
+                'enh.module6.feature4': '3阶段缓解策略',
+                'enh.module6.tech1': '严重性分级',
+                'enh.module6.tech2': '阈值调整',
+                'enh.module6.tech3': 'HTML报告',
+                'enh.module6.tech4': '~2,120行代码',
+
+                // Module 7
+                'enh.module7.title': '🧠 模块7: 知识库 (Knowledge Base & Few-shot)',
+                'enh.module7.desc': '知识管理，Few-shot学习，提示工程，A/B测试',
+                'enh.module7.feature1': '知识库CRUD',
+                'enh.module7.feature2': '语义检索',
+                'enh.module7.feature3': '4种Few-shot选择',
+                'enh.module7.feature4': '5种Prompt类型',
+                'enh.module7.tech1': 'Embedding相似度',
+                'enh.module7.tech2': 'Prompt优化',
+                'enh.module7.tech3': 'A/B测试',
+                'enh.module7.tech4': '~2,100行代码',
+
+                // Module 8
+                'enh.module8.title': '🔍 模块8: 可解释性 (Explainability) 🆕',
+                'enh.module8.desc': '<strong>合规要求:</strong> SHAP/LIME模型解释，符合EU AI Act、FDA医疗器械、金融监管要求',
+                'enh.module8.feature1': 'SHAP (7种explainer类型)',
+                'enh.module8.feature2': 'LIME (局部近似)',
+                'enh.module8.feature3': '4种特征重要性方法',
+                'enh.module8.feature4': '反事实建议',
+                'enh.module8.tech1': '自动explainer选择',
+                'enh.module8.tech2': 'Shapley值 (博弈论)',
+                'enh.module8.tech3': '合规报告 (HTML/Text)',
+                'enh.module8.tech4': '~2,000行代码',
+                'enh.module8.compliance': '监管合规:',
+                'enh.module8.compliance-desc': 'EU AI Act (高风险系统可解释性)、FDA医疗器械算法透明度、金融服务决策解释',
+
+                // V2.0 & Production Integration
+                'enh.v2.title': '🚀 v2.0 新增功能',
+                'enh.v2.subtitle': '企业级生产优化与功能增强',
+                'enh.prod-integration.title': '⚙️ 生产级集成',
+                'enh.prod-integration.desc': '<strong>企业级库集成:</strong> 智能Fallback机制，100% API兼容，零侵入设计',
+                'enh.art.title': '🛡️ ART集成',
+                'enh.art.feature1': '40+ 攻击方法 (vs 3)',
+                'enh.art.feature2': '2-3x 性能提升',
+                'enh.art.feature3': 'GPU加速支持',
+                'enh.art.feature4': '智能Fallback',
+                'enh.ge.title': '📊 Great Expectations',
+                'enh.ge.feature1': '50+ 数据期望 (vs 5)',
+                'enh.ge.feature2': '专业HTML报告',
+                'enh.ge.feature3': '自动化验证',
+                'enh.ge.feature4': 'Pipeline集成',
+                'enh.statsmodels.title': '📈 statsmodels',
+                'enh.statsmodels.feature1': '100+ 统计方法 (vs 20+)',
+                'enh.statsmodels.feature2': '贝叶斯A/B测试',
+                'enh.statsmodels.feature3': '功效分析',
+                'enh.statsmodels.feature4': '序贯检验',
+                'enh.prod-integration.improvements': '功能提升:',
+                'enh.prod-integration.improvements-detail': '对抗攻击 13x | 数据期望 10x | 统计方法 5x | 性能 2-3x',
+
+                // Dashboard
+                'enh.dashboard.title': '🎨 交互式仪表板',
+                'enh.dashboard.desc': '<strong>Streamlit Web界面:</strong> 9个主页面+4个高级功能，17个交互演示，零代码体验',
+                'enh.dashboard.core-pages': '核心页面:',
+                'enh.dashboard.page1': '🏠 主页 - 系统概览',
+                'enh.dashboard.page2': '🔍 可解释性 - SHAP/LIME演示',
+                'enh.dashboard.page3': '🛡️ 对抗鲁棒性 - 攻击测试',
+                'enh.dashboard.page4': '📊 数据质量 - 质量分析',
+                'enh.dashboard.more-features': '更多功能:',
+                'enh.dashboard.feature1': '📈 A/B测试 - 统计比较',
+                'enh.dashboard.feature2': '📝 模型卡片 - 文档生成',
+                'enh.dashboard.feature3': '⚙️ 生产集成 - 库状态',
+                'enh.dashboard.feature4': '💻 完整代码示例',
+                'enh.dashboard.usage': '使用:',
+                'enh.dashboard.access': '访问 http://localhost:8501',
+
+                // Docker
+                'enh.docker.title': '🐳 Docker容器化',
+                'enh.docker.desc': '<strong>完整Docker支持:</strong> 多阶段构建，Compose编排，企业级部署',
+                'enh.docker.image-config': '镜像配置:',
+                'enh.docker.feature1': '生产版 - 全功能 (~2GB)',
+                'enh.docker.feature2': '基础版 - 快速轻量 (~800MB)',
+                'enh.docker.feature3': '多阶段优化 (33%减小)',
+                'enh.docker.feature4': '健康检查支持',
+                'enh.docker.orchestration': '编排功能:',
+                'enh.docker.orch1': 'Docker Compose (4服务)',
+                'enh.docker.orch2': '智能入口脚本 (8命令)',
+                'enh.docker.orch3': '数据持久化',
+                'enh.docker.orch4': '网络隔离',
+                'enh.docker.quick-start': '快速启动:',
+
+                // Testing
+                'enh.testing.title': '🧪 测试框架',
+                'enh.testing.desc': '<strong>完整pytest框架:</strong> 68个测试用例，65%代码覆盖率',
+                'enh.testing.module1': '模型卡片模块',
+                'enh.testing.module2': '对抗鲁棒性',
+                'enh.testing.module3': '可解释性',
+                'enh.testing.stats': '测试统计:',
+                'enh.testing.stats-detail': '68个用例 | 47通过 (69%) | 65%覆盖 | pytest框架',
+
+                // Summary
+                'enh.summary.title': '🎉 AEVA v2.0 完成总结',
+                'enh.summary.stat1': '全部任务完成 (6/6)',
+                'enh.summary.stat2': '代码行数 (+34%)',
+                'enh.summary.stat3': 'API方法 (+11%)',
+                'enh.summary.stat4': '模块 (12+3集成)',
+                'enh.summary.highlights': '🚀 v2.0 新增亮点:',
+                'enh.summary.highlight1': '<strong>生产级集成</strong> - ART (40+攻击), GE (50+期望), statsmodels (100+方法)',
+                'enh.summary.highlight2': '<strong>交互式仪表板</strong> - Streamlit界面，7页面，16个演示',
+                'enh.summary.highlight3': '<strong>Docker容器化</strong> - 多阶段构建，Compose编排，企业就绪',
+                'enh.summary.highlight4': '<strong>完整测试</strong> - 68测试用例，65%覆盖率，pytest框架',
+                'enh.summary.highlight5': '<strong>性能优化</strong> - 2-3x速度提升，智能Fallback机制',
+                'enh.summary.highlight6': '<strong>企业成熟度</strong> - 95%生产就绪，28+文档，完整合规',
+                'enh.summary.status': '✅ 项目状态: ENTERPRISE READY',
+                'enh.summary.completion': '完成日期: 2026-04-12 | 版本: v2.0 Complete',
+
+                // Guard Page
+                'guard.alert.title': '✓ 所有门禁检查通过',
+                'guard.alert.desc': '模型质量符合部署标准',
+                'guard.config.title': '门禁配置',
+                'guard.config.edit-btn': '编辑配置',
+                'guard.table.gate-name': '门禁名称',
+                'guard.table.type': '类型',
+                'guard.table.threshold': '阈值',
+                'guard.table.current-value': '当前值',
+                'guard.table.status': '状态',
+                'guard.table.policy': '策略',
+                'guard.gate.accuracy': '准确率门禁',
+                'guard.gate.performance': '性能门禁',
+                'guard.gate.recall': '召回率门禁',
+                'guard.gate.f1': 'F1分数门禁',
+                'guard.gate.resource': '资源使用门禁',
+                'guard.status.passed': '通过',
+                'guard.history.title': '门禁历史',
+                'guard.history.item1': '通过所有门禁检查',
+                'guard.history.item1-detail': '准确率: 94.2%, 性能: 85ms',
+                'guard.history.item2': '通过门禁（1个警告）',
+                'guard.history.item2-detail': '准确率: 89.7%, 性能: 120ms ⚠️ 略高于建议值',
+                'guard.history.item3': '未通过门禁',
+                'guard.history.item3-detail': '准确率: 82.3% ✗ 低于阈值90%',
+
+                // Bench Page
+                'bench.suite.title': '基准测试套件',
+                'bench.suite.run-btn': '运行新测试',
+                'bench.table.benchmark-name': '基准名称',
+                'bench.table.test-items': '测试项',
+                'bench.table.dataset': '数据集',
+                'bench.table.best-score': '最佳成绩',
+                'bench.table.avg-score': '平均成绩',
+                'bench.table.status': '状态',
+                'bench.benchmark.text-classification': '文本分类基准',
+                'bench.benchmark.sentiment': '情感分析基准',
+                'bench.benchmark.ner': '命名实体识别',
+                'bench.benchmark.performance': '性能基准',
+                'bench.items.12': '12项',
+                'bench.items.8': '8项',
+                'bench.items.15': '15项',
+                'bench.items.10': '10项',
+                'bench.status.active': '活跃',
+                'bench.chart.accuracy': '基准对比 - 准确率',
+                'bench.chart.performance': '性能对比',
+                'bench.details.title': '详细测试结果 - 文本分类基准',
+                'bench.details.test-item': '测试项',
+                'bench.details.accuracy': '准确率',
+                'bench.details.precision': '精确率',
+                'bench.details.recall': '召回率',
+                'bench.details.f1': 'F1',
+                'bench.details.progress': '进度',
+                'bench.test.news': '新闻分类',
+                'bench.test.product': '商品评论',
+                'bench.test.qa': '问答分类',
+                'bench.test.intent': '意图识别',
+
+                // Auto Page
+                'auto.pipeline.title': 'Pipeline可视化',
+                'auto.pipeline.running': '运行中',
+                'auto.stage1.status': 'Stage 1 - 完成',
+                'auto.stage1.name': '数据准备',
+                'auto.stage1.detail': '加载测试数据集 (10,000条) ✓',
+                'auto.stage1.time': '耗时: 2.3s',
+                'auto.stage2.status': 'Stage 2 - 完成',
+                'auto.stage2.name': '模型加载',
+                'auto.stage2.detail': '加载 bert-base-chinese v2.1.0 ✓',
+                'auto.stage2.time': '耗时: 5.8s',
+                'auto.stage3.status': 'Stage 3 - 完成',
+                'auto.stage3.name': '基准测试',
+                'auto.stage3.detail': '执行12项测试 ✓ (准确率: 94.2%)',
+                'auto.stage3.time': '耗时: 45.2s',
+                'auto.stage4.status': 'Stage 4 - 完成',
+                'auto.stage4.name': '质量门禁',
+                'auto.stage4.detail': '通过5项门禁检查 ✓',
+                'auto.stage4.time': '耗时: 1.2s',
+                'auto.stage5.status': 'Stage 5 - 进行中',
+                'auto.stage5.name': '智能分析',
+                'auto.stage5.detail': 'Brain模块分析中...',
+                'auto.config.title': '流水线配置',
+                'auto.config.edit-btn': '编辑',
+                'auto.config.comment1': '# Stage 1: 数据准备',
+                'auto.config.comment2': '# Stage 2: 模型加载',
+                'auto.config.comment3': '# Stage 3: 基准测试',
+                'auto.config.comment4': '# Stage 4: 质量门禁',
+                'auto.config.comment5': '# Stage 5: 智能分析',
+                'auto.history.title': '执行历史',
+                'auto.history.trigger': '触发方式',
+                'auto.history.duration': '耗时',
+                'auto.history.status': '状态',
+                'auto.history.time': '时间',
+                'auto.trigger.manual': '手动',
+                'auto.trigger.scheduled': '定时任务',
+                'auto.status.running': '运行中',
+                'auto.status.success': '成功',
+                'auto.status.failed': '失败',
+
+                // Brain Page
+                'brain.alert.title': '✓ 分析完成',
+                'brain.alert.desc': 'Brain模块已完成评测结果分析',
+                'brain.overview.title': '智能分析概览',
+                'brain.overview.confidence': '置信度: 87%',
+                'brain.overview.summary-title': '分析摘要',
+                'brain.overview.summary': '模型 <strong>bert-base-chinese v2.1.0</strong> 在文本分类基准测试中表现优异，准确率达到 <strong>94.2%</strong>，超过设定阈值4.2个百分点。推理性能为 <strong>85ms</strong>，满足实时应用要求。模型在新闻分类和商品评论场景表现最佳，但在意图识别任务上有轻微下降，建议针对该场景补充训练数据。',
+                'brain.root-cause.title': '根因分析',
+                'brain.root-cause.item1-title': '1. 训练数据质量',
+                'brain.root-cause.item1-status': '优秀',
+                'brain.root-cause.item1-detail': '训练数据分布均衡，样本质量高，覆盖多个领域，有利于模型泛化能力。',
+                'brain.root-cause.item2-title': '2. 模型架构',
+                'brain.root-cause.item2-status': '合适',
+                'brain.root-cause.item2-detail': 'BERT-base架构适合当前任务复杂度，参数量与性能平衡良好。',
+                'brain.root-cause.item3-title': '3. 超参数设置',
+                'brain.root-cause.item3-status': '可优化',
+                'brain.root-cause.item3-detail': '学习率和批次大小设置合理，但建议尝试更长的训练轮次以进一步提升性能。',
+                'brain.root-cause.item4-title': '4. 推理优化',
+                'brain.root-cause.item4-status': '良好',
+                'brain.root-cause.item4-detail': '已启用模型量化和批处理优化，推理速度达标。',
+                'brain.recommend.title': '优化建议',
+                'brain.recommend.rec1-title': '🎯 建议 1: 增强意图识别场景',
+                'brain.recommend.rec1-desc': '针对意图识别任务准确率偏低(88.9%)的问题，建议：',
+                'brain.recommend.rec1-action1': '补充1000+条意图识别样本',
+                'brain.recommend.rec1-action2': '使用数据增强技术扩充训练集',
+                'brain.recommend.rec1-action3': '考虑使用对比学习提升区分度',
+                'brain.recommend.rec1-impact': '预期提升: +3-5%',
+                'brain.recommend.rec2-title': '⚡ 建议 2: 性能进一步优化',
+                'brain.recommend.rec2-desc': '当前推理速度85ms已达标，可进一步优化：',
+                'brain.recommend.rec2-action1': '尝试模型蒸馏减少参数量',
+                'brain.recommend.rec2-action2': '启用TensorRT加速推理',
+                'brain.recommend.rec2-action3': '使用动态批处理提升吞吐',
+                'brain.recommend.rec2-impact': '预期提升: 20-30%',
+                'brain.recommend.rec3-title': '📊 建议 3: 持续监控',
+                'brain.recommend.rec3-desc': '部署后建议建立持续监控机制：',
+                'brain.recommend.rec3-action1': '每日采样100条生产数据进行评测',
+                'brain.recommend.rec3-action2': '设置准确率低于92%的告警阈值',
+                'brain.recommend.rec3-action3': '每周生成性能趋势报告',
+                'brain.json.title': '分析详情 (JSON格式)',
+                'brain.json.summary': '"模型表现优异，准确率94.2%超过阈值..."',
+                'brain.json.category1': '"训练数据质量"',
+                'brain.json.details1': '"训练数据分布均衡，样本质量高..."',
+                'brain.json.category2': '"超参数设置"',
+                'brain.json.details2': '"建议尝试更长的训练轮次..."',
+                'brain.json.rec-title': '"增强意图识别场景"',
+                'brain.json.action1': '"补充1000+条意图识别样本"',
+                'brain.json.action2': '"使用数据增强技术"',
+                'brain.json.action3': '"考虑使用对比学习"',
+                'brain.history.title': '分析历史',
+                'brain.history.model': '模型',
+                'brain.history.version': '版本',
+                'brain.history.severity': '严重性',
+                'brain.history.confidence': '置信度',
+                'brain.history.recommendations': '建议数',
+                'brain.history.time': '时间',
+                'brain.history.items3': '3项',
+                'brain.history.items5': '5项',
+                'brain.history.items2': '2项',
+                'brain.history.items7': '7项',
+
+                // Language toggle
+                'lang-toggle': '中文/EN',
             },
             'en': {
                 // Navigation
+                'lang-toggle': 'EN/中文',
                 'nav-architecture': 'Architecture',
                 'nav-dashboard': 'Dashboard',
                 'nav-interfaces': 'Interfaces ⭐',
@@ -6166,6 +6519,355 @@ pipeline.add_stage(
                 'enhancements.module11.desc': '0-100 scoring, multi-dimensional metrics, missing/duplicate detection',
                 'enhancements.module12.title': '12. A/B Testing 🆕',
                 'enhancements.module12.desc': 'T-test/Chi-square, Cohen\'s d, statistical significance testing',
+
+                // Enhancement Page - New translations
+                'enh.alert.title': '✅ All Complete + Optimization Upgrade',
+                'enh.alert.desc': '12 core modules + 3 production integrations + Dashboard + Docker, 23,000+ lines of enterprise-grade code',
+                'enh.stat.all-modules': 'All Modules (12+3 integrations)',
+                'enh.stat.complete': '100% Complete',
+                'enh.stat.lines-of-code': 'Lines of Code',
+                'enh.stat.quality': '+34% Enterprise Quality',
+                'enh.stat.api-methods': 'API Methods',
+                'enh.stat.enhanced': '+11% Feature Enhancement',
+                'enh.stat.project-files': 'Project Files',
+                'enh.stat.complete-arch': 'Complete Architecture',
+                'enh.badge.completed': 'Completed',
+                'enh.core-features': 'Core Features:',
+                'enh.tech-highlights': 'Technical Highlights:',
+
+                // Module 1
+                'enh.module1.title': '📊 Module 1: Report Generation',
+                'enh.module1.desc': 'Professional evaluation report generation system with HTML/Markdown/PDF multi-format export',
+                'enh.module1.feature1': 'HTML reports (chart support)',
+                'enh.module1.feature2': 'Markdown documentation',
+                'enh.module1.feature3': 'PDF export (graceful degradation)',
+                'enh.module1.feature4': 'Model comparison reports',
+                'enh.module1.tech1': 'Professional CSS templates',
+                'enh.module1.tech2': 'Custom branding',
+                'enh.module1.tech3': 'Multi-language support',
+                'enh.module1.tech4': '~1,085 lines of code',
+
+                // Module 2
+                'enh.module2.title': '⚖️ Module 2: Model Comparison',
+                'enh.module2.desc': 'Multi-model comparison evaluation, Champion/Challenger deployment mode',
+                'enh.module2.feature1': 'Weighted ranking',
+                'enh.module2.feature2': 'Pairwise comparison',
+                'enh.module2.feature3': 'Champion/Challenger',
+                'enh.module2.feature4': 'Promotion threshold management',
+                'enh.module2.tech1': 'Statistical testing',
+                'enh.module2.tech2': 'Historical tracking',
+                'enh.module2.tech3': 'Safe deployment',
+                'enh.module2.tech4': '~523 lines of code',
+
+                // Module 3
+                'enh.module3.title': '💾 Module 3: Dataset Management',
+                'enh.module3.desc': '<strong>Innovative Features:</strong> Git-like version control, quality analysis, 11 sampling/splitting strategies',
+                'enh.module3.feature1': 'Version control (checksum, tag, diff)',
+                'enh.module3.feature2': 'Quality analysis (0-100 score)',
+                'enh.module3.feature3': '4 splitting strategies (incl. k-fold)',
+                'enh.module3.feature4': '7 sampling strategies',
+                'enh.module3.tech1': 'SHA256 integrity check',
+                'enh.module3.tech2': 'Reservoir sampling',
+                'enh.module3.tech3': 'Time-series splitting',
+                'enh.module3.tech4': '~1,535 lines of code',
+
+                // Module 4
+                'enh.module4.title': '⚡ Module 4: Performance Profiling',
+                'enh.module4.desc': 'Comprehensive performance analysis including latency, resources, cost, and bottleneck detection',
+                'enh.module4.feature1': 'Latency analysis (P50/P95/P99)',
+                'enh.module4.feature2': 'CPU/Memory/GPU monitoring',
+                'enh.module4.feature3': 'Cost estimation (multiple GPU types)',
+                'enh.module4.feature4': 'Bottleneck identification',
+                'enh.module4.tech1': 'Batch optimization',
+                'enh.module4.tech2': 'Deployment comparison',
+                'enh.module4.tech3': 'Business value-oriented',
+                'enh.module4.tech4': '~1,500 lines of code',
+
+                // Module 5
+                'enh.module5.title': '🔄 Module 5: Continuous Evaluation',
+                'enh.module5.desc': 'Real-time monitoring, drift detection (PSI/KL divergence), automated alerts',
+                'enh.module5.feature1': 'Real-time monitoring',
+                'enh.module5.feature2': 'Data drift (PSI, KL)',
+                'enh.module5.feature3': 'Model drift',
+                'enh.module5.feature4': 'Automated scheduling',
+                'enh.module5.tech1': 'PSI financial standard',
+                'enh.module5.tech2': 'Multi-channel alerts',
+                'enh.module5.tech3': 'Anomaly detection',
+                'enh.module5.tech4': '~1,600 lines of code',
+
+                // Module 6
+                'enh.module6.title': '⚖️ Module 6: Fairness & Bias Detection',
+                'enh.module6.desc': '6 fairness metrics, intersectional bias detection, 80% rule compliance',
+                'enh.module6.feature1': '6 fairness metrics (DPD, DIR, etc.)',
+                'enh.module6.feature2': 'Intersectional bias analysis',
+                'enh.module6.feature3': '80% rule compliance',
+                'enh.module6.feature4': '3-stage mitigation strategies',
+                'enh.module6.tech1': 'Severity classification',
+                'enh.module6.tech2': 'Threshold adjustment',
+                'enh.module6.tech3': 'HTML reports',
+                'enh.module6.tech4': '~2,120 lines of code',
+
+                // Module 7
+                'enh.module7.title': '🧠 Module 7: Knowledge Base & Few-shot',
+                'enh.module7.desc': 'Knowledge management, few-shot learning, prompt engineering, A/B testing',
+                'enh.module7.feature1': 'Knowledge base CRUD',
+                'enh.module7.feature2': 'Semantic search',
+                'enh.module7.feature3': '4 few-shot selection methods',
+                'enh.module7.feature4': '5 prompt types',
+                'enh.module7.tech1': 'Embedding similarity',
+                'enh.module7.tech2': 'Prompt optimization',
+                'enh.module7.tech3': 'A/B testing',
+                'enh.module7.tech4': '~2,100 lines of code',
+
+                // Module 8
+                'enh.module8.title': '🔍 Module 8: Explainability 🆕',
+                'enh.module8.desc': '<strong>Compliance Requirements:</strong> SHAP/LIME model explanation, compliant with EU AI Act, FDA medical devices, financial regulations',
+                'enh.module8.feature1': 'SHAP (7 explainer types)',
+                'enh.module8.feature2': 'LIME (local approximation)',
+                'enh.module8.feature3': '4 feature importance methods',
+                'enh.module8.feature4': 'Counterfactual recommendations',
+                'enh.module8.tech1': 'Auto explainer selection',
+                'enh.module8.tech2': 'Shapley values (game theory)',
+                'enh.module8.tech3': 'Compliance reports (HTML/Text)',
+                'enh.module8.tech4': '~2,000 lines of code',
+                'enh.module8.compliance': 'Regulatory Compliance:',
+                'enh.module8.compliance-desc': 'EU AI Act (high-risk system explainability), FDA medical device algorithm transparency, financial services decision explanation',
+
+                // V2.0 & Production Integration
+                'enh.v2.title': '🚀 v2.0 New Features',
+                'enh.v2.subtitle': 'Enterprise-grade production optimization and feature enhancement',
+                'enh.prod-integration.title': '⚙️ Production-Grade Integration',
+                'enh.prod-integration.desc': '<strong>Enterprise Library Integration:</strong> Smart fallback mechanism, 100% API compatibility, zero-intrusion design',
+                'enh.art.title': '🛡️ ART Integration',
+                'enh.art.feature1': '40+ attack methods (vs 3)',
+                'enh.art.feature2': '2-3x performance improvement',
+                'enh.art.feature3': 'GPU acceleration support',
+                'enh.art.feature4': 'Smart fallback',
+                'enh.ge.title': '📊 Great Expectations',
+                'enh.ge.feature1': '50+ data expectations (vs 5)',
+                'enh.ge.feature2': 'Professional HTML reports',
+                'enh.ge.feature3': 'Automated validation',
+                'enh.ge.feature4': 'Pipeline integration',
+                'enh.statsmodels.title': '📈 statsmodels',
+                'enh.statsmodels.feature1': '100+ statistical methods (vs 20+)',
+                'enh.statsmodels.feature2': 'Bayesian A/B testing',
+                'enh.statsmodels.feature3': 'Power analysis',
+                'enh.statsmodels.feature4': 'Sequential testing',
+                'enh.prod-integration.improvements': 'Feature Improvements:',
+                'enh.prod-integration.improvements-detail': 'Adversarial attacks 13x | Data expectations 10x | Statistical methods 5x | Performance 2-3x',
+
+                // Dashboard
+                'enh.dashboard.title': '🎨 Interactive Dashboard',
+                'enh.dashboard.desc': '<strong>Streamlit Web Interface:</strong> 9 main pages + 4 advanced features, 17 interactive demos, zero-code experience',
+                'enh.dashboard.core-pages': 'Core Pages:',
+                'enh.dashboard.page1': '🏠 Home - System Overview',
+                'enh.dashboard.page2': '🔍 Explainability - SHAP/LIME Demo',
+                'enh.dashboard.page3': '🛡️ Adversarial Robustness - Attack Testing',
+                'enh.dashboard.page4': '📊 Data Quality - Quality Analysis',
+                'enh.dashboard.more-features': 'More Features:',
+                'enh.dashboard.feature1': '📈 A/B Testing - Statistical Comparison',
+                'enh.dashboard.feature2': '📝 Model Cards - Documentation Generation',
+                'enh.dashboard.feature3': '⚙️ Production Integration - Library Status',
+                'enh.dashboard.feature4': '💻 Complete Code Examples',
+                'enh.dashboard.usage': 'Usage:',
+                'enh.dashboard.access': 'Access at http://localhost:8501',
+
+                // Docker
+                'enh.docker.title': '🐳 Docker Containerization',
+                'enh.docker.desc': '<strong>Complete Docker Support:</strong> Multi-stage builds, Compose orchestration, enterprise deployment',
+                'enh.docker.image-config': 'Image Configuration:',
+                'enh.docker.feature1': 'Production - Full features (~2GB)',
+                'enh.docker.feature2': 'Base - Fast & lightweight (~800MB)',
+                'enh.docker.feature3': 'Multi-stage optimization (33% reduction)',
+                'enh.docker.feature4': 'Health check support',
+                'enh.docker.orchestration': 'Orchestration Features:',
+                'enh.docker.orch1': 'Docker Compose (4 services)',
+                'enh.docker.orch2': 'Smart entrypoint script (8 commands)',
+                'enh.docker.orch3': 'Data persistence',
+                'enh.docker.orch4': 'Network isolation',
+                'enh.docker.quick-start': 'Quick Start:',
+
+                // Testing
+                'enh.testing.title': '🧪 Testing Framework',
+                'enh.testing.desc': '<strong>Complete pytest Framework:</strong> 68 test cases, 65% code coverage',
+                'enh.testing.module1': 'Model Cards Module',
+                'enh.testing.module2': 'Adversarial Robustness',
+                'enh.testing.module3': 'Explainability',
+                'enh.testing.stats': 'Test Statistics:',
+                'enh.testing.stats-detail': '68 cases | 47 passed (69%) | 65% coverage | pytest framework',
+
+                // Summary
+                'enh.summary.title': '🎉 AEVA v2.0 Completion Summary',
+                'enh.summary.stat1': 'All tasks complete (6/6)',
+                'enh.summary.stat2': 'Lines of code (+34%)',
+                'enh.summary.stat3': 'API methods (+11%)',
+                'enh.summary.stat4': 'Modules (12+3 integrations)',
+                'enh.summary.highlights': '🚀 v2.0 New Highlights:',
+                'enh.summary.highlight1': '<strong>Production Integration</strong> - ART (40+ attacks), GE (50+ expectations), statsmodels (100+ methods)',
+                'enh.summary.highlight2': '<strong>Interactive Dashboard</strong> - Streamlit interface, 7 pages, 16 demos',
+                'enh.summary.highlight3': '<strong>Docker Containerization</strong> - Multi-stage builds, Compose orchestration, enterprise-ready',
+                'enh.summary.highlight4': '<strong>Complete Testing</strong> - 68 test cases, 65% coverage, pytest framework',
+                'enh.summary.highlight5': '<strong>Performance Optimization</strong> - 2-3x speed improvement, smart fallback mechanism',
+                'enh.summary.highlight6': '<strong>Enterprise Maturity</strong> - 95% production ready, 28+ docs, full compliance',
+                'enh.summary.status': '✅ Project Status: ENTERPRISE READY',
+                'enh.summary.completion': 'Completion Date: 2026-04-12 | Version: v2.0 Complete',
+
+                // Guard Page
+                'guard.alert.title': '✓ All Gate Checks Passed',
+                'guard.alert.desc': 'Model quality meets deployment standards',
+                'guard.config.title': 'Gate Configuration',
+                'guard.config.edit-btn': 'Edit Config',
+                'guard.table.gate-name': 'Gate Name',
+                'guard.table.type': 'Type',
+                'guard.table.threshold': 'Threshold',
+                'guard.table.current-value': 'Current Value',
+                'guard.table.status': 'Status',
+                'guard.table.policy': 'Policy',
+                'guard.gate.accuracy': 'Accuracy Gate',
+                'guard.gate.performance': 'Performance Gate',
+                'guard.gate.recall': 'Recall Gate',
+                'guard.gate.f1': 'F1 Score Gate',
+                'guard.gate.resource': 'Resource Usage Gate',
+                'guard.status.passed': 'Passed',
+                'guard.history.title': 'Gate History',
+                'guard.history.item1': 'Passed all gate checks',
+                'guard.history.item1-detail': 'Accuracy: 94.2%, Performance: 85ms',
+                'guard.history.item2': 'Passed gates (1 warning)',
+                'guard.history.item2-detail': 'Accuracy: 89.7%, Performance: 120ms ⚠️ Slightly above recommended',
+                'guard.history.item3': 'Failed gates',
+                'guard.history.item3-detail': 'Accuracy: 82.3% ✗ Below threshold 90%',
+
+                // Bench Page
+                'bench.suite.title': 'Benchmark Test Suite',
+                'bench.suite.run-btn': 'Run New Test',
+                'bench.table.benchmark-name': 'Benchmark Name',
+                'bench.table.test-items': 'Test Items',
+                'bench.table.dataset': 'Dataset',
+                'bench.table.best-score': 'Best Score',
+                'bench.table.avg-score': 'Avg Score',
+                'bench.table.status': 'Status',
+                'bench.benchmark.text-classification': 'Text Classification Benchmark',
+                'bench.benchmark.sentiment': 'Sentiment Analysis Benchmark',
+                'bench.benchmark.ner': 'Named Entity Recognition',
+                'bench.benchmark.performance': 'Performance Benchmark',
+                'bench.items.12': '12 items',
+                'bench.items.8': '8 items',
+                'bench.items.15': '15 items',
+                'bench.items.10': '10 items',
+                'bench.status.active': 'Active',
+                'bench.chart.accuracy': 'Benchmark Comparison - Accuracy',
+                'bench.chart.performance': 'Performance Comparison',
+                'bench.details.title': 'Detailed Test Results - Text Classification Benchmark',
+                'bench.details.test-item': 'Test Item',
+                'bench.details.accuracy': 'Accuracy',
+                'bench.details.precision': 'Precision',
+                'bench.details.recall': 'Recall',
+                'bench.details.f1': 'F1',
+                'bench.details.progress': 'Progress',
+                'bench.test.news': 'News Classification',
+                'bench.test.product': 'Product Reviews',
+                'bench.test.qa': 'Q&A Classification',
+                'bench.test.intent': 'Intent Recognition',
+
+                // Auto Page
+                'auto.pipeline.title': 'Pipeline Visualization',
+                'auto.pipeline.running': 'Running',
+                'auto.stage1.status': 'Stage 1 - Complete',
+                'auto.stage1.name': 'Data Preparation',
+                'auto.stage1.detail': 'Loaded test dataset (10,000 records) ✓',
+                'auto.stage1.time': 'Duration: 2.3s',
+                'auto.stage2.status': 'Stage 2 - Complete',
+                'auto.stage2.name': 'Model Loading',
+                'auto.stage2.detail': 'Loaded bert-base-chinese v2.1.0 ✓',
+                'auto.stage2.time': 'Duration: 5.8s',
+                'auto.stage3.status': 'Stage 3 - Complete',
+                'auto.stage3.name': 'Benchmark Testing',
+                'auto.stage3.detail': 'Executed 12 tests ✓ (Accuracy: 94.2%)',
+                'auto.stage3.time': 'Duration: 45.2s',
+                'auto.stage4.status': 'Stage 4 - Complete',
+                'auto.stage4.name': 'Quality Gate',
+                'auto.stage4.detail': 'Passed 5 gate checks ✓',
+                'auto.stage4.time': 'Duration: 1.2s',
+                'auto.stage5.status': 'Stage 5 - In Progress',
+                'auto.stage5.name': 'Smart Analysis',
+                'auto.stage5.detail': 'Brain module analyzing...',
+                'auto.config.title': 'Pipeline Configuration',
+                'auto.config.edit-btn': 'Edit',
+                'auto.config.comment1': '# Stage 1: Data Preparation',
+                'auto.config.comment2': '# Stage 2: Model Loading',
+                'auto.config.comment3': '# Stage 3: Benchmark Testing',
+                'auto.config.comment4': '# Stage 4: Quality Gate',
+                'auto.config.comment5': '# Stage 5: Smart Analysis',
+                'auto.history.title': 'Execution History',
+                'auto.history.trigger': 'Trigger Method',
+                'auto.history.duration': 'Duration',
+                'auto.history.status': 'Status',
+                'auto.history.time': 'Time',
+                'auto.trigger.manual': 'Manual',
+                'auto.trigger.scheduled': 'Scheduled',
+                'auto.status.running': 'Running',
+                'auto.status.success': 'Success',
+                'auto.status.failed': 'Failed',
+
+                // Brain Page
+                'brain.alert.title': '✓ Analysis Complete',
+                'brain.alert.desc': 'Brain module completed evaluation result analysis',
+                'brain.overview.title': 'Smart Analysis Overview',
+                'brain.overview.confidence': 'Confidence: 87%',
+                'brain.overview.summary-title': 'Analysis Summary',
+                'brain.overview.summary': 'Model <strong>bert-base-chinese v2.1.0</strong> performed excellently in text classification benchmark testing, achieving an accuracy of <strong>94.2%</strong>, exceeding the set threshold by 4.2 percentage points. Inference performance is <strong>85ms</strong>, meeting real-time application requirements. The model performs best in news classification and product review scenarios, but shows slight decline in intent recognition tasks. It is recommended to supplement training data for this scenario.',
+                'brain.root-cause.title': 'Root Cause Analysis',
+                'brain.root-cause.item1-title': '1. Training Data Quality',
+                'brain.root-cause.item1-status': 'Excellent',
+                'brain.root-cause.item1-detail': 'Training data is well-balanced, high sample quality, covers multiple domains, beneficial for model generalization.',
+                'brain.root-cause.item2-title': '2. Model Architecture',
+                'brain.root-cause.item2-status': 'Suitable',
+                'brain.root-cause.item2-detail': 'BERT-base architecture is appropriate for current task complexity, good balance between parameters and performance.',
+                'brain.root-cause.item3-title': '3. Hyperparameter Settings',
+                'brain.root-cause.item3-status': 'Optimizable',
+                'brain.root-cause.item3-detail': 'Learning rate and batch size are reasonable, but recommend trying longer training epochs for further performance improvement.',
+                'brain.root-cause.item4-title': '4. Inference Optimization',
+                'brain.root-cause.item4-status': 'Good',
+                'brain.root-cause.item4-detail': 'Model quantization and batch processing optimization enabled, inference speed meets requirements.',
+                'brain.recommend.title': 'Optimization Recommendations',
+                'brain.recommend.rec1-title': '🎯 Recommendation 1: Enhance Intent Recognition Scenario',
+                'brain.recommend.rec1-desc': 'For the low accuracy (88.9%) in intent recognition tasks, recommend:',
+                'brain.recommend.rec1-action1': 'Add 1000+ intent recognition samples',
+                'brain.recommend.rec1-action2': 'Use data augmentation techniques to expand training set',
+                'brain.recommend.rec1-action3': 'Consider using contrastive learning to improve discrimination',
+                'brain.recommend.rec1-impact': 'Expected improvement: +3-5%',
+                'brain.recommend.rec2-title': '⚡ Recommendation 2: Further Performance Optimization',
+                'brain.recommend.rec2-desc': 'Current inference speed of 85ms meets requirements, can be further optimized:',
+                'brain.recommend.rec2-action1': 'Try model distillation to reduce parameters',
+                'brain.recommend.rec2-action2': 'Enable TensorRT to accelerate inference',
+                'brain.recommend.rec2-action3': 'Use dynamic batching to improve throughput',
+                'brain.recommend.rec2-impact': 'Expected improvement: 20-30%',
+                'brain.recommend.rec3-title': '📊 Recommendation 3: Continuous Monitoring',
+                'brain.recommend.rec3-desc': 'Recommend establishing continuous monitoring mechanism after deployment:',
+                'brain.recommend.rec3-action1': 'Sample 100 production data daily for evaluation',
+                'brain.recommend.rec3-action2': 'Set alert threshold for accuracy below 92%',
+                'brain.recommend.rec3-action3': 'Generate weekly performance trend reports',
+                'brain.json.title': 'Analysis Details (JSON Format)',
+                'brain.json.summary': '"Model performs excellently, accuracy 94.2% exceeds threshold..."',
+                'brain.json.category1': '"Training Data Quality"',
+                'brain.json.details1': '"Training data well-balanced, high sample quality..."',
+                'brain.json.category2': '"Hyperparameter Settings"',
+                'brain.json.details2': '"Recommend trying longer training epochs..."',
+                'brain.json.rec-title': '"Enhance Intent Recognition Scenario"',
+                'brain.json.action1': '"Add 1000+ intent recognition samples"',
+                'brain.json.action2': '"Use data augmentation techniques"',
+                'brain.json.action3': '"Consider contrastive learning"',
+                'brain.history.title': 'Analysis History',
+                'brain.history.model': 'Model',
+                'brain.history.version': 'Version',
+                'brain.history.severity': 'Severity',
+                'brain.history.confidence': 'Confidence',
+                'brain.history.recommendations': 'Recommendations',
+                'brain.history.time': 'Time',
+                'brain.history.items3': '3 items',
+                'brain.history.items5': '5 items',
+                'brain.history.items2': '2 items',
+                'brain.history.items7': '7 items',
             }
         };
 
