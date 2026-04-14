@@ -3406,11 +3406,11 @@ k8s/<br>
             <!-- Data Flow -->
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">🔄 典型工作流</h3>
+                    <h3 class="card-title"><span data-lang="workflow.title">🔄 典型工作流</span></h3>
                 </div>
                 <div>
                     <p style="margin-bottom: 1rem; color: var(--gray-700);">
-                        AEVA支持灵活的工作流编排，典型的ML评测流程：
+                        <span data-lang="workflow.intro">AEVA支持灵活的工作流编排，典型的ML评测流程：</span>
                     </p>
 
                     <div style="background: linear-gradient(to right, #667eea, #764ba2); padding: 2rem; border-radius: 8px; color: white;">
@@ -3418,7 +3418,7 @@ k8s/<br>
                             <div style="display: flex; align-items: center; gap: 1rem;">
                                 <div style="background: white; color: #667eea; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">1</div>
                                 <div style="flex: 1;">
-                                    <strong>数据质量检查</strong> → 数据画像、缺失值、重复检测、质量评分
+                                    <span data-lang="workflow.step1"><strong>数据质量检查</strong> → 数据画像、缺失值、重复检测、质量评分</span>
                                 </div>
                             </div>
                             <div style="border-left: 2px dashed rgba(255,255,255,0.3); height: 20px; margin-left: 15px;"></div>
@@ -3426,7 +3426,7 @@ k8s/<br>
                             <div style="display: flex; align-items: center; gap: 1rem;">
                                 <div style="background: white; color: #667eea; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">2</div>
                                 <div style="flex: 1;">
-                                    <strong>模型训练与基准测试</strong> → 性能评估、多模型对比、统计检验
+                                    <span data-lang="workflow.step2"><strong>模型训练与基准测试</strong> → 性能评估、多模型对比、统计检验</span>
                                 </div>
                             </div>
                             <div style="border-left: 2px dashed rgba(255,255,255,0.3); height: 20px; margin-left: 15px;"></div>
@@ -3434,7 +3434,7 @@ k8s/<br>
                             <div style="display: flex; align-items: center; gap: 1rem;">
                                 <div style="background: white; color: #667eea; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">3</div>
                                 <div style="flex: 1;">
-                                    <strong>公平性与可解释性分析</strong> → 偏见检测、SHAP/LIME解释、合规验证
+                                    <span data-lang="workflow.step3"><strong>公平性与可解释性分析</strong> → 偏见检测、SHAP/LIME解释、合规验证</span>
                                 </div>
                             </div>
                             <div style="border-left: 2px dashed rgba(255,255,255,0.3); height: 20px; margin-left: 15px;"></div>
@@ -3442,7 +3442,7 @@ k8s/<br>
                             <div style="display: flex; align-items: center; gap: 1rem;">
                                 <div style="background: white; color: #667eea; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">4</div>
                                 <div style="flex: 1;">
-                                    <strong>性能与鲁棒性测试</strong> → 延迟分析、资源监控、对抗攻击测试
+                                    <span data-lang="workflow.step4"><strong>性能与鲁棒性测试</strong> → 延迟分析、资源监控、对抗攻击测试</span>
                                 </div>
                             </div>
                             <div style="border-left: 2px dashed rgba(255,255,255,0.3); height: 20px; margin-left: 15px;"></div>
@@ -3450,7 +3450,7 @@ k8s/<br>
                             <div style="display: flex; align-items: center; gap: 1rem;">
                                 <div style="background: white; color: #667eea; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">5</div>
                                 <div style="flex: 1;">
-                                    <strong>质量门禁检查</strong> → 自动化阈值验证、通过/拒绝决策
+                                    <span data-lang="workflow.step5"><strong>质量门禁检查</strong> → 自动化阈值验证、通过/拒绝决策</span>
                                 </div>
                             </div>
                             <div style="border-left: 2px dashed rgba(255,255,255,0.3); height: 20px; margin-left: 15px;"></div>
@@ -3458,7 +3458,7 @@ k8s/<br>
                             <div style="display: flex; align-items: center; gap: 1rem;">
                                 <div style="background: white; color: #667eea; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">6</div>
                                 <div style="flex: 1;">
-                                    <strong>生成模型卡片与报告</strong> → 多格式文档、合规材料准备
+                                    <span data-lang="workflow.step6"><strong>生成模型卡片与报告</strong> → 多格式文档、合规材料准备</span>
                                 </div>
                             </div>
                             <div style="border-left: 2px dashed rgba(255,255,255,0.3); height: 20px; margin-left: 15px;"></div>
@@ -3466,7 +3466,7 @@ k8s/<br>
                             <div style="display: flex; align-items: center; gap: 1rem;">
                                 <div style="background: white; color: #667eea; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">7</div>
                                 <div style="flex: 1;">
-                                    <strong>A/B测试与部署决策</strong> → Champion vs Challenger、统计显著性
+                                    <span data-lang="workflow.step7"><strong>A/B测试与部署决策</strong> → Champion vs Challenger、统计显著性</span>
                                 </div>
                             </div>
                             <div style="border-left: 2px dashed rgba(255,255,255,0.3); height: 20px; margin-left: 15px;"></div>
@@ -3474,7 +3474,7 @@ k8s/<br>
                             <div style="display: flex; align-items: center; gap: 1rem;">
                                 <div style="background: white; color: #667eea; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">8</div>
                                 <div style="flex: 1;">
-                                    <strong>持续监控与告警</strong> → 漂移检测、性能追踪、异常告警
+                                    <span data-lang="workflow.step8"><strong>持续监控与告警</strong> → 漂移检测、性能追踪、异常告警</span>
                                 </div>
                             </div>
                         </div>
@@ -5937,6 +5937,18 @@ pipeline.add_stage(
                 'k8s.stats.availability': '可用性',
                 'k8s.stats.status': '<strong style="color: #fef3c7;">✅ 生产就绪</strong> | 文档: <code style="background: rgba(0,0,0,0.2); padding: 0.125rem 0.5rem; border-radius: 4px;">SCALABILITY_ARCHITECTURE.md</code> | 配置: <code style="background: rgba(0,0,0,0.2); padding: 0.125rem 0.5rem; border-radius: 4px;">k8s/</code> | 代码: <code style="background: rgba(0,0,0,0.2); padding: 0.125rem 0.5rem; border-radius: 4px;">aeva/auto/distributed_executor.py</code>',
 
+                // Workflow Section
+                'workflow.title': '🔄 典型工作流',
+                'workflow.intro': 'AEVA支持灵活的工作流编排，典型的ML评测流程：',
+                'workflow.step1': '<strong>数据质量检查</strong> → 数据画像、缺失值、重复检测、质量评分',
+                'workflow.step2': '<strong>模型训练与基准测试</strong> → 性能评估、多模型对比、统计检验',
+                'workflow.step3': '<strong>公平性与可解释性分析</strong> → 偏见检测、SHAP/LIME解释、合规验证',
+                'workflow.step4': '<strong>性能与鲁棒性测试</strong> → 延迟分析、资源监控、对抗攻击测试',
+                'workflow.step5': '<strong>质量门禁检查</strong> → 自动化阈值验证、通过/拒绝决策',
+                'workflow.step6': '<strong>生成模型卡片与报告</strong> → 多格式文档、合规材料准备',
+                'workflow.step7': '<strong>A/B测试与部署决策</strong> → Champion vs Challenger、统计显著性',
+                'workflow.step8': '<strong>持续监控与告警</strong> → 漂移检测、性能追踪、异常告警',
+
                 // Language toggle
                 'lang-toggle': '中文/EN',
             },
@@ -7080,6 +7092,18 @@ pipeline.add_stage(
                 'k8s.stats.qps-boost': 'QPS Boost',
                 'k8s.stats.availability': 'Availability',
                 'k8s.stats.status': '<strong style="color: #fef3c7;">✅ Production Ready</strong> | Docs: <code style="background: rgba(0,0,0,0.2); padding: 0.125rem 0.5rem; border-radius: 4px;">SCALABILITY_ARCHITECTURE.md</code> | Config: <code style="background: rgba(0,0,0,0.2); padding: 0.125rem 0.5rem; border-radius: 4px;">k8s/</code> | Code: <code style="background: rgba(0,0,0,0.2); padding: 0.125rem 0.5rem; border-radius: 4px;">aeva/auto/distributed_executor.py</code>',
+
+                // Workflow Section
+                'workflow.title': '🔄 Typical Workflow',
+                'workflow.intro': 'AEVA supports flexible workflow orchestration, typical ML evaluation process:',
+                'workflow.step1': '<strong>Data Quality Check</strong> → Data profiling, missing values, duplicate detection, quality scoring',
+                'workflow.step2': '<strong>Model Training & Benchmarking</strong> → Performance evaluation, multi-model comparison, statistical testing',
+                'workflow.step3': '<strong>Fairness & Explainability Analysis</strong> → Bias detection, SHAP/LIME explanation, compliance validation',
+                'workflow.step4': '<strong>Performance & Robustness Testing</strong> → Latency analysis, resource monitoring, adversarial attack testing',
+                'workflow.step5': '<strong>Quality Gate Check</strong> → Automated threshold validation, pass/reject decision',
+                'workflow.step6': '<strong>Generate Model Cards & Reports</strong> → Multi-format documentation, compliance materials preparation',
+                'workflow.step7': '<strong>A/B Testing & Deployment Decision</strong> → Champion vs Challenger, statistical significance',
+                'workflow.step8': '<strong>Continuous Monitoring & Alerting</strong> → Drift detection, performance tracking, anomaly alerting',
             }
         };
 
