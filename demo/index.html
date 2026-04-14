@@ -3121,11 +3121,11 @@ overall_score = (<br>
             <!-- Enterprise Scalability & Kubernetes Deployment -->
             <div class="card" style="border: 2px solid #10b981;">
                 <div class="card-header" style="background: linear-gradient(135deg, #059669, #10b981); color: white;">
-                    <h3 class="card-title" style="color: white;">☸️ 企业级可扩展架构 & Kubernetes部署 ⭐ NEW</h3>
+                    <h3 class="card-title" style="color: white;"><span data-lang="k8s.title">☸️ 企业级可扩展架构 & Kubernetes部署 ⭐ NEW</span></h3>
                 </div>
                 <div>
                     <p style="margin-bottom: 1.5rem; color: var(--gray-700); font-size: 1rem;">
-                        <strong style="color: #10b981;">生产就绪</strong>的云原生架构，支持从 <strong>100 QPS</strong> 到 <strong>1000+ QPS</strong> 的水平扩展
+                        <span data-lang="k8s.description"><strong style="color: #10b981;">生产就绪</strong>的云原生架构，支持从 <strong>100 QPS</strong> 到 <strong>1000+ QPS</strong> 的水平扩展</span>
                     </p>
 
                     <!-- Architecture Comparison -->
@@ -3134,17 +3134,17 @@ overall_score = (<br>
                         <div style="padding: 1.5rem; background: #fef3c7; border-radius: 8px; border: 2px solid #f59e0b;">
                             <h4 style="margin: 0 0 1rem 0; color: #d97706; display: flex; align-items: center; gap: 0.5rem;">
                                 <span style="font-size: 1.5rem;">📦</span>
-                                <span>当前架构</span>
+                                <span data-lang="k8s.current.title">当前架构</span>
                             </h4>
                             <div style="font-size: 0.9rem; color: #78350f; line-height: 1.8;">
-                                <div style="margin-bottom: 0.5rem;"><strong>可扩展性:</strong> ⭐⭐⭐☆☆ (3/5)</div>
-                                <div style="margin-bottom: 0.5rem;"><strong>生产就绪:</strong> ⭐⭐☆☆☆ (2/5)</div>
+                                <div style="margin-bottom: 0.5rem;"><strong data-lang="k8s.current.scalability">可扩展性:</strong> ⭐⭐⭐☆☆ (3/5)</div>
+                                <div style="margin-bottom: 0.5rem;"><strong data-lang="k8s.current.production">生产就绪:</strong> ⭐⭐☆☆☆ (2/5)</div>
                                 <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #fbbf24;">
-                                    ✅ Docker容器化<br>
-                                    ✅ 模块化设计<br>
-                                    ⚠️ 单机执行 (~100 QPS)<br>
-                                    ⚠️ 无自动扩缩容<br>
-                                    ⚠️ 缺少监控告警
+                                    <span data-lang="k8s.current.feature1">✅ Docker容器化</span><br>
+                                    <span data-lang="k8s.current.feature2">✅ 模块化设计</span><br>
+                                    <span data-lang="k8s.current.feature3">⚠️ 单机执行 (~100 QPS)</span><br>
+                                    <span data-lang="k8s.current.feature4">⚠️ 无自动扩缩容</span><br>
+                                    <span data-lang="k8s.current.feature5">⚠️ 缺少监控告警</span>
                                 </div>
                             </div>
                         </div>
@@ -3153,17 +3153,17 @@ overall_score = (<br>
                         <div style="padding: 1.5rem; background: #d1fae5; border-radius: 8px; border: 2px solid #10b981;">
                             <h4 style="margin: 0 0 1rem 0; color: #059669; display: flex; align-items: center; gap: 0.5rem;">
                                 <span style="font-size: 1.5rem;">☸️</span>
-                                <span>目标架构 (已实现)</span>
+                                <span data-lang="k8s.target.title">目标架构 (已实现)</span>
                             </h4>
                             <div style="font-size: 0.9rem; color: #064e3b; line-height: 1.8;">
-                                <div style="margin-bottom: 0.5rem;"><strong>可扩展性:</strong> ⭐⭐⭐⭐⭐ (5/5)</div>
-                                <div style="margin-bottom: 0.5rem;"><strong>生产就绪:</strong> ⭐⭐⭐⭐⭐ (5/5)</div>
+                                <div style="margin-bottom: 0.5rem;"><strong data-lang="k8s.target.scalability">可扩展性:</strong> ⭐⭐⭐⭐⭐ (5/5)</div>
+                                <div style="margin-bottom: 0.5rem;"><strong data-lang="k8s.target.production">生产就绪:</strong> ⭐⭐⭐⭐⭐ (5/5)</div>
                                 <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #34d399;">
-                                    ✅ Kubernetes云原生<br>
-                                    ✅ 分布式任务队列 (Celery)<br>
-                                    ✅ 自动扩缩容 (3-50 workers)<br>
-                                    ✅ 高可用 99.99%<br>
-                                    ✅ 完整监控告警
+                                    <span data-lang="k8s.target.feature1">✅ Kubernetes云原生</span><br>
+                                    <span data-lang="k8s.target.feature2">✅ 分布式任务队列 (Celery)</span><br>
+                                    <span data-lang="k8s.target.feature3">✅ 自动扩缩容 (3-50 workers)</span><br>
+                                    <span data-lang="k8s.target.feature4">✅ 高可用 99.99%</span><br>
+                                    <span data-lang="k8s.target.feature5">✅ 完整监控告警</span>
                                 </div>
                             </div>
                         </div>
@@ -3171,190 +3171,190 @@ overall_score = (<br>
 
                     <!-- Performance Metrics -->
                     <div style="margin-bottom: 2rem; background: linear-gradient(135deg, #1e3a8a, #3b82f6); padding: 1.5rem; border-radius: 8px; color: white;">
-                        <h4 style="margin: 0 0 1rem 0; color: white;">📈 性能指标对比</h4>
+                        <h4 style="margin: 0 0 1rem 0; color: white;"><span data-lang="k8s.comparison.title">📈 性能指标对比</span></h4>
                         <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;">
                             <div style="text-align: center;">
-                                <div style="font-size: 0.8rem; opacity: 0.9; margin-bottom: 0.25rem;">API QPS</div>
-                                <div style="font-size: 1.25rem; font-weight: bold;">100 → 5,000</div>
-                                <div style="font-size: 0.75rem; opacity: 0.8; margin-top: 0.25rem;">50x 提升</div>
+                                <div style="font-size: 0.8rem; opacity: 0.9; margin-bottom: 0.25rem;"><span data-lang="k8s.comparison.header1">API QPS</span></div>
+                                <div style="font-size: 1.25rem; font-weight: bold;"><span data-lang="k8s.comparison.row1-col1">100 → 5,000</span></div>
+                                <div style="font-size: 0.75rem; opacity: 0.8; margin-top: 0.25rem;"><span data-lang="k8s.comparison.row2-col1">50x 提升</span></div>
                             </div>
                             <div style="text-align: center;">
-                                <div style="font-size: 0.8rem; opacity: 0.9; margin-bottom: 0.25rem;">并发任务</div>
-                                <div style="font-size: 1.25rem; font-weight: bold;">10 → 1,000</div>
-                                <div style="font-size: 0.75rem; opacity: 0.8; margin-top: 0.25rem;">100x 提升</div>
+                                <div style="font-size: 0.8rem; opacity: 0.9; margin-bottom: 0.25rem;"><span data-lang="k8s.comparison.header2">并发任务</span></div>
+                                <div style="font-size: 1.25rem; font-weight: bold;"><span data-lang="k8s.comparison.row1-col2">10 → 1,000</span></div>
+                                <div style="font-size: 0.75rem; opacity: 0.8; margin-top: 0.25rem;"><span data-lang="k8s.comparison.row2-col2">100x 提升</span></div>
                             </div>
                             <div style="text-align: center;">
-                                <div style="font-size: 0.8rem; opacity: 0.9; margin-bottom: 0.25rem;">可用性</div>
-                                <div style="font-size: 1.25rem; font-weight: bold;">95% → 99.99%</div>
-                                <div style="font-size: 0.75rem; opacity: 0.8; margin-top: 0.25rem;">+4.99% SLA</div>
+                                <div style="font-size: 0.8rem; opacity: 0.9; margin-bottom: 0.25rem;"><span data-lang="k8s.comparison.header3">可用性</span></div>
+                                <div style="font-size: 1.25rem; font-weight: bold;"><span data-lang="k8s.comparison.row1-col3">95% → 99.99%</span></div>
+                                <div style="font-size: 0.75rem; opacity: 0.8; margin-top: 0.25rem;"><span data-lang="k8s.comparison.row2-col3">+4.99% SLA</span></div>
                             </div>
                             <div style="text-align: center;">
-                                <div style="font-size: 0.8rem; opacity: 0.9; margin-bottom: 0.25rem;">故障恢复</div>
-                                <div style="font-size: 1.25rem; font-weight: bold;">手动 → 自动</div>
-                                <div style="font-size: 0.75rem; opacity: 0.8; margin-top: 0.25rem;">秒级恢复</div>
+                                <div style="font-size: 0.8rem; opacity: 0.9; margin-bottom: 0.25rem;"><span data-lang="k8s.comparison.header4">故障恢复</span></div>
+                                <div style="font-size: 1.25rem; font-weight: bold;"><span data-lang="k8s.comparison.row1-col4">手动 → 自动</span></div>
+                                <div style="font-size: 0.75rem; opacity: 0.8; margin-top: 0.25rem;"><span data-lang="k8s.comparison.row2-col4">秒级恢复</span></div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Core Components -->
-                    <h4 style="margin: 1.5rem 0 1rem 0; color: #059669;">🏗️ 核心组件</h4>
+                    <h4 style="margin: 1.5rem 0 1rem 0; color: #059669;"><span data-lang="k8s.components.title">🏗️ 核心组件</span></h4>
                     <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 2rem;">
                         <div style="padding: 1rem; background: white; border-radius: 8px; border: 1px solid #d1d5db;">
                             <div style="font-weight: bold; color: #3b82f6; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
                                 <span style="font-size: 1.25rem;">📦</span>
-                                <span>Kubernetes</span>
+                                <span data-lang="k8s.components.k8s.title">Kubernetes</span>
                             </div>
                             <div style="font-size: 0.85rem; color: #6b7280;">
-                                • API服务器 (3-20副本)<br>
-                                • Worker集群 (3-50副本)<br>
-                                • HPA自动扩缩容<br>
-                                • StatefulSet有状态部署
+                                <span data-lang="k8s.components.k8s.feature1">• API服务器 (3-20副本)</span><br>
+                                <span data-lang="k8s.components.k8s.feature2">• Worker集群 (3-50副本)</span><br>
+                                <span data-lang="k8s.components.k8s.feature3">• HPA自动扩缩容</span><br>
+                                <span data-lang="k8s.components.k8s.feature4">• StatefulSet有状态部署</span>
                             </div>
                         </div>
 
                         <div style="padding: 1rem; background: white; border-radius: 8px; border: 1px solid #d1d5db;">
                             <div style="font-weight: bold; color: #8b5cf6; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
                                 <span style="font-size: 1.25rem;">🔄</span>
-                                <span>分布式任务队列</span>
+                                <span data-lang="k8s.components.queue.title">分布式任务队列</span>
                             </div>
                             <div style="font-size: 0.85rem; color: #6b7280;">
-                                • Celery + RabbitMQ<br>
-                                • 4个优先级队列<br>
-                                • 自动重试机制<br>
-                                • 任务状态追踪
+                                <span data-lang="k8s.components.queue.feature1">• Celery + RabbitMQ</span><br>
+                                <span data-lang="k8s.components.queue.feature2">• 4个优先级队列</span><br>
+                                <span data-lang="k8s.components.queue.feature3">• 自动重试机制</span><br>
+                                <span data-lang="k8s.components.queue.feature4">• 任务状态追踪</span>
                             </div>
                         </div>
 
                         <div style="padding: 1rem; background: white; border-radius: 8px; border: 1px solid #d1d5db;">
                             <div style="font-weight: bold; color: #10b981; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
                                 <span style="font-size: 1.25rem;">💾</span>
-                                <span>高可用存储</span>
+                                <span data-lang="k8s.components.storage.title">高可用存储</span>
                             </div>
                             <div style="font-size: 0.85rem; color: #6b7280;">
-                                • PostgreSQL HA集群<br>
-                                • Redis Sentinel<br>
-                                • 主从复制<br>
-                                • 自动故障转移
+                                <span data-lang="k8s.components.storage.feature1">• PostgreSQL HA集群</span><br>
+                                <span data-lang="k8s.components.storage.feature2">• Redis Sentinel</span><br>
+                                <span data-lang="k8s.components.storage.feature3">• 主从复制</span><br>
+                                <span data-lang="k8s.components.storage.feature4">• 自动故障转移</span>
                             </div>
                         </div>
 
                         <div style="padding: 1rem; background: white; border-radius: 8px; border: 1px solid #d1d5db;">
                             <div style="font-weight: bold; color: #f59e0b; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
                                 <span style="font-size: 1.25rem;">📊</span>
-                                <span>监控告警</span>
+                                <span data-lang="k8s.components.monitoring.title">监控告警</span>
                             </div>
                             <div style="font-size: 0.85rem; color: #6b7280;">
-                                • Prometheus + Grafana<br>
-                                • 15+ 性能指标<br>
-                                • 10+ 告警规则<br>
-                                • 实时Dashboard
+                                <span data-lang="k8s.components.monitoring.feature1">• Prometheus + Grafana</span><br>
+                                <span data-lang="k8s.components.monitoring.feature2">• 15+ 性能指标</span><br>
+                                <span data-lang="k8s.components.monitoring.feature3">• 10+ 告警规则</span><br>
+                                <span data-lang="k8s.components.monitoring.feature4">• 实时Dashboard</span>
                             </div>
                         </div>
 
                         <div style="padding: 1rem; background: white; border-radius: 8px; border: 1px solid #d1d5db;">
                             <div style="font-weight: bold; color: #ec4899; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
                                 <span style="font-size: 1.25rem;">🌐</span>
-                                <span>负载均衡</span>
+                                <span data-lang="k8s.components.loadbalancer.title">负载均衡</span>
                             </div>
                             <div style="font-size: 0.85rem; color: #6b7280;">
-                                • Nginx Ingress<br>
-                                • SSL/TLS自动化<br>
-                                • 速率限制<br>
-                                • 健康检查
+                                <span data-lang="k8s.components.loadbalancer.feature1">• Nginx Ingress</span><br>
+                                <span data-lang="k8s.components.loadbalancer.feature2">• SSL/TLS自动化</span><br>
+                                <span data-lang="k8s.components.loadbalancer.feature3">• 速率限制</span><br>
+                                <span data-lang="k8s.components.loadbalancer.feature4">• 健康检查</span>
                             </div>
                         </div>
 
                         <div style="padding: 1rem; background: white; border-radius: 8px; border: 1px solid #d1d5db;">
                             <div style="font-weight: bold; color: #14b8a6; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
                                 <span style="font-size: 1.25rem;">🔐</span>
-                                <span>安全配置</span>
+                                <span data-lang="k8s.components.security.title">安全配置</span>
                             </div>
                             <div style="font-size: 0.85rem; color: #6b7280;">
-                                • ConfigMap/Secret管理<br>
-                                • 网络策略<br>
-                                • RBAC权限控制<br>
-                                • Pod安全标准
+                                <span data-lang="k8s.components.security.feature1">• ConfigMap/Secret管理</span><br>
+                                <span data-lang="k8s.components.security.feature2">• 网络策略</span><br>
+                                <span data-lang="k8s.components.security.feature3">• RBAC权限控制</span><br>
+                                <span data-lang="k8s.components.security.feature4">• Pod安全标准</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Deployment Config Files -->
-                    <h4 style="margin: 1.5rem 0 1rem 0; color: #059669;">📁 部署配置文件</h4>
+                    <h4 style="margin: 1.5rem 0 1rem 0; color: #059669;"><span data-lang="k8s.deployment.title">📁 部署配置文件</span></h4>
                     <div style="background: #1e1e1e; color: #d4d4d4; padding: 1.5rem; border-radius: 8px; font-family: 'Courier New', monospace; font-size: 0.85rem; line-height: 1.8; margin-bottom: 1.5rem;">
 k8s/<br>
-├── <span style="color: #4fc3f7;">aeva-api-deployment.yaml</span>      <span style="color: #66bb6a;"># API服务器 + HPA (3-20副本)</span><br>
-├── <span style="color: #4fc3f7;">aeva-worker-statefulset.yaml</span> <span style="color: #66bb6a;"># Worker集群 + HPA (3-50副本)</span><br>
-├── <span style="color: #4fc3f7;">configmap.yaml</span>                <span style="color: #66bb6a;"># 配置和密钥管理</span><br>
-├── <span style="color: #4fc3f7;">ingress.yaml</span>                  <span style="color: #66bb6a;"># 负载均衡 + SSL</span><br>
-├── <span style="color: #4fc3f7;">monitoring.yaml</span>               <span style="color: #66bb6a;"># Prometheus + 告警规则</span><br>
-└── <span style="color: #4fc3f7;">README.md</span>                     <span style="color: #66bb6a;"># 完整部署指南</span>
+├── <span style="color: #4fc3f7;">aeva-api-deployment.yaml</span>      <span style="color: #66bb6a;" data-lang="k8s.deployment.file1"># API服务器 + HPA (3-20副本)</span><br>
+├── <span style="color: #4fc3f7;">aeva-worker-statefulset.yaml</span> <span style="color: #66bb6a;" data-lang="k8s.deployment.file2"># Worker集群 + HPA (3-50副本)</span><br>
+├── <span style="color: #4fc3f7;">configmap.yaml</span>                <span style="color: #66bb6a;" data-lang="k8s.deployment.file3"># 配置和密钥管理</span><br>
+├── <span style="color: #4fc3f7;">ingress.yaml</span>                  <span style="color: #66bb6a;" data-lang="k8s.deployment.file4"># 负载均衡 + SSL</span><br>
+├── <span style="color: #4fc3f7;">monitoring.yaml</span>               <span style="color: #66bb6a;" data-lang="k8s.deployment.file5"># Prometheus + 告警规则</span><br>
+└── <span style="color: #4fc3f7;">README.md</span>                     <span style="color: #66bb6a;" data-lang="k8s.deployment.file6"># 完整部署指南</span>
                     </div>
 
                     <!-- Resource Requirements -->
-                    <h4 style="margin: 1.5rem 0 1rem 0; color: #059669;">💰 资源需求估算</h4>
+                    <h4 style="margin: 1.5rem 0 1rem 0; color: #059669;"><span data-lang="k8s.resources.title">💰 资源需求估算</span></h4>
                     <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-bottom: 2rem;">
                         <div style="padding: 1.25rem; background: linear-gradient(135deg, #fef3c7, #fde68a); border-radius: 8px;">
-                            <div style="font-weight: bold; color: #92400e; margin-bottom: 0.75rem; font-size: 1.1rem;">小规模部署 (100 QPS)</div>
+                            <div style="font-weight: bold; color: #92400e; margin-bottom: 0.75rem; font-size: 1.1rem;"><span data-lang="k8s.resources.small.title">小规模部署 (100 QPS)</span></div>
                             <div style="font-size: 0.85rem; color: #78350f; line-height: 1.8;">
-                                <strong>总资源:</strong> ~46 CPU, ~66GB RAM<br>
-                                • API服务器: 3 pods × 2 CPU<br>
-                                • Workers: 5 pods × 4 CPU<br>
-                                • PostgreSQL: 2 nodes × 4 CPU<br>
-                                • Redis + RabbitMQ: 6 nodes<br>
+                                <span data-lang="k8s.resources.small.total"><strong>总资源:</strong> ~46 CPU, ~66GB RAM</span><br>
+                                <span data-lang="k8s.resources.small.api">• API服务器: 3 pods × 2 CPU</span><br>
+                                <span data-lang="k8s.resources.small.workers">• Workers: 5 pods × 4 CPU</span><br>
+                                <span data-lang="k8s.resources.small.postgres">• PostgreSQL: 2 nodes × 4 CPU</span><br>
+                                <span data-lang="k8s.resources.small.redis">• Redis + RabbitMQ: 6 nodes</span><br>
                                 <div style="margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px solid #fbbf24;">
-                                    <strong>成本:</strong> ~$500-800/月
+                                    <span data-lang="k8s.resources.small.cost"><strong>成本:</strong> ~$500-800/月</span>
                                 </div>
                             </div>
                         </div>
 
                         <div style="padding: 1.25rem; background: linear-gradient(135deg, #d1fae5, #a7f3d0); border-radius: 8px;">
-                            <div style="font-weight: bold; color: #065f46; margin-bottom: 0.75rem; font-size: 1.1rem;">大规模部署 (1000 QPS)</div>
+                            <div style="font-weight: bold; color: #065f46; margin-bottom: 0.75rem; font-size: 1.1rem;"><span data-lang="k8s.resources.large.title">大规模部署 (1000 QPS)</span></div>
                             <div style="font-size: 0.85rem; color: #064e3b; line-height: 1.8;">
-                                <strong>总资源:</strong> ~532 CPU, ~644GB RAM<br>
-                                • API服务器: 10 pods × 4 CPU<br>
-                                • Workers: 50 pods × 8 CPU<br>
-                                • PostgreSQL: 3 nodes × 8 CPU<br>
-                                • Redis + RabbitMQ: 11 nodes<br>
+                                <span data-lang="k8s.resources.large.total"><strong>总资源:</strong> ~532 CPU, ~644GB RAM</span><br>
+                                <span data-lang="k8s.resources.large.api">• API服务器: 10 pods × 4 CPU</span><br>
+                                <span data-lang="k8s.resources.large.workers">• Workers: 50 pods × 8 CPU</span><br>
+                                <span data-lang="k8s.resources.large.postgres">• PostgreSQL: 3 nodes × 8 CPU</span><br>
+                                <span data-lang="k8s.resources.large.redis">• Redis + RabbitMQ: 11 nodes</span><br>
                                 <div style="margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px solid #34d399;">
-                                    <strong>成本:</strong> ~$3000-5000/月
+                                    <span data-lang="k8s.resources.large.cost"><strong>成本:</strong> ~$3000-5000/月</span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Implementation Roadmap -->
-                    <h4 style="margin: 1.5rem 0 1rem 0; color: #059669;">🛣️ 实施路线图 (7周)</h4>
+                    <h4 style="margin: 1.5rem 0 1rem 0; color: #059669;"><span data-lang="k8s.roadmap.title">🛣️ 实施路线图 (7周)</span></h4>
                     <div style="background: linear-gradient(135deg, #667eea, #764ba2); padding: 1.5rem; border-radius: 8px; color: white; margin-bottom: 1.5rem;">
                         <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem;">
                             <div style="text-align: center; padding: 1rem; background: rgba(255,255,255,0.1); border-radius: 6px; backdrop-filter: blur(10px);">
                                 <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">📦</div>
                                 <div style="font-weight: bold; margin-bottom: 0.25rem;">Phase 1</div>
-                                <div style="font-size: 0.75rem; opacity: 0.9;">基础分布式能力</div>
-                                <div style="font-size: 0.7rem; opacity: 0.8; margin-top: 0.25rem;">2周</div>
+                                <div style="font-size: 0.75rem; opacity: 0.9;"><span data-lang="k8s.roadmap.phase1">基础分布式能力</span></div>
+                                <div style="font-size: 0.7rem; opacity: 0.8; margin-top: 0.25rem;"><span data-lang="k8s.roadmap.phase1-time">2周</span></div>
                             </div>
                             <div style="text-align: center; padding: 1rem; background: rgba(255,255,255,0.1); border-radius: 6px;">
                                 <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">⚡</div>
                                 <div style="font-weight: bold; margin-bottom: 0.25rem;">Phase 2</div>
-                                <div style="font-size: 0.75rem; opacity: 0.9;">高可用架构</div>
-                                <div style="font-size: 0.7rem; opacity: 0.8; margin-top: 0.25rem;">2周</div>
+                                <div style="font-size: 0.75rem; opacity: 0.9;"><span data-lang="k8s.roadmap.phase2">高可用架构</span></div>
+                                <div style="font-size: 0.7rem; opacity: 0.8; margin-top: 0.25rem;"><span data-lang="k8s.roadmap.phase2-time">2周</span></div>
                             </div>
                             <div style="text-align: center; padding: 1rem; background: rgba(255,255,255,0.1); border-radius: 6px;">
                                 <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">📊</div>
                                 <div style="font-weight: bold; margin-bottom: 0.25rem;">Phase 3</div>
-                                <div style="font-size: 0.75rem; opacity: 0.9;">可观测性</div>
-                                <div style="font-size: 0.7rem; opacity: 0.8; margin-top: 0.25rem;">1周</div>
+                                <div style="font-size: 0.75rem; opacity: 0.9;"><span data-lang="k8s.roadmap.phase3">可观测性</span></div>
+                                <div style="font-size: 0.7rem; opacity: 0.8; margin-top: 0.25rem;"><span data-lang="k8s.roadmap.phase3-time">1周</span></div>
                             </div>
                             <div style="text-align: center; padding: 1rem; background: rgba(255,255,255,0.1); border-radius: 6px;">
                                 <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🔄</div>
                                 <div style="font-weight: bold; margin-bottom: 0.25rem;">Phase 4</div>
-                                <div style="font-size: 0.75rem; opacity: 0.9;">自动扩缩容</div>
-                                <div style="font-size: 0.7rem; opacity: 0.8; margin-top: 0.25rem;">1周</div>
+                                <div style="font-size: 0.75rem; opacity: 0.9;"><span data-lang="k8s.roadmap.phase4">自动扩缩容</span></div>
+                                <div style="font-size: 0.7rem; opacity: 0.8; margin-top: 0.25rem;"><span data-lang="k8s.roadmap.phase4-time">1周</span></div>
                             </div>
                             <div style="text-align: center; padding: 1rem; background: rgba(255,255,255,0.1); border-radius: 6px;">
                                 <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🚀</div>
                                 <div style="font-weight: bold; margin-bottom: 0.25rem;">Phase 5</div>
-                                <div style="font-size: 0.75rem; opacity: 0.9;">生产强化</div>
-                                <div style="font-size: 0.7rem; opacity: 0.8; margin-top: 0.25rem;">1周</div>
+                                <div style="font-size: 0.75rem; opacity: 0.9;"><span data-lang="k8s.roadmap.phase5">生产强化</span></div>
+                                <div style="font-size: 0.7rem; opacity: 0.8; margin-top: 0.25rem;"><span data-lang="k8s.roadmap.phase5-time">1周</span></div>
                             </div>
                         </div>
                     </div>
@@ -3362,41 +3362,41 @@ k8s/<br>
                     <!-- Statistics -->
                     <div style="background: linear-gradient(135deg, #059669, #10b981); padding: 1.5rem; border-radius: 8px; color: white;">
                         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-                            <h4 style="color: white; margin: 0;">📊 交付统计</h4>
-                            <div style="font-size: 0.9rem; opacity: 0.9;">2,210行新增代码</div>
+                            <h4 style="color: white; margin: 0;"><span data-lang="k8s.stats.title">📊 交付统计</span></h4>
+                            <div style="font-size: 0.9rem; opacity: 0.9;"><span data-lang="k8s.stats.loc">2,210行新增代码</span></div>
                         </div>
                         <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 1rem;">
                             <div style="text-align: center; padding: 0.75rem; background: rgba(255,255,255,0.15); border-radius: 6px; backdrop-filter: blur(10px);">
                                 <div style="font-size: 1.5rem; font-weight: bold;">8</div>
-                                <div style="font-size: 0.75rem; opacity: 0.9;">K8s配置</div>
+                                <div style="font-size: 0.75rem; opacity: 0.9;"><span data-lang="k8s.stats.k8s-configs">K8s配置</span></div>
                             </div>
                             <div style="text-align: center; padding: 0.75rem; background: rgba(255,255,255,0.15); border-radius: 6px;">
                                 <div style="font-size: 1.5rem; font-weight: bold;">5</div>
-                                <div style="font-size: 0.75rem; opacity: 0.9;">分布式任务</div>
+                                <div style="font-size: 0.75rem; opacity: 0.9;"><span data-lang="k8s.stats.distributed-tasks">分布式任务</span></div>
                             </div>
                             <div style="text-align: center; padding: 0.75rem; background: rgba(255,255,255,0.15); border-radius: 6px;">
                                 <div style="font-size: 1.5rem; font-weight: bold;">15+</div>
-                                <div style="font-size: 0.75rem; opacity: 0.9;">监控指标</div>
+                                <div style="font-size: 0.75rem; opacity: 0.9;"><span data-lang="k8s.stats.metrics">监控指标</span></div>
                             </div>
                             <div style="text-align: center; padding: 0.75rem; background: rgba(255,255,255,0.15); border-radius: 6px;">
                                 <div style="font-size: 1.5rem; font-weight: bold;">10+</div>
-                                <div style="font-size: 0.75rem; opacity: 0.9;">告警规则</div>
+                                <div style="font-size: 0.75rem; opacity: 0.9;"><span data-lang="k8s.stats.alerts">告警规则</span></div>
                             </div>
                             <div style="text-align: center; padding: 0.75rem; background: rgba(255,255,255,0.15); border-radius: 6px;">
                                 <div style="font-size: 1.5rem; font-weight: bold;">50x</div>
-                                <div style="font-size: 0.75rem; opacity: 0.9;">QPS提升</div>
+                                <div style="font-size: 0.75rem; opacity: 0.9;"><span data-lang="k8s.stats.qps-boost">QPS提升</span></div>
                             </div>
                             <div style="text-align: center; padding: 0.75rem; background: rgba(255,255,255,0.15); border-radius: 6px;">
                                 <div style="font-size: 1.5rem; font-weight: bold;">99.99%</div>
-                                <div style="font-size: 0.75rem; opacity: 0.9;">可用性</div>
+                                <div style="font-size: 0.75rem; opacity: 0.9;"><span data-lang="k8s.stats.availability">可用性</span></div>
                             </div>
                         </div>
                         <div style="margin-top: 1rem; text-align: center; padding: 0.75rem; background: rgba(255,255,255,0.1); border-radius: 6px;">
                             <div style="font-size: 0.9rem;">
-                                <strong style="color: #fef3c7;">✅ 生产就绪</strong> |
+                                <span data-lang="k8s.stats.status"><strong style="color: #fef3c7;">✅ 生产就绪</strong> |
                                 文档: <code style="background: rgba(0,0,0,0.2); padding: 0.125rem 0.5rem; border-radius: 4px;">SCALABILITY_ARCHITECTURE.md</code> |
                                 配置: <code style="background: rgba(0,0,0,0.2); padding: 0.125rem 0.5rem; border-radius: 4px;">k8s/</code> |
-                                代码: <code style="background: rgba(0,0,0,0.2); padding: 0.125rem 0.5rem; border-radius: 4px;">aeva/auto/distributed_executor.py</code>
+                                代码: <code style="background: rgba(0,0,0,0.2); padding: 0.125rem 0.5rem; border-radius: 4px;">aeva/auto/distributed_executor.py</code></span>
                             </div>
                         </div>
                     </div>
@@ -5831,6 +5831,112 @@ pipeline.add_stage(
                 'brain.history.items2': '2项',
                 'brain.history.items7': '7项',
 
+                // Kubernetes Section
+                'k8s.title': '☸️ 企业级可扩展架构 & Kubernetes部署 ⭐ NEW',
+                'k8s.description': '<strong style="color: #10b981;">生产就绪</strong>的云原生架构，支持从 <strong>100 QPS</strong> 到 <strong>1000+ QPS</strong> 的水平扩展',
+                'k8s.current.title': '当前架构',
+                'k8s.current.scalability': '可扩展性:',
+                'k8s.current.production': '生产就绪:',
+                'k8s.current.feature1': '✅ Docker容器化',
+                'k8s.current.feature2': '✅ 模块化设计',
+                'k8s.current.feature3': '⚠️ 单机执行 (~100 QPS)',
+                'k8s.current.feature4': '⚠️ 无自动扩缩容',
+                'k8s.current.feature5': '⚠️ 缺少监控告警',
+                'k8s.target.title': '目标架构 (已实现)',
+                'k8s.target.scalability': '可扩展性:',
+                'k8s.target.production': '生产就绪:',
+                'k8s.target.feature1': '✅ Kubernetes云原生',
+                'k8s.target.feature2': '✅ 分布式任务队列 (Celery)',
+                'k8s.target.feature3': '✅ 自动扩缩容 (3-50 workers)',
+                'k8s.target.feature4': '✅ 高可用 99.99%',
+                'k8s.target.feature5': '✅ 完整监控告警',
+                'k8s.comparison.title': '📈 性能指标对比',
+                'k8s.comparison.header1': 'API QPS',
+                'k8s.comparison.header2': '并发任务',
+                'k8s.comparison.header3': '可用性',
+                'k8s.comparison.header4': '故障恢复',
+                'k8s.comparison.row1-col1': '100 → 5,000',
+                'k8s.comparison.row1-col2': '10 → 1,000',
+                'k8s.comparison.row1-col3': '95% → 99.99%',
+                'k8s.comparison.row1-col4': '手动 → 自动',
+                'k8s.comparison.row2-col1': '50x 提升',
+                'k8s.comparison.row2-col2': '100x 提升',
+                'k8s.comparison.row2-col3': '+4.99% SLA',
+                'k8s.comparison.row2-col4': '秒级恢复',
+                'k8s.components.title': '🏗️ 核心组件',
+                'k8s.components.k8s.title': 'Kubernetes',
+                'k8s.components.k8s.feature1': '• API服务器 (3-20副本)',
+                'k8s.components.k8s.feature2': '• Worker集群 (3-50副本)',
+                'k8s.components.k8s.feature3': '• HPA自动扩缩容',
+                'k8s.components.k8s.feature4': '• StatefulSet有状态部署',
+                'k8s.components.queue.title': '分布式任务队列',
+                'k8s.components.queue.feature1': '• Celery + RabbitMQ',
+                'k8s.components.queue.feature2': '• 4个优先级队列',
+                'k8s.components.queue.feature3': '• 自动重试机制',
+                'k8s.components.queue.feature4': '• 任务状态追踪',
+                'k8s.components.storage.title': '高可用存储',
+                'k8s.components.storage.feature1': '• PostgreSQL HA集群',
+                'k8s.components.storage.feature2': '• Redis Sentinel',
+                'k8s.components.storage.feature3': '• 主从复制',
+                'k8s.components.storage.feature4': '• 自动故障转移',
+                'k8s.components.monitoring.title': '监控告警',
+                'k8s.components.monitoring.feature1': '• Prometheus + Grafana',
+                'k8s.components.monitoring.feature2': '• 15+ 性能指标',
+                'k8s.components.monitoring.feature3': '• 10+ 告警规则',
+                'k8s.components.monitoring.feature4': '• 实时Dashboard',
+                'k8s.components.loadbalancer.title': '负载均衡',
+                'k8s.components.loadbalancer.feature1': '• Nginx Ingress',
+                'k8s.components.loadbalancer.feature2': '• SSL/TLS自动化',
+                'k8s.components.loadbalancer.feature3': '• 速率限制',
+                'k8s.components.loadbalancer.feature4': '• 健康检查',
+                'k8s.components.security.title': '安全配置',
+                'k8s.components.security.feature1': '• ConfigMap/Secret管理',
+                'k8s.components.security.feature2': '• 网络策略',
+                'k8s.components.security.feature3': '• RBAC权限控制',
+                'k8s.components.security.feature4': '• Pod安全标准',
+                'k8s.deployment.title': '📁 部署配置文件',
+                'k8s.deployment.file1': '# API服务器 + HPA (3-20副本)',
+                'k8s.deployment.file2': '# Worker集群 + HPA (3-50副本)',
+                'k8s.deployment.file3': '# 配置和密钥管理',
+                'k8s.deployment.file4': '# 负载均衡 + SSL',
+                'k8s.deployment.file5': '# Prometheus + 告警规则',
+                'k8s.deployment.file6': '# 完整部署指南',
+                'k8s.resources.title': '💰 资源需求估算',
+                'k8s.resources.small.title': '小规模部署 (100 QPS)',
+                'k8s.resources.small.total': '<strong>总资源:</strong> ~46 CPU, ~66GB RAM',
+                'k8s.resources.small.api': '• API服务器: 3 pods × 2 CPU',
+                'k8s.resources.small.workers': '• Workers: 5 pods × 4 CPU',
+                'k8s.resources.small.postgres': '• PostgreSQL: 2 nodes × 4 CPU',
+                'k8s.resources.small.redis': '• Redis + RabbitMQ: 6 nodes',
+                'k8s.resources.small.cost': '<strong>成本:</strong> ~$500-800/月',
+                'k8s.resources.large.title': '大规模部署 (1000 QPS)',
+                'k8s.resources.large.total': '<strong>总资源:</strong> ~532 CPU, ~644GB RAM',
+                'k8s.resources.large.api': '• API服务器: 10 pods × 4 CPU',
+                'k8s.resources.large.workers': '• Workers: 50 pods × 8 CPU',
+                'k8s.resources.large.postgres': '• PostgreSQL: 3 nodes × 8 CPU',
+                'k8s.resources.large.redis': '• Redis + RabbitMQ: 11 nodes',
+                'k8s.resources.large.cost': '<strong>成本:</strong> ~$3000-5000/月',
+                'k8s.roadmap.title': '🛣️ 实施路线图 (7周)',
+                'k8s.roadmap.phase1': '基础分布式能力',
+                'k8s.roadmap.phase1-time': '2周',
+                'k8s.roadmap.phase2': '高可用架构',
+                'k8s.roadmap.phase2-time': '2周',
+                'k8s.roadmap.phase3': '可观测性',
+                'k8s.roadmap.phase3-time': '1周',
+                'k8s.roadmap.phase4': '自动扩缩容',
+                'k8s.roadmap.phase4-time': '1周',
+                'k8s.roadmap.phase5': '生产强化',
+                'k8s.roadmap.phase5-time': '1周',
+                'k8s.stats.title': '📊 交付统计',
+                'k8s.stats.loc': '2,210行新增代码',
+                'k8s.stats.k8s-configs': 'K8s配置',
+                'k8s.stats.distributed-tasks': '分布式任务',
+                'k8s.stats.metrics': '监控指标',
+                'k8s.stats.alerts': '告警规则',
+                'k8s.stats.qps-boost': 'QPS提升',
+                'k8s.stats.availability': '可用性',
+                'k8s.stats.status': '<strong style="color: #fef3c7;">✅ 生产就绪</strong> | 文档: <code style="background: rgba(0,0,0,0.2); padding: 0.125rem 0.5rem; border-radius: 4px;">SCALABILITY_ARCHITECTURE.md</code> | 配置: <code style="background: rgba(0,0,0,0.2); padding: 0.125rem 0.5rem; border-radius: 4px;">k8s/</code> | 代码: <code style="background: rgba(0,0,0,0.2); padding: 0.125rem 0.5rem; border-radius: 4px;">aeva/auto/distributed_executor.py</code>',
+
                 // Language toggle
                 'lang-toggle': '中文/EN',
             },
@@ -6868,6 +6974,112 @@ pipeline.add_stage(
                 'brain.history.items5': '5 items',
                 'brain.history.items2': '2 items',
                 'brain.history.items7': '7 items',
+
+                // Kubernetes Section
+                'k8s.title': '☸️ Enterprise Scalable Architecture & Kubernetes Deployment ⭐ NEW',
+                'k8s.description': '<strong style="color: #10b981;">Production-ready</strong> cloud-native architecture, supporting horizontal scaling from <strong>100 QPS</strong> to <strong>1000+ QPS</strong>',
+                'k8s.current.title': 'Current Architecture',
+                'k8s.current.scalability': 'Scalability:',
+                'k8s.current.production': 'Production Ready:',
+                'k8s.current.feature1': '✅ Docker Containerized',
+                'k8s.current.feature2': '✅ Modular Design',
+                'k8s.current.feature3': '⚠️ Single Machine (~100 QPS)',
+                'k8s.current.feature4': '⚠️ No Auto-scaling',
+                'k8s.current.feature5': '⚠️ Limited Monitoring',
+                'k8s.target.title': 'Target Architecture (Implemented)',
+                'k8s.target.scalability': 'Scalability:',
+                'k8s.target.production': 'Production Ready:',
+                'k8s.target.feature1': '✅ Kubernetes Cloud-Native',
+                'k8s.target.feature2': '✅ Distributed Task Queue (Celery)',
+                'k8s.target.feature3': '✅ Auto-scaling (3-50 workers)',
+                'k8s.target.feature4': '✅ High Availability 99.99%',
+                'k8s.target.feature5': '✅ Complete Monitoring & Alerting',
+                'k8s.comparison.title': '📈 Performance Metrics Comparison',
+                'k8s.comparison.header1': 'API QPS',
+                'k8s.comparison.header2': 'Concurrent Tasks',
+                'k8s.comparison.header3': 'Availability',
+                'k8s.comparison.header4': 'Disaster Recovery',
+                'k8s.comparison.row1-col1': '100 → 5,000',
+                'k8s.comparison.row1-col2': '10 → 1,000',
+                'k8s.comparison.row1-col3': '95% → 99.99%',
+                'k8s.comparison.row1-col4': 'Manual → Auto',
+                'k8s.comparison.row2-col1': '50x Boost',
+                'k8s.comparison.row2-col2': '100x Boost',
+                'k8s.comparison.row2-col3': '+4.99% SLA',
+                'k8s.comparison.row2-col4': 'Second-level Recovery',
+                'k8s.components.title': '🏗️ Core Components',
+                'k8s.components.k8s.title': 'Kubernetes',
+                'k8s.components.k8s.feature1': '• API Server (3-20 replicas)',
+                'k8s.components.k8s.feature2': '• Worker Cluster (3-50 replicas)',
+                'k8s.components.k8s.feature3': '• HPA Auto-scaling',
+                'k8s.components.k8s.feature4': '• StatefulSet Deployment',
+                'k8s.components.queue.title': 'Distributed Task Queue',
+                'k8s.components.queue.feature1': '• Celery + RabbitMQ',
+                'k8s.components.queue.feature2': '• 4 Priority Queues',
+                'k8s.components.queue.feature3': '• Auto Retry Mechanism',
+                'k8s.components.queue.feature4': '• Task Status Tracking',
+                'k8s.components.storage.title': 'High Availability Storage',
+                'k8s.components.storage.feature1': '• PostgreSQL HA Cluster',
+                'k8s.components.storage.feature2': '• Redis Sentinel',
+                'k8s.components.storage.feature3': '• Master-Slave Replication',
+                'k8s.components.storage.feature4': '• Auto Failover',
+                'k8s.components.monitoring.title': 'Monitoring & Alerting',
+                'k8s.components.monitoring.feature1': '• Prometheus + Grafana',
+                'k8s.components.monitoring.feature2': '• 15+ Performance Metrics',
+                'k8s.components.monitoring.feature3': '• 10+ Alert Rules',
+                'k8s.components.monitoring.feature4': '• Real-time Dashboard',
+                'k8s.components.loadbalancer.title': 'Load Balancing',
+                'k8s.components.loadbalancer.feature1': '• Nginx Ingress',
+                'k8s.components.loadbalancer.feature2': '• SSL/TLS Automation',
+                'k8s.components.loadbalancer.feature3': '• Rate Limiting',
+                'k8s.components.loadbalancer.feature4': '• Health Checks',
+                'k8s.components.security.title': 'Security Configuration',
+                'k8s.components.security.feature1': '• ConfigMap/Secret Management',
+                'k8s.components.security.feature2': '• Network Policies',
+                'k8s.components.security.feature3': '• RBAC Access Control',
+                'k8s.components.security.feature4': '• Pod Security Standards',
+                'k8s.deployment.title': '📁 Deployment Configuration Files',
+                'k8s.deployment.file1': '# API Server + HPA (3-20 replicas)',
+                'k8s.deployment.file2': '# Worker Cluster + HPA (3-50 replicas)',
+                'k8s.deployment.file3': '# ConfigMap & Secret Management',
+                'k8s.deployment.file4': '# Load Balancing + SSL',
+                'k8s.deployment.file5': '# Prometheus + Alert Rules',
+                'k8s.deployment.file6': '# Complete Deployment Guide',
+                'k8s.resources.title': '💰 Resource Requirements Estimation',
+                'k8s.resources.small.title': 'Small-scale Deployment (100 QPS)',
+                'k8s.resources.small.total': '<strong>Total Resources:</strong> ~46 CPU, ~66GB RAM',
+                'k8s.resources.small.api': '• API Server: 3 pods × 2 CPU',
+                'k8s.resources.small.workers': '• Workers: 5 pods × 4 CPU',
+                'k8s.resources.small.postgres': '• PostgreSQL: 2 nodes × 4 CPU',
+                'k8s.resources.small.redis': '• Redis + RabbitMQ: 6 nodes',
+                'k8s.resources.small.cost': '<strong>Cost:</strong> ~$500-800/month',
+                'k8s.resources.large.title': 'Large-scale Deployment (1000 QPS)',
+                'k8s.resources.large.total': '<strong>Total Resources:</strong> ~532 CPU, ~644GB RAM',
+                'k8s.resources.large.api': '• API Server: 10 pods × 4 CPU',
+                'k8s.resources.large.workers': '• Workers: 50 pods × 8 CPU',
+                'k8s.resources.large.postgres': '• PostgreSQL: 3 nodes × 8 CPU',
+                'k8s.resources.large.redis': '• Redis + RabbitMQ: 11 nodes',
+                'k8s.resources.large.cost': '<strong>Cost:</strong> ~$3000-5000/month',
+                'k8s.roadmap.title': '🛣️ Implementation Roadmap (7 weeks)',
+                'k8s.roadmap.phase1': 'Basic Distributed Capabilities',
+                'k8s.roadmap.phase1-time': '2 weeks',
+                'k8s.roadmap.phase2': 'High Availability Architecture',
+                'k8s.roadmap.phase2-time': '2 weeks',
+                'k8s.roadmap.phase3': 'Observability',
+                'k8s.roadmap.phase3-time': '1 week',
+                'k8s.roadmap.phase4': 'Auto-scaling',
+                'k8s.roadmap.phase4-time': '1 week',
+                'k8s.roadmap.phase5': 'Production Hardening',
+                'k8s.roadmap.phase5-time': '1 week',
+                'k8s.stats.title': '📊 Delivery Statistics',
+                'k8s.stats.loc': '2,210 lines of new code',
+                'k8s.stats.k8s-configs': 'K8s Configs',
+                'k8s.stats.distributed-tasks': 'Distributed Tasks',
+                'k8s.stats.metrics': 'Metrics',
+                'k8s.stats.alerts': 'Alert Rules',
+                'k8s.stats.qps-boost': 'QPS Boost',
+                'k8s.stats.availability': 'Availability',
+                'k8s.stats.status': '<strong style="color: #fef3c7;">✅ Production Ready</strong> | Docs: <code style="background: rgba(0,0,0,0.2); padding: 0.125rem 0.5rem; border-radius: 4px;">SCALABILITY_ARCHITECTURE.md</code> | Config: <code style="background: rgba(0,0,0,0.2); padding: 0.125rem 0.5rem; border-radius: 4px;">k8s/</code> | Code: <code style="background: rgba(0,0,0,0.2); padding: 0.125rem 0.5rem; border-radius: 4px;">aeva/auto/distributed_executor.py</code>',
             }
         };
 
